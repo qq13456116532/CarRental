@@ -37,10 +37,8 @@ Link: https://dotnet.microsoft.com/en-us/download
 Run the following command in the project directory to restore the required NuGet packages:
 ```
 dotnet restore
-Run the Project
 ```
-- Navigate to the CarRental directory and run:
-
+- Run the Project: Navigate to the CarRental directory and run:
 ```
 dotnet run
 ```
