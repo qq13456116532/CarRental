@@ -1,0 +1,138 @@
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+@inject HttpClient HttpClient
+<div class="main-bar-view">
+    <div class="logo">
+        <img src="images/k-logo.png" class="search-icon" @onclick='() => Navigation.NavigateTo("/portal")' />
+    </div>
+    <div class="search-entry">
+        <img src="images/search-icon.svg" class="search-icon" />
+        <input placeholder="输入关键词" @onkeyup="HandleSearch"  @bind="keyword" />
+    </div>
+    <div class="right-view">
+        <button class="btn-link" @onclick="HandleAdmin">后台入口</button>
+        @if (AuthService.IsUserLoggedIn)
+        {
+            <div class="user-dropdown">
+                <img src="images/avatar.jpg" class="self-img" @onclick="ToggleDropdown" />
+                @if (showDropdown)
+                {
+                    <div class="dropdown-menu">
+                        <a href="javascript:void(0)" @onclick='() => GoToUserCenter("orderView")'>我的预订</a>
+                        <a href="javascript:void(0)" @onclick='() => GoToUserCenter("userInfoEditView")'>个人设置</a>
+                        <a href="javascript:void(0)" @onclick="Logout">退出</a>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <button class="login btn" @onclick="GoLogin">登录</button>
+        }
+
+        <div class="right-icon" >
+            <img src="images/message-icon.svg" @onclick="ShowMessages"/>
+            <span class="msg-point"></span>
+        </div>
+        @if (showMessages)
+        {
+            <div class="message-drawer">
+                <h3>我的消息</h3>
+                <button @onclick="CloseMessages">关闭</button>
+                @if (loading)
+                {
+                    <p>加载中...</p>
+                }
+                else
+                {
+                    @foreach (var item in messages)
+                    {
+                        <div class="notification-item">
+                            <h4>@item.Title</h4>
+                            <p>@item.Content</p>
+                            <span class="time">@item.CreateTime</span>
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private string? keyword;
+    private bool showDropdown = false;
+    private bool showMessages = false;
+    private bool loading = false;
+    private List<Message> messages = new List<Message>();
+
+    private void HandleAdmin()
+    {
+        Navigation.NavigateTo("/admin");
+    }
+
+    private void GoLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+
+    private void GoToUserCenter(string menuName)
+    {
+        Navigation.NavigateTo($"/{menuName}");
+    }
+
+    private void Logout()
+    {
+        AuthService.Logout();
+        Navigation.NavigateTo("/portal");
+    }
+
+    private void ToggleDropdown()
+    {
+        showDropdown = !showDropdown;
+    }
+
+    private void ShowMessages()
+    {
+        showMessages = !showMessages;
+        LoadMessages();
+    }
+
+    private void CloseMessages()
+    {
+        showMessages = false;
+    }
+
+    private async void LoadMessages()
+    {
+        loading = true;
+        try
+        {
+            var result = await HttpClient.GetFromJsonAsync<List<Message>>($"{Navigation.BaseUri}api/notice");
+            messages = result ?? new List<Message>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private void HandleSearch(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            Navigation.NavigateTo($"/search?keyword={keyword}");
+        }
+    }
+
+    public class Message
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public string CreateTime { get; set; } = string.Empty;
+    }
+}

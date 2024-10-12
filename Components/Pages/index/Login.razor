@@ -1,0 +1,90 @@
+@page "/login"
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Forms
+@inject NavigationManager Navigation
+@inject HttpClient Http
+@inject AuthService AuthService
+@layout MinimalLayout
+<div class="container">
+    <div class="login-page pc-style">
+        <img src="images/k-logo.png" alt="logo" class="logo-icon" />
+        <div class="login-tab">
+            <div class="tab-selected">
+                <span>邮箱登录</span>
+                <span class="tabline tabline-width"></span>
+            </div>
+        </div>
+        <div class="mail-login" type="login">
+            <div class="common-input">
+                <img src="images/mail-icon.svg" class="left-icon" />
+                <div class="input-view">
+                    <input placeholder="请输入注册邮箱" @bind="loginForm.Username" type="text" class="input" />
+                    <p class="err-view"></p>
+                </div>
+            </div>
+            <div class="common-input">
+                <img src="images/pwd-icon.svg" class="left-icon" />
+                <div class="input-view">
+                    <input placeholder="请输入密码" @bind="loginForm.Password" type="password" class="input" />
+                    <p class="err-view"></p>
+                </div>
+            </div>
+            <div class="next-btn-view">
+                <button class="next-btn btn-active" style="margin: 16px 0px;" @onclick="HandleLogin">登录</button>
+            </div>
+            @if(ErrorMessage!=null){
+                <p style="color:red">@ErrorMessage</p>
+            }
+
+        </div>
+        <div class="operation">
+            <a @onclick="HandleCreateUser" class="forget-pwd" style="text-align: left;">注册新帐号</a>
+            <a class="forget-pwd" style="text-align: right;">忘记密码？</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginForm loginForm = new LoginForm();
+
+    private string? ErrorMessage{set;get;}
+     private async Task HandleLogin()
+    {
+        try
+
+        {
+            var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Auth/login", loginForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                Console.WriteLine("登录成功，Token：" + result?.Token);
+                AuthService.LoginIn(result?.Token);
+                
+                Navigation.NavigateTo("/portal");
+            }
+            else
+            {
+                ErrorMessage = "登录失败，用户名或密码错误。";
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorMessage = $"登录过程中发生错误：{ex.Message}";
+            throw ex;
+        }
+    }
+
+    private void HandleCreateUser()
+    {
+        Navigation.NavigateTo("/register");
+    }
+
+    private void LoginSuccess()
+    {
+        Navigation.NavigateTo("/portal");
+        Console.WriteLine("登录成功！");
+        // 可以使用一个服务来显示提示信息，类似于 Vue 的 message.success
+    }
+
+}

@@ -1,0 +1,475 @@
+@page "/detail"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Data
+@using Microsoft.AspNetCore.WebUtilities
+@using Services
+@inject AuthService AuthService
+<div class="detail">
+    <div class="detail-content">
+        <div class="detail-content-top">
+            <div style="position: relative;">
+                <div class="thing-infos-view">
+                    <div class="thing-infos">
+                        <div class="thing-img-box">
+                            <img src="images/@thing.Cover" />
+                        </div>
+                        <div class="thing-info-box">
+                            <div class="thing-state">
+                                <span class="state hidden-sm">信息状态</span>
+                                <span>有效</span>
+                            </div>
+                            <h1 class="thing-name">@thing.Title</h1>
+                            <span>
+                                <span class="a-price-symbol"></span>
+                                <span class="a-price" style="font-size: 20px;">@thing.Price</span>
+                            </span>
+                            <div class="translators flex-view">
+                                <span>车龄：</span>
+                                <span class="name">@thing.Age</span>
+                            </div>
+                            <div class="translators flex-view">
+                                <span>续航：</span>
+                                <span class="name">@thing.Xuhang</span>
+                            </div>
+                            <div class="translators flex-view">
+                                <span>动力：</span>
+                                <span class="name">@thing.Dongli</span>
+                            </div>
+                            <div class="translators flex-view">
+                                <span>闲置时间：</span>
+                                <span class="name">@thing.Xianzhi</span>
+                            </div>
+                            <div class="translators flex-view">
+                                <span>所在地区：</span>
+                                <span class="name">@thing.Location</span>
+                            </div>
+                            <button class="buy-btn" @onclick="() => HandleOrder(thing)">
+                                <img src="images/add.svg" />
+                                <span>立即预订</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="thing-counts hidden-sm">
+                        <div class="count-item flex-view pointer" @onclick="AddToWish">
+                            <div class="count-img">
+                                <img src="images/want-read-hover.svg" />
+                            </div>
+                            <div class="count-box flex-view">
+                                <div class="count-text-box">
+                                    <span class="count-title" @onclick="AddToWish">加入心愿单</span>
+                                </div>
+                                <div class="count-num-box">
+                                    <span class="num-text">@thing.WishCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count-item flex-view pointer" @onclick="Collect">
+                            <div class="count-img">
+                                <img src="images/recommend-hover.svg" />
+                            </div>
+                            <div class="count-box flex-view">
+                                <div class="count-text-box">
+                                    <span class="count-title">收藏</span>
+                                </div>
+                                <div class="count-num-box">
+                                    <span class="num-text">@thing.CollectCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count-item flex-view" @onclick="Share">
+                            <div class="count-img">
+                                <img src="images/share-icon.svg" />
+                            </div>
+                            <div class="count-box flex-view">
+                                <div class="count-text-box">
+                                    <span class="count-title">分享</span>
+                                </div>
+                                <div class="count-num-box">
+                                    <img src="images/wb-share.svg" class="mg-l" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-content-bottom">
+            <div class="thing-content-view flex-view">
+                <div class="main-content">
+                    <div class="order-view main-tab">
+                        @foreach (var item in tabData.Select((name, index) => new { Name = name, Index = index }))
+                        {
+                            <span class="tab @(selectTabIndex == item.Index ? "tab-select" : "")" @onclick="() => SelectTab(item.Index)">
+                                @item.Name
+                            </span>
+                        }
+
+                        <span style="left: @($"{tabUnderLeft}px")" class="tab-underline"></span>
+                    </div>
+
+                    <!-- 简介 -->
+                    <div class="thing-intro @(selectTabIndex == 0 ? "" : "hide")">
+                        <p class="text">@thing.Description</p>
+                    </div>
+
+                    <!-- 评论 -->
+                    <div class="thing-comment @(selectTabIndex == 1 ? "" : "hide")">
+                        <div class="title">发表新的评论</div>
+                        <div class="publish flex-view">
+                            <img src="images/avatar.jpg" class="mine-img" />
+                            <input placeholder="说点什么..." class="content-input" @bind="newComment" />
+                            <button class="send-btn" @onclick="SendComment">发送</button>
+                        </div>
+                        <div class="tab-view flex-view">
+                            <div class="count-text">共有 @commentData.Count 条评论</div>
+                            @if(commentData.Any()){
+                                <div class="tab-box flex-view" >
+                                    <span class="@((sortIndex == 0 ? "tab-select" : ""))" @onclick='() => SortCommentList("recent")'>最新</span>
+                                    <div class="line"></div>
+                                    <span class="@((sortIndex == 1 ? "tab-select" : ""))" @onclick='() => SortCommentList("hot")'>热门</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="comments-list">
+                            @foreach (var comment in commentData)
+                            {
+                                <div class="comment-item">
+                                    <div class="flex-item flex-view">
+                                        <img src="images/avatar.jpg" class="avator" />
+                                        <div class="person">
+                                            <div class="name">@comment.Username</div>
+                                            <div class="time">@comment.CommentTime</div>
+                                        </div>
+                                        <div class="float-right">
+                                            <span @onclick="() => LikeComment(comment.Id)">推荐</span>
+                                            <span class="num">@comment.LikeCount</span>
+                                        </div>
+                                    </div>
+                                    <p class="comment-content">@comment.Content</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend">
+                    <div class="title">热门推荐</div>
+                    <div class="things">
+                        @foreach (var item in recommendData)
+                        {
+                            <div class="thing-item" @onclick="() => HandleDetail(item)">
+                                <div class="img-view">
+                                    <img src="images/@item.Cover" />
+                                </div>
+                                <div class="info-view">
+                                    <h3 class="thing-name">
+                                        @if (!string.IsNullOrEmpty(item.Title))
+                                        {
+                                            @item.Title.Substring(0, Math.Min(12, item.Title.Length)) <!-- 安全截取字符串 -->
+                                        }
+                                    </h3>
+                                    <span>
+                                        <span class="a-price-symbol"></span>
+                                        <span class="a-price">@item.Price</span>&nbsp;
+                                        <span class="a-price">@item.Location</span>
+                                    </span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private Thing thing = new Thing{
+        Id = 3,
+        Title = "Smartphone",
+        Cover = "smartphone.jpg",
+        Description = "A latest-generation smartphone with advanced features.",
+        Price = "999",
+        Status = "1",
+        Score = 92,
+        Mobile = "1122334455",
+        Age = "6 months",
+        Location = "San Francisco",
+        CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+        Pv = 2500,
+        RecommendCount = 200,
+        WishCount = 150,
+        CollectCount = 100,
+        ClassificationId = 8,
+        UserId = "guest",
+        Xuhang = "N/A",
+        Dongli = "Battery",
+        Xianzhi = "No restriction"
+    };
+    private List<CommentDto> commentData = new List<CommentDto>();
+    private List<Thing> recommendData = new List<Thing>();
+    private string newComment = string.Empty;
+    private int selectTabIndex = 0;
+    private double tabUnderLeft = 6;
+    private int sortIndex = 0;
+    private string order = "recent";
+    private static readonly List<string> tabData = new List<string> { "简介", "评论" };
+
+
+    private long? id;
+    protected override async Task OnInitializedAsync()
+    {
+         // Extract the 'id' query parameter from the URL
+        var uri = new Uri(Navigation.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("id", out var idParam))
+        {
+            if (long.TryParse(idParam, out long parsedId))
+            {
+                id = parsedId;
+                await GetDetailData();
+                await GetCommentList();
+                await GetRecommendData();
+            }
+            else
+            {
+                // Handle the case where id is not a valid long (e.g., show an error or redirect)
+                Console.WriteLine("Invalid id parameter.");
+            }
+        }
+        else
+        {
+            // Handle the case when 'id' is not provided
+            Navigation.NavigateTo("/error", true);
+        }
+    }
+
+    private async Task GetDetailData()
+    {
+        try
+        {
+            // Construct the request URL with the 'id' query parameter.
+            var requestUrl = $"{Navigation.BaseUri}api/Index/thing?id={id}";
+
+            // Send the GET request and deserialize the response into the detailData object.
+            var response = await Http.GetFromJsonAsync<Thing>(requestUrl);
+
+            if (response != null)
+            {
+                thing = response;
+            }
+            else
+            {
+                // Handle the case where no data is returned (e.g., show an error message).
+                Console.WriteLine("No detail data found for the specified ID.");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions, such as network errors or server-side errors.
+            Console.WriteLine($"Error fetching detail data: {ex.Message}");
+            throw ex;
+        }
+    }
+
+    private async Task GetRecommendData()
+    {
+        try
+        {
+            // Construct the request URL.
+            var requestUrl = $"{Navigation.BaseUri}api/Index/recommendations";
+
+            // Send the GET request and deserialize the response into the recommendData list.
+            var response = await Http.GetFromJsonAsync<List<Thing>>(requestUrl);
+
+            if (response != null && response.Any())
+            {
+                recommendData = response;
+            }
+            else
+            {
+                // Handle the case where no data is returned (e.g., show an error message).
+                Console.WriteLine("No recommended data found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions, such as network errors or server-side errors.
+            Console.WriteLine($"Error fetching recommended data: {ex.Message}");
+            throw ex;
+        }
+    }
+
+
+    private async Task GetCommentList()
+    {
+        // Call your API to get the comments data and bind it to commentData.
+        try
+        {
+            // Construct the request URL with the 'thingId' query parameter.
+            var requestUrl = $"{Navigation.BaseUri}api/Index/comments?thingId={id}&order={order}";
+            // Send the GET request and deserialize the response into the commentData list.
+            var response = await Http.GetFromJsonAsync<List<CommentDto>>(requestUrl);
+
+            if (response != null && response.Any())
+            {
+                commentData = response;
+            }
+            else
+            {
+                // Handle the case where no data is returned (e.g., show an error message).
+                Console.WriteLine("No comments found for this item.");
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions, such as network errors or server-side errors.
+            Console.WriteLine($"Error fetching comments: {ex.Message}");
+            throw ex;
+        }
+    }
+
+    private void SelectTab(int index)
+    {
+        selectTabIndex = index;
+        tabUnderLeft = 6 + 54 * index;
+    }
+
+    private async Task AddToWish()
+    {
+        // Add to wish list logic.
+        try
+        {
+            // 获取用户 token（假设 token 已存储在 localStorage 中）
+            string token = AuthService.UserToken??"";
+            // 构造请求体
+            var request = new DetailRequest
+            {
+                ThingId = thing.Id,
+                Token=token
+            };
+
+            
+
+            // 发送 POST 请求
+            var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Index/things/wish", request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Thing added to wish list successfully.");
+                // 可以选择更新界面，重新加载愿望单状态或愿望数
+                thing.WishCount+=1;
+            }
+            else
+            {
+                Console.WriteLine("Failed to add thing to wish list.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            throw ex;
+        }
+    }
+
+    private async Task Collect()
+    {
+        try
+        {
+            // 获取用户 token（
+            string token = AuthService.UserToken??"";
+
+            // 构造请求体
+            var request = new DetailRequest
+            {
+                ThingId = thing.Id,Token=token
+            };
+
+            
+            // 发送 POST 请求
+            var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Index/things/collect", request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Thing collected successfully.");
+                // 可以选择更新界面，重新加载收藏状态或收藏数
+                thing.CollectCount+=1;
+            }
+            else
+            {
+                Console.WriteLine("Failed to collect thing.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            throw ex;
+        }
+    }
+
+
+    private void Share()
+    {
+        // Share logic.
+    }
+
+    private async Task SendComment()
+    {
+        // Send new comment logic.
+        long thingid = thing.Id;
+        string token = AuthService.UserToken??"";
+        var request = new DetailRequest{ThingId=thingid,Content=newComment,Token=token};
+        var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Index/comments", request);
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Comment added successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Failed to add comment.");
+        }
+        await GetCommentList();
+    }
+
+    private async Task LikeComment(long commentId)
+    {
+        // Like comment logic.
+        string token = AuthService.UserToken??"";
+        var request = new DetailRequest{CommentId=commentId,Token=token,Content=""};
+        // 发送 POST 请求来点赞评论
+        var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Index/comments/like", request);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Comment liked successfully.");
+            // 可以选择重新加载评论列表或更新点赞数
+            await GetCommentList();
+        }
+        else
+        {
+            Console.WriteLine("Failed to like comment.");
+        }
+
+
+    }
+
+    //to do 暂时没实现
+    private void  HandleOrder(Thing detail)
+    {
+        // Handle order logic.
+
+    }
+
+    private void HandleDetail(Thing item)
+    {
+        Navigation.NavigateTo($"/detail?id={item.Id}",true);
+    }
+
+    private async void SortCommentList(string sortType)
+    {
+        sortIndex = sortType == "recent" ? 0 : 1;
+        order = sortType;
+        await GetCommentList();
+    }
+}

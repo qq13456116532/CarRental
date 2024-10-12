@@ -1,0 +1,196 @@
+@page "/portal"
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@using Shared
+@using Data
+@using Radzen
+@using Radzen.Blazor
+
+<div class="content">
+    <div class="content-left">
+        <div class="left-search-item">
+            <h4>车辆分类</h4>
+            <TreeView Items="@classifications" TitleSelector="(e)=>e.Title" 
+                OnItemSelected="EventCallback.Factory.Create<Classification>(this, OnCategorySelected)" />
+        </div>
+        <div class="left-search-item">
+            <h4>热门标签</h4>
+            <div class="tag-view tag-flex-view">
+                @foreach (var tag in tags)
+                {
+                    <span class="tag @(selectedTagId == tag.Id ? "tag-select" : "")" @onclick="() => OnTagClicked(tag.Id)">
+                        @tag.Title
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="top-select-view flex-view">
+            <div class="order-view">
+                <span class="title"></span>
+                @foreach (var tab in tabData.Select((item, index) => new { item, index }))
+                {
+                    <span class="tab @(selectedTabIndex == tab.index ? "tab-select" : "")" @onclick="() => SelectTab(tab.index)">
+                        @tab.item
+                    </span>
+                }
+                <span class="tab-underline" style="left: @tabUnderlineLeft"></span>
+            </div>
+        </div>
+        @if (loading)
+        {
+            <div>加载中...</div>
+        }
+        else
+        {
+            <div class="pc-thing-list flex-view">
+                @foreach (var item in pageData)
+                {
+                    <div class="thing-item item-column-3">
+                        <div class="img-view">
+                            <img src="@item.Cover"  @onclick="() => HandleDetail(item)"/> 
+                        </div>
+                        <div class="info-view">
+                            <h3 class="thing-name">@item.Title.Substring(0, Math.Min(item.Title.Length, 12))</h3>
+                            <span>
+                                <span class="a-price-symbol"></span>
+                                <span class="a-price">@item.Price</span>&nbsp;
+                                <span class="a-price">@item.Location</span>
+                            </span>
+                        </div>
+                    </div>
+                }
+                @if (!pageData.Any() && !loading)
+                {
+                    <div class="no-data">暂无数据</div>
+                }
+            </div>
+        }
+        @* <div class="page-view"> *@
+            @* <h1>RadzenPager</h1> *@
+            @* <RadzenPager CurrentPage="@currentPage" PageSize="@pageSize" Total="@total" OnPageChanged="ChangePage" /> *@
+        @* </div> *@
+    </div>
+</div>
+
+
+@code {
+    private List<Classification> classifications = new();
+    private List<long> selectedKeys = new();
+    private List<Tag> tags = new();
+    private long selectedTagId = -1;
+    private bool loading = false;
+
+    private List<string> tabData = new() { "最新", "最热", "推荐" };
+    private int selectedTabIndex = 0;
+    private int tabUnderlineLeft = 12;
+
+    private List<Thing> thingData = new();
+    private List<Thing> pageData = new();
+    private int currentPage = 1;
+    private int total = 50;
+    private int pageSize = 12;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await InitSiderAsync();
+        await GetThingListAsync(new Dictionary<string, string>());
+    }
+
+    private async Task InitSiderAsync()
+    {
+        var classificationResponse = await HttpClient.GetFromJsonAsync<List<Classification>>($"{Navigation.BaseUri}api/Index/classifications");
+        if (classificationResponse != null)
+        {
+            classifications.AddRange(classificationResponse);
+        }
+        tags = await HttpClient.GetFromJsonAsync<List<Tag>>($"{Navigation.BaseUri}api/index/tags") ?? new List<Tag>();
+    }
+
+    private async Task GetThingListAsync(Dictionary<string, string> parameters)
+    {
+        loading = true;
+        try
+        {
+            var queryString = string.Join("&", parameters.Select(p => $"{Uri.EscapeDataString(p.Key)}={Uri.EscapeDataString(p.Value)}"));
+            var url = $"{Navigation.BaseUri}api/index/things?{queryString}";
+            var response = await HttpClient.GetFromJsonAsync<List<Thing>>(url);
+            if (response != null)
+            {
+                foreach (var item in response)
+                {
+                    item.Cover = $"images/{item.Cover}";
+                }
+                thingData = response;
+                total = thingData.Count;
+                loading = false;
+                ChangePage(1);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private async Task OnCategorySelected(Classification c)
+    {
+        selectedKeys[0] = c.Id;
+        if (selectedKeys.Any())
+        {
+            await GetThingListAsync(new Dictionary<string, string> { { "c", selectedKeys[0].ToString() } });
+        }
+        selectedTagId = -1;
+    }
+
+    private async void OnTagClicked(long tagId)
+    {
+        selectedKeys.Clear();
+        selectedTagId = tagId;
+        await GetThingListAsync(new Dictionary<string, string> { { "tag", selectedTagId.ToString() } });
+    }
+
+    private async Task SelectTab(int index)
+    {
+        loading = true;
+        selectedTabIndex = index;
+        tabUnderlineLeft = 12 + 50 * index;
+        string sort = index switch
+        {
+            0 => "recent",
+            1 => "hot",
+            2 => "recommend",
+            _ => "recent"
+        };
+        var data = new Dictionary<string, string> { { "sort", sort } };
+        if (selectedTagId != -1)
+        {
+            data["tag"] = selectedTagId.ToString();
+        }
+        else if (selectedKeys.Any())
+        {
+            data["c"] = selectedKeys[0].ToString();
+        }
+        await GetThingListAsync(data);
+        loading = false;
+    }
+
+    private void HandleDetail(Thing item)
+    {
+        Navigation.NavigateTo($"{Navigation.BaseUri}detail?id={item.Id}", true);
+    }
+
+    private void ChangePage(int page)
+    {
+        currentPage = page;
+        int start = (currentPage - 1) * pageSize;
+        pageData = thingData.Skip(start).Take(pageSize).ToList();
+    }
+
+
+}

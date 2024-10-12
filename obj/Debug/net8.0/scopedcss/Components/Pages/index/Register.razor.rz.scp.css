@@ -1,0 +1,120 @@
+
+div[b-xvdlf18dfz] {
+  display: block;
+}
+
+*[b-xvdlf18dfz], [b-xvdlf18dfz]:after, [b-xvdlf18dfz]:before, img[b-xvdlf18dfz] {
+  border-style: none;
+}
+
+*[b-xvdlf18dfz], [b-xvdlf18dfz]:after, [b-xvdlf18dfz]:before {
+  border-width: 0;
+  border-color: #dae1e7;
+}
+
+.container[b-xvdlf18dfz] {
+  max-width: 100%;
+  background-image: url('../images/admin-login-bg.jpg');
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.pc-style[b-xvdlf18dfz] {
+  position: relative;
+  width: 400px;
+  height: 464px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 6px #aaa;
+  box-shadow: 2px 2px 6px #aaa;
+  border-radius: 4px;
+}
+
+.tel-regist-page[b-xvdlf18dfz] {
+  overflow: hidden;
+
+  .regist-title {
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: 500;
+    height: 24px;
+    line-height: 24px;
+    margin: 40px 0;
+    padding: 0 28px;
+
+    .toWxLogin {
+      color: #3d5b96;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  .regist-padding[b-xvdlf18dfz] {
+    padding: 0 28px;
+    margin-bottom: 8px;
+  }
+}
+
+.common-input[b-xvdlf18dfz] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  .left-icon {
+    margin-right: 12px;
+    width: 24px;
+  }
+
+  .input-view[b-xvdlf18dfz] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    .input {
+      font-weight: 500;
+      font-size: 14px;
+      color: #1e1e1e;
+      height: 26px;
+      line-height: 26px;
+      padding: 0;
+      display: block;
+      width: 100%;
+      letter-spacing: 1.5px;
+      outline: none; 
+    }
+
+    .err-view[b-xvdlf18dfz] {
+      margin-top: 4px;
+      height: 16px;
+      line-height: 16px;
+      font-size: 12px;
+      color: #f62a2a;
+    }
+  }
+}
+
+.tel-login[b-xvdlf18dfz] {
+  padding: 0 28px;
+}
+
+.next-btn[b-xvdlf18dfz] {
+  background: #3d5b96;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+

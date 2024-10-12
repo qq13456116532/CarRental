@@ -1,0 +1,25 @@
+@namespace Shared
+@typeparam TItem
+
+<div>
+    @foreach (var item in Items)
+    {
+        <div >
+            <a @onclick="@(() => OnItemClicked(item))">@GetTitle(item)</a>
+
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public IEnumerable<TItem> Items { get; set; } = Enumerable.Empty<TItem>();
+    [Parameter] public required Func<TItem, string> TitleSelector { get; set; } 
+    [Parameter] public EventCallback<TItem> OnItemSelected { get; set; }
+
+    private void OnItemClicked(TItem item)
+    {
+        OnItemSelected.InvokeAsync(item);
+    }
+
+    private string GetTitle(TItem item) => TitleSelector(item);
+}

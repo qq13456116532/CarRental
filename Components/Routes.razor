@@ -1,0 +1,35 @@
+﻿@using Services.Auth
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        @if (redirectUrl != null)
+        {
+            <h1>Your are Not authorized!!!!</h1>
+            @* <a href="@redirectUrl">请去登录</a> *@
+            <button @onclick="() => Navigation.NavigateTo(redirectUrl,true)">请去登录</button>
+
+        }
+        else
+        {
+            <RouteView RouteData="@routeData" DefaultLayout="@(routeData.PageType.FullName?
+                .Contains("admin", StringComparison.OrdinalIgnoreCase) == true ? typeof(Layout.MainLayout) : typeof(Layout.IndexLayout))" />
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        }
+    </Found>
+    <NotFound>
+        <p>Sorry, there's nothing at this address.</p>
+    </NotFound>
+</Router>
+
+@code {
+    private string? redirectUrl;
+
+    protected override void OnParametersSet()
+    {
+        var fullUri = Navigation.Uri;//全部URL
+        string baseUri = Navigation.BaseUri; //基本URL
+        string relativePath = fullUri.Replace(baseUri, "");//相对路径
+        redirectUrl = AuthService.GetRedirectUrl(relativePath);
+    }
+}

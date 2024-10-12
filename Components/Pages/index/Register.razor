@@ -1,0 +1,99 @@
+@page "/register"
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+@inject HttpClient Http
+@layout MinimalLayout
+
+
+
+    <div class="container">
+        <div class="tel-regist-page pc-style">
+            <div class="regist-title">
+                <span>注册新账号</span>
+                <span @onclick="NavigateToLogin" class="toWxLogin">我要登录</span>
+            </div>
+            <EditForm Model="@registerForm" OnValidSubmit="HandleRegister">
+            <DataAnnotationsValidator />
+            <div class="regist-padding">
+                <div class="common-input">
+                    <img src="images/mail-icon.svg" class="left-icon" alt="Mail Icon" />
+                    <div class="input-view">
+                        <InputText placeholder="请输入邮箱" @bind-Value="registerForm.Username" class="input" />
+                        <ValidationMessage For="@(() => registerForm.Username)" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="regist-padding">
+                <div class="common-input">
+                    <img src="images/pwd-icon.svg" class="left-icon" alt="Password Icon" />
+                    <div class="input-view">
+                        <InputText placeholder="请输入密码" @bind-Value="registerForm.Password" type="password" class="input" />
+                        <ValidationMessage For="@(() => registerForm.Password)" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="regist-padding">
+                <div class="common-input">
+                    <img src="images/pwd-icon.svg" class="left-icon" alt="Password Icon" />
+                    <div class="input-view">
+                        <InputText placeholder="请再次输入密码" @bind-Value="registerForm.RePassword" type="password" class="input" />
+                        <ValidationMessage For="@(() => registerForm.RePassword)" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="tel-login">
+                <div class="next-btn-view">
+                    <button class="next-btn" type="submit">注册</button>
+                </div>
+            </div>
+            </EditForm>
+                @if (showSuccessMessage)
+                {
+                    <div class="success-message">
+                        注册成功！
+                    </div>
+                }
+        </div>
+    </div>
+
+
+
+@code {
+    private RegisterForm registerForm = new RegisterForm();
+    private bool showSuccessMessage = false;
+    private void NavigateToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+
+    private async Task HandleRegister()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Auth/register", registerForm);
+            if (response.IsSuccessStatusCode)
+            {
+                // 显示注册成功消息
+                showSuccessMessage = true;
+                StateHasChanged();
+
+                // 等待 3 秒钟
+                await Task.Delay(3000);
+
+                Navigation.NavigateTo("/login");
+            }
+        }
+        catch (Exception ex)
+        {
+            // 显示注册失败消息
+            Console.WriteLine(ex.Message);
+            throw ex;
+        }
+    }
+
+
+}
+

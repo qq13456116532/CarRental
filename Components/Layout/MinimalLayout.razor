@@ -1,0 +1,18 @@
+@namespace CarRental.Components.Layout
+@inherits LayoutComponentBase
+
+
+<div class="minimal-container">
+    @Body
+</div>
+
+<style>
+    .minimal-container {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    min-height: 92vh; /* 占据整个视口高度 */
+    @* box-sizing: border-box; /* 确保 padding 和 margin 不会影响总高度 */ *@
+}
+
+</style>

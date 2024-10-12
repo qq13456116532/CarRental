@@ -1,0 +1,263 @@
+@page "/search"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@using Microsoft.AspNetCore.WebUtilities;
+
+@using Data
+<div class="content-margin">
+    <h1>@Keyword</h1>
+    <div class="search-tab-nav clearfix">
+        <div class="tab-text">
+            <span>与</span>
+            <span class="strong">@Keyword</span>
+            <span>相关的内容</span>
+        </div>
+    </div>
+    <div class="content-list">
+        <div class="thing-list">
+            @if (Loading)
+            {
+                <div class="loading-spinner" style="min-height: 200px;">Loading...</div>
+            }
+            else
+            {
+                <div class="things flex-view">
+                    @foreach (var item in PageData)
+                    {
+                        <div class="thing-item item-column-4" @onclick="() => HandleDetail(item)">
+                            <div class="img-view">
+                                <img src="@item.Cover" />
+                            </div>
+                            <div class="info-view">
+                                <h3 class="thing-name">@item.Title.Substring(0, Math.Min(12, item.Title.Length))</h3>
+                                <span>
+                                    <span class="a-price">@item.Price</span>&nbsp;
+                                    <span class="a-price">@item.Location</span>
+                                </span>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                @* <div class="page-view">
+                    <Pagination CurrentPage="@Page" TotalItems="@Total" PageSize="@PageSize" OnPageChange="ChangePage" />
+                </div> *@
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private string? Keyword { get; set; } = "";
+    private bool Loading { get; set; } = false;
+    private List<Thing> ThingData { get; set; } = new();
+    private List<Thing> PageData { get; set; } = new();
+    private int Page { get; set; } = 1;
+    private int Total { get; set; } = 0;
+    private int PageSize { get; set; } = 20;
+
+    protected async override Task OnParametersSetAsync()
+    {
+        // 订阅 URL 变化事件
+        Navigation.LocationChanged += OnLocationChanged;
+        await toSearch();
+    }
+    private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        // 当 URL 发生变化时，执行新的搜索
+        await toSearch();
+        StateHasChanged();
+    }
+    private async Task toSearch()
+    {
+        Loading = true;
+        // 从 URL 中获取查询参数
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("keyword", out var keyword))
+        {
+            Keyword = keyword;
+            await GetThingList(Keyword);
+        }
+        Loading= false;
+    }
+
+    private async Task GetThingList(string? keyword)
+    {
+        Loading = true;
+
+        // 执行搜索逻辑
+        var parameters = new Dictionary<string, string>();
+        
+        // 检查关键字是否为 null
+        if (!string.IsNullOrEmpty(keyword))
+        {
+            parameters.Add("keyword", keyword);
+        }
+
+        // 构建查询字符串
+        var queryString = string.Join("&", parameters.Select(kvp => $"{kvp.Key}={Uri.EscapeDataString(kvp.Value)}"));
+        
+        // 向 API 发出请求（替换 API 端点为你的实际路径）
+        var response = await Http.GetFromJsonAsync<List<Thing>>($"{Navigation.BaseUri}api/Index/things?{queryString}");
+
+
+        if (response != null)
+        {
+            foreach (var item in response)
+            {
+                if (!string.IsNullOrEmpty(item.Cover))
+                {
+                    item.Cover = $"images/{item.Cover}";
+                }
+            }
+
+            ThingData = response;
+            Total = ThingData.Count;
+            ChangePage(1);
+        }
+
+        Loading = false;
+    }
+
+    private void ChangePage(int page)
+    {
+        Page = page;
+        var start = (Page - 1) * PageSize;
+        PageData = ThingData.Skip(start).Take(PageSize).ToList();
+        Console.WriteLine($"Page {Page}");
+    }
+
+    private void HandleDetail(Thing item)
+    {
+        // Logic to handle navigation to detail page
+        var detailUrl = $"detail/id={item.Id}";
+        Navigation.NavigateTo(detailUrl, true);
+    }
+}
+
+
+<style scoped lang="less">
+.content-margin {
+  margin: 156px 0 100px;
+}
+
+.page-view {
+  width: 100%;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.search-name-box {
+  background: #f5f9fb;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  color: #152844;
+  text-align: center;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 1;
+  width: calc(100% - 8px);
+}
+
+.search-tab-nav {
+  position: relative;
+  padding: 24px 0 16px;
+  text-align: center;
+
+  .tab-text {
+    float: left;
+    color: #5f77a6;
+    font-size: 14px;
+  }
+
+  .strong {
+    color: #152844;
+    font-weight: 600;
+    margin: 0 4px;
+  }
+}
+
+.things {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-view {
+  display: flex;
+}
+
+.thing-item {
+  min-width: 255px;
+  max-width: 255px;
+  position: relative;
+  flex: 1;
+  margin-right: 20px;
+  height: fit-content;
+  overflow: hidden;
+  margin-top: 26px;
+  margin-bottom: 36px;
+  cursor: pointer;
+
+  .img-view {
+    height: 200px;
+    width: 255px;
+
+    img {
+      height: 200px;
+      width: 220px;
+      margin: 0 auto;
+      background-size: cover;
+      object-fit: cover;
+    }
+  }
+
+  .info-view {
+    overflow: hidden;
+    padding: 0 16px;
+
+    .thing-name {
+      line-height: 32px;
+      margin-top: 12px;
+      color: #0F1111 !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      text-transform: none !important;
+      text-decoration: none !important;
+    }
+
+    .price {
+      color: #ff7b31;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .translators {
+      color: #6f6f6f;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.a-price-symbol {
+  top: -0.5em;
+  font-size: 12px;
+}
+
+.a-price {
+  color: #0F1111;
+  font-size: 14px;
+}
+
+</style>

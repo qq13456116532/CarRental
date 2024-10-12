@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CarRental.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\add.svg",
+      "PackagePath": "staticwebassets\\images\\add.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\admin-login-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\admin-login-bg.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.png",
+      "PackagePath": "staticwebassets\\images\\avatar.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\electric_car.jpg",
+      "PackagePath": "staticwebassets\\images\\electric_car.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\k-logo.png",
+      "PackagePath": "staticwebassets\\images\\k-logo.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mail-icon.svg",
+      "PackagePath": "staticwebassets\\images\\mail-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\message-icon.svg",
+      "PackagePath": "staticwebassets\\images\\message-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mountain_bike.jpg",
+      "PackagePath": "staticwebassets\\images\\mountain_bike.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\pwd-icon.svg",
+      "PackagePath": "staticwebassets\\images\\pwd-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\recommend-hover.svg",
+      "PackagePath": "staticwebassets\\images\\recommend-hover.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\search-icon.svg",
+      "PackagePath": "staticwebassets\\images\\search-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\share-icon.svg",
+      "PackagePath": "staticwebassets\\images\\share-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\smartphone.jpg",
+      "PackagePath": "staticwebassets\\images\\smartphone.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\want-read-hover.svg",
+      "PackagePath": "staticwebassets\\images\\want-read-hover.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wb-share.svg",
+      "PackagePath": "staticwebassets\\images\\wb-share.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CarRental.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CarRental.props",
+      "PackagePath": "build\\CarRental.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CarRental.props",
+      "PackagePath": "buildMultiTargeting\\CarRental.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CarRental.props",
+      "PackagePath": "buildTransitive\\CarRental.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
