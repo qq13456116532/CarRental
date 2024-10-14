@@ -1,3 +1,5 @@
+@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
+
 /* _content/CarRental/Components/Layout/Footer.razor.rz.scp.css */
 .flex-view[b-jwwntbm0gw] {
     display: -webkit-box;
@@ -462,6 +464,156 @@ main[b-6vrjrk681f] {
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }
+}
+/* _content/CarRental/Components/Pages/index/Confirm.razor.rz.scp.css */
+.order-form[b-7hjh3ekh3h] {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-details[b-7hjh3ekh3h] {
+  margin-bottom: 20px;
+}
+
+.list-container[b-7hjh3ekh3h] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list-th[b-7hjh3ekh3h] {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.list-th span[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+
+.list[b-7hjh3ekh3h] {
+  padding: 10px;
+}
+
+.items[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.book[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.book img[b-7hjh3ekh3h] {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pay[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+
+.delete[b-7hjh3ekh3h] {
+  width: 20px;
+  cursor: pointer;
+}
+
+.form-group[b-7hjh3ekh3h] {
+  margin-bottom: 20px;
+}
+
+.remark-address-group[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.remark-group[b-7hjh3ekh3h] {
+  margin-top: 10px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.remark-input[b-7hjh3ekh3h] {
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+}
+
+.address-group[b-7hjh3ekh3h] {
+  margin-top: 10px;
+  flex: 1;
+}
+
+.address-details[b-7hjh3ekh3h], .no-address[b-7hjh3ekh3h] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.compact[b-7hjh3ekh3h] {
+  max-width: 400px;
+}
+
+.checkout-section[b-7hjh3ekh3h] {
+  margin-top: 20px;
+}
+
+.price-view[b-7hjh3ekh3h] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.price-item[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-price[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.action-buttons[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back[b-7hjh3ekh3h], .btn-submit[b-7hjh3ekh3h] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-back[b-7hjh3ekh3h] {
+  background-color: #f0f0f0;
+}
+
+.btn-submit[b-7hjh3ekh3h] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-submit:hover[b-7hjh3ekh3h] {
+  background-color: #0056b3;
 }
 /* _content/CarRental/Components/Pages/index/Detail.razor.rz.scp.css */
 
@@ -1248,6 +1400,137 @@ textarea[b-ac60ju7ahk] {
     font-size: 14px;
     cursor: pointer;
 }
+/* _content/CarRental/Components/Pages/index/Pay.razor.rz.scp.css */
+.flex-view[b-azim4cdjqa] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .pay-content[b-azim4cdjqa] {
+    position: relative;
+    margin: 120px auto 0;
+    width: 500px;
+    background: #fff;
+    overflow: hidden;
+  
+    .title {
+      color: #152844;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 22px;
+      height: 22px;
+      text-align: center;
+      margin-bottom: 11px;
+    }
+  
+    .time-margin[b-azim4cdjqa] {
+      margin: 11px 0 24px;
+    }
+  
+    .text[b-azim4cdjqa] {
+      height: 22px;
+      line-height: 22px;
+      font-size: 14px;
+      text-align: center;
+      color: #152844;
+    }
+  
+    .time[b-azim4cdjqa] {
+      color: #f62a2a;
+    }
+  
+    .text[b-azim4cdjqa] {
+      height: 22px;
+      line-height: 22px;
+      font-size: 14px;
+      text-align: center;
+      color: #152844;
+    }
+  
+    .price[b-azim4cdjqa] {
+      color: #ff8a00;
+      font-weight: 500;
+      font-size: 16px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+  
+      .num {
+        font-size: 28px;
+      }
+    }
+  
+    .pay-choose-view[b-azim4cdjqa] {
+      margin-top: 24px;
+  
+      .choose-box {
+        width: 140px;
+        height: 126px;
+        border: 1px solid #cedce4;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+      }
+  
+      .pay-choose-box[b-azim4cdjqa] {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto;
+  
+        img {
+          height: 40px;
+          margin: 24px auto 16px;
+          display: block;
+        }
+      }
+  
+      .tips[b-azim4cdjqa] {
+        color: #6f6f6f;
+        font-size: 14px;
+        line-height: 22px;
+        height: 22px;
+        text-align: center;
+        margin: 16px 0 24px;
+      }
+  
+      .choose-box-active[b-azim4cdjqa] {
+        border: 1px solid #4684e2;
+      }
+  
+      .tips[b-azim4cdjqa] {
+        color: #6f6f6f;
+        font-size: 14px;
+        line-height: 22px;
+        height: 22px;
+        text-align: center;
+        margin: 16px 0 24px;
+      }
+  
+      .pay-btn[b-azim4cdjqa] {
+        cursor: pointer;
+        background: #c3c9d5;
+        border-radius: 32px;
+        width: 104px;
+        height: 32px;
+        line-height: 32px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+      }
+  
+      .pay-btn-active[b-azim4cdjqa] {
+        background: #4684e2;
+      }
+    }
+  }
+  
 /* _content/CarRental/Components/Pages/index/Portal.razor.rz.scp.css */
 .content[b-pb0pfr6hiv] {
     display: flex;
@@ -1747,3 +2030,127 @@ div[b-xvdlf18dfz] {
 }
 
 /* _content/CarRental/Components/Pages/index/Search.razor.rz.scp.css */
+
+.content-margin[b-4rhzd1ud88] {
+  margin: 156px 0 100px;
+}
+
+.page-view[b-4rhzd1ud88] {
+  width: 100%;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.search-name-box[b-4rhzd1ud88] {
+  background: #f5f9fb;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  color: #152844;
+  text-align: center;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 1;
+  width: calc(100% - 8px);
+}
+
+.search-tab-nav[b-4rhzd1ud88] {
+  position: relative;
+  padding: 24px 0 16px;
+  text-align: center;
+
+  .tab-text {
+    float: left;
+    color: #5f77a6;
+    font-size: 14px;
+  }
+
+  .strong[b-4rhzd1ud88] {
+    color: #152844;
+    font-weight: 600;
+    margin: 0 4px;
+  }
+}
+
+.things[b-4rhzd1ud88] {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-view[b-4rhzd1ud88] {
+  display: flex;
+}
+
+.thing-item[b-4rhzd1ud88] {
+  min-width: 255px;
+  max-width: 255px;
+  position: relative;
+  flex: 1;
+  margin-right: 20px;
+  height: fit-content;
+  overflow: hidden;
+  margin-top: 26px;
+  margin-bottom: 36px;
+  cursor: pointer;
+
+  .img-view {
+    height: 200px;
+    width: 255px;
+
+    img {
+      height: 200px;
+      width: 220px;
+      margin: 0 auto;
+      background-size: cover;
+      object-fit: cover;
+    }
+  }
+
+  .info-view[b-4rhzd1ud88] {
+    overflow: hidden;
+    padding: 0 16px;
+
+    .thing-name {
+      line-height: 32px;
+      margin-top: 12px;
+      color: #0F1111 !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      text-transform: none !important;
+      text-decoration: none !important;
+    }
+
+    .price[b-4rhzd1ud88] {
+      color: #ff7b31;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .translators[b-4rhzd1ud88] {
+      color: #6f6f6f;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.a-price-symbol[b-4rhzd1ud88] {
+  top: -0.5em;
+  font-size: 12px;
+}
+
+.a-price[b-4rhzd1ud88] {
+  color: #0F1111;
+  font-size: 14px;
+}
+

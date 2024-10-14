@@ -11,6 +11,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 builder.Services.AddSqlite<Data.AppDbContext>("Data Source=carDB.db");
 builder.Services.AddSingleton<AuthService>();
+builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();
 

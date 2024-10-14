@@ -1,0 +1,149 @@
+.order-form[b-7hjh3ekh3h] {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-details[b-7hjh3ekh3h] {
+  margin-bottom: 20px;
+}
+
+.list-container[b-7hjh3ekh3h] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list-th[b-7hjh3ekh3h] {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.list-th span[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+
+.list[b-7hjh3ekh3h] {
+  padding: 10px;
+}
+
+.items[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.book[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.book img[b-7hjh3ekh3h] {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pay[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+
+.delete[b-7hjh3ekh3h] {
+  width: 20px;
+  cursor: pointer;
+}
+
+.form-group[b-7hjh3ekh3h] {
+  margin-bottom: 20px;
+}
+
+.remark-address-group[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.remark-group[b-7hjh3ekh3h] {
+  margin-top: 10px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.remark-input[b-7hjh3ekh3h] {
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+}
+
+.address-group[b-7hjh3ekh3h] {
+  margin-top: 10px;
+  flex: 1;
+}
+
+.address-details[b-7hjh3ekh3h], .no-address[b-7hjh3ekh3h] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.compact[b-7hjh3ekh3h] {
+  max-width: 400px;
+}
+
+.checkout-section[b-7hjh3ekh3h] {
+  margin-top: 20px;
+}
+
+.price-view[b-7hjh3ekh3h] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.price-item[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-price[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.action-buttons[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back[b-7hjh3ekh3h], .btn-submit[b-7hjh3ekh3h] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-back[b-7hjh3ekh3h] {
+  background-color: #f0f0f0;
+}
+
+.btn-submit[b-7hjh3ekh3h] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-submit:hover[b-7hjh3ekh3h] {
+  background-color: #0056b3;
+}

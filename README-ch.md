@@ -23,6 +23,9 @@
 ![Image description](README/2.png)
 ![Image description](README/3.png)
 ![Image description](README/4.png)
+![Image description](README/5.png)
+![Image description](README/6.png)
+
 
 ### 部署运行
 

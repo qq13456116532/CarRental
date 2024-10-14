@@ -74,3 +74,13 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Radzen.Blazor.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Detail.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Search.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\CarRental.sourcelink.json
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\BlazorBootstrap.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.JSInterop.dll
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Confirm.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Pay.razor.rz.scp.css

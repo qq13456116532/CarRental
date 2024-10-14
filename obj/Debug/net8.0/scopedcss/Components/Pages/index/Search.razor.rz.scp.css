@@ -1,0 +1,124 @@
+
+.content-margin[b-4rhzd1ud88] {
+  margin: 156px 0 100px;
+}
+
+.page-view[b-4rhzd1ud88] {
+  width: 100%;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.search-name-box[b-4rhzd1ud88] {
+  background: #f5f9fb;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
+  color: #152844;
+  text-align: center;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 1;
+  width: calc(100% - 8px);
+}
+
+.search-tab-nav[b-4rhzd1ud88] {
+  position: relative;
+  padding: 24px 0 16px;
+  text-align: center;
+
+  .tab-text {
+    float: left;
+    color: #5f77a6;
+    font-size: 14px;
+  }
+
+  .strong[b-4rhzd1ud88] {
+    color: #152844;
+    font-weight: 600;
+    margin: 0 4px;
+  }
+}
+
+.things[b-4rhzd1ud88] {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-view[b-4rhzd1ud88] {
+  display: flex;
+}
+
+.thing-item[b-4rhzd1ud88] {
+  min-width: 255px;
+  max-width: 255px;
+  position: relative;
+  flex: 1;
+  margin-right: 20px;
+  height: fit-content;
+  overflow: hidden;
+  margin-top: 26px;
+  margin-bottom: 36px;
+  cursor: pointer;
+
+  .img-view {
+    height: 200px;
+    width: 255px;
+
+    img {
+      height: 200px;
+      width: 220px;
+      margin: 0 auto;
+      background-size: cover;
+      object-fit: cover;
+    }
+  }
+
+  .info-view[b-4rhzd1ud88] {
+    overflow: hidden;
+    padding: 0 16px;
+
+    .thing-name {
+      line-height: 32px;
+      margin-top: 12px;
+      color: #0F1111 !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      text-transform: none !important;
+      text-decoration: none !important;
+    }
+
+    .price[b-4rhzd1ud88] {
+      color: #ff7b31;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .translators[b-4rhzd1ud88] {
+      color: #6f6f6f;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.a-price-symbol[b-4rhzd1ud88] {
+  top: -0.5em;
+  font-size: 12px;
+}
+
+.a-price[b-4rhzd1ud88] {
+  color: #0F1111;
+  font-size: 14px;
+}
+

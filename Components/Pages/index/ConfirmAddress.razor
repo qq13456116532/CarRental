@@ -1,0 +1,36 @@
+@using Services
+
+<EditForm Model="modal.Form" OnValidSubmit="HandleOk">
+    <DataAnnotationsValidator />
+    <div>
+        <label>姓名</label>
+        <InputText @bind-Value="modal.Form.Name" />
+    </div>
+    <div>
+        <label>电话号码</label>
+        <InputText @bind-Value="modal.Form.Mobile" />
+    </div>
+    <div>
+        <label>送货地址</label>
+        <InputText @bind-Value="modal.Form.Desc" />
+    </div>
+    <div>
+        <label>默认地址</label>
+        <InputCheckbox @bind-Value="modal.Form.Default" />
+    </div>
+    <div>
+        <Button Color="ButtonColor.Secondary" @onclick="OnClickClose">Close</Button>
+        <Button Color="ButtonColor.Primary">Understood</Button>
+    </div>
+</EditForm>
+
+@code{
+    [Parameter] public EventCallback<MouseEventArgs> OnClickClose { get; set; }
+    [Parameter] public ModalData modal { get; set; } = new ModalData();
+    [Parameter] public string buttonName{set;get;}="确认";
+    private void HandleOk()
+    {
+        
+    }
+ 
+}

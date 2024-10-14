@@ -1,0 +1,149 @@
+.order-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-details {
+  margin-bottom: 20px;
+}
+
+.list-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list-th {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.list-th span {
+  flex: 1;
+  text-align: center;
+}
+
+.list {
+  padding: 10px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.book img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pay {
+  flex: 1;
+  text-align: center;
+}
+
+.delete {
+  width: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.remark-address-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.remark-group {
+  margin-top: 10px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.remark-input {
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+}
+
+.address-group {
+  margin-top: 10px;
+  flex: 1;
+}
+
+.address-details, .no-address {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.compact {
+  max-width: 400px;
+}
+
+.checkout-section {
+  margin-top: 20px;
+}
+
+.price-view {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back, .btn-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-back {
+  background-color: #f0f0f0;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}

@@ -442,7 +442,7 @@ public static class SeedData
         Name = "John Doe",
         Mobile = "1234567890",
         Description = "Primary residence",
-        Def = "Yes",
+        Def = "安徽工业大学",
         CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
         UserId = 1
     },

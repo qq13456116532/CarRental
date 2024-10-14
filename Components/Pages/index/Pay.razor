@@ -1,0 +1,83 @@
+@page "/pay"
+
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager Navigation
+
+<Header />
+<div class="pay-content">
+    <div class="title">订单提交成功</div>
+    <div class="text time-margin">
+        <span>请在 </span>
+        <span class="time">@DdlTime</span>
+        <span> 之前付款，超时订单将自动取消</span>
+    </div>
+    <div class="text">支付金额</div>
+    <div class="price">
+        <span class="num">@Amount</span>
+        <span>元</span>
+    </div>
+    <div class="pay-choose-view">
+        <div class="pay-choose-box flex-view">
+            <div class="choose-box choose-box-active">
+                <img src="@WxPayIcon" alt="WeChat Pay Icon">
+                <span>微信支付</span>
+            </div>
+            <div class="choose-box">
+                <img src="@AliPayIcon" alt="AliPay Icon">
+                <span>支付宝</span>
+            </div>
+        </div>
+        <div class="tips">请选择任意一种支付方式</div>
+        <button class="pay-btn pay-btn-active" @onclick="HandlePay">确认支付</button>
+    </div>
+    <div class="pay-qr-view" style="display: none;">
+        <div class="loading-tip">正在生成安全支付二维码</div>
+        <div class="qr-box" style="display: none;">
+            <div id="qrCode" class="qr"></div>
+            <div class="tips">请打开微信扫一扫进行支付</div>
+            <button class="pay-finish-btn">支付完成</button>
+            <button class="back-pay-btn">选择其他支付方式</button>
+        </div>
+    </div>
+</div>
+<Modal @ref="modal" Title="Modal title">
+    <BodyTemplate>
+        支付成功
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Primary" @onclick="OnHideModalClick">好的</Button>
+    </FooterTemplate>
+</Modal>
+@code {
+    [Parameter]
+    public string WxPayIcon { get; set; } = "images/wx-pay-icon.svg";
+    [Parameter]
+    public string AliPayIcon { get; set; } = "images/ali-pay-icon.svg";
+    
+    private string DdlTime { get; set; }
+    private string Amount { get; set; }
+
+    private Modal modal = default!;
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        Amount = queryParams["amount"]?? "0";
+        DdlTime = FormatDate(DateTime.Now.AddHours(1));
+    }
+    private async Task OnHideModalClick()
+        {
+            await modal.HideAsync();
+        }
+    private async void HandlePay()
+    {
+        // Display a warning message for the lack of payment functionality
+        Console.WriteLine("to do 支付功能");
+        await modal.ShowAsync();
+    }
+
+    private string FormatDate(DateTime dateTime)
+    {
+        return dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+    }
+}

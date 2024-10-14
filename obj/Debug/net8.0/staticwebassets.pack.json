@@ -9,14 +9,6 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
@@ -29,12 +21,20 @@
       "PackagePath": "staticwebassets\\images\\admin-login-bg.jpg"
     },
     {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\ali-pay-icon.svg",
+      "PackagePath": "staticwebassets\\images\\ali-pay-icon.svg"
+    },
+    {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.jpg",
       "PackagePath": "staticwebassets\\images\\avatar.jpg"
     },
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.png",
       "PackagePath": "staticwebassets\\images\\avatar.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\delete-icon.svg",
+      "PackagePath": "staticwebassets\\images\\delete-icon.svg"
     },
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\electric_car.jpg",
@@ -83,6 +83,10 @@
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wb-share.svg",
       "PackagePath": "staticwebassets\\images\\wb-share.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wx-pay-icon.svg",
+      "PackagePath": "staticwebassets\\images\\wx-pay-icon.svg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CarRental.Microsoft.AspNetCore.StaticWebAssets.props",

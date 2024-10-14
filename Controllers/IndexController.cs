@@ -276,6 +276,7 @@ public class IndexController : ControllerBase
     }
 
 
+
     [HttpGet("recommendations")]
     public async Task<ActionResult<List<Thing>>> GetRecommendedThings()
     {
@@ -292,6 +293,23 @@ public class IndexController : ControllerBase
 
         return Ok(recommendedThings);
     }
+
+    [HttpGet("addresses")]
+    public async Task<ActionResult<List<Address>>> GetUserAddresses([FromQuery] string token)
+    {
+        // 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
+
+        // 查找用户的地址列表
+        var addresses = await _context.Addresses.Where(a => a.UserId == user.Id).ToListAsync();
+
+        return Ok(addresses);
+    }
+
 
 
 
