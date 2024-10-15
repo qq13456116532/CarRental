@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb25maXJtQWRkcmVzcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/OrderView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxPcmRlclZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/VSproject/CarRental/CarRental/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope = b-6vrjrk681f
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-c9zwnx3nu7
 
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/CollectThing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb2xsZWN0VGhpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ukrlbohemy
+
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/Confirm.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb25maXJtLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-7hjh3ekh3h
@@ -105,3 +113,11 @@ build_metadata.AdditionalFiles.CssScope = b-xvdlf18dfz
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/Search.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxTZWFyY2gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-4rhzd1ud88
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/UserCenter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxVc2VyQ2VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-v1zsapz5t3
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/WishesThing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxXaXNoZXNUaGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8gepgyd694

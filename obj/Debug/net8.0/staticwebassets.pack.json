@@ -69,6 +69,22 @@
       "PackagePath": "staticwebassets\\images\\search-icon.svg"
     },
     {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-icon.svg",
+      "PackagePath": "staticwebassets\\images\\setting-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-msg-icon.svg",
+      "PackagePath": "staticwebassets\\images\\setting-msg-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-push-icon.svg",
+      "PackagePath": "staticwebassets\\images\\setting-push-icon.svg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-safe-icon.svg",
+      "PackagePath": "staticwebassets\\images\\setting-safe-icon.svg"
+    },
+    {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\share-icon.svg",
       "PackagePath": "staticwebassets\\images\\share-icon.svg"
     },

@@ -22,7 +22,8 @@
   
   .thing-infos-view[b-c4umwzs5wk] {
     display: flex;
-    margin: 89px 0 40px;
+    margin: 0 0 40px;
+
     overflow: hidden;
   
     .thing-infos {

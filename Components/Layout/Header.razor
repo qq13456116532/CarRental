@@ -17,9 +17,9 @@
                 <img src="images/avatar.jpg" class="self-img" @onclick="ToggleDropdown" />
                 @if (showDropdown)
                 {
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu" style="display: block; visibility: visible; border: 1px solid ;">
                         <a href="javascript:void(0)" @onclick='() => GoToUserCenter("orderView")'>我的预订</a>
-                        <a href="javascript:void(0)" @onclick='() => GoToUserCenter("userInfoEditView")'>个人设置</a>
+                        <a href="javascript:void(0)" @onclick='() => GoToUserCenter("userCenter")'>个人设置</a>
                         <a href="javascript:void(0)" @onclick="Logout">退出</a>
                     </div>
                 }

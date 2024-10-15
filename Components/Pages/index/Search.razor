@@ -130,7 +130,7 @@
     private void HandleDetail(Thing item)
     {
         // Logic to handle navigation to detail page
-        var detailUrl = $"detail/id={item.Id}";
+        var detailUrl = $"detail?id={item.Id}";
         Navigation.NavigateTo(detailUrl, true);
     }
 }

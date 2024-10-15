@@ -121,6 +121,59 @@ public class IndexController : ControllerBase
 
         return Ok("Thing collected successfully.");
     }
+    [HttpGet("things/collect")]
+    public async Task<ActionResult> GetCollectThingList([FromQuery] string token)
+    {
+        // 验证用户通过传入的 token
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
+
+        
+        // 获取用户收藏的东西，一次查询解决
+        List<CollectedThingDto> collectThings = await _context.ThingCollects
+            .Where(tc => tc.UserId == user.Id)
+            .Join(_context.Things,
+                tc => tc.ThingId,  // 连接条件
+                t => t.Id,
+                (tc, t) => new CollectedThingDto
+                {
+                    id = tc.ThingId,
+                    ThingName = t.Title ?? "default",
+                    Cover = t.Cover ?? "default-cover.jpg",
+                    Title = t.Title ?? "default-title"
+                })
+            .ToListAsync();
+
+
+        return Ok(collectThings);
+    }
+    [HttpDelete("things/collect/{id}")]
+    public async Task<ActionResult> DeleteCollect(int id, [FromQuery] string token)
+    {
+        // 验证用户通过传入的 token
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
+
+        // 查找用户的收藏记录
+        var thingCollect = await _context.ThingCollects.FirstOrDefaultAsync(tc => tc.UserId == user.Id && tc.ThingId == id);
+        if (thingCollect == null)
+        {
+            return NotFound("Item not found in your collection");
+        }
+
+        // 删除收藏
+        _context.ThingCollects.Remove(thingCollect);
+        await _context.SaveChangesAsync();
+
+        return Ok("Item removed from collection");
+    }
+
 
     [HttpPost("things/wish")]
     public async Task<ActionResult> AddToWishList([FromBody] DetailRequest request)
@@ -164,8 +217,58 @@ public class IndexController : ControllerBase
 
         return Ok("Thing added to wish list successfully.");
     }
+    [HttpGet("things/wish")]
+    public async Task<ActionResult> GetWishThingList([FromQuery] string token)
+    {
+        // 验证用户通过传入的 token
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
 
 
+        List<WishedThingDto> wishThings = await _context.ThingWishes
+            .Where(tc => tc.UserId == user.Id)
+            .Join(_context.Things,
+                tc => tc.ThingId,  // 连接条件
+                t => t.Id,
+                (tc, t) => new WishedThingDto
+                {
+                    id = tc.ThingId,
+                    ThingName = t.Title ?? "default",
+                    Cover = t.Cover ?? "default-cover.jpg",
+                    Title = t.Title ?? "default-title"
+                })
+            .ToListAsync();
+
+
+        return Ok(wishThings);
+    }
+
+    [HttpDelete("things/wish/{id}")]
+        public async Task<ActionResult> DeleteWish(int id, [FromQuery] string token)
+        {
+            // 验证用户通过传入的 token
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+            if (user == null)
+            {
+                return Unauthorized("Invalid token");
+            }
+
+            // 查找用户的收藏记录
+            var thingCollect = await _context.ThingWishes.FirstOrDefaultAsync(tc => tc.UserId == user.Id && tc.ThingId == id);
+            if (thingCollect == null)
+            {
+                return NotFound("Item not found in your collection");
+            }
+
+            // 删除收藏
+            _context.ThingWishes.Remove(thingCollect);
+            await _context.SaveChangesAsync();
+
+            return Ok("Item removed from collection");
+        }
     [HttpGet("thing")]
     public async Task<ActionResult<Thing>> GetThingById([FromQuery] long id)
     {
@@ -310,7 +413,111 @@ public class IndexController : ControllerBase
         return Ok(addresses);
     }
 
+    [HttpGet("orders/{status}")]
+    public async Task<ActionResult<List<OrderDto>>> GetOrders([FromQuery] string token,string status){
+        // 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
+        var orders = await _context.Orders
+        .Where(a => a.UserId == user.Id && a.Status==status)
+        .Join(
+            _context.Things, // 连接的表
+            order => order.ThingId, // 连接的键
+            thing => thing.Id, // 另一个表的键
+            (order, thing) => new OrderDto
+            {
+                Id = order.Id??0,
+                OrderNumber = order.OrderNumber,
+                OrderTime = order.OrderTime,
+                ThingId = order.ThingId,
+                Status = order.Status,
+                Count = order.Count,
+                Cover = thing.Cover, // 从 Thing 表获取
+                Title = thing.Title, // 从 Thing 表获取
+                Price = thing.Price // 从 Thing 表获取
+            }
+        )
+        .ToListAsync();
 
+        return Ok(orders);
+
+    }
+
+    [HttpDelete("orders/{id}")]
+    public async Task<ActionResult> DeleteOrders([FromQuery] string token,long id){
+        // 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }        
+        // 查找满足条件的订单
+        var order = await _context.Orders
+            .Where(a => a.UserId == user.Id && a.Id == id)
+            .FirstOrDefaultAsync();
+
+        if (order != null)
+        {
+            // 从上下文中移除订单
+            _context.Orders.Remove(order);
+
+            // 保存更改
+            await _context.SaveChangesAsync();
+        }
+        else
+        {
+            // 处理未找到订单的情况
+            Console.WriteLine("Order not found");
+        }
+
+        return Ok();
+
+    }
+    //添加order
+    [HttpPost("orders/{thingId}")]
+    public async Task<ActionResult> addOrders([FromQuery] string token,long thingId){
+        // 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }    
+
+        // 检查该用户是否已经为该商品下过订单
+        var existingOrder = await _context.Orders
+            .FirstOrDefaultAsync(o => o.UserId == user.Id && o.ThingId == thingId);
+
+        if (existingOrder != null)
+        {
+            // 如果订单已存在，返回 Conflict（冲突）状态码或其他适当响应
+            return Conflict("Order already exists for this item.");
+        }
+            // 创建新的订单实体
+        var newOrder = new Order
+        {
+            UserId = user.Id??1,
+            Status = "1", // 订单状态
+            OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), // 订单时间
+            PayTime = "default", // 支付时间，可能为空或由其他逻辑设置
+            ThingId = thingId, // 商品ID
+            Count = 1, // 购买数量
+            OrderNumber = "default", // 订单编号
+            ReceiverAddress = "default", // 收货地址，可以根据需求填充
+            ReceiverName = "default", // 收货人姓名，可以根据需求填充
+            ReceiverPhone = "default", // 收货人电话，可以根据需求填充
+            Remark = "default" // 备注，可以根据需求填充
+        };
+
+        // 将新订单添加到上下文中
+        _context.Orders.Add(newOrder);
+
+        // 保存更改
+        await _context.SaveChangesAsync();          
+        return Ok();                                            
+    }
 
 
 }

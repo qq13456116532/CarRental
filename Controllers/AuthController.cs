@@ -2,6 +2,7 @@ using  Services.Auth;
 using Microsoft.AspNetCore.Mvc;
 using Data;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core.Tokenizer;
 //using BCrypt.Net;
 
 [ApiController]
@@ -85,4 +86,15 @@ public class AuthController : ControllerBase
         //return BCrypt.Net.BCrypt.HashPassword(password);
         return password;
     }
+    [HttpGet("user")]
+    public async Task<IActionResult> GetUserById([FromQuery] string token)
+    {
+        User? existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (existingUser != null){
+            return Ok(existingUser);
+        }else{
+            return Unauthorized("Invalid username or password.");
+        }
     }
+
+}

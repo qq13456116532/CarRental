@@ -225,10 +225,10 @@ public static class SeedData
     new Order
     {
         Id = 1,
-        Status = "01",
+        Status = "1",
         OrderTime = DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd HH:mm:ss"),
         PayTime = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd HH:mm:ss"),
-        ThingId = 101,
+        ThingId = 1,
         UserId = 1,
         Count = 2,
         OrderNumber = "ORD1234567890",
@@ -240,7 +240,7 @@ public static class SeedData
     new Order
     {
         Id = 2,
-        Status = "02",
+        Status = "2",
         OrderTime = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd HH:mm:ss"),
         PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
         ThingId = 102,

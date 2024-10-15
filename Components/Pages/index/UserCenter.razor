@@ -1,0 +1,110 @@
+@page "/userCenter"
+@inject NavigationManager Navigation
+@using Services
+@inject HttpClient Http
+@inject AuthService AuthService
+@using Data
+<div class="mine-infos-view">
+    <div class="info-box flex-view">
+        <img src="images/avatar.jpg" class="avatar-img" />
+        <div class="name-box">
+            <h2 class="nick">@user.Username</h2>
+            <div class="age">
+                <span>Active for 1 day</span>
+                <span class="give-point"></span>
+            </div>
+        </div>
+    </div>
+    <div class="counts-view">
+        <div class="counts flex-view">
+            <div class="fans-box flex-item" @onclick='() => NavigateToMenu("my-collections")'>
+                <div class="text">Favorites</div>
+                <div class="num">@collects.Count</div>
+            </div>
+            <div class="split-line"></div>
+            <div class="follow-box flex-item" @onclick='() => NavigateToMenu("my-wishes")'>
+                <div class="text">Wishlist</div>
+                <div class="num">@wishes.Count</div>
+            </div>
+        </div>
+    </div>
+    <div class="setting-box">
+        <div class="title">Personal Settings</div>
+        <div class="list">
+            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("orderView")'>
+                <img src="images/setting-icon.svg" alt="My Reservations" />
+                <span>My Reservations</span>
+            </div>
+            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("userInfoEditView")'>
+                <img src="images/setting-icon.svg" alt="Edit Profile" />
+                <span>Edit Profile</span>
+            </div>
+            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("securityView")'>
+                <img src="images/setting-safe-icon.svg" alt="Account Security" />
+                <span>Account Security</span>
+            </div>
+            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("pushView")'>
+                <img src="images/setting-push-icon.svg" alt="Push Notifications" />
+                <span>Push Notifications</span>
+            </div>
+            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("messageView")'>
+                <img src="images/setting-msg-icon.svg" alt="Message Management" />
+                <span>Message Management</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private User user = new User
+        {
+            Id = -1,
+            Username = "default",
+            Password = "default",
+            Role = "default",
+            Status = "default",
+            Nickname = "default",
+            Avatar = "default",
+            Mobile = "default",
+            Email = "default",
+            Gender = "default",
+            Description = "default",
+            CreateTime = "default",
+            Score = 0,
+            PushEmail = "default",
+            PushSwitch = false,
+            Token = "default"
+        };
+
+    List<CollectedThingDto> collects = new List<CollectedThingDto>();
+    List<WishedThingDto> wishes = new List<WishedThingDto>();
+    DetailRequest request = new DetailRequest();
+    protected override async Task OnInitializedAsync()
+    {
+        await GetUserProfile();
+        await GetCollectThingList();
+        await GetWishThingList();
+    }
+    private async Task GetUserProfile(){
+        User? user2 = await Http.GetFromJsonAsync<User>($"{Navigation.BaseUri}api/Auth/user?token={AuthService.UserToken}");
+        if(user2!=null)
+            user = user2;
+    }
+
+    private void NavigateToMenu(string menuName)
+    {
+        Navigation.NavigateTo($"/{menuName}");
+        
+    }
+
+    private async Task GetCollectThingList()
+    {
+        collects = await Http.GetFromJsonAsync<List<CollectedThingDto> >($"{Navigation.BaseUri}api/Index/things/collect?token={AuthService.UserToken}")??collects;
+    }
+
+    private async Task GetWishThingList()
+    {
+        wishes = await Http.GetFromJsonAsync<List<WishedThingDto> >($"{Navigation.BaseUri}api/Index/things/wish?token={AuthService.UserToken}")??wishes;
+    }
+}

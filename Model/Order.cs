@@ -6,7 +6,7 @@ namespace Data
     public class Order
     {
         [Key]
-        public required long Id { get; set; }
+        public long? Id { get; set; }
 
         [StringLength(2)]
         public required string Status { get; set; }
@@ -17,9 +17,9 @@ namespace Data
         [StringLength(30)]
         public required string PayTime { get; set; }
 
-        public long? ThingId { get; set; }
+        public long ThingId { get; set; }
 
-        public long? UserId { get; set; }
+        public long UserId { get; set; }
 
         public required int Count { get; set; }
 

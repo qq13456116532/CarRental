@@ -1,208 +1,253 @@
+/* Main Bar View */
 .main-bar-view[b-1ionqlzgif] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 56px;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #cedce4;
-    padding-left: 48px;
-    z-index: 16;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /*垂直居中*/
-  }
-  
-  .logo[b-1ionqlzgif] {
-    margin-right: 24px;
-    img {
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-    }
-  }
-  
-  .search-entry[b-1ionqlzgif] {
-    position: relative;
-    width: 400px;
-    min-width: 200px;
-    height: 32px;
-    background: #ecf3fc;
-    padding: 0 12px;
-    border-radius: 16px;
-    font-size: 0;
-    cursor: pointer;
-  
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    .search-icon[b-1ionqlzgif] {
-      width: 18px;
-      margin: 7px 8px 0 0;
-    }
-    input[b-1ionqlzgif] {
-      position: absolute;
-      top:4px;
-      width: 85%;
-      height: 24px;
-      border: 0px;
-      outline:none;
-      color: #000;
-      background: #ecf3fc;
-      font-size: 14px;
-    }
-  }
-  
-  .right-view[b-1ionqlzgif] {
-    padding-right: 36px;
-    flex:1;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: flex-end; /* 内容右对齐 */
-  
-    .username {
-      height: 32px;
-      line-height: 32px;
-      text-align: center;
-    }
-    button[b-1ionqlzgif] {
-      outline: none;
-      border: none;
-      cursor: pointer;
-    }
-    img[b-1ionqlzgif] {
-      cursor: pointer;
-    }
-    .right-icon[b-1ionqlzgif] {
-      position: relative;
-      width: 24px;
-      margin: 4px 0 0 4px;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 0;
-      span {
-        position: absolute;
-        right: -15px;
-        top: -3px;
-        font-size: 12px;
-        color: #fff;
-        background: #4684e2;
-        border-radius: 8px;
-        padding: 0 4px;
-        height: 16px;
-        line-height: 16px;
-        font-weight: 600;
-        min-width: 20px;
-        text-align: center;
-      }
-      .msg-point[b-1ionqlzgif] {
-        position: absolute;
-        right: -4px;
-        top: 0;
-        min-width: 8px;
-        width: 8px;
-        height: 8px;
-        background: #4684e2;
-        border-radius: 50%;
-      }
-    }
-  
-    .self-img[b-1ionqlzgif] {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      vertical-align: middle;
-      cursor: pointer;
-    }
-    .btn[b-1ionqlzgif] {
-      background: #4684e2;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 32px;
-      text-align: center;
-      width: 66px;
-      height: 32px;
-      line-height: 32px;
-      vertical-align: middle;
-      margin-left: 32px;
-    }
-  }
-  
-  .content-list[b-1ionqlzgif] {
-    flex: 1;
-  
-    .list-title {
-      color: #152844;
-      font-weight: 600;
-      font-size: 18px;
-      height: 48px;
-      margin-bottom: 4px;
-      border-bottom: 1px solid #cedce4;
-    }
-  }
-  .message-drawer[b-1ionqlzgif] {
-    position: absolute; /* 使其不占据页面布局的空间 */
-    top: 60px; /* 根据实际情况调整位置 */
-    right: 16px; /* 根据图标的位置调整 */
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 1000; /* 确保消息抽屉在其他元素之上 */
-    padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #cedce4;
+  padding-left: 48px;
+  z-index: 16;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 垂直居中 */
 }
 
-  .notification-item[b-1ionqlzgif] {
-    padding-top: 16px;
-  
-    .avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      margin-right: 8px;
-    }
-  
-    .content-box[b-1ionqlzgif] {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      border-bottom: 1px dashed #e9e9e9;
-      padding: 4px 0 16px;
-    }
-  
-    .header[b-1ionqlzgif] {
-      margin-bottom: 12px;
-    }
-  
-    .title-txt[b-1ionqlzgif] {
-      color: #315c9e;
-      font-weight: 500;
-      font-size: 14px;
-    }
-  
-    .time[b-1ionqlzgif] {
-      color: #a1adc5;
-      font-size: 14px;
-    }
-  
-    .head-text[b-1ionqlzgif] {
-      color: #152844;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 22px;
-  
-      .name {
-        margin-right: 8px;
-      }
-    }
-  
-    .content[b-1ionqlzgif] {
-      margin-top: 4px;
-      color: #484848;
-      font-size: 14px;
-      line-height: 22px;
-    }
-  
-  }
+/* Logo */
+.logo[b-1ionqlzgif] {
+  margin-right: 24px;
+}
+
+.logo img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Search Entry */
+.search-entry[b-1ionqlzgif] {
+  position: relative;
+  width: 400px;
+  min-width: 200px;
+  height: 32px;
+  background: #ecf3fc;
+  padding: 0 12px;
+  border-radius: 16px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.search-entry img[b-1ionqlzgif] {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-entry .search-icon[b-1ionqlzgif] {
+  width: 18px;
+  margin: 7px 8px 0 0;
+}
+
+.search-entry input[b-1ionqlzgif] {
+  position: absolute;
+  top: 4px;
+  width: 85%;
+  height: 24px;
+  border: 0px;
+  outline: none;
+  color: #000;
+  background: #ecf3fc;
+  font-size: 14px;
+}
+
+/* Right View */
+.right-view[b-1ionqlzgif] {
+  padding-right: 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end; /* 内容右对齐 */
+}
+
+.right-view .username[b-1ionqlzgif] {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.right-view button[b-1ionqlzgif] {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.right-view img[b-1ionqlzgif] {
+  cursor: pointer;
+}
+
+.right-view .right-icon[b-1ionqlzgif] {
+  position: relative;
+  width: 24px;
+  margin: 4px 0 0 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+}
+
+.right-view .right-icon span[b-1ionqlzgif] {
+  position: absolute;
+  right: -15px;
+  top: -3px;
+  font-size: 12px;
+  color: #fff;
+  background: #4684e2;
+  border-radius: 8px;
+  padding: 0 4px;
+  height: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.right-view .right-icon .msg-point[b-1ionqlzgif] {
+  position: absolute;
+  right: -4px;
+  top: 0;
+  min-width: 8px;
+  width: 8px;
+  height: 8px;
+  background: #4684e2;
+  border-radius: 50%;
+}
+
+.right-view .self-img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.right-view .btn[b-1ionqlzgif] {
+  background: #4684e2;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 32px;
+  text-align: center;
+  width: 66px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  margin-left: 32px;
+}
+
+/* Content List */
+.content-list[b-1ionqlzgif] {
+  flex: 1;
+}
+
+.content-list .list-title[b-1ionqlzgif] {
+  color: #152844;
+  font-weight: 600;
+  font-size: 18px;
+  height: 48px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #cedce4;
+}
+
+/* Message Drawer */
+.message-drawer[b-1ionqlzgif] {
+  position: absolute; /* 使其不占据页面布局的空间 */
+  top: 60px; /* 根据实际情况调整位置 */
+  right: 16px; /* 根据图标的位置调整 */
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 500; /* 确保消息抽屉在其他元素之上 */
+  padding: 16px;
+}
+
+/* Notification Item */
+.notification-item[b-1ionqlzgif] {
+  padding-top: 16px;
+}
+
+.notification-item .avatar[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.notification-item .content-box[b-1ionqlzgif] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 1px dashed #e9e9e9;
+  padding: 4px 0 16px;
+}
+
+.notification-item .header[b-1ionqlzgif] {
+  margin-bottom: 12px;
+}
+
+.notification-item .title-txt[b-1ionqlzgif] {
+  color: #315c9e;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-item .time[b-1ionqlzgif] {
+  color: #a1adc5;
+  font-size: 14px;
+}
+
+.notification-item .head-text[b-1ionqlzgif] {
+  color: #152844;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.notification-item .head-text .name[b-1ionqlzgif] {
+  margin-right: 8px;
+}
+
+.notification-item .content[b-1ionqlzgif] {
+  margin-top: 4px;
+  color: #484848;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* User Dropdown */
+.user-dropdown[b-1ionqlzgif] {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu[b-1ionqlzgif] {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu a[b-1ionqlzgif] {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover[b-1ionqlzgif] {
+  background-color: #f0f0f0;
+}

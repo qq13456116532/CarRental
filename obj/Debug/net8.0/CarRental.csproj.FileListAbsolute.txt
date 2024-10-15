@@ -84,3 +84,6 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.JSInterop.dll
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Confirm.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Pay.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\UserCenter.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\CollectThing.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\WishesThing.razor.rz.scp.css

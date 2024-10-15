@@ -52,214 +52,259 @@
     }
   }
 /* _content/CarRental/Components/Layout/Header.razor.rz.scp.css */
+/* Main Bar View */
 .main-bar-view[b-1ionqlzgif] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 56px;
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #cedce4;
-    padding-left: 48px;
-    z-index: 16;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /*垂直居中*/
-  }
-  
-  .logo[b-1ionqlzgif] {
-    margin-right: 24px;
-    img {
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-    }
-  }
-  
-  .search-entry[b-1ionqlzgif] {
-    position: relative;
-    width: 400px;
-    min-width: 200px;
-    height: 32px;
-    background: #ecf3fc;
-    padding: 0 12px;
-    border-radius: 16px;
-    font-size: 0;
-    cursor: pointer;
-  
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    .search-icon[b-1ionqlzgif] {
-      width: 18px;
-      margin: 7px 8px 0 0;
-    }
-    input[b-1ionqlzgif] {
-      position: absolute;
-      top:4px;
-      width: 85%;
-      height: 24px;
-      border: 0px;
-      outline:none;
-      color: #000;
-      background: #ecf3fc;
-      font-size: 14px;
-    }
-  }
-  
-  .right-view[b-1ionqlzgif] {
-    padding-right: 36px;
-    flex:1;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: flex-end; /* 内容右对齐 */
-  
-    .username {
-      height: 32px;
-      line-height: 32px;
-      text-align: center;
-    }
-    button[b-1ionqlzgif] {
-      outline: none;
-      border: none;
-      cursor: pointer;
-    }
-    img[b-1ionqlzgif] {
-      cursor: pointer;
-    }
-    .right-icon[b-1ionqlzgif] {
-      position: relative;
-      width: 24px;
-      margin: 4px 0 0 4px;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 0;
-      span {
-        position: absolute;
-        right: -15px;
-        top: -3px;
-        font-size: 12px;
-        color: #fff;
-        background: #4684e2;
-        border-radius: 8px;
-        padding: 0 4px;
-        height: 16px;
-        line-height: 16px;
-        font-weight: 600;
-        min-width: 20px;
-        text-align: center;
-      }
-      .msg-point[b-1ionqlzgif] {
-        position: absolute;
-        right: -4px;
-        top: 0;
-        min-width: 8px;
-        width: 8px;
-        height: 8px;
-        background: #4684e2;
-        border-radius: 50%;
-      }
-    }
-  
-    .self-img[b-1ionqlzgif] {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      vertical-align: middle;
-      cursor: pointer;
-    }
-    .btn[b-1ionqlzgif] {
-      background: #4684e2;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 32px;
-      text-align: center;
-      width: 66px;
-      height: 32px;
-      line-height: 32px;
-      vertical-align: middle;
-      margin-left: 32px;
-    }
-  }
-  
-  .content-list[b-1ionqlzgif] {
-    flex: 1;
-  
-    .list-title {
-      color: #152844;
-      font-weight: 600;
-      font-size: 18px;
-      height: 48px;
-      margin-bottom: 4px;
-      border-bottom: 1px solid #cedce4;
-    }
-  }
-  .message-drawer[b-1ionqlzgif] {
-    position: absolute; /* 使其不占据页面布局的空间 */
-    top: 60px; /* 根据实际情况调整位置 */
-    right: 16px; /* 根据图标的位置调整 */
-    width: 300px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 1000; /* 确保消息抽屉在其他元素之上 */
-    padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #cedce4;
+  padding-left: 48px;
+  z-index: 16;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 垂直居中 */
 }
 
-  .notification-item[b-1ionqlzgif] {
-    padding-top: 16px;
-  
-    .avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      margin-right: 8px;
-    }
-  
-    .content-box[b-1ionqlzgif] {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      border-bottom: 1px dashed #e9e9e9;
-      padding: 4px 0 16px;
-    }
-  
-    .header[b-1ionqlzgif] {
-      margin-bottom: 12px;
-    }
-  
-    .title-txt[b-1ionqlzgif] {
-      color: #315c9e;
-      font-weight: 500;
-      font-size: 14px;
-    }
-  
-    .time[b-1ionqlzgif] {
-      color: #a1adc5;
-      font-size: 14px;
-    }
-  
-    .head-text[b-1ionqlzgif] {
-      color: #152844;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 22px;
-  
-      .name {
-        margin-right: 8px;
-      }
-    }
-  
-    .content[b-1ionqlzgif] {
-      margin-top: 4px;
-      color: #484848;
-      font-size: 14px;
-      line-height: 22px;
-    }
-  
-  }
+/* Logo */
+.logo[b-1ionqlzgif] {
+  margin-right: 24px;
+}
+
+.logo img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Search Entry */
+.search-entry[b-1ionqlzgif] {
+  position: relative;
+  width: 400px;
+  min-width: 200px;
+  height: 32px;
+  background: #ecf3fc;
+  padding: 0 12px;
+  border-radius: 16px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.search-entry img[b-1ionqlzgif] {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-entry .search-icon[b-1ionqlzgif] {
+  width: 18px;
+  margin: 7px 8px 0 0;
+}
+
+.search-entry input[b-1ionqlzgif] {
+  position: absolute;
+  top: 4px;
+  width: 85%;
+  height: 24px;
+  border: 0px;
+  outline: none;
+  color: #000;
+  background: #ecf3fc;
+  font-size: 14px;
+}
+
+/* Right View */
+.right-view[b-1ionqlzgif] {
+  padding-right: 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end; /* 内容右对齐 */
+}
+
+.right-view .username[b-1ionqlzgif] {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.right-view button[b-1ionqlzgif] {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.right-view img[b-1ionqlzgif] {
+  cursor: pointer;
+}
+
+.right-view .right-icon[b-1ionqlzgif] {
+  position: relative;
+  width: 24px;
+  margin: 4px 0 0 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0;
+}
+
+.right-view .right-icon span[b-1ionqlzgif] {
+  position: absolute;
+  right: -15px;
+  top: -3px;
+  font-size: 12px;
+  color: #fff;
+  background: #4684e2;
+  border-radius: 8px;
+  padding: 0 4px;
+  height: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.right-view .right-icon .msg-point[b-1ionqlzgif] {
+  position: absolute;
+  right: -4px;
+  top: 0;
+  min-width: 8px;
+  width: 8px;
+  height: 8px;
+  background: #4684e2;
+  border-radius: 50%;
+}
+
+.right-view .self-img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.right-view .btn[b-1ionqlzgif] {
+  background: #4684e2;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 32px;
+  text-align: center;
+  width: 66px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  margin-left: 32px;
+}
+
+/* Content List */
+.content-list[b-1ionqlzgif] {
+  flex: 1;
+}
+
+.content-list .list-title[b-1ionqlzgif] {
+  color: #152844;
+  font-weight: 600;
+  font-size: 18px;
+  height: 48px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #cedce4;
+}
+
+/* Message Drawer */
+.message-drawer[b-1ionqlzgif] {
+  position: absolute; /* 使其不占据页面布局的空间 */
+  top: 60px; /* 根据实际情况调整位置 */
+  right: 16px; /* 根据图标的位置调整 */
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 500; /* 确保消息抽屉在其他元素之上 */
+  padding: 16px;
+}
+
+/* Notification Item */
+.notification-item[b-1ionqlzgif] {
+  padding-top: 16px;
+}
+
+.notification-item .avatar[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.notification-item .content-box[b-1ionqlzgif] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 1px dashed #e9e9e9;
+  padding: 4px 0 16px;
+}
+
+.notification-item .header[b-1ionqlzgif] {
+  margin-bottom: 12px;
+}
+
+.notification-item .title-txt[b-1ionqlzgif] {
+  color: #315c9e;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-item .time[b-1ionqlzgif] {
+  color: #a1adc5;
+  font-size: 14px;
+}
+
+.notification-item .head-text[b-1ionqlzgif] {
+  color: #152844;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.notification-item .head-text .name[b-1ionqlzgif] {
+  margin-right: 8px;
+}
+
+.notification-item .content[b-1ionqlzgif] {
+  margin-top: 4px;
+  color: #484848;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* User Dropdown */
+.user-dropdown[b-1ionqlzgif] {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu[b-1ionqlzgif] {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu a[b-1ionqlzgif] {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover[b-1ionqlzgif] {
+  background-color: #f0f0f0;
+}
 /* _content/CarRental/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-6vrjrk681f] {
     position: relative;
@@ -463,6 +508,120 @@ main[b-6vrjrk681f] {
         overflow-y: auto;
     }
 }
+/* _content/CarRental/Components/Pages/index/CollectThing.razor.rz.scp.css */
+.flex-view[b-ukrlbohemy] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .content-list[b-ukrlbohemy] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  
+    .list-title {
+      color: #152844;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+  
+    .list-tabs-view[b-ukrlbohemy] {
+      position: relative;
+      border-bottom: 1px solid #cedce4;
+      height: 12px;
+      line-height: 42px;
+    }
+  }
+  
+  .thing-list[b-ukrlbohemy] {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  
+    .thing-item {
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-right: 20px;
+      min-width: 255px;
+      max-width: 255px;
+      height: fit-content;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 16px;
+      cursor: pointer;
+  
+      .remove {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 48px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        background: #a1adc5;
+        border-radius: 32px;
+        cursor: pointer;
+      }
+  
+      .img-view[b-ukrlbohemy] {
+        background: #eaf1f5;
+        font-size: 0;
+        text-align: center;
+        height: 156px;
+        padding: 8px 0;
+  
+        img {
+          max-width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0 auto;
+          border-radius: 4px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+      }
+  
+      .info-view[b-ukrlbohemy] {
+        background: #f6f9fb;
+        text-align: center;
+        height: 108px;
+        overflow: hidden;
+        padding: 0 16px;
+  
+        h3 {
+          color: #1c355a;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin: 12px 0 8px;
+        }
+  
+        .authors[b-ukrlbohemy], .translators[b-ukrlbohemy] {
+          color: #6f6f6f;
+          font-size: 12px;
+          line-height: 14px;
+          margin-top: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 /* _content/CarRental/Components/Pages/index/Confirm.razor.rz.scp.css */
 .order-form[b-7hjh3ekh3h] {
   padding: 20px;
@@ -638,7 +797,8 @@ main[b-6vrjrk681f] {
   
   .thing-infos-view[b-c4umwzs5wk] {
     display: flex;
-    margin: 89px 0 40px;
+    margin: 0 0 40px;
+
     overflow: hidden;
   
     .thing-infos {
@@ -1534,7 +1694,9 @@ textarea[b-ac60ju7ahk] {
     display: flex;
     flex-direction: row;
     width: 1100px;
-    margin: 80px auto;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
   }
   
   .content-left[b-pb0pfr6hiv] {
@@ -2152,3 +2314,254 @@ div[b-xvdlf18dfz] {
   font-size: 14px;
 }
 
+/* _content/CarRental/Components/Pages/index/UserCenter.razor.rz.scp.css */
+.mine-infos-view[b-v1zsapz5t3] {
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 50px; /* 增加顶部外边距，避免与header重叠 */
+}
+
+.info-box[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-img[b-v1zsapz5t3] {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.name-box[b-v1zsapz5t3] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nick[b-v1zsapz5t3] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.age[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+}
+
+.age span[b-v1zsapz5t3] {
+    margin-right: 10px;
+}
+
+.give-point[b-v1zsapz5t3] {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.counts-view[b-v1zsapz5t3] {
+    margin: 20px 0;
+}
+
+.counts[b-v1zsapz5t3] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fans-box[b-v1zsapz5t3],
+.follow-box[b-v1zsapz5t3] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text[b-v1zsapz5t3] {
+    font-size: 14px;
+    color: #555;
+}
+
+.num[b-v1zsapz5t3] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.split-line[b-v1zsapz5t3] {
+    width: 1px;
+    height: 40px;
+    background-color: #ddd;
+}
+
+.setting-box[b-v1zsapz5t3] {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.title[b-v1zsapz5t3] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.list[b-v1zsapz5t3] {
+    display: flex;
+    flex-direction: column;
+}
+
+.mine-item[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.mine-item img[b-v1zsapz5t3] {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.mine-item span[b-v1zsapz5t3] {
+    font-size: 14px;
+    color: #333;
+}
+
+.mine-item:hover[b-v1zsapz5t3] {
+    background-color: #f9f9f9;
+}
+
+.flex-view[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+}
+
+.flex-item[b-v1zsapz5t3] {
+    flex: 1;
+    text-align: center;
+}
+
+/* _content/CarRental/Components/Pages/index/WishesThing.razor.rz.scp.css */
+.flex-view[b-8gepgyd694] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .content-list[b-8gepgyd694] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  
+    .list-title {
+      color: #152844;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+  
+    .list-tabs-view[b-8gepgyd694] {
+      position: relative;
+      border-bottom: 1px solid #cedce4;
+      height: 12px;
+      line-height: 42px;
+    }
+  }
+  
+  .thing-list[b-8gepgyd694] {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  
+    .thing-item {
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin-right: 20px;
+      min-width: 255px;
+      max-width: 255px;
+      height: fit-content;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 16px;
+      cursor: pointer;
+  
+      .remove {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 48px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        background: #a1adc5;
+        border-radius: 32px;
+        cursor: pointer;
+      }
+  
+      .img-view[b-8gepgyd694] {
+        background: #eaf1f5;
+        font-size: 0;
+        text-align: center;
+        height: 156px;
+        padding: 8px 0;
+  
+        img {
+          max-width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0 auto;
+          border-radius: 4px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+      }
+  
+      .info-view[b-8gepgyd694] {
+        background: #f6f9fb;
+        text-align: center;
+        height: 108px;
+        overflow: hidden;
+        padding: 0 16px;
+  
+        h3 {
+          color: #1c355a;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin: 12px 0 8px;
+        }
+  
+        .authors[b-8gepgyd694], .translators[b-8gepgyd694] {
+          color: #6f6f6f;
+          font-size: 12px;
+          line-height: 14px;
+          margin-top: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }

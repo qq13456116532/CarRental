@@ -455,9 +455,25 @@
     }
 
     //to do 暂时没实现
-    private void  HandleOrder(Thing detail)
+    private async void  HandleOrder(Thing detail)
     {
         // Handle order logic.
+        var url = $"{Navigation.BaseUri}api/Index/orders/{detail.Id}?token={AuthService.UserToken}";
+        // 发送POST请求
+        var response = await Http.PostAsync(url,null); 
+        // 检查响应状态
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Order added successfully.");
+        }
+        else
+        {
+            // 输出错误信息
+            var errorMessage = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"Error: {errorMessage}");
+        }
+
+
 
     }
 

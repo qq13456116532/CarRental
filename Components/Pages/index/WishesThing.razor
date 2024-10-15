@@ -1,0 +1,78 @@
+@page "/my-wishes"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+@using Services
+
+<div class="content-list" >
+    <div class="list-title">我的心愿单</div>
+    <div role="tablist" class="list-tabs-view flex-view">
+    </div>
+    <div class="list-content">
+        <div class="collect-thing-view">
+            <div class="thing-list flex-view">
+                @if (wishData != null && wishData.Any())
+                {
+                    @foreach (var item in wishData)
+                    {
+                        <div class="thing-item item-column-3">
+                            <div class="remove" @onclick="() => HandleRemove(item)">移出</div>
+                            <div class="img-view" @onclick="() => HandleClickItem(item)">
+                                <img src="@item.Cover" />
+                            </div>
+                            <div class="info-view">
+                                <h3 class="thing-name">@item.Title</h3>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>没有收藏的物品。</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<WishedThingDto> wishData = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetCollectThingList();
+    }
+
+    private  void  HandleClickItem(WishedThingDto item)
+    {
+        var url = $"/detail?id={item.id}";
+        Navigation.NavigateTo(url, true);
+    }
+
+    private async Task HandleRemove(WishedThingDto item)
+    {
+        try
+        {
+
+            await Http.DeleteAsync($"{Navigation.BaseUri}api/Index/things/wish/{item.id}?token={AuthService.UserToken}");
+            await GetCollectThingList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error removing item: {ex.Message}");
+        }
+    }
+
+    private async Task GetCollectThingList()
+    {
+        try
+        {
+            var token = AuthService.UserToken;
+            wishData = await Http.GetFromJsonAsync<List<WishedThingDto>>($"{Navigation.BaseUri}api/Index/things/wish?token={token}") ?? wishData;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching collection: {ex.Message}");
+        }
+    }
+}
