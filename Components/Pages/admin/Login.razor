@@ -1,0 +1,95 @@
+@page "/admin/login"
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+@inject HttpClient Http
+@layout MinimalLayout
+<div id="userLayout">
+    <div class="user-layout-header">
+        <img class="logo" src="images/k-logo.png" alt="" />
+        <span>租车后台管理系统</span>
+    </div>
+    <div class="main-container">
+        <div class="main">
+            <div class="main_right">
+                <h2 class="sys_title">管理员登录</h2>
+                <EditForm Model="@loginForm" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <label>账号</label>
+                        <InputText class="form-control" @bind-Value="loginForm.Username" placeholder="请输入登录账号" />
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <InputText class="form-control" @bind-Value="loginForm.Password" placeholder="请输入登录密码" type="password" />
+                    </div>
+                    <div class="form-group" style="padding-top: 24px">
+                        <button class="login-button btn btn-primary" disabled="@isSubmitting" type="submit">登录</button>
+                    </div>
+                </EditForm>
+                @if (!string.IsNullOrEmpty(errorMessage))
+                {
+                    <div class="error-tip" style="color: red;">@errorMessage</div>
+                }
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="copyright">
+            <span></span>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private LoginForm loginForm = new LoginForm();
+    private bool isSubmitting = false;
+    private string? errorMessage;
+
+    private async Task HandleSubmit()
+    {
+        isSubmitting = true;
+        errorMessage = null;
+
+        try
+        {
+            // 构建登录请求
+            var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Auth/adminLogin", loginForm);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
+                Console.WriteLine("登录成功，Token：" + result?.Token);
+                AuthService.AdminToken = result?.Token;
+                Navigation.NavigateTo("/admin/");
+
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+            {
+                // 处理没有权限的情况
+                errorMessage = "您没有权限访问该资源。";
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                // 处理登录失败的情况
+                errorMessage = "用户名或密码错误。";
+            }
+            else
+            {
+                // 处理其他错误
+                errorMessage = "登录失败，请稍后重试。";
+            }
+        }
+        catch (Exception ex)
+        {
+            // 捕获任何异常
+            errorMessage = $"登录过程中发生错误: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+
+
+}

@@ -97,4 +97,28 @@ public class AuthController : ControllerBase
         }
     }
 
+    [HttpPost("adminLogin")]
+    public async Task<IActionResult> adminLogin([FromBody] LoginForm loginForm)
+    {
+        // 模拟用户验证逻辑
+        // 检查数据库中是否有匹配的用户
+        var user = await _context.Users
+            .Where(u => u.Username == loginForm.Username && u.Password == loginForm.Password)
+            .FirstOrDefaultAsync();
+
+        if (user != null)
+        {
+            if(user.Role == "1")
+            // 登录成功，返回 JWT Token 或其他信息,注册的时候Token就是Username
+                return Ok(new { Token = user.Token });
+            else{
+                return Forbid("You do not have permission to access this resource."); 
+            }
+        }
+
+        // 登录失败，返回 Unauthorized 响应
+        return Unauthorized("Invalid username or password.");
+
+    }
+
 }

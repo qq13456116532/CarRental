@@ -86,14 +86,11 @@
 </EditForm>
 
 
-    <Modal @ref="boostrapModal" OnOk="HandleOk" OnCancel="HandleCancel">
-    </Modal>
+   
 
 @code {
     private PageData pageData = new PageData();
     private ModalData modal = new ModalData();
-    private Modal boostrapModal = default!;
-
     [Parameter] public required string id{get;set;}
     [Parameter] public required string title{get;set;}
     [Parameter] public required string cover{get;set;}
@@ -118,7 +115,6 @@
         var parameters = new Dictionary<string, object>();
         parameters.Add("buttonName","新增");
         parameters.Add("OnClickClose",EventCallback.Factory.Create<MouseEventArgs>(this,OnBoostrapModalClickClose));
-        await boostrapModal.ShowAsync<ConfirmAddress>(title: "新增" );
 
     }
 
@@ -139,14 +135,12 @@
         // Logic to navigate back
     }
     public async void OnBoostrapModalClickClose(){
-        await boostrapModal.HideAsync();
     }
     private async void HandleJiesuan()
     {
         var parameters = new Dictionary<string, object>();
         parameters.Add("modal", modal);
         parameters.Add("OnClickClose",EventCallback.Factory.Create<MouseEventArgs>(this,OnBoostrapModalClickClose));
-        await boostrapModal.ShowAsync<ConfirmAddress>(title: modal.Title??"" , parameters: parameters);
 
         if (string.IsNullOrEmpty(pageData.ReceiverName))
         {

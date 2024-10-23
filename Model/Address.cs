@@ -6,7 +6,7 @@ namespace Data
     public class Address
     {
         [Key]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [StringLength(100)]
         public string? Name { get; set; }

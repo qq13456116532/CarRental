@@ -1,7 +1,8 @@
 using Data;
 using CarRental.Components;
-using System.IO;
 using Services.Auth;
+using TabBlazor;
+using TabBlazor.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,7 +12,10 @@ builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 builder.Services.AddSqlite<Data.AppDbContext>("Data Source=carDB.db");
 builder.Services.AddSingleton<AuthService>();
-builder.Services.AddBlazorBootstrap();
+builder.Services.AddScoped<ToastService>();  // 注册 ToastService
+// 注册 TabBlazor 服务
+builder.Services.AddTabler();
+builder.Services.AddTabBlazor();
 
 var app = builder.Build();
 

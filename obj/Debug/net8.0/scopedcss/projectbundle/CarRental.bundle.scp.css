@@ -508,6 +508,92 @@ main[b-6vrjrk681f] {
         overflow-y: auto;
     }
 }
+/* _content/CarRental/Components/Pages/admin/Login.razor.rz.scp.css */
+
+#userLayout[b-gauzrmhdlj] {
+    position: relative;
+    height: 90vh;
+
+    .user-layout-header {
+      height: 80px;
+      padding: 0 24px;
+      color: fade(#000, 85%);
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 80px;
+  
+      .logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        margin-top: -4px;
+      }
+    }
+
+    .main-container[b-gauzrmhdlj] {
+      width: 100%;
+      height: calc(45vh);
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      .main {
+        position: absolute;
+        height: 40vh;
+        right: 80px;
+        top: 50%;
+        display: flex;
+        transform: translate(0, -50%);
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px #aaa;
+        box-shadow: 2px 2px 6px #aaa;
+  
+        .main_right {
+          background: #ffffff;
+          padding: 24px;
+          width: 420px;
+          user-select: none;
+  
+          .sys_title {
+            font-size: 24px;
+            color: fade(#000, 85%);
+            font-weight: bold;
+            user-select: none;
+            padding-bottom: 8px;
+          }
+  
+          :deep(.ant-form-item label)[b-gauzrmhdlj] {
+            font-weight: bold;
+          }
+  
+          .flex[b-gauzrmhdlj] {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+          }
+  
+          .forget_password[b-gauzrmhdlj] {
+            cursor: pointer;
+          }
+  
+          .login-button[b-gauzrmhdlj] {
+            background: linear-gradient(128deg, #00aaeb, #00c1cd 59%, #0ac2b0 100%);
+          }
+        }
+  
+        .error-tip[b-gauzrmhdlj] {
+          text-align: center;
+        }
+      }
+    }
+  
+    .footer[b-gauzrmhdlj] {
+      height: 80px;
+    }
+  }
+  
 /* _content/CarRental/Components/Pages/index/CollectThing.razor.rz.scp.css */
 .flex-view[b-ukrlbohemy] {
     display: -webkit-box;
@@ -773,7 +859,6 @@ main[b-6vrjrk681f] {
   background-color: #0056b3;
 }
 /* _content/CarRental/Components/Pages/index/Detail.razor.rz.scp.css */
-
 .hide[b-c4umwzs5wk] {
     display: none;
   }
@@ -1375,7 +1460,6 @@ div[b-ac60ju7ahk] {
 }
 
 .container[b-ac60ju7ahk] {
-    background-image: url('/images/admin-login-bg.jpg');
     background-size: cover;
     object-fit: cover;
     height: 100%;
@@ -1558,6 +1642,238 @@ textarea[b-ac60ju7ahk] {
     font-size: 14px;
     cursor: pointer;
 }
+/* _content/CarRental/Components/Pages/index/OrderView.razor.rz.scp.css */
+.flex-view[b-ct95ir8go8] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .content-list[b-ct95ir8go8] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  
+    .list-title {
+      color: #152844;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+  }
+  
+  .order-item-view[b-ct95ir8go8] {
+    background: #f7f9fb;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 12px;
+  
+    .header {
+      border-bottom: 1px solid #cedce4;
+      padding-bottom: 12px;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      font-size: 14px;
+  
+      .text {
+        color: #6f6f6f;
+      }
+  
+      .mg-4[b-ct95ir8go8] {
+        margin-left: 4px;
+      }
+  
+      .num[b-ct95ir8go8] {
+        font-weight: 500;
+        color: #152844;
+      }
+  
+      .num[b-ct95ir8go8] {
+        font-weight: 500;
+        color: #152844;
+      }
+  
+      .time[b-ct95ir8go8] {
+        margin-left: 16px;
+        color: #a1adc5;
+      }
+  
+      .state[b-ct95ir8go8] {
+        color: #ff7b31;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
+  
+    .content[b-ct95ir8go8] {
+      padding: 12px 0;
+      overflow: hidden;
+  
+      .left-list {
+        overflow: hidden;
+        height: 132px;
+        -webkit-box-flex: 2;
+        -ms-flex: 2;
+        flex: 2;
+        padding-right: 16px;
+  
+        .list-item {
+          height: 60px;
+          margin-bottom: 12px;
+          overflow: hidden;
+          cursor: pointer;
+        }
+  
+        .thing-img[b-ct95ir8go8] {
+          width: 100px;
+          height: 100%;
+          margin-right: 12px;
+        }
+  
+        .detail[b-ct95ir8go8] {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+  
+        .flex-between[b-ct95ir8go8] {
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+  
+        .flex-between[b-ct95ir8go8] {
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+  
+        .flex-top[b-ct95ir8go8] {
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+        }
+  
+        .name[b-ct95ir8go8] {
+          color: #152844;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 18px;
+        }
+  
+        .count[b-ct95ir8go8] {
+          color: #484848;
+          font-size: 12px;
+        }
+  
+        .flex-between[b-ct95ir8go8] {
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+  
+        .flex-center[b-ct95ir8go8] {
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+  
+        .type[b-ct95ir8go8] {
+          color: #6f6f6f;
+          font-size: 12px;
+        }
+  
+        .price[b-ct95ir8go8] {
+          color: #ff7b31;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+  
+      .right-info[b-ct95ir8go8] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border-left: 1px solid #cedce4;
+        padding-left: 12px;
+        line-height: 22px;
+        font-size: 14px;
+  
+        .title {
+          color: #6f6f6f;
+        }
+  
+        .name[b-ct95ir8go8] {
+          color: #152844;
+        }
+  
+        .text[b-ct95ir8go8] {
+          color: #484848;
+        }
+  
+        .mg[b-ct95ir8go8] {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  
+    .bottom[b-ct95ir8go8] {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-top: 1px solid #cedce4;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      font-size: 14px;
+      padding-top: 14px;
+  
+      .text {
+        color: #6f6f6f;
+      }
+  
+      .open[b-ct95ir8go8] {
+        color: #4684e2;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+  
+      .right[b-ct95ir8go8] {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+  
+      .text[b-ct95ir8go8] {
+        color: #6f6f6f;
+      }
+  
+      .num[b-ct95ir8go8] {
+        color: #152844;
+        margin: 0 40px 0 8px;
+      }
+  
+      .money[b-ct95ir8go8] {
+        font-weight: 600;
+        font-size: 18px;
+        color: #ff7b31;
+        margin-left: 8px;
+      }
+    }
+  
+  }
+  
+  .order-item-view:first-child[b-ct95ir8go8] {
+    margin-top: 16px;
+  }
+  
 /* _content/CarRental/Components/Pages/index/Pay.razor.rz.scp.css */
 .flex-view[b-azim4cdjqa] {
     display: -webkit-box;
@@ -2085,7 +2401,6 @@ div[b-xvdlf18dfz] {
 
 .container[b-xvdlf18dfz] {
   max-width: 100%;
-  background-image: url('../images/admin-login-bg.jpg');
   background-size: cover;
   object-fit: cover;
   height: 100vh;
@@ -2192,7 +2507,9 @@ div[b-xvdlf18dfz] {
 /* _content/CarRental/Components/Pages/index/Search.razor.rz.scp.css */
 
 .content-margin[b-4rhzd1ud88] {
-  margin: 156px 0 100px;
+  margin: 0 100px 0px 100px;
+  padding-bottom: 50px; 
+  padding-left: 80px;
 }
 
 .page-view[b-4rhzd1ud88] {

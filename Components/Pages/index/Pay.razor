@@ -40,14 +40,7 @@
         </div>
     </div>
 </div>
-<Modal @ref="modal" Title="Modal title">
-    <BodyTemplate>
-        支付成功
-    </BodyTemplate>
-    <FooterTemplate>
-        <Button Color="ButtonColor.Primary" @onclick="OnHideModalClick">好的</Button>
-    </FooterTemplate>
-</Modal>
+
 @code {
     [Parameter]
     public string WxPayIcon { get; set; } = "images/wx-pay-icon.svg";
@@ -57,7 +50,7 @@
     private string DdlTime { get; set; }
     private string Amount { get; set; }
 
-    private Modal modal = default!;
+
     protected override void OnInitialized()
     {
         var uri = new Uri(Navigation.Uri);
@@ -67,13 +60,13 @@
     }
     private async Task OnHideModalClick()
         {
-            await modal.HideAsync();
+            //await modal.HideAsync();
         }
     private async void HandlePay()
     {
         // Display a warning message for the lack of payment functionality
         Console.WriteLine("to do 支付功能");
-        await modal.ShowAsync();
+        //await modal.ShowAsync();
     }
 
     private string FormatDate(DateTime dateTime)

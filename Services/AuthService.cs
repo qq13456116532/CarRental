@@ -18,7 +18,7 @@ public class AuthService
             return null; // 不进行重定向
         }
 
-        var isAdminPage = relativeUri.Contains("/admin");
+        var isAdminPage = relativeUri.Contains("admin");
         if (isAdminPage && !IsAdminLoggedIn)
         {
             return "/admin/login";

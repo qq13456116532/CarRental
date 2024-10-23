@@ -50,10 +50,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Blazor.Bootstrap": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -69,6 +65,10 @@
             "System.Net.Http.Json": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "TabBlazor": {
+              "target": "Package",
+              "version": "[0.14.10-beta, )"
             }
           },
           "imports": [

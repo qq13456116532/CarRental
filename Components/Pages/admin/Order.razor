@@ -1,0 +1,192 @@
+@page "/admin/order"
+@using Data
+@using TabBlazor.Components.Tables
+@using TabBlazor.Services
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@inject ToastService ToastService
+
+
+<Row class="mb-3">
+    <RowCol Sm="12" Md="6" Lg="4">
+        <label class="form-label">Edit Mode</label>
+        <Select Items="EnumHelper.GetList<TableEditMode>()" @bind-SelectedValue="@tableEditMode" TextExpression="e=> e.ToString()" />
+    </RowCol>
+</Row>
+
+<TabBlazor.Table Item="Data.Order" Items="orders" PageSize="10" AddItemFactory="AddItem" OnItemEdited="OnItemEdit"
+    OnItemAdded="OnItemAdd" OnItemDeleted="OnItemDelete" CancelStrategy="OnCancelStrategy.Revert"
+    ShowCheckboxes MultiSelect Hover Responsive EditMode=tableEditMode EditPopupMutator=EditPopupOptions>
+    
+    <HeaderTemplate>
+        <strong>Orders</strong>
+    </HeaderTemplate>
+
+    <ChildContent>
+        <!-- Order Number Column -->
+        <Column Item="Data.Order" Property="e=>e.OrderNumber" Title="Order Number" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.OrderNumber" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Status Column -->
+        <Column Item="Data.Order" Property="e=>e.Status" Title="Status" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Status" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Order Time Column -->
+        <Column Item="Data.Order" Property="e=>e.OrderTime" Title="Order Time" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.OrderTime" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Pay Time Column -->
+        <Column Item="Data.Order" Property="e=>e.PayTime" Title="Pay Time" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.PayTime" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Count Column -->
+        <Column Item="Data.Order" Property="e=>e.Count" Title="Count" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.Count" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Receiver Address Column -->
+        <Column Item="Data.Order" Property="e=>e.ReceiverAddress" Title="Receiver Address" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.ReceiverAddress" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Receiver Name Column -->
+        <Column Item="Data.Order" Property="e=>e.ReceiverName" Title="Receiver Name" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.ReceiverName" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Receiver Phone Column -->
+        <Column Item="Data.Order" Property="e=>e.ReceiverPhone" Title="Receiver Phone" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.ReceiverPhone" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Remark Column -->
+        <Column Item="Data.Order" Property="e=>e.Remark" Title="Remark" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <textarea class="form-control" @bind="@context.Remark"></textarea>
+            </EditorTemplate>
+        </Column>
+    </ChildContent>
+
+</TabBlazor.Table>
+
+@code {
+
+    [Inject] TabBlazor.Services.TablerService TablerService { get; set; }
+    private static List<Data.Order> orders = new List<Data.Order>();
+
+    private TableEditMode tableEditMode;
+
+    // 页面加载时获取订单数据
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOrders();
+    }
+
+    // 从 API 加载订单数据
+    private async Task LoadOrders()
+    {
+        var response = await HttpClient.GetFromJsonAsync<List<Data.Order>>($"{Navigation.BaseUri}api/Admin/orders");
+        if (response != null)
+        {
+            orders = response;
+            Console.WriteLine($"Loaded {orders.Count} Orders.");
+        }
+        else
+        {
+            Console.WriteLine("No Orders found.");
+        }
+    }
+
+    // 添加订单
+    private async Task OnItemAdd(Data.Order order)
+    {
+        var response = await HttpClient.PostAsJsonAsync($"{Navigation.BaseUri}api/Admin/orders", order);
+        if (response.IsSuccessStatusCode)
+        {
+            Data.Order? createdOrder = await response.Content.ReadFromJsonAsync<Data.Order>();
+            await ShowDialog($"Added Order's Id : {createdOrder?.Id ?? -1}");
+            await LoadOrders();
+        }
+    }
+
+    // 编辑订单
+    private async Task OnItemEdit(Data.Order order)
+    {
+        var response = await HttpClient.PutAsJsonAsync($"{Navigation.BaseUri}api/Admin/orders/{order.Id}", order);
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"Edited Order's Id : {order.Id}");
+            await LoadOrders();
+        }
+    }
+
+    // 删除订单
+    private async Task OnItemDelete(Data.Order order)
+    {
+        var response = await HttpClient.DeleteAsync($"{Navigation.BaseUri}api/Admin/orders/{order.Id}");
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"Order Id : {order.Id} is deleted");
+            await LoadOrders();
+        }
+    }
+
+    // 显示通知
+    private async Task ShowDialog(string title)
+    {
+        await ToastService.AddToastAsync(new ToastModel { Title = "Toast", SubTitle = "Sub title", Message = title });
+    }
+
+    // 添加订单模板
+    private Task<Data.Order> AddItem()
+    {
+        return Task.FromResult(new Data.Order
+        {
+            Status = "1",
+            OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            ThingId = 1,
+            UserId = 1,
+            Count = 2,
+            OrderNumber = "ORD123456",
+            ReceiverAddress = "123 Main Street",
+            ReceiverName = "John Doe",
+            ReceiverPhone = "1234567890",
+            Remark = "Please handle with care"
+        });
+    }
+
+    // 这是可选项，如果你想控制编辑弹出框
+    private void EditPopupOptions(TableEditPopupOptions<Data.Order> options)
+    {
+        if (options.IsAddInProgress)
+        {
+            options.Title = "Add new Order";
+        }
+        else
+        {
+            options.Title = $"Edit Order {options.CurrentEditItem.Id}, {options.CurrentEditItem.OrderNumber}";
+        }
+        options.ModalOptions.Draggable = true;
+    }
+}

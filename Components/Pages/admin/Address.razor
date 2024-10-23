@@ -1,0 +1,166 @@
+@page "/admin/address"
+@using Data
+@using TabBlazor.Components.Tables
+@using TabBlazor.Services
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@inject ToastService ToastService
+
+<Row class="mb-3">
+    <RowCol Sm="12" Md="6" Lg="4">
+        <label class="form-label">Edit Mode</label>
+        <Select Items="EnumHelper.GetList<TableEditMode>()" @bind-SelectedValue="@tableEditMode" TextExpression="e=> e.ToString()" />
+    </RowCol>
+</Row>
+
+<TabBlazor.Table Item="Data.Address" Items="addresses" PageSize="10" AddItemFactory="AddItem" OnItemEdited="OnItemEdit"
+    OnItemAdded="OnItemAdd" OnItemDeleted="OnItemDelete" CancelStrategy="OnCancelStrategy.Revert"
+    ShowCheckboxes MultiSelect Hover Responsive EditMode=tableEditMode EditPopupMutator=EditPopupOptions>
+
+    <HeaderTemplate>
+        <strong>Addresses</strong>
+    </HeaderTemplate>
+
+    <ChildContent>
+        <!-- Name Column -->
+        <Column Item="Data.Address" Property="e=>e.Name" Title="Name" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Name" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Mobile Column -->
+        <Column Item="Data.Address" Property="e=>e.Mobile" Title="Mobile" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Mobile" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Description Column -->
+        <Column Item="Data.Address" Property="e=>e.Description" Title="Description" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <textarea class="form-control" @bind="@context.Description"></textarea>
+            </EditorTemplate>
+        </Column>
+
+        <!-- Def Column -->
+        <Column Item="Data.Address" Property="e=>e.Def" Title="Default" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Def" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Create Time Column -->
+        <Column Item="Data.Address" Property="e=>e.CreateTime" Title="Create Time" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.CreateTime" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- UserId Column -->
+        <Column Item="Data.Address" Property="e=>e.UserId" Title="User ID" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.UserId" />
+            </EditorTemplate>
+        </Column>
+    </ChildContent>
+
+</TabBlazor.Table>
+
+@code {
+    [Inject] TabBlazor.Services.TablerService TablerService { get; set; }
+    private static List<Data.Address> addresses = new List<Data.Address>();
+
+    private TableEditMode tableEditMode;
+
+    // 页面加载时获取地址数据
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAddresses();
+    }
+
+    // 从 API 加载地址数据
+    private async Task LoadAddresses()
+    {
+        var response = await HttpClient.GetFromJsonAsync<List<Data.Address>>($"{Navigation.BaseUri}api/Admin/addresses");
+        if (response != null)
+        {
+            addresses = response;
+            Console.WriteLine($"Loaded {addresses.Count} Addresses.");
+        }
+        else
+        {
+            Console.WriteLine("No Addresses found.");
+        }
+    }
+
+    // 添加地址
+    private async Task OnItemAdd(Data.Address address)
+    {
+        var response = await HttpClient.PostAsJsonAsync($"{Navigation.BaseUri}api/Admin/addresses", address);
+        if (response.IsSuccessStatusCode)
+        {
+            Data.Address? createdAddress = await response.Content.ReadFromJsonAsync<Data.Address>();
+            await ShowDialog($"Added Address's Id : {createdAddress?.Id ?? -1}");
+            await LoadAddresses();
+        }
+    }
+
+    // 编辑地址
+    private async Task OnItemEdit(Data.Address address)
+    {
+        var response = await HttpClient.PutAsJsonAsync($"{Navigation.BaseUri}api/Admin/addresses/{address.Id}", address);
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"Edited Address's Id : {address.Id}");
+            await LoadAddresses();
+        }
+    }
+
+    // 删除地址
+    private async Task OnItemDelete(Data.Address address)
+    {
+        var response = await HttpClient.DeleteAsync($"{Navigation.BaseUri}api/Admin/addresses/{address.Id}");
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"Address Id : {address.Id} is deleted");
+            await LoadAddresses();
+        }
+    }
+
+    // 显示通知
+    private async Task ShowDialog(string title)
+    {
+        await ToastService.AddToastAsync(new ToastModel { Title = "Toast", SubTitle = "Sub title", Message = title });
+    }
+
+    // 添加地址模板
+    private Task<Data.Address> AddItem()
+    {
+        return Task.FromResult(new Data.Address
+        {
+            Name = "John Doe",
+            Mobile = "1234567890",
+            Description = "Primary address for John Doe",
+            Def = "Y",
+            CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            UserId = 1
+        });
+    }
+
+    // 这是可选项，如果你想控制编辑弹出框
+    private void EditPopupOptions(TableEditPopupOptions<Data.Address> options)
+    {
+        if (options.IsAddInProgress)
+        {
+            options.Title = "Add new Address";
+        }
+        else
+        {
+            options.Title = $"Edit Address {options.CurrentEditItem.Id}, {options.CurrentEditItem.Name}";
+        }
+        options.ModalOptions.Draggable = true;
+    }
+}
+
+

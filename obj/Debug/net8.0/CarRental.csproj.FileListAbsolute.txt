@@ -75,7 +75,6 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Detail.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\Search.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\CarRental.sourcelink.json
-E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\BlazorBootstrap.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -87,3 +86,8 @@ E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\ind
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\UserCenter.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\CollectThing.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\WishesThing.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\index\OrderView.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\LinqKit.Core.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\TabBlazor.dll
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\admin\Login.razor.rz.scp.css

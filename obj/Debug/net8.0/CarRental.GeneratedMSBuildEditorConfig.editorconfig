@@ -30,8 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWluaW1hbExheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/VSproject/CarRental/CarRental/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Address.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxBZGRyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Order.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxPcmRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Thing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxUaGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/User.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxVc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/VSproject/CarRental/CarRental/Components/Pages/Error.razor]
@@ -44,14 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/ConfirmAddress.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb25maXJtQWRkcmVzcy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/VSproject/CarRental/CarRental/Components/Pages/index/OrderView.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxPcmRlclZpZXcucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/VSproject/CarRental/CarRental/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/VSproject/CarRental/CarRental/Components/Routes.razor]
@@ -82,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope = b-6vrjrk681f
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-c9zwnx3nu7
 
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gauzrmhdlj
+
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/CollectThing.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb2xsZWN0VGhpbmcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ukrlbohemy
@@ -97,6 +105,10 @@ build_metadata.AdditionalFiles.CssScope = b-c4umwzs5wk
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ac60ju7ahk
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/OrderView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxPcmRlclZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ct95ir8go8
 
 [E:/VSproject/CarRental/CarRental/Components/Pages/index/Pay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxQYXkucmF6b3I=

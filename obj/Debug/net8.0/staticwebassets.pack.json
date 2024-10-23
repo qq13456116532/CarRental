@@ -93,6 +93,26 @@
       "PackagePath": "staticwebassets\\images\\smartphone.jpg"
     },
     {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\417baadb-5249-41a4-bd8a-2eb3fbd0e338.png",
+      "PackagePath": "staticwebassets\\images\\uploads\\417baadb-5249-41a4-bd8a-2eb3fbd0e338.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\818e91a6-4db2-4604-9401-3f841dc43393.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\818e91a6-4db2-4604-9401-3f841dc43393.jpg"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\8f1d3915-57c4-4ee8-a651-2c75ef17c829.png",
+      "PackagePath": "staticwebassets\\images\\uploads\\8f1d3915-57c4-4ee8-a651-2c75ef17c829.png"
+    },
+    {
+      "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg"
+    },
+    {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\want-read-hover.svg",
       "PackagePath": "staticwebassets\\images\\want-read-hover.svg"
     },

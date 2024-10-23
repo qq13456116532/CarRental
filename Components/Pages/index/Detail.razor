@@ -417,7 +417,7 @@
     private async Task SendComment()
     {
         // Send new comment logic.
-        long thingid = thing.Id;
+        long? thingid = thing.Id;
         string token = AuthService.UserToken??"";
         var request = new DetailRequest{ThingId=thingid,Content=newComment,Token=token};
         var response = await Http.PostAsJsonAsync($"{Navigation.BaseUri}api/Index/comments", request);

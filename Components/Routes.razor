@@ -12,8 +12,9 @@
         }
         else
         {
-            <RouteView RouteData="@routeData" DefaultLayout="@(routeData.PageType.FullName?
-                .Contains("admin", StringComparison.OrdinalIgnoreCase) == true ? typeof(Layout.MainLayout) : typeof(Layout.IndexLayout))" />
+            var useAdminLayout = Navigation.Uri.Contains("admin", StringComparison.OrdinalIgnoreCase);
+            <RouteView RouteData="@routeData" DefaultLayout="@(useAdminLayout ? typeof(Layout.MainLayout) : typeof(Layout.IndexLayout))" />
+
             <FocusOnNavigate RouteData="@routeData" Selector="h1" />
         }
     </Found>

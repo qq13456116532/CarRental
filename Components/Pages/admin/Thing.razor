@@ -1,0 +1,328 @@
+@page "/admin/thing"
+@using Data
+@using TabBlazor.Components.Tables
+@using TabBlazor.Services
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@inject ToastService ToastService
+
+
+<Row class="mb-3">
+    <RowCol Sm="12" Md="6" Lg="4">
+        <label class="form-label">Edit Mode</label>
+        <Select Items="EnumHelper.GetList<TableEditMode>()" @bind-SelectedValue="@tableEditMode" TextExpression="e=> e.ToString()" />
+    </RowCol>
+</Row>
+
+
+<TabBlazor.Table Item="Data.Thing" Items="things" PageSize="10" AddItemFactory="AddItem" OnItemEdited="OnItemEdit"
+        OnItemAdded="OnItemAdd" OnItemDeleted="OnItemDelete" CancelStrategy="OnCancelStrategy.Revert"
+       ShowCheckboxes MultiSelect Hover Responsive EditMode=tableEditMode EditPopupMutator=EditPopupOptions>
+    <HeaderTemplate>
+        <strong>Things</strong>
+    </HeaderTemplate>
+
+    <ChildContent>
+        <!-- Cover Column -->
+        <Column Item="Data.Thing" Title="Cover" Sortable="false" Searchable="false">
+            <Template>
+                <img src="@context.Cover" alt="Cover" style="max-width: 100px; height: auto;" />
+            </Template>
+            <!-- 添加或编辑时的上传控件 -->
+            <EditorTemplate>
+                <InputFile OnChange="@(e => HandleFileSelected(e, context))" />
+            </EditorTemplate>
+        </Column>
+
+         <!-- Title Column -->
+        <Column Item="Data.Thing" Property="e=>e.Title" Title="Title" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Title" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Description Column -->
+        <Column Item="Data.Thing" Property="e=>e.Description" Title="Description" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <textarea class="form-control" @bind="@context.Description"></textarea>
+            </EditorTemplate>
+        </Column>
+
+        <!-- Price Column -->
+        <Column Item="Data.Thing" Property="e=>e.Price" Title="Price" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Price" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Status Column -->
+        <Column Item="Data.Thing" Property="e=>e.Status" Title="Status" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Status" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Score Column -->
+        <Column Item="Data.Thing" Property="e=>e.Score" Title="Score" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.Score" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Mobile Column -->
+        <Column Item="Data.Thing" Property="e=>e.Mobile" Title="Mobile" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Mobile" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Age Column -->
+        <Column Item="Data.Thing" Property="e=>e.Age" Title="Age" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Age" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Location Column -->
+        <Column Item="Data.Thing" Property="e=>e.Location" Title="Location" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Location" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Create Time Column -->
+        <Column Item="Data.Thing" Property="e=>e.CreateTime" Title="Create Time" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.CreateTime" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Pv Column -->
+        <Column Item="Data.Thing" Property="e=>e.Pv" Title="Pv" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.Pv" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Recommend Count Column -->
+        <Column Item="Data.Thing" Property="e=>e.RecommendCount" Title="Recommend Count" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.RecommendCount" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Wish Count Column -->
+        <Column Item="Data.Thing" Property="e=>e.WishCount" Title="Wish Count" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.WishCount" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Collect Count Column -->
+        <Column Item="Data.Thing" Property="e=>e.CollectCount" Title="Collect Count" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.CollectCount" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Classification Id Column -->
+        <Column Item="Data.Thing" Property="e=>e.ClassificationId" Title="Classification ID" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind="@context.ClassificationId" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- User Id Column -->
+        <Column Item="Data.Thing" Property="e=>e.UserId" Title="User ID" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.UserId" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Xuhang Column -->
+        <Column Item="Data.Thing" Property="e=>e.Xuhang" Title="Xuhang" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Xuhang" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Dongli Column -->
+        <Column Item="Data.Thing" Property="e=>e.Dongli" Title="Dongli" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Dongli" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Xianzhi Column -->
+        <Column Item="Data.Thing" Property="e=>e.Xianzhi" Title="Xianzhi" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind="@context.Xianzhi" />
+            </EditorTemplate>
+        </Column>
+
+    </ChildContent>
+
+</TabBlazor.Table>
+@code {
+
+    [Inject] TabBlazor.Services.TablerService TablerService { get; set; }
+    private static List<Data.Thing> things = new List<Data.Thing>{new Data.Thing
+    {
+        Id = 1,
+        Title = "Electric Car",
+        Cover = "electric_car.jpg",
+        Description = "A powerful electric car with a range of 500 km.",
+        Price = "25000",
+        Status = "1",
+        Score = 95,
+        Mobile = "1234567890",
+        Age = "2 years",
+        Location = "New York",
+        CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+        Pv = 1500,
+        RecommendCount = 120,
+        WishCount = 80,
+        CollectCount = 60,
+        ClassificationId = 10,
+        UserId = "admin",
+        Xuhang = "500km",
+        Dongli = "Electric",
+        Xianzhi = "No restriction"
+    },};
+
+  
+    private TableEditMode tableEditMode;
+
+    // 页面加载时获取用户数据
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadThings();
+    }
+
+    // 从 API 加载用户数据
+    private async Task LoadThings()
+    {
+
+        // 发送 GET 请求获取用户列表
+        var response = await HttpClient.GetFromJsonAsync<List<Data.Thing>>($"{Navigation.BaseUri}api/Admin/things");
+        if (response != null)
+        {
+            things = response;
+            foreach (var item in things)
+            {
+                item.Cover = $"images/{item.Cover}";
+            }
+            Console.WriteLine($"Loaded {things.Count} Things.");
+        }
+        else
+        {
+            Console.WriteLine("No Things found.");
+        }
+
+    }
+    // 处理文件选择
+    private IBrowserFile uploadedFile;
+    private async Task HandleFileSelected(InputFileChangeEventArgs e, Data.Thing thing)
+    {
+        uploadedFile = e.File;
+        // 处理上传逻辑，可以是上传到服务器，或者将图片的URL设置到 `thing.Cover`
+        await UploadFile(thing);
+    }
+
+    // 模拟文件上传并将URL设置到Thing的Cover属性
+    private async Task UploadFile(Data.Thing thing)
+    {
+        if (uploadedFile != null)
+        {
+            var content = new MultipartFormDataContent();
+            var fileContent = new StreamContent(uploadedFile.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024)); // 10MB 限制
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(uploadedFile.ContentType);
+            content.Add(fileContent, "file", uploadedFile.Name);
+
+            // 假设API返回图片的URL
+            var response = await HttpClient.PostAsync($"{Navigation.BaseUri}api/Common/upload", content);
+            if (response.IsSuccessStatusCode)
+            {
+                var imageUrl = await response.Content.ReadAsStringAsync();
+                // 设置上传后的图片URL到Thing的Cover字段
+                thing.Cover = imageUrl;
+            }
+        }
+    }
+
+    private async Task OnItemEdit(Data.Thing thing)
+    {
+        var response = await HttpClient.PutAsJsonAsync($"{Navigation.BaseUri}api/Admin/things/{thing.Id}", thing);
+        if (response.IsSuccessStatusCode)
+        {
+            // 更新成功的处理
+            await ShowDialog($"Edited Thing's Id : {thing.Id}");
+            await LoadThings();
+        }
+    }
+
+    private async Task OnItemAdd(Data.Thing thing)
+    {
+        var response = await HttpClient.PostAsJsonAsync($"{Navigation.BaseUri}api/Admin/things", thing);
+        if (response.IsSuccessStatusCode)
+        {
+            Data.Thing? createdThing = await response.Content.ReadFromJsonAsync<Data.Thing>();
+            await ShowDialog($"Added Thing's Id : {createdThing?.Id ?? -1}");
+            await LoadThings();
+        }
+    }
+    private async Task OnItemDelete(Data.Thing thing)
+    {
+        var response = await HttpClient.DeleteAsync($"{Navigation.BaseUri}api/Admin/things/{thing.Id}");
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"Thing Id : {thing.Id} is deleted ");// 删除成功的处理
+            await LoadThings();
+        }
+    }
+
+    private async Task ShowDialog(string title)
+    {
+        await ToastService.AddToastAsync(new ToastModel { Title = "Toast", SubTitle = "Sub title", Message = title });
+    }
+
+    private Task<Data.Thing> AddItem()
+    {
+        return Task.FromResult(new Data.Thing{
+        Title = "Electric Car",
+        Cover = "electric_car.jpg",
+        Description = "A powerful electric car with a range of 500 km.",
+        Price = "25000",
+        Status = "1",
+        Score = 95,
+        Mobile = "1234567890",
+        Age = "2 years",
+        Location = "New York",
+        CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+        Pv = 1500,
+        RecommendCount = 120,
+        WishCount = 80,
+        CollectCount = 60,
+        ClassificationId = 10,
+        UserId = "admin",
+        Xuhang = "500km",
+        Dongli = "Electric",
+        Xianzhi = "No restriction"
+    });
+    }
+
+
+    //This is optional if you like to control the edit popup.
+    private void EditPopupOptions(TableEditPopupOptions<Data.Thing> options)
+    {
+        if (options.IsAddInProgress)
+        {
+            options.Title = "Add new Thing";
+        }
+        else
+        {
+            options.Title = $"Edit Thing {options.CurrentEditItem.Id}, {options.CurrentEditItem.Title}";
+        }
+        options.ModalOptions.Draggable = true;
+    }
+}

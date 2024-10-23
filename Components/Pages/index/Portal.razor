@@ -10,7 +10,7 @@
     <div class="content-left">
         <div class="left-search-item">
             <h4>车辆分类</h4>
-            <TreeView Items="@classifications" TitleSelector="(e)=>e.Title" 
+            <Shared.TreeView Items="@classifications" TitleSelector="(e)=>e.Title" 
                 OnItemSelected="EventCallback.Factory.Create<Classification>(this, OnCategorySelected)" />
         </div>
         <div class="left-search-item">

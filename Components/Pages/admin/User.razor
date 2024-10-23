@@ -1,0 +1,296 @@
+@page "/admin/user"
+@using Data
+@using TabBlazor.Components.Tables
+@using TabBlazor.Services
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@inject ToastService ToastService
+
+
+<Row class="mb-3">
+    <RowCol Sm="12" Md="6" Lg="4">
+        <label class="form-label">Edit Mode</label>
+        <Select Items="EnumHelper.GetList<TableEditMode>()" @bind-SelectedValue="@tableEditMode"
+            TextExpression="e=> e.ToString()" />
+    </RowCol>
+</Row>
+
+
+<TabBlazor.Table Item="Data.User" Items="users" PageSize="10" AddItemFactory="AddItem" OnItemEdited="OnItemEdit"
+    OnItemAdded="OnItemAdd" OnItemDeleted="OnItemDelete" CancelStrategy="OnCancelStrategy.Revert" ShowCheckboxes
+    MultiSelect Hover Responsive EditMode=tableEditMode EditPopupMutator=EditPopupOptions>
+
+    <HeaderTemplate>
+        <strong>Users</strong>
+    </HeaderTemplate>
+
+    <ChildContent>
+        <!-- Cover Column -->
+        <Column Item="Data.User" Title="Avatar" Sortable="false" Searchable="false">
+            <Template>
+                <img src="@context.Avatar" alt="Avatar" style="max-width: 100px; height: auto;" />
+            </Template>
+            <!-- 添加或编辑时的上传控件 -->
+            <EditorTemplate>
+                <InputFile OnChange="@(e => HandleFileSelected(e, context))" />
+            </EditorTemplate>
+        </Column>
+
+        <Column Item="Data.User" Property="e=>e.Username" Title="Username" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Username" />
+            </EditorTemplate>
+        </Column>
+        <Column Item="Data.User" Property="e=>e.Password" Title="Password" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Password" />
+            </EditorTemplate>
+        </Column>
+        <!-- Role Column -->
+        <Column Item="Data.User" Property="e=>e.Role" Title="Role" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Role" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Status Column -->
+        <Column Item="Data.User" Property="e=>e.Status" Title="Status" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Status" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Nickname Column -->
+        <Column Item="Data.User" Property="e=>e.Nickname" Title="Nickname" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Nickname" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Mobile Column -->
+        <Column Item="Data.User" Property="e=>e.Mobile" Title="Mobile" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Mobile" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Email Column -->
+        <Column Item="Data.User" Property="e=>e.Email" Title="Email" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="email" class="form-control" @bind-value="@context.Email" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Gender Column -->
+        <Column Item="Data.User" Property="e=>e.Gender" Title="Gender" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Gender" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Description Column -->
+        <Column Item="Data.User" Property="e=>e.Description" Title="Description" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <textarea class="form-control" @bind="@context.Description"></textarea>
+            </EditorTemplate>
+        </Column>
+
+        <!-- CreateTime Column -->
+        <Column Item="Data.User" Property="e=>e.CreateTime" Title="Create Time" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.CreateTime" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Score Column -->
+        <Column Item="Data.User" Property="e=>e.Score" Title="Score" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="number" class="form-control" @bind-value="@context.Score" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Push Email Column -->
+        <Column Item="Data.User" Property="e=>e.PushEmail" Title="Push Email" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="email" class="form-control" @bind-value="@context.PushEmail" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Push Switch Column -->
+        <Column Item="Data.User" Property="e=>e.PushSwitch" Title="Push Switch" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="checkbox" @bind-value="@context.PushSwitch" />
+            </EditorTemplate>
+        </Column>
+
+        <!-- Token Column -->
+        <Column Item="Data.User" Property="e=>e.Token" Title="Token" Sortable Searchable Groupable>
+            <EditorTemplate>
+                <input type="text" class="form-control" @bind-value="@context.Token" />
+            </EditorTemplate>
+        </Column>
+    </ChildContent>
+    
+
+
+</TabBlazor.Table>
+
+
+
+@code {
+
+[Inject] TabBlazor.Services.TablerService TablerService { get; set; }
+private static List<Data.User> users = new List<Data.User>{new Data.User
+{
+Id = 1,
+Username = "默认值",
+Password = "默认值",
+Role = "1",
+Status = "1",
+Nickname = "AdminUser",
+Avatar = "avatar.jpg",
+Mobile = "12345678901",
+Email = "admin@example.com",
+Gender = "M",
+Description = "Administrator account",
+CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+Score = 100,
+PushEmail = "admin@example.com",
+PushSwitch = true,
+Token = "admin"
+},};
+
+
+    private TableEditMode tableEditMode;
+
+    // 页面加载时获取用户数据
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUsers();
+    }
+
+    // 从 API 加载用户数据
+    private async Task LoadUsers()
+    {
+
+        // 发送 GET 请求获取用户列表
+        var response = await HttpClient.GetFromJsonAsync<List<Data.User>>($"{Navigation.BaseUri}api/Admin/users");
+        if (response != null)
+        {
+            users = response;
+            foreach (var item in users)
+            {
+                item.Avatar = $"images/{item.Avatar}";
+            }
+            Console.WriteLine($"Loaded {users.Count} users.");
+        }
+        else
+        {
+            Console.WriteLine("No users found.");
+        }
+    }
+
+    // 处理文件选择
+    private IBrowserFile uploadedFile;
+    private async Task HandleFileSelected(InputFileChangeEventArgs e, Data.User user)
+    {
+        uploadedFile = e.File;
+        // 处理上传逻辑，可以是上传到服务器，或者将图片的URL设置到 `thing.Cover`
+        await UploadFile(user);
+    }
+
+    // 模拟文件上传并将URL设置到Thing的Cover属性
+    private async Task UploadFile(Data.User user)
+    {
+        if (uploadedFile != null)
+        {
+            var content = new MultipartFormDataContent();
+            var fileContent = new StreamContent(uploadedFile.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024)); // 10MB 限制
+            fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(uploadedFile.ContentType);
+            content.Add(fileContent, "file", uploadedFile.Name);
+
+            // 假设API返回图片的URL
+            var response = await HttpClient.PostAsync($"{Navigation.BaseUri}api/Common/upload", content);
+            if (response.IsSuccessStatusCode)
+            {
+                var imageUrl = await response.Content.ReadAsStringAsync();
+                // 设置上传后的图片URL到Thing的Cover字段
+                user.Avatar = imageUrl;
+            }
+        }
+    }
+
+    private async Task OnItemEdit(Data.User user)
+    {
+        var response = await HttpClient.PutAsJsonAsync($"{Navigation.BaseUri}api/Admin/users/{user.Id}", user);
+        if (response.IsSuccessStatusCode)
+        {
+            // 更新成功的处理
+            //await TablerService.ShowAlert($"Edited User {user.Id}");
+            await ShowDialog($"Edited User's Id : {user.Id}");
+            await LoadUsers();
+        }
+    }
+
+    private async Task OnItemAdd(Data.User user)
+    {
+        var response = await HttpClient.PostAsJsonAsync($"{Navigation.BaseUri}api/Admin/users", user);
+        if (response.IsSuccessStatusCode)
+        {
+            Data.User? createdUser = await response.Content.ReadFromJsonAsync<Data.User>();
+            await ShowDialog($"Added User's Id : {createdUser?.Id ?? -1}");
+            await LoadUsers();
+        }
+    }
+    private async Task OnItemDelete(Data.User user)
+    {
+        var response = await HttpClient.DeleteAsync($"{Navigation.BaseUri}api/Admin/users/{user.Id}");
+        if (response.IsSuccessStatusCode)
+        {
+            await ShowDialog($"User Id : {user.Id} is deleted ");// 删除成功的处理
+            await LoadUsers();
+        }
+    }
+
+    private async Task ShowDialog(string title)
+    {
+        await ToastService.AddToastAsync(new ToastModel { Title = "Toast", SubTitle = "Sub title", Message = title });
+    }
+
+    private Task<Data.User> AddItem()
+    {
+        return Task.FromResult(new Data.User
+            {
+                Username = "default",
+                Password = "default",
+                Role = "1",
+                Status = "1",
+                Nickname = "default",
+                Avatar = "images/avatar.jpg",
+                Mobile = "12345678901",
+                Email = "admin@example.com",
+                Gender = "M",
+                Description = "Administrator account",
+                CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                Score = 100,
+                PushEmail = "admin@example.com",
+                PushSwitch = true,
+                Token = "default"
+            });
+    }
+
+
+    //This is optional if you like to control the edit popup.
+    private void EditPopupOptions(TableEditPopupOptions<Data.User> options)
+    {
+        if (options.IsAddInProgress)
+        {
+            options.Title = "Add new User";
+        }
+        else
+        {
+            options.Title = $"Edit User {options.CurrentEditItem.Id}, {options.CurrentEditItem.Nickname}";
+        }
+        options.ModalOptions.Draggable = true;
+    }
+}
