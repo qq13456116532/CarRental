@@ -110,7 +110,7 @@
         ListAddressData();
     }
 
-    private async void HandleAdd()
+    private void HandleAdd()
     {
         var parameters = new Dictionary<string, object>();
         parameters.Add("buttonName","新增");
@@ -135,6 +135,7 @@
         // Logic to navigate back
     }
     public async void OnBoostrapModalClickClose(){
+        await Task.Delay(10);
     }
     private async void HandleJiesuan()
     {
@@ -147,7 +148,7 @@
             // Show message: Please select an address.
             return;
         }
-
+        await Task.Delay(10);
         // Logic to create the order and redirect to payment
     }
 
@@ -187,7 +188,7 @@
         public string? Id { get; set; }
         public string? Title { get; set; }
         public string? Cover { get; set; }
-        public string Price { get; set; }
+        public string? Price { get; set; }
         public int Count { get; set; } = 1;
         public decimal Amount { get; set; }
         public string? Remark { get; set; }

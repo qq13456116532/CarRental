@@ -47,8 +47,8 @@
     [Parameter]
     public string AliPayIcon { get; set; } = "images/ali-pay-icon.svg";
     
-    private string DdlTime { get; set; }
-    private string Amount { get; set; }
+    private string? DdlTime { get; set; }
+    private string? Amount { get; set; }
 
 
     protected override void OnInitialized()
@@ -61,12 +61,14 @@
     private async Task OnHideModalClick()
         {
             //await modal.HideAsync();
+            await Task.Delay(10);
         }
     private async void HandlePay()
     {
         // Display a warning message for the lack of payment functionality
         Console.WriteLine("to do 支付功能");
         //await modal.ShowAsync();
+        await Task.Delay(10);
     }
 
     private string FormatDate(DateTime dateTime)

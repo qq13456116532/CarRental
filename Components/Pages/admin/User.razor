@@ -5,7 +5,7 @@
 @inject HttpClient HttpClient
 @inject NavigationManager Navigation
 @inject ToastService ToastService
-
+@inject TablerService TablerService
 
 <Row class="mb-3">
     <RowCol Sm="12" Md="6" Lg="4">
@@ -139,7 +139,6 @@
 
 @code {
 
-[Inject] TabBlazor.Services.TablerService TablerService { get; set; }
 private static List<Data.User> users = new List<Data.User>{new Data.User
 {
 Id = 1,
@@ -191,7 +190,7 @@ Token = "admin"
     }
 
     // 处理文件选择
-    private IBrowserFile uploadedFile;
+    private IBrowserFile? uploadedFile;
     private async Task HandleFileSelected(InputFileChangeEventArgs e, Data.User user)
     {
         uploadedFile = e.File;

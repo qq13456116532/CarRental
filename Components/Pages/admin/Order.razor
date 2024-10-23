@@ -5,7 +5,7 @@
 @inject HttpClient HttpClient
 @inject NavigationManager Navigation
 @inject ToastService ToastService
-
+@inject TablerService TablerService
 
 <Row class="mb-3">
     <RowCol Sm="12" Md="6" Lg="4">
@@ -90,8 +90,6 @@
 </TabBlazor.Table>
 
 @code {
-
-    [Inject] TabBlazor.Services.TablerService TablerService { get; set; }
     private static List<Data.Order> orders = new List<Data.Order>();
 
     private TableEditMode tableEditMode;
