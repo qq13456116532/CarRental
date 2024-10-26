@@ -91,3 +91,4 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\LinqKit.Core.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\TabBlazor.dll
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\admin\Login.razor.rz.scp.css
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Blazor-ApexCharts.dll

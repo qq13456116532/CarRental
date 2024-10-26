@@ -35,7 +35,7 @@ Password: admin123
 ![Image description](README/10.png)
 ![Image description](README/11.png)
 ![Image description](README/12.png)
-
+![Image description](README/13.png)
 # Deployment and Running Instructions
 - Install .NET 8.0
 Link: https://dotnet.microsoft.com/en-us/download

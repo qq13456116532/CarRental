@@ -31,6 +31,7 @@
 ![Image description](README/10.png)
 ![Image description](README/11.png)
 ![Image description](README/12.png)
+![Image description](README/13.png)
 ### 部署运行
 
 - 安装.Net8.0，链接：https://dotnet.microsoft.com/en-us/download

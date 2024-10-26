@@ -3,6 +3,8 @@ using CarRental.Components;
 using Services.Auth;
 using TabBlazor;
 using TabBlazor.Services;
+using ApexCharts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +18,7 @@ builder.Services.AddScoped<ToastService>();  // 注册 ToastService
 // 注册 TabBlazor 服务
 builder.Services.AddTabler();
 builder.Services.AddTabBlazor();
+
 
 var app = builder.Build();
 

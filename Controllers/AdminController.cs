@@ -13,11 +13,29 @@ public class AdminController : ControllerBase
     {
         _context = context;
     }
+    private async Task LogOperation(string method, string content)
+    {
+        var log = new OpLog
+        {
+            ReIp = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            ReTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            ReUa = Request.Headers["User-Agent"].ToString(),
+            ReUrl = HttpContext.Request.Path,
+            ReMethod = method,
+            ReContent = content,
+            AccessTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        };
+
+        _context.OpLogs.Add(log);
+        await _context.SaveChangesAsync();
+    }
+
     //-------------------------------- User ---------------------------------
     [HttpGet("users")]
     public async Task<ActionResult<List<User>>> GetUsers()
     {
         var users = await _context.Users.ToListAsync();
+        await LogOperation("GET", "获取用户列表");
         return Ok(users);
     }
     //  POST 请求：创建用户
@@ -26,6 +44,7 @@ public class AdminController : ControllerBase
     {
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
+        await LogOperation("POST", $"创建用户: {user.Username}");
         return Ok(user);
     }
 
@@ -62,7 +81,7 @@ public class AdminController : ControllerBase
         user.Token = updatedUser.Token;
 
         await _context.SaveChangesAsync();
-
+        await LogOperation("PUT", $"更新用户: {updatedUser.Username}");
         return NoContent();
     }
 
@@ -78,8 +97,16 @@ public class AdminController : ControllerBase
 
         _context.Users.Remove(user);
         await _context.SaveChangesAsync();
-
+        await LogOperation("DELETE", $"删除用户ID: {id}");
         return NoContent();
+    }
+    //-------------------------------- Oplog ---------------------------------
+    [HttpGet("oplogs")]
+    public async Task<ActionResult<List<Thing>>> GetOplogs()
+    {
+        var oplogs = await _context.OpLogs.ToListAsync();
+        await LogOperation("GET", "获取Oplogs列表");
+        return Ok(oplogs);
     }
 
     //-------------------------------- Thing ---------------------------------
@@ -88,6 +115,7 @@ public class AdminController : ControllerBase
     public async Task<ActionResult<List<Thing>>> GetThings()
     {
         var things = await _context.Things.ToListAsync();
+        await LogOperation("GET", "获取商品列表");
         return Ok(things);
     }
 
@@ -97,6 +125,7 @@ public class AdminController : ControllerBase
     {
         _context.Things.Add(thing);
         await _context.SaveChangesAsync();
+        await LogOperation("POST", $"创建商品: {thing.Title}");
         return Ok(thing);
     }
 
@@ -137,7 +166,7 @@ public class AdminController : ControllerBase
         thing.Xianzhi = updatedThing.Xianzhi;
 
         await _context.SaveChangesAsync();
-
+        await LogOperation("PUT", $"更新商品: {thing.Title}");
         return NoContent();
     }
 
@@ -153,7 +182,7 @@ public class AdminController : ControllerBase
 
         _context.Things.Remove(thing);
         await _context.SaveChangesAsync();
-
+        await LogOperation("DELETE", $"删除商品ID: {id}");
         return NoContent();
     }
 
@@ -164,6 +193,7 @@ public class AdminController : ControllerBase
     public async Task<ActionResult<List<Order>>> GetOrders()
     {
         var orders = await _context.Orders.ToListAsync();
+        await LogOperation("GET", "获取订单列表");
         return Ok(orders);
     }
 
@@ -173,6 +203,7 @@ public class AdminController : ControllerBase
     {
         _context.Orders.Add(order);
         await _context.SaveChangesAsync();
+        await LogOperation("POST", $"创建订单: {order.Id}");
         return Ok(order);
     }
 
@@ -205,7 +236,7 @@ public class AdminController : ControllerBase
         order.Remark = updatedOrder.Remark;
 
         await _context.SaveChangesAsync();
-
+        await LogOperation("PUT", $"更新订单: {id}");
         return NoContent();
     }
 
@@ -221,10 +252,10 @@ public class AdminController : ControllerBase
 
         _context.Orders.Remove(order);
         await _context.SaveChangesAsync();
-
+        await LogOperation("DELETE", $"删除订单ID: {id}");
         return NoContent();
     }
-    
+
     //-------------------------------- Address ---------------------------------
 
     //  GET 请求：获取所有 Address
@@ -232,6 +263,7 @@ public class AdminController : ControllerBase
     public async Task<ActionResult<List<Address>>> GetAddresses()
     {
         var addresses = await _context.Addresses.ToListAsync();
+        await LogOperation("GET", "获取地址列表");
         return Ok(addresses);
     }
 
@@ -241,6 +273,7 @@ public class AdminController : ControllerBase
     {
         _context.Addresses.Add(address);
         await _context.SaveChangesAsync();
+        await LogOperation("POST", $"创建地址: {address.Name}");
         return Ok(address);
     }
 
@@ -268,7 +301,7 @@ public class AdminController : ControllerBase
         address.UserId = updatedAddress.UserId;
 
         await _context.SaveChangesAsync();
-
+        await LogOperation("PUT", $"更新地址: {updatedAddress.Name}");
         return NoContent();
     }
 
@@ -284,9 +317,31 @@ public class AdminController : ControllerBase
 
         _context.Addresses.Remove(address);
         await _context.SaveChangesAsync();
-
+        await LogOperation("DELETE", $"删除地址ID: {id}");
         return NoContent();
     }
+    //-------------------------------- Notice ---------------------------------
+    [HttpGet("latest-notice")]
+    public async Task<ActionResult<Notice>> GetLatestNotice()
+    {
+        // 查询最新的Notice，按CreateTime降序排序，取第一条
+        var latestNotice = await _context.Notices
+                                        .OrderByDescending(n => n.CreateTime)
+                                        .FirstOrDefaultAsync();
+
+        // 如果不存在Notice，则返回404
+        if (latestNotice == null)
+        {
+            return NotFound("没有可用的公告");
+        }
+
+        // 记录操作日志
+        await LogOperation("GET", "获取最新公告");
+
+        // 返回最新的公告
+        return Ok(latestNotice);
+    }
+
 
 
 

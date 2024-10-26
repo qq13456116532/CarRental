@@ -6,7 +6,7 @@ public class AuthService
 {
     public bool IsUserLoggedIn => !string.IsNullOrEmpty(UserToken);
     public bool IsAdminLoggedIn => !string.IsNullOrEmpty(AdminToken);
-    private readonly string[] _allowList = { "admin/login","userCenter", "login", "register", "portal", "search", "403", "404" };
+    private readonly string[] _allowList = {"admin/", "admin/login","userCenter", "login", "register", "portal", "search", "403", "404" };
 
     public string? UserToken { get; set; }
     public string? AdminToken { get; set; }

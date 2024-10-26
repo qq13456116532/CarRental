@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "CarRental/1.0.0": {
         "dependencies": {
+          "Blazor-ApexCharts": "3.5.0",
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.10",
           "Radzen.Blazor": "5.2.12",
@@ -16,6 +17,18 @@
         },
         "runtime": {
           "CarRental.dll": {}
+        }
+      },
+      "Blazor-ApexCharts/3.5.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.8",
+          "Microsoft.AspNetCore.Components.Web": "8.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Blazor-ApexCharts.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          }
         }
       },
       "DartSassBuilder/1.0.0": {},
@@ -448,6 +461,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazor-ApexCharts/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PEl2PflOJOXy/31GDvHYoYmkL8CpEZndWtjGOV9S4PICwXZfUJpv8HFuJK2d8MqdZ/Z+7c2DJRc2OQ8hv8yLDw==",
+      "path": "blazor-apexcharts/3.5.0",
+      "hashPath": "blazor-apexcharts.3.5.0.nupkg.sha512"
     },
     "DartSassBuilder/1.0.0": {
       "type": "package",

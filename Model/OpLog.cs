@@ -6,7 +6,7 @@ namespace Data
     public class OpLog
     {
         [Key]
-        public required long Id { get; set; }
+        public long? Id { get; set; }
 
         [StringLength(100)]
         public required string ReIp { get; set; }

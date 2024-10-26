@@ -1,0 +1,188 @@
+﻿@page "/admin/"
+@using TabBlazor.Components.Modals
+@using Services
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+@using Data
+<PageTitle>Home</PageTitle>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; height: 87vh; box-sizing: border-box;">
+
+<div style="height:400px;width:650px">
+    <ApexChart @ref="chart" TItem="OpLog" Options=options Title="请求类型统计">
+        <ApexPointSeries TItem="OpLog" Items="ops" Name="Op Count" XValue="@(e => e.ReMethod)"
+            YAggregate="@(e => e.Sum(e => 1))" OrderByDescending="e => e.Y" SeriesType="SeriesType.Bar" />
+    </ApexChart>
+</div>
+<div style="height:400px;width:650px">
+    <ApexChart @ref="chart2" TItem="OpLogChartData" Options=options2 Title="请求时间分布">
+        <ApexPointSeries TItem="OpLogChartData" Items="DailyOpLogData" Name="请求时间" XValue="@(e => e.Date)"
+            YAggregate="@(e => e.Sum(e=> e.Count))" SeriesType="SeriesType.Line" />
+    </ApexChart>
+</div>
+<div style="height:400px;width:650px">
+    <ApexChart @ref="chart3" TItem="Data.Thing" Options=options3 Title="商品价格区间分布">
+        <ApexPointSeries TItem="Data.Thing"
+                         Items="things"
+                         Name="商品数量"
+                         XValue="@(e => getPriceRange(e))"
+                         YAggregate="@(e => e.Sum(e=> 1))"
+                         SeriesType="SeriesType.Bar" />
+    </ApexChart>
+</div>
+   <!-- 右下角通知区域 -->
+    <div style="display: flex; align-items: center; justify-content: center; padding: 20px; background-color: linear-gradient(135deg, #f0f4ff, #e0e7ff); border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); max-width: 600px; border-left: 5px solid #007bff;">
+        <h3 style="color: #007bff; font-weight: bold; text-align: left; font-size: 40px; margin-right: 20px;">通知区域</h3>
+        <div style="width: 100%; height: 100%; position: relative;"> <!-- 添加 position: relative -->
+            @if (isLoading)
+            {
+                <p style="text-align: center; font-style: italic; color: #555; animation: fadein 1s;">加载中...</p>
+            }
+            else if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <p class="text-danger" style="text-align: center;">@errorMessage</p>
+            }
+            else
+            {
+                <div class="latest-notice" style="padding: 15px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); position: relative;"> <!-- 添加 position: relative -->
+                    <h3 style="color: #333; font-weight: bold; text-align: center; font-size: 30px; margin-bottom: 15px;">@latestNotice?.Title</h3>
+                    
+                    <!-- 固定高度并处理溢出滚动 -->
+                    <p style="color: #666; line-height: 1.8; height: 250px; overflow-y: auto; padding: 15px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);">
+                        @latestNotice?.Content
+                    </p>
+
+
+                </div>
+            <!-- 通过绝对定位将 small 固定在右下角 -->
+            <small style="position: absolute; right: 15px; bottom: 20px; color: #999;">
+                @latestNotice?.CreateTime
+            </small>
+            }
+
+        </div>
+    </div>
+
+
+
+
+</div>
+@code {
+    private List<OpLog> ops = new List<OpLog>();
+    private List<Data.Thing> things = new List<Data.Thing>();
+    private List<OpLogChartData> DailyOpLogData = new List<OpLogChartData>();
+
+    private ApexChart<OpLog>? chart;
+    private ApexChart<OpLogChartData>? chart2;
+    private ApexChart<Data.Thing>? chart3;
+    private ApexChartOptions<OpLog>? options;
+    private ApexChartOptions<OpLogChartData>? options2;
+    private ApexChartOptions<Data.Thing>? options3;
+
+    private Notice? latestNotice;
+    private bool isLoading = true;
+    private string? errorMessage;
+
+    protected override void OnInitialized()
+    {
+        options = new ApexChartOptions<OpLog>
+            {
+                Theme = new Theme
+                {
+                    Mode = Mode.Dark,
+                    Palette = PaletteType.Palette1
+                }
+            };
+        options2 = new ApexChartOptions<OpLogChartData>
+            {
+                Theme = new Theme
+                {
+                    Mode = Mode.Dark,
+                    Palette = PaletteType.Palette1
+                }
+            };
+            options3 = new ApexChartOptions<Data.Thing>
+            {
+                Theme = new Theme
+                {
+                    Mode = Mode.Dark,
+                    Palette = PaletteType.Palette1
+                }
+            };
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // 向API发送请求，获取最新公告
+            latestNotice = await HttpClient.GetFromJsonAsync<Notice>($"{Navigation.BaseUri}api/Admin/latest-notice");
+            if (latestNotice == null)
+            {
+                errorMessage = "没有最新的公告";
+            }
+        }
+        catch (Exception ex)
+        {
+            // 捕获错误
+            errorMessage = $"加载公告时出错: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false; // 加载完成
+        }
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        // 调用 GetOplogs API 并获取数据
+        var oplogs = await HttpClient.GetFromJsonAsync<List<OpLog>>($"{Navigation.BaseUri}api/Admin/oplogs");
+
+        var thingsData = await HttpClient.GetFromJsonAsync<List<Data.Thing>>($"{Navigation.BaseUri}api/Admin/things");
+
+        if (oplogs != null)
+        {
+            ops = oplogs;
+            // 按天统计请求次数
+            DailyOpLogData = ops
+            .GroupBy(log => DateTime.Parse(log.ReTime).ToString("yyyy-MM-dd")) // 提取日期
+            .Select(group => new OpLogChartData
+                {
+                    Date = group.Key,
+                    Count = group.Count()
+                })
+            .OrderBy(data => data.Date) // 按日期排序
+            .ToList();
+        }
+        if (thingsData != null)
+        {
+            things = thingsData;
+        }
+        
+        StateHasChanged();
+        if (chart2 != null)
+            await chart2.UpdateOptionsAsync(true, true, true, null);
+        if (chart != null)
+            await chart.UpdateOptionsAsync(true, true, true, null);
+        if (chart3 != null)
+            await chart3.UpdateOptionsAsync(true, true, true, null);
+
+    }
+    private string getPriceRange(Data.Thing thing){
+        int price;
+        if (int.TryParse(thing.Price, out price))
+        {
+            Console.WriteLine($"转换成功，价格为：{price}");
+            if (price >= 1 && price <= 100) return "1-100";
+            if (price >= 101 && price <= 1000) return "101-1000";
+            if (price >= 1001 && price <= 5000) return "1001-5000";
+            if (price >= 5001 && price <= 10000) return "5001-10000";
+            return "10000+";
+        }
+        else
+        {
+            Console.WriteLine("转换失败，t.Price 不是有效的整数");
+            return "1-100";
+        }
+
+
+    }
+}

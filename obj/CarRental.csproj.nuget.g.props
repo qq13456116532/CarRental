@@ -17,5 +17,6 @@
     <Import Project="$(NuGetPackageRoot)tabblazor\0.14.10-beta\buildTransitive\TabBlazor.props" Condition="Exists('$(NuGetPackageRoot)tabblazor\0.14.10-beta\buildTransitive\TabBlazor.props')" />
     <Import Project="$(NuGetPackageRoot)radzen.blazor\5.2.12\buildTransitive\Radzen.Blazor.props" Condition="Exists('$(NuGetPackageRoot)radzen.blazor\5.2.12\buildTransitive\Radzen.Blazor.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.10\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\8.0.10\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)blazor-apexcharts\3.5.0\buildTransitive\Blazor-ApexCharts.props" Condition="Exists('$(NuGetPackageRoot)blazor-apexcharts\3.5.0\buildTransitive\Blazor-ApexCharts.props')" />
   </ImportGroup>
 </Project>
