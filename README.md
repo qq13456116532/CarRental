@@ -1,28 +1,26 @@
-# Car Rental Management System (Partly Completed)
-[中文版](README-ch.md)
-# Overview
-The platform is built using a B/S architecture and developed with .NET 8.
-
-The entire platform includes both frontend and backend sections.
-
-Frontend features include: Homepage, Vehicle Details, Vehicle Reservation, and User Center.
-
-Backend features include: Vehicle Management, Category Management, Tag Management, Comment Management, User Management, Operations Management, Log Management, Statistics, and System Information.
-# Target Audience
-College students
-
-System designers
-
-Course projects
-
-Graduation design
-# Admin Account:
-Username: admin
-
-Password: admin123
 
 
-# Screenshots
+# 车辆租赁管理平台/租车系统(partly completed)
+[English Version](README-en.md)
+### 功能介绍
+平台采用 B/S 结构，使用 .NET8 开发
+
+
+整个平台包括前台和后台两个部分。
+
+前台功能包括：首页、车辆详情、车辆预订、用户中心模块。
+
+后台功能包括：车辆管理、分类管理、标签管理、评论管理、用户管理、运营管理、日志管理、统计分析、系统信息模块。
+
+### 适合人群
+大学生、系统设计人员、课程作业、毕业设计
+
+### 帐号：
+用户名：admin
+
+密码：admin123
+
+### 效果图
 ![Image description](README/1.png)
 ![Image description](README/2.png)
 ![Image description](README/3.png)
@@ -36,16 +34,18 @@ Password: admin123
 ![Image description](README/11.png)
 ![Image description](README/12.png)
 ![Image description](README/13.png)
-# Deployment and Running Instructions
-- Install .NET 8.0
-Link: https://dotnet.microsoft.com/en-us/download
+### 部署运行
 
-- Download Packages: 
-Run the following command in the project directory to restore the required NuGet packages:
-```
+- 安装.Net8.0，链接：https://dotnet.microsoft.com/en-us/download
+
+- 下载包
+```cs
 dotnet restore
 ```
-- Run the Project: Navigate to the CarRental directory and run:
-```
+
+- 运行项目，在项目文件夹`CarRental`下,运行
+```cs
 dotnet run
 ```
+
+
