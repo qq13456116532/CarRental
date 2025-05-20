@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mOmgTvpCz5pwo+4Lx0Iy2qNrwH+swrqY56KpvevZj8k=",
+  "Hash": "LXB8XHOKU7Ko7siUPbA5OaUu8HMEYp48bUAlBMwOvfk=",
   "Source": "CarRental",
   "BasePath": "_content/CarRental",
   "Mode": "Default",
@@ -31,6 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "fipu15mg5j",
+      "Integrity": "We76yQ6BbUqy3OL7pB4AiChSOtAH/BdDsZ0Z+MzXvD0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\css\\apexcharts.css"
@@ -50,6 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "z26g0237cp",
+      "Integrity": "y7oBw09A3u8iAjBztkQlI3N3pGqva06sVjeXDGyculI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\js\\apexcharts.esm.js"
@@ -69,6 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "kzlgsdogkz",
+      "Integrity": "UEPBukuX9UBUsoujon2fDJJ7kFSKMU0BjBs/DqSewQ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\js\\blazor-apexcharts.js"
@@ -88,6 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "xa1fllx2j5",
+      "Integrity": "pxL3pNtdvzD2E7ZxLCoHXkPcE/rjqW5RwjueNMnLYdc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark-base.css"
@@ -107,6 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "f9yvf3g7j5",
+      "Integrity": "M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark-wcag.css"
@@ -126,6 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "v2s5ed3x6n",
+      "Integrity": "mVBlYGadvaqVkjgdd897LzBR1WgAoKen7TmfN0Y+Q5o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark.css"
@@ -145,6 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "at1qepv213",
+      "Integrity": "rs3/0avb3w0j/EhTJ1NBLOIkeFT9YjIubA+/IBjj4V4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default-base.css"
@@ -164,6 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "796b73bq82",
+      "Integrity": "lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default-wcag.css"
@@ -183,6 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "hefbkhm0si",
+      "Integrity": "ufrMa2luSoYP7f3F+jYyg7rfO7o2lmwuNbwWSFlgUQ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default.css"
@@ -202,6 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8biyd0hyw5",
+      "Integrity": "NE5+++OeNUUsW0Iojgu3hcoZiWwO+mtdHap8QJLLK1s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-base.css"
@@ -221,6 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "0n8ent8vd3",
+      "Integrity": "xJFYUaTFcgzJeM01XsmqboE5OmNX5Eeyz8uzQJiArlg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark-base.css"
@@ -240,6 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "a5szytxnku",
+      "Integrity": "wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark-wcag.css"
@@ -259,6 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "o0bnz9p3hv",
+      "Integrity": "iK6hbZ0cOpYIn8hGtIStDoUGuRplcZrmKigVg2cbZ0A=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark.css"
@@ -278,6 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "x6merli1rk",
+      "Integrity": "J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-wcag.css"
@@ -297,6 +325,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "yj6lorf4h9",
+      "Integrity": "kpeKOOuWCJjvYHdQYNO496JaJrGLMLYqfhgAI4GSFfg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic.css"
@@ -316,6 +346,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "tz40y1xw61",
+      "Integrity": "SS+VWvMRYsMvRb8o5Xvj3s/tBABkenZoswkOXj7nnic=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-base.css"
@@ -335,6 +367,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "e1qmd0wfgx",
+      "Integrity": "ruVmSpSVmH6uq2MaLytEqedsvnIXYFiRoKm3kVs2nWo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark-base.css"
@@ -354,6 +388,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "22pb44itlf",
+      "Integrity": "mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark-wcag.css"
@@ -373,6 +409,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "bj3w3oiokn",
+      "Integrity": "GcNXuNcHmJLaTNDT39uEORXorWzPGixsQdm8PgY5ECw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark.css"
@@ -392,6 +430,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "pblx1qaqft",
+      "Integrity": "y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-wcag.css"
@@ -411,6 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8325u01fvd",
+      "Integrity": "LLhDuqmr9tnmAUOLNSZSTXHBVy04EdqwTz/nB6x0pfA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material.css"
@@ -430,6 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "q4nlwx21uy",
+      "Integrity": "Wgx1ir0M96gcvwthwTVOKpH8CQb/K6fhirIz8hxy27I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-base.css"
@@ -449,6 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "he980ykk53",
+      "Integrity": "menqiNNCYVJERl/evSjjjuz5wfqjTHJLBeycprjzNS4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark-base.css"
@@ -468,6 +514,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "557e8lceon",
+      "Integrity": "VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark-wcag.css"
@@ -487,6 +535,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "2om4x41hei",
+      "Integrity": "PhMdn1pfcb/qBMC+A/Y4hXMmz8GgHJ/dvN5oOQBapzY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark.css"
@@ -506,6 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "9fpk6led9e",
+      "Integrity": "tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-wcag.css"
@@ -525,6 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "n0nvfrv74s",
+      "Integrity": "uQ7/PszhqDvYSKFjOvU+FmtAO/GfGfhOjPLX0597CDY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software.css"
@@ -544,6 +598,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "k1ktrcmyup",
+      "Integrity": "SGrVRmBYVHTtAXgEODVgEviydePii6tPAXZTRi5GoF8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-base.css"
@@ -563,6 +619,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3ru3aegdtm",
+      "Integrity": "kb/4CJvwilqComcai9cnRyxiIVhHo2bHztQxxez0BDI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark-base.css"
@@ -582,6 +640,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "7bt2cgjiuc",
+      "Integrity": "HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark-wcag.css"
@@ -601,6 +661,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "uyqfwmh3sx",
+      "Integrity": "usELOtTv8sW1XN+uLOHVjDyJMZ0viTzIJ9/FBFJG9y8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark.css"
@@ -620,6 +682,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "kp0ueqs315",
+      "Integrity": "GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-wcag.css"
@@ -639,6 +703,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "d766iikxks",
+      "Integrity": "6b4YDzXMm4kH8kbadPwfvKP4jVtbdx6bScVB4nqf/z4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard.css"
@@ -658,6 +724,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mv86jbv18h",
+      "Integrity": "jl6yGniuOaLQTXd36jhE7+/dH86dwgPNpHgSvBiQxxM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2"
@@ -677,6 +745,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "tdgcpklreb",
+      "Integrity": "D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\RobotoFlex.woff2"
@@ -696,6 +766,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "sw3iuqo2hf",
+      "Integrity": "tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2"
@@ -715,6 +787,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "nqmp3d2aoy",
+      "Integrity": "XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2"
@@ -734,6 +808,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "1zua16gx9k",
+      "Integrity": "TXQB/StiqilOWOHz79YDgrbww/nA0Ga8cs/m5yTJESA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\Radzen.Blazor.js"
@@ -753,6 +829,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "e9fyo4cz7e",
+      "Integrity": "PlZPu3YY4ei9P+DAKTzAKybAO0YpxFQheBlTAcO7bRs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.css"
@@ -772,6 +850,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "kz6ejqombz",
+      "Integrity": "4LXf6PfeclhPZ3ic6iaYqRxGqJzXxZjNMgzKnweXl7Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.css.map"
@@ -791,6 +871,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "6xla1ms584",
+      "Integrity": "hrmPcS6T7ZbioPxvWTmILbJgy2BJXJpgsjQHZ99tIC4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.min.css"
@@ -810,6 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "k6kwb5ag56",
+      "Integrity": "LO19CfHM8p5oJM4rmJXfyiyPUGbwmfVUUAWVvE3k8kc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.min.css.map"
@@ -829,6 +913,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "d9nl2ahezi",
+      "Integrity": "AaNv53FPrWRBxWg8p3Y28aECynsSB2lRERrnZBlb7DQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.scss"
@@ -848,6 +934,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "nbgzti36ho",
+      "Integrity": "Y7IDC7GeXFBuXsh0mNZ07q0wbepNe+rxamAqgzZgujw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\js\\tabblazor.js"
@@ -867,6 +955,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "s379a5wvyh",
+      "Integrity": "yDXivc2qlOWMO4Y3bz8YMy/X3rJg1fU5CZ4A0vzMBi4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\TabBlazor.bundle.scp.css"
@@ -877,7 +967,7 @@
       "SourceType": "Computed",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "CarRental.styles.css",
+      "RelativePath": "CarRental#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -886,6 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "x4z2u0r1el",
+      "Integrity": "Yez5xqRY0I5AkwlzCTno4SFc1W4IYhPSB556rv/vsp4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CarRental.styles.css"
@@ -896,7 +988,7 @@
       "SourceType": "Computed",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "CarRental.bundle.scp.css",
+      "RelativePath": "CarRental#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -905,6 +997,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "9a8y25j809",
+      "Integrity": "cQS1VgeYCQIxoo08kpV7Y5JizPK0nspDGrNLebNhhWY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css"
@@ -915,15 +1009,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "app.css",
+      "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -934,15 +1030,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
@@ -953,15 +1051,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/add.svg",
+      "RelativePath": "images/add#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "rlx5t7bxmo",
+      "Integrity": "X+K3S0xuAyJBsYRfPf4fT657y6wxwKptdigj28OgCtA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\add.svg"
@@ -972,15 +1072,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/admin-login-bg.jpg",
+      "RelativePath": "images/admin-login-bg#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "xohfvz7688",
+      "Integrity": "rx2fmx9Ii4WerFVcaGcIStH5zpqlCinF36DKxkbERZs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\admin-login-bg.jpg"
@@ -991,15 +1093,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/ali-pay-icon.svg",
+      "RelativePath": "images/ali-pay-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "nq78djckkw",
+      "Integrity": "L/JynbHNLSAwtjW5fu6hJXpsQtm3wYdm1vVwA28gyKs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ali-pay-icon.svg"
@@ -1010,15 +1114,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/avatar.jpg",
+      "RelativePath": "images/avatar#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "5v7sgz8ms5",
+      "Integrity": "0ZK0MeKv/ZcjudFO9tEqJApHb64dyf7qt+xXoQF6Oew=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\avatar.jpg"
@@ -1029,15 +1135,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/avatar.png",
+      "RelativePath": "images/avatar#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "epsvnqday0",
+      "Integrity": "EhKtLmnhbCZC33fHXSBiXSSIUYyoe6JHXBFIcUYTG1w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\avatar.png"
@@ -1048,15 +1156,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/delete-icon.svg",
+      "RelativePath": "images/delete-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "jmhgzsclo9",
+      "Integrity": "O7ASZ6pMsslVn1+7zsM/Pz/IuAKjHZzhGg4sMgBtshI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\delete-icon.svg"
@@ -1067,15 +1177,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/electric_car.jpg",
+      "RelativePath": "images/electric_car#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "e9pbcvs0mx",
+      "Integrity": "XoPKMunDw3GmeS78uJJJgp2lqCAOLfwNR3U0WVbrMmI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\electric_car.jpg"
@@ -1086,15 +1198,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/k-logo.png",
+      "RelativePath": "images/k-logo#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "zq0a8mjwst",
+      "Integrity": "S3J0lVb2R79SGsgll3DXVUcj4tJ+gEIRGbu23A9DRB4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\k-logo.png"
@@ -1105,15 +1219,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/mail-icon.svg",
+      "RelativePath": "images/mail-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "f2eqmg8dfi",
+      "Integrity": "t58p3rTQrNtxG8bsT6Gh1R2D8beRp7/q1cFPOp3uylI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\mail-icon.svg"
@@ -1124,15 +1240,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/message-icon.svg",
+      "RelativePath": "images/message-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "l9rtdou3pc",
+      "Integrity": "t6OGyqZp6ca0rL+94uR211Wdc2uqRZQo+JqbJ6d69X4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\message-icon.svg"
@@ -1143,15 +1261,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/mountain_bike.jpg",
+      "RelativePath": "images/mountain_bike#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "dpxddr2te6",
+      "Integrity": "4cRHwfq6vthJzQV/uE9QbXR1TuX4TTCzhcPdP5Akcio=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\mountain_bike.jpg"
@@ -1162,15 +1282,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/pwd-icon.svg",
+      "RelativePath": "images/pwd-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "xmyd37hyfi",
+      "Integrity": "md88smnH0/9oO+TTZDMndoVb/7e/adkvEF56HXKmkME=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pwd-icon.svg"
@@ -1181,15 +1303,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/recommend-hover.svg",
+      "RelativePath": "images/recommend-hover#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "dbtk48f1io",
+      "Integrity": "aaXMDBIGsU5PxUlB5JBnxjFwxHvTJZLGSkp6Jpq/AvA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\recommend-hover.svg"
@@ -1200,15 +1324,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/search-icon.svg",
+      "RelativePath": "images/search-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "odca3c7zvc",
+      "Integrity": "LCCPYJrDUn8A/4yPG3KdvOetBQxXKzIcUk1MrUeuvmY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\search-icon.svg"
@@ -1219,15 +1345,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/setting-icon.svg",
+      "RelativePath": "images/setting-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "vylyzsqfp5",
+      "Integrity": "t/ZNDwNuVRwZ3/0PQIoG+CFHmLTpytaaM7/zGrkq2bM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\setting-icon.svg"
@@ -1238,15 +1366,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/setting-msg-icon.svg",
+      "RelativePath": "images/setting-msg-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "yojnu8wve7",
+      "Integrity": "coEcFDKaptFYW7j1sfVbosyev8G0EzFR2tpNQKDvEGU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\setting-msg-icon.svg"
@@ -1257,15 +1387,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/setting-push-icon.svg",
+      "RelativePath": "images/setting-push-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "sae30pjtaf",
+      "Integrity": "JN/dFnXsoKBHhb8/OFpRgpGM0aAgTip0G9jBIwmF9+k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\setting-push-icon.svg"
@@ -1276,15 +1408,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/setting-safe-icon.svg",
+      "RelativePath": "images/setting-safe-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "b60fnu2d0c",
+      "Integrity": "XUIxinUB0eeC03vPgyRDLBlqUQ8aY0K17FzmoCvm/4I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\setting-safe-icon.svg"
@@ -1295,15 +1429,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/share-icon.svg",
+      "RelativePath": "images/share-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "2biu4t3c5n",
+      "Integrity": "0v9lNNolq4KFaifSp8RqWfWF5jLkWvrvZQ7jLdpFKsw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\share-icon.svg"
@@ -1314,15 +1450,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/smartphone.jpg",
+      "RelativePath": "images/smartphone#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "bklv37queu",
+      "Integrity": "FQKpzMy/FGjmR8hRAhgqcslQ0wszlqlQl7mTRAkgxnQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\smartphone.jpg"
@@ -1333,15 +1471,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/uploads/3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg",
+      "RelativePath": "images/uploads/3c6aff89-a79e-4cd2-8915-3e06b9b68d7d#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "zxm1hpqae2",
+      "Integrity": "mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg"
@@ -1352,15 +1492,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/uploads/417baadb-5249-41a4-bd8a-2eb3fbd0e338.png",
+      "RelativePath": "images/uploads/417baadb-5249-41a4-bd8a-2eb3fbd0e338#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "94qir9xsn3",
+      "Integrity": "uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\417baadb-5249-41a4-bd8a-2eb3fbd0e338.png"
@@ -1371,15 +1513,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/uploads/818e91a6-4db2-4604-9401-3f841dc43393.jpg",
+      "RelativePath": "images/uploads/818e91a6-4db2-4604-9401-3f841dc43393#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "lcx8igorga",
+      "Integrity": "K9OfZw2afZ2MaKs6VB7TDOHTRTyXkl1Es4JER4NSrLc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\818e91a6-4db2-4604-9401-3f841dc43393.jpg"
@@ -1390,15 +1534,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/uploads/8f1d3915-57c4-4ee8-a651-2c75ef17c829.png",
+      "RelativePath": "images/uploads/8f1d3915-57c4-4ee8-a651-2c75ef17c829#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "94qir9xsn3",
+      "Integrity": "uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\8f1d3915-57c4-4ee8-a651-2c75ef17c829.png"
@@ -1409,15 +1555,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/uploads/d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg",
+      "RelativePath": "images/uploads/d7501b94-1efb-49bc-b3d4-85b9de6b09b5#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "zxm1hpqae2",
+      "Integrity": "mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg"
@@ -1428,15 +1576,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/want-read-hover.svg",
+      "RelativePath": "images/want-read-hover#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "pg9gznd3kd",
+      "Integrity": "6eIn4hMEoBlTNhfMd/adP0fuAJQsCurzp2UmDcenKio=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\want-read-hover.svg"
@@ -1447,15 +1597,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/wb-share.svg",
+      "RelativePath": "images/wb-share#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "4tlj335as9",
+      "Integrity": "KJQUN5Oi0mtdpASJwNqMjgdjaK2bVtt505WgFzcEoVc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\wb-share.svg"
@@ -1466,18 +1618,4319 @@
       "SourceType": "Discovered",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "images/wx-pay-icon.svg",
+      "RelativePath": "images/wx-pay-icon#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "gwja0wmuyn",
+      "Integrity": "QOMATRWEnGZT2TZHLhUJL16w1tS/bxQaHyHfCN8fus8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\wx-pay-icon.svg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/Blazor-ApexCharts/css/apexcharts.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\css\\apexcharts.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13568"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"We76yQ6BbUqy3OL7pB4AiChSOtAH/BdDsZ0Z+MzXvD0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Oct 2024 19:49:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-We76yQ6BbUqy3OL7pB4AiChSOtAH/BdDsZ0Z+MzXvD0="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Blazor-ApexCharts/js/apexcharts.esm.js",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\js\\apexcharts.esm.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "616842"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7oBw09A3u8iAjBztkQlI3N3pGqva06sVjeXDGyculI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Oct 2024 19:49:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y7oBw09A3u8iAjBztkQlI3N3pGqva06sVjeXDGyculI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Blazor-ApexCharts/js/blazor-apexcharts.js",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\blazor-apexcharts\\3.5.0\\staticwebassets\\js\\blazor-apexcharts.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16405"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UEPBukuX9UBUsoujon2fDJJ7kFSKMU0BjBs/DqSewQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Oct 2024 19:49:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UEPBukuX9UBUsoujon2fDJJ7kFSKMU0BjBs/DqSewQ0="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "602231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pxL3pNtdvzD2E7ZxLCoHXkPcE/rjqW5RwjueNMnLYdc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pxL3pNtdvzD2E7ZxLCoHXkPcE/rjqW5RwjueNMnLYdc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "605072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mVBlYGadvaqVkjgdd897LzBR1WgAoKen7TmfN0Y+Q5o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mVBlYGadvaqVkjgdd897LzBR1WgAoKen7TmfN0Y+Q5o="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "601898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rs3/0avb3w0j/EhTJ1NBLOIkeFT9YjIubA+/IBjj4V4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rs3/0avb3w0j/EhTJ1NBLOIkeFT9YjIubA+/IBjj4V4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\default.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604739"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ufrMa2luSoYP7f3F+jYyg7rfO7o2lmwuNbwWSFlgUQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ufrMa2luSoYP7f3F+jYyg7rfO7o2lmwuNbwWSFlgUQ8="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "601862"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NE5+++OeNUUsW0Iojgu3hcoZiWwO+mtdHap8QJLLK1s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NE5+++OeNUUsW0Iojgu3hcoZiWwO+mtdHap8QJLLK1s="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "602196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xJFYUaTFcgzJeM01XsmqboE5OmNX5Eeyz8uzQJiArlg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xJFYUaTFcgzJeM01XsmqboE5OmNX5Eeyz8uzQJiArlg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2658"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "605037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iK6hbZ0cOpYIn8hGtIStDoUGuRplcZrmKigVg2cbZ0A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iK6hbZ0cOpYIn8hGtIStDoUGuRplcZrmKigVg2cbZ0A="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\humanistic.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kpeKOOuWCJjvYHdQYNO496JaJrGLMLYqfhgAI4GSFfg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kpeKOOuWCJjvYHdQYNO496JaJrGLMLYqfhgAI4GSFfg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "610969"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SS+VWvMRYsMvRb8o5Xvj3s/tBABkenZoswkOXj7nnic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SS+VWvMRYsMvRb8o5Xvj3s/tBABkenZoswkOXj7nnic="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "610591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ruVmSpSVmH6uq2MaLytEqedsvnIXYFiRoKm3kVs2nWo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ruVmSpSVmH6uq2MaLytEqedsvnIXYFiRoKm3kVs2nWo="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "613432"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GcNXuNcHmJLaTNDT39uEORXorWzPGixsQdm8PgY5ECw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GcNXuNcHmJLaTNDT39uEORXorWzPGixsQdm8PgY5ECw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\material.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "613810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LLhDuqmr9tnmAUOLNSZSTXHBVy04EdqwTz/nB6x0pfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LLhDuqmr9tnmAUOLNSZSTXHBVy04EdqwTz/nB6x0pfA="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "601897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wgx1ir0M96gcvwthwTVOKpH8CQb/K6fhirIz8hxy27I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wgx1ir0M96gcvwthwTVOKpH8CQb/K6fhirIz8hxy27I="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "602200"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"menqiNNCYVJERl/evSjjjuz5wfqjTHJLBeycprjzNS4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-menqiNNCYVJERl/evSjjjuz5wfqjTHJLBeycprjzNS4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "605041"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PhMdn1pfcb/qBMC+A/Y4hXMmz8GgHJ/dvN5oOQBapzY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PhMdn1pfcb/qBMC+A/Y4hXMmz8GgHJ/dvN5oOQBapzY="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\software.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uQ7/PszhqDvYSKFjOvU+FmtAO/GfGfhOjPLX0597CDY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uQ7/PszhqDvYSKFjOvU+FmtAO/GfGfhOjPLX0597CDY="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "608366"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SGrVRmBYVHTtAXgEODVgEviydePii6tPAXZTRi5GoF8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SGrVRmBYVHTtAXgEODVgEviydePii6tPAXZTRi5GoF8="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-base.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "610814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kb/4CJvwilqComcai9cnRyxiIVhHo2bHztQxxez0BDI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kb/4CJvwilqComcai9cnRyxiIVhHo2bHztQxxez0BDI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2596"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"usELOtTv8sW1XN+uLOHVjDyJMZ0viTzIJ9/FBFJG9y8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-usELOtTv8sW1XN+uLOHVjDyJMZ0viTzIJ9/FBFJG9y8="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-wcag.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\css\\standard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "611207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6b4YDzXMm4kH8kbadPwfvKP4jVtbdx6bScVB4nqf/z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 11:57:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6b4YDzXMm4kH8kbadPwfvKP4jVtbdx6bScVB4nqf/z4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/MaterialSymbolsOutlined.woff2",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3208232"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jl6yGniuOaLQTXd36jhE7+/dH86dwgPNpHgSvBiQxxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jl6yGniuOaLQTXd36jhE7+/dH86dwgPNpHgSvBiQxxM="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/RobotoFlex.woff2",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\RobotoFlex.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "747316"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Italic.ttf.woff2",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Upright.ttf.woff2",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "170188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/Radzen.Blazor.js",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\radzen.blazor\\5.2.12\\staticwebassets\\Radzen.Blazor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "87659"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TXQB/StiqilOWOHz79YDgrbww/nA0Ga8cs/m5yTJESA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Oct 2024 08:40:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TXQB/StiqilOWOHz79YDgrbww/nA0Ga8cs/m5yTJESA="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/css/tabblazor.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4185"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PlZPu3YY4ei9P+DAKTzAKybAO0YpxFQheBlTAcO7bRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PlZPu3YY4ei9P+DAKTzAKybAO0YpxFQheBlTAcO7bRs="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/css/tabblazor.css.map",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1058"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4LXf6PfeclhPZ3ic6iaYqRxGqJzXxZjNMgzKnweXl7Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4LXf6PfeclhPZ3ic6iaYqRxGqJzXxZjNMgzKnweXl7Y="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/css/tabblazor.min.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3395"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hrmPcS6T7ZbioPxvWTmILbJgy2BJXJpgsjQHZ99tIC4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hrmPcS6T7ZbioPxvWTmILbJgy2BJXJpgsjQHZ99tIC4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/css/tabblazor.min.css.map",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1038"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LO19CfHM8p5oJM4rmJXfyiyPUGbwmfVUUAWVvE3k8kc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LO19CfHM8p5oJM4rmJXfyiyPUGbwmfVUUAWVvE3k8kc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/css/tabblazor.scss",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\css\\tabblazor.scss",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4423"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AaNv53FPrWRBxWg8p3Y28aECynsSB2lRERrnZBlb7DQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AaNv53FPrWRBxWg8p3Y28aECynsSB2lRERrnZBlb7DQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/js/tabblazor.js",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\js\\tabblazor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5928"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y7IDC7GeXFBuXsh0mNZ07q0wbepNe+rxamAqgzZgujw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y7IDC7GeXFBuXsh0mNZ07q0wbepNe+rxamAqgzZgujw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/TabBlazor/TabBlazor.bundle.scp.css",
+      "AssetFile": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\TabBlazor.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yDXivc2qlOWMO4Y3bz8YMy/X3rJg1fU5CZ4A0vzMBi4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:09:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yDXivc2qlOWMO4Y3bz8YMy/X3rJg1fU5CZ4A0vzMBi4="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:47:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:47:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.9a8y25j809.bundle.scp.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQS1VgeYCQIxoo08kpV7Y5JizPK0nspDGrNLebNhhWY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:54:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9a8y25j809"
+        },
+        {
+          "Name": "label",
+          "Value": "CarRental.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQS1VgeYCQIxoo08kpV7Y5JizPK0nspDGrNLebNhhWY="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.bundle.scp.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55688"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cQS1VgeYCQIxoo08kpV7Y5JizPK0nspDGrNLebNhhWY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:54:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cQS1VgeYCQIxoo08kpV7Y5JizPK0nspDGrNLebNhhWY="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.styles.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CarRental.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55746"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Yez5xqRY0I5AkwlzCTno4SFc1W4IYhPSB556rv/vsp4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:54:39 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Yez5xqRY0I5AkwlzCTno4SFc1W4IYhPSB556rv/vsp4="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.x4z2u0r1el.styles.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CarRental.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55746"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Yez5xqRY0I5AkwlzCTno4SFc1W4IYhPSB556rv/vsp4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:54:39 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x4z2u0r1el"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Yez5xqRY0I5AkwlzCTno4SFc1W4IYhPSB556rv/vsp4="
+        },
+        {
+          "Name": "label",
+          "Value": "CarRental.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:47:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:47:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "images/add.rlx5t7bxmo.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\add.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+K3S0xuAyJBsYRfPf4fT657y6wxwKptdigj28OgCtA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rlx5t7bxmo"
+        },
+        {
+          "Name": "label",
+          "Value": "images/add.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+K3S0xuAyJBsYRfPf4fT657y6wxwKptdigj28OgCtA="
+        }
+      ]
+    },
+    {
+      "Route": "images/add.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\add.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+K3S0xuAyJBsYRfPf4fT657y6wxwKptdigj28OgCtA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+K3S0xuAyJBsYRfPf4fT657y6wxwKptdigj28OgCtA="
+        }
+      ]
+    },
+    {
+      "Route": "images/admin-login-bg.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\admin-login-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rx2fmx9Ii4WerFVcaGcIStH5zpqlCinF36DKxkbERZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Feb 2021 05:19:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rx2fmx9Ii4WerFVcaGcIStH5zpqlCinF36DKxkbERZs="
+        }
+      ]
+    },
+    {
+      "Route": "images/admin-login-bg.xohfvz7688.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\admin-login-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rx2fmx9Ii4WerFVcaGcIStH5zpqlCinF36DKxkbERZs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Feb 2021 05:19:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xohfvz7688"
+        },
+        {
+          "Name": "label",
+          "Value": "images/admin-login-bg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rx2fmx9Ii4WerFVcaGcIStH5zpqlCinF36DKxkbERZs="
+        }
+      ]
+    },
+    {
+      "Route": "images/ali-pay-icon.nq78djckkw.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\ali-pay-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1180"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/JynbHNLSAwtjW5fu6hJXpsQtm3wYdm1vVwA28gyKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nq78djckkw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/ali-pay-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/JynbHNLSAwtjW5fu6hJXpsQtm3wYdm1vVwA28gyKs="
+        }
+      ]
+    },
+    {
+      "Route": "images/ali-pay-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\ali-pay-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1180"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L/JynbHNLSAwtjW5fu6hJXpsQtm3wYdm1vVwA28gyKs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L/JynbHNLSAwtjW5fu6hJXpsQtm3wYdm1vVwA28gyKs="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.5v7sgz8ms5.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0ZK0MeKv/ZcjudFO9tEqJApHb64dyf7qt+xXoQF6Oew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5v7sgz8ms5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/avatar.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZK0MeKv/ZcjudFO9tEqJApHb64dyf7qt+xXoQF6Oew="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.epsvnqday0.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EhKtLmnhbCZC33fHXSBiXSSIUYyoe6JHXBFIcUYTG1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 10:45:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "epsvnqday0"
+        },
+        {
+          "Name": "label",
+          "Value": "images/avatar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EhKtLmnhbCZC33fHXSBiXSSIUYyoe6JHXBFIcUYTG1w="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6065"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0ZK0MeKv/ZcjudFO9tEqJApHb64dyf7qt+xXoQF6Oew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0ZK0MeKv/ZcjudFO9tEqJApHb64dyf7qt+xXoQF6Oew="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27032"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EhKtLmnhbCZC33fHXSBiXSSIUYyoe6JHXBFIcUYTG1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 10:45:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EhKtLmnhbCZC33fHXSBiXSSIUYyoe6JHXBFIcUYTG1w="
+        }
+      ]
+    },
+    {
+      "Route": "images/delete-icon.jmhgzsclo9.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\delete-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O7ASZ6pMsslVn1+7zsM/Pz/IuAKjHZzhGg4sMgBtshI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jmhgzsclo9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/delete-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O7ASZ6pMsslVn1+7zsM/Pz/IuAKjHZzhGg4sMgBtshI="
+        }
+      ]
+    },
+    {
+      "Route": "images/delete-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\delete-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O7ASZ6pMsslVn1+7zsM/Pz/IuAKjHZzhGg4sMgBtshI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O7ASZ6pMsslVn1+7zsM/Pz/IuAKjHZzhGg4sMgBtshI="
+        }
+      ]
+    },
+    {
+      "Route": "images/electric_car.e9pbcvs0mx.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\electric_car.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XoPKMunDw3GmeS78uJJJgp2lqCAOLfwNR3U0WVbrMmI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:03:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e9pbcvs0mx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/electric_car.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XoPKMunDw3GmeS78uJJJgp2lqCAOLfwNR3U0WVbrMmI="
+        }
+      ]
+    },
+    {
+      "Route": "images/electric_car.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\electric_car.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XoPKMunDw3GmeS78uJJJgp2lqCAOLfwNR3U0WVbrMmI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:03:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XoPKMunDw3GmeS78uJJJgp2lqCAOLfwNR3U0WVbrMmI="
+        }
+      ]
+    },
+    {
+      "Route": "images/k-logo.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\k-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12002"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3J0lVb2R79SGsgll3DXVUcj4tJ+gEIRGbu23A9DRB4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3J0lVb2R79SGsgll3DXVUcj4tJ+gEIRGbu23A9DRB4="
+        }
+      ]
+    },
+    {
+      "Route": "images/k-logo.zq0a8mjwst.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\k-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12002"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"S3J0lVb2R79SGsgll3DXVUcj4tJ+gEIRGbu23A9DRB4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zq0a8mjwst"
+        },
+        {
+          "Name": "label",
+          "Value": "images/k-logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-S3J0lVb2R79SGsgll3DXVUcj4tJ+gEIRGbu23A9DRB4="
+        }
+      ]
+    },
+    {
+      "Route": "images/mail-icon.f2eqmg8dfi.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mail-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t58p3rTQrNtxG8bsT6Gh1R2D8beRp7/q1cFPOp3uylI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2eqmg8dfi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/mail-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t58p3rTQrNtxG8bsT6Gh1R2D8beRp7/q1cFPOp3uylI="
+        }
+      ]
+    },
+    {
+      "Route": "images/mail-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mail-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t58p3rTQrNtxG8bsT6Gh1R2D8beRp7/q1cFPOp3uylI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t58p3rTQrNtxG8bsT6Gh1R2D8beRp7/q1cFPOp3uylI="
+        }
+      ]
+    },
+    {
+      "Route": "images/message-icon.l9rtdou3pc.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\message-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1029"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t6OGyqZp6ca0rL+94uR211Wdc2uqRZQo+JqbJ6d69X4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l9rtdou3pc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/message-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t6OGyqZp6ca0rL+94uR211Wdc2uqRZQo+JqbJ6d69X4="
+        }
+      ]
+    },
+    {
+      "Route": "images/message-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\message-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1029"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t6OGyqZp6ca0rL+94uR211Wdc2uqRZQo+JqbJ6d69X4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t6OGyqZp6ca0rL+94uR211Wdc2uqRZQo+JqbJ6d69X4="
+        }
+      ]
+    },
+    {
+      "Route": "images/mountain_bike.dpxddr2te6.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mountain_bike.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cRHwfq6vthJzQV/uE9QbXR1TuX4TTCzhcPdP5Akcio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:04:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dpxddr2te6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/mountain_bike.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cRHwfq6vthJzQV/uE9QbXR1TuX4TTCzhcPdP5Akcio="
+        }
+      ]
+    },
+    {
+      "Route": "images/mountain_bike.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\mountain_bike.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "67195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4cRHwfq6vthJzQV/uE9QbXR1TuX4TTCzhcPdP5Akcio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:04:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4cRHwfq6vthJzQV/uE9QbXR1TuX4TTCzhcPdP5Akcio="
+        }
+      ]
+    },
+    {
+      "Route": "images/pwd-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\pwd-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"md88smnH0/9oO+TTZDMndoVb/7e/adkvEF56HXKmkME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-md88smnH0/9oO+TTZDMndoVb/7e/adkvEF56HXKmkME="
+        }
+      ]
+    },
+    {
+      "Route": "images/pwd-icon.xmyd37hyfi.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\pwd-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"md88smnH0/9oO+TTZDMndoVb/7e/adkvEF56HXKmkME=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xmyd37hyfi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/pwd-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-md88smnH0/9oO+TTZDMndoVb/7e/adkvEF56HXKmkME="
+        }
+      ]
+    },
+    {
+      "Route": "images/recommend-hover.dbtk48f1io.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\recommend-hover.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1812"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aaXMDBIGsU5PxUlB5JBnxjFwxHvTJZLGSkp6Jpq/AvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dbtk48f1io"
+        },
+        {
+          "Name": "label",
+          "Value": "images/recommend-hover.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aaXMDBIGsU5PxUlB5JBnxjFwxHvTJZLGSkp6Jpq/AvA="
+        }
+      ]
+    },
+    {
+      "Route": "images/recommend-hover.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\recommend-hover.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1812"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aaXMDBIGsU5PxUlB5JBnxjFwxHvTJZLGSkp6Jpq/AvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aaXMDBIGsU5PxUlB5JBnxjFwxHvTJZLGSkp6Jpq/AvA="
+        }
+      ]
+    },
+    {
+      "Route": "images/search-icon.odca3c7zvc.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\search-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LCCPYJrDUn8A/4yPG3KdvOetBQxXKzIcUk1MrUeuvmY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "odca3c7zvc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/search-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LCCPYJrDUn8A/4yPG3KdvOetBQxXKzIcUk1MrUeuvmY="
+        }
+      ]
+    },
+    {
+      "Route": "images/search-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\search-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "633"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LCCPYJrDUn8A/4yPG3KdvOetBQxXKzIcUk1MrUeuvmY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LCCPYJrDUn8A/4yPG3KdvOetBQxXKzIcUk1MrUeuvmY="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t/ZNDwNuVRwZ3/0PQIoG+CFHmLTpytaaM7/zGrkq2bM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t/ZNDwNuVRwZ3/0PQIoG+CFHmLTpytaaM7/zGrkq2bM="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-icon.vylyzsqfp5.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t/ZNDwNuVRwZ3/0PQIoG+CFHmLTpytaaM7/zGrkq2bM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vylyzsqfp5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/setting-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t/ZNDwNuVRwZ3/0PQIoG+CFHmLTpytaaM7/zGrkq2bM="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-msg-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-msg-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"coEcFDKaptFYW7j1sfVbosyev8G0EzFR2tpNQKDvEGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-coEcFDKaptFYW7j1sfVbosyev8G0EzFR2tpNQKDvEGU="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-msg-icon.yojnu8wve7.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-msg-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "673"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"coEcFDKaptFYW7j1sfVbosyev8G0EzFR2tpNQKDvEGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yojnu8wve7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/setting-msg-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-coEcFDKaptFYW7j1sfVbosyev8G0EzFR2tpNQKDvEGU="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-push-icon.sae30pjtaf.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-push-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JN/dFnXsoKBHhb8/OFpRgpGM0aAgTip0G9jBIwmF9+k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sae30pjtaf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/setting-push-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JN/dFnXsoKBHhb8/OFpRgpGM0aAgTip0G9jBIwmF9+k="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-push-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-push-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JN/dFnXsoKBHhb8/OFpRgpGM0aAgTip0G9jBIwmF9+k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JN/dFnXsoKBHhb8/OFpRgpGM0aAgTip0G9jBIwmF9+k="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-safe-icon.b60fnu2d0c.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-safe-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XUIxinUB0eeC03vPgyRDLBlqUQ8aY0K17FzmoCvm/4I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b60fnu2d0c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/setting-safe-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XUIxinUB0eeC03vPgyRDLBlqUQ8aY0K17FzmoCvm/4I="
+        }
+      ]
+    },
+    {
+      "Route": "images/setting-safe-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\setting-safe-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1545"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XUIxinUB0eeC03vPgyRDLBlqUQ8aY0K17FzmoCvm/4I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XUIxinUB0eeC03vPgyRDLBlqUQ8aY0K17FzmoCvm/4I="
+        }
+      ]
+    },
+    {
+      "Route": "images/share-icon.2biu4t3c5n.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\share-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0v9lNNolq4KFaifSp8RqWfWF5jLkWvrvZQ7jLdpFKsw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2biu4t3c5n"
+        },
+        {
+          "Name": "label",
+          "Value": "images/share-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0v9lNNolq4KFaifSp8RqWfWF5jLkWvrvZQ7jLdpFKsw="
+        }
+      ]
+    },
+    {
+      "Route": "images/share-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\share-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1157"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0v9lNNolq4KFaifSp8RqWfWF5jLkWvrvZQ7jLdpFKsw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0v9lNNolq4KFaifSp8RqWfWF5jLkWvrvZQ7jLdpFKsw="
+        }
+      ]
+    },
+    {
+      "Route": "images/smartphone.bklv37queu.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\smartphone.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52918"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FQKpzMy/FGjmR8hRAhgqcslQ0wszlqlQl7mTRAkgxnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:05:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bklv37queu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/smartphone.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FQKpzMy/FGjmR8hRAhgqcslQ0wszlqlQl7mTRAkgxnQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/smartphone.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\smartphone.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52918"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FQKpzMy/FGjmR8hRAhgqcslQ0wszlqlQl7mTRAkgxnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Oct 2024 09:05:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FQKpzMy/FGjmR8hRAhgqcslQ0wszlqlQl7mTRAkgxnQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237465"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:22:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.zxm1hpqae2.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237465"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:22:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zxm1hpqae2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uploads/3c6aff89-a79e-4cd2-8915-3e06b9b68d7d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/417baadb-5249-41a4-bd8a-2eb3fbd0e338.94qir9xsn3.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\417baadb-5249-41a4-bd8a-2eb3fbd0e338.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 07:48:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "94qir9xsn3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uploads/417baadb-5249-41a4-bd8a-2eb3fbd0e338.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/417baadb-5249-41a4-bd8a-2eb3fbd0e338.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\417baadb-5249-41a4-bd8a-2eb3fbd0e338.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 07:48:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/818e91a6-4db2-4604-9401-3f841dc43393.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\818e91a6-4db2-4604-9401-3f841dc43393.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "272207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K9OfZw2afZ2MaKs6VB7TDOHTRTyXkl1Es4JER4NSrLc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:52:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K9OfZw2afZ2MaKs6VB7TDOHTRTyXkl1Es4JER4NSrLc="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/818e91a6-4db2-4604-9401-3f841dc43393.lcx8igorga.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\818e91a6-4db2-4604-9401-3f841dc43393.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "272207"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K9OfZw2afZ2MaKs6VB7TDOHTRTyXkl1Es4JER4NSrLc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:52:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcx8igorga"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uploads/818e91a6-4db2-4604-9401-3f841dc43393.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K9OfZw2afZ2MaKs6VB7TDOHTRTyXkl1Es4JER4NSrLc="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/8f1d3915-57c4-4ee8-a651-2c75ef17c829.94qir9xsn3.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\8f1d3915-57c4-4ee8-a651-2c75ef17c829.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 07:00:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "94qir9xsn3"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uploads/8f1d3915-57c4-4ee8-a651-2c75ef17c829.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/8f1d3915-57c4-4ee8-a651-2c75ef17c829.png",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\8f1d3915-57c4-4ee8-a651-2c75ef17c829.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "537206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 07:00:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uSP0dgBVAvwq/vh4zHs63k9AxeO8afMOUFfJfRNnkI4="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237465"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:24:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8="
+        }
+      ]
+    },
+    {
+      "Route": "images/uploads/d7501b94-1efb-49bc-b3d4-85b9de6b09b5.zxm1hpqae2.jpg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\uploads\\d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "237465"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:24:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zxm1hpqae2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/uploads/d7501b94-1efb-49bc-b3d4-85b9de6b09b5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mQDlQ2mZH+rjZK/0wHkuMipaJyEtQuV9MmqWXj1HAM8="
+        }
+      ]
+    },
+    {
+      "Route": "images/want-read-hover.pg9gznd3kd.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\want-read-hover.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1342"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6eIn4hMEoBlTNhfMd/adP0fuAJQsCurzp2UmDcenKio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pg9gznd3kd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/want-read-hover.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6eIn4hMEoBlTNhfMd/adP0fuAJQsCurzp2UmDcenKio="
+        }
+      ]
+    },
+    {
+      "Route": "images/want-read-hover.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\want-read-hover.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1342"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6eIn4hMEoBlTNhfMd/adP0fuAJQsCurzp2UmDcenKio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6eIn4hMEoBlTNhfMd/adP0fuAJQsCurzp2UmDcenKio="
+        }
+      ]
+    },
+    {
+      "Route": "images/wb-share.4tlj335as9.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wb-share.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2370"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KJQUN5Oi0mtdpASJwNqMjgdjaK2bVtt505WgFzcEoVc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4tlj335as9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/wb-share.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KJQUN5Oi0mtdpASJwNqMjgdjaK2bVtt505WgFzcEoVc="
+        }
+      ]
+    },
+    {
+      "Route": "images/wb-share.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wb-share.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2370"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KJQUN5Oi0mtdpASJwNqMjgdjaK2bVtt505WgFzcEoVc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KJQUN5Oi0mtdpASJwNqMjgdjaK2bVtt505WgFzcEoVc="
+        }
+      ]
+    },
+    {
+      "Route": "images/wx-pay-icon.gwja0wmuyn.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wx-pay-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1211"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QOMATRWEnGZT2TZHLhUJL16w1tS/bxQaHyHfCN8fus8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gwja0wmuyn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/wx-pay-icon.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QOMATRWEnGZT2TZHLhUJL16w1tS/bxQaHyHfCN8fus8="
+        }
+      ]
+    },
+    {
+      "Route": "images/wx-pay-icon.svg",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wx-pay-icon.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1211"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QOMATRWEnGZT2TZHLhUJL16w1tS/bxQaHyHfCN8fus8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Oct 2024 07:44:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QOMATRWEnGZT2TZHLhUJL16w1tS/bxQaHyHfCN8fus8="
+        }
+      ]
     }
   ]
 }

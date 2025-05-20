@@ -1,130 +1,253 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center .pay-content if Header is full-width */
+}
+
 .flex-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .pay-content {
-    position: relative;
-    margin: 120px auto 0;
-    width: 500px;
-    background: #fff;
-    overflow: hidden;
-  
-    .title {
-      color: #152844;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 22px;
-      height: 22px;
-      text-align: center;
-      margin-bottom: 11px;
-    }
-  
-    .time-margin {
-      margin: 11px 0 24px;
-    }
-  
-    .text {
-      height: 22px;
-      line-height: 22px;
-      font-size: 14px;
-      text-align: center;
-      color: #152844;
-    }
-  
-    .time {
-      color: #f62a2a;
-    }
-  
-    .text {
-      height: 22px;
-      line-height: 22px;
-      font-size: 14px;
-      text-align: center;
-      color: #152844;
-    }
-  
-    .price {
-      color: #ff8a00;
-      font-weight: 500;
-      font-size: 16px;
-      height: 36px;
-      line-height: 36px;
-      text-align: center;
-  
-      .num {
-        font-size: 28px;
-      }
-    }
-  
-    .pay-choose-view {
-      margin-top: 24px;
-  
-      .choose-box {
-        width: 140px;
-        height: 126px;
-        border: 1px solid #cedce4;
-        border-radius: 4px;
-        text-align: center;
-        cursor: pointer;
-      }
-  
-      .pay-choose-box {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        max-width: 300px;
-        margin: 0 auto;
-  
-        img {
-          height: 40px;
-          margin: 24px auto 16px;
-          display: block;
-        }
-      }
-  
-      .tips {
-        color: #6f6f6f;
-        font-size: 14px;
-        line-height: 22px;
-        height: 22px;
-        text-align: center;
-        margin: 16px 0 24px;
-      }
-  
-      .choose-box-active {
-        border: 1px solid #4684e2;
-      }
-  
-      .tips {
-        color: #6f6f6f;
-        font-size: 14px;
-        line-height: 22px;
-        height: 22px;
-        text-align: center;
-        margin: 16px 0 24px;
-      }
-  
-      .pay-btn {
-        cursor: pointer;
-        background: #c3c9d5;
-        border-radius: 32px;
-        width: 104px;
-        height: 32px;
-        line-height: 32px;
-        border: none;
-        outline: none;
-        font-size: 14px;
-        color: #fff;
-        text-align: center;
-        display: block;
-        margin: 0 auto;
-      }
-  
-      .pay-btn-active {
-        background: #4684e2;
-      }
-    }
-  }
-  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.pay-content {
+  position: relative;
+  margin: 40px auto; /* Adjusted margin, assuming Header takes some space */
+  width: 500px;
+  max-width: 95%; /* Ensure it's responsive on smaller viewports */
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer, more modern shadow */
+  padding: 30px 40px; /* Increased padding */
+  text-align: center; /* Default text alignment for content */
+}
+
+.pay-content .title {
+  color: #2c3e50; /* Darker, neutral title */
+  font-weight: 600; /* Bolder */
+  font-size: 26px; /* Larger title */
+  line-height: 1.4;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.pay-content .text {
+  /* height: auto; Removed fixed height */
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: center;
+  color: #5a677d; /* Softer text color */
+  margin-bottom: 8px;
+}
+.pay-content .text.time-margin { /* Specific margin for the deadline text */
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.pay-content .time {
+  color: #e74c3c; /* Red for urgency */
+  font-weight: 500;
+}
+
+.pay-content .price {
+  color: #e67e22; /* Orange for price */
+  font-weight: 600;
+  font-size: 20px; /* Base size for "元" */
+  /* height: auto; Removed fixed height */
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px; /* Space before payment options */
+}
+
+.pay-content .price .num {
+  font-size: 36px; /* Larger amount */
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.pay-content .pay-choose-view {
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.pay-content .pay-choose-box {
+  justify-content: center; /* Center boxes if less than max-width */
+  gap: 20px; /* Space between payment options */
+  max-width: 340px; /* Adjusted to fit two 140px boxes + 20px gap */
+  margin: 0 auto 20px auto; /* Center the container and add bottom margin */
+}
+
+.pay-content .choose-box {
+  width: 140px;
+  min-height: 120px; /* Use min-height instead of fixed height */
+  border: 2px solid #e0e6ed; /* Slightly thicker, softer border */
+  border-radius: 8px; /* More rounded */
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  background-color: #fdfdfd;
+}
+.pay-content .choose-box:hover {
+  border-color: #a0b0c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pay-content .choose-box img {
+  height: 36px; /* Adjusted icon size */
+  width: auto;
+  margin: 0 auto 12px auto; /* Adjusted margin */
+  display: block;
+}
+.pay-content .choose-box span {
+    font-size: 14px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.pay-content .choose-box.choose-box-active { /* Styles for the active payment method */
+  border-color: #3498db; /* Primary blue for active */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3); /* Glow effect */
+  background-color: #fff;
+}
+
+.pay-content .tips {
+  color: #7f8c9f; /* Softer grey for tips */
+  font-size: 13px;
+  line-height: 1.5;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin: 20px 0 25px; /* Adjusted margins */
+}
+
+.pay-content .pay-btn {
+  cursor: pointer;
+  background: #bdc3c7; /* Default disabled-like background */
+  border-radius: 25px; /* Pill shape */
+  min-width: 160px; /* Wider button */
+  height: 46px; /* Taller button */
+  line-height: 46px;
+  border: none;
+  outline: none;
+  font-size: 16px; /* Larger font */
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-content .pay-btn:hover {
+    transform: translateY(-1px);
+}
+.pay-content .pay-btn:active {
+    transform: translateY(0px);
+}
+
+.pay-content .pay-btn.pay-btn-active { /* Active style for when a payment method is chosen */
+  background: #3498db; /* Primary blue */
+}
+.pay-content .pay-btn.pay-btn-active:hover {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+
+/* Styles for QR Code View */
+.pay-qr-view {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.pay-qr-view .loading-tip {
+  font-size: 15px;
+  color: #5a677d;
+  margin-bottom: 20px;
+}
+
+.pay-qr-view .qr-box {
+  display: flex; /* Use flex for column layout */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pay-qr-view .qr { /* This is where the QR code will be rendered */
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0; /* Placeholder background */
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #aaa;
+}
+.pay-qr-view .qr img { /* If QR code library renders an img tag */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.pay-qr-view .qr-box .tips { /* Overrides general .tips for QR context if needed */
+  color: #34495e;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.pay-qr-view .pay-finish-btn,
+.pay-qr-view .back-pay-btn {
+  cursor: pointer;
+  border-radius: 25px;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 0 25px; /* Horizontal padding */
+  min-width: 200px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-qr-view .pay-finish-btn:hover,
+.pay-qr-view .back-pay-btn:hover {
+    transform: translateY(-1px);
+}
+
+.pay-qr-view .pay-finish-btn {
+  background: #2ecc71; /* Green for success/finish */
+}
+.pay-qr-view .pay-finish-btn:hover {
+  background: #27ae60;
+}
+
+.pay-qr-view .back-pay-btn {
+  background: transparent;
+  color: #3498db; /* Blue link color */
+  border: 1px solid #3498db; /* Optional: make it look like a secondary button */
+  margin-top: 15px;
+}
+.pay-qr-view .back-pay-btn:hover {
+  background: rgba(52, 152, 219, 0.1); /* Light blue background on hover */
+  color: #2980b9;
+}

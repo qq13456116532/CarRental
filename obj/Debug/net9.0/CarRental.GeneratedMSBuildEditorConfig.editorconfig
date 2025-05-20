@@ -1,0 +1,149 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CarRental
+build_property.RootNamespace = CarRental
+build_property.ProjectDir = E:\VSproject\CarRental\CarRental\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\VSproject\CarRental\CarRental
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[E:/VSproject/CarRental/CarRental/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/IndexLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcSW5kZXhMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/MinimalLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWluaW1hbExheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Address.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxBZGRyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Order.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxPcmRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Thing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxUaGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/User.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/AddressBlock.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxBZGRyZXNzQmxvY2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/ConfirmAddress.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb25maXJtQWRkcmVzcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/OrderItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxPcmRlckl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/RedirectToPortal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWRpcmVjdFRvUG9ydGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Shared/TreeView.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFRyZWVWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRm9vdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-jwwntbm0gw
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcSGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-1ionqlzgif
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6vrjrk681f
+
+[E:/VSproject/CarRental/CarRental/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-c9zwnx3nu7
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/admin/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xhZG1pblxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gauzrmhdlj
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/CollectThing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb2xsZWN0VGhpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ukrlbohemy
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Confirm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxDb25maXJtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-7hjh3ekh3h
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Detail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c4umwzs5wk
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ac60ju7ahk
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/OrderView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxPcmRlclZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ct95ir8go8
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Pay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxQYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-azim4cdjqa
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Portal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxQb3J0YWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pb0pfr6hiv
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-xvdlf18dfz
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/Search.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxTZWFyY2gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4rhzd1ud88
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/UserCenter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxVc2VyQ2VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-v1zsapz5t3
+
+[E:/VSproject/CarRental/CarRental/Components/Pages/index/WishesThing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xpbmRleFxXaXNoZXNUaGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8gepgyd694

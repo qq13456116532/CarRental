@@ -54,258 +54,217 @@
     }
   }
 /* _content/CarRental/Components/Layout/Header.razor.rz.scp.css */
-/* Main Bar View */
+/* --- 顶部导航栏 --- */
 .main-bar-view[b-1ionqlzgif] {
   position: fixed;
   top: 0;
   left: 0;
-  height: 56px;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #cedce4;
-  padding-left: 48px;
-  z-index: 16;
+  height: 64px;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: row;
-  align-items: center; /* 垂直居中 */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 100;
 }
 
-/* Logo */
-.logo[b-1ionqlzgif] {
-  margin-right: 24px;
-}
-
+/* --- LOGO --- */
 .logo img[b-1ionqlzgif] {
-  width: 32px;
   height: 32px;
+  width: 32px;
   cursor: pointer;
 }
 
-/* Search Entry */
+/* --- 搜索框 --- */
 .search-entry[b-1ionqlzgif] {
   position: relative;
   width: 400px;
-  min-width: 200px;
-  height: 32px;
-  background: #ecf3fc;
-  padding: 0 12px;
-  border-radius: 16px;
-  font-size: 0;
-  cursor: pointer;
-}
-
-.search-entry img[b-1ionqlzgif] {
-  max-width: 100%;
-  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #f4f6f9;
+  border-radius: 20px;
+  padding: 6px 12px;
 }
 
 .search-entry .search-icon[b-1ionqlzgif] {
   width: 18px;
-  margin: 7px 8px 0 0;
+  margin-right: 8px;
 }
 
 .search-entry input[b-1ionqlzgif] {
-  position: absolute;
-  top: 4px;
-  width: 85%;
-  height: 24px;
-  border: 0px;
-  outline: none;
-  color: #000;
-  background: #ecf3fc;
-  font-size: 14px;
-}
-
-/* Right View */
-.right-view[b-1ionqlzgif] {
-  padding-right: 36px;
   flex: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: flex-end; /* 内容右对齐 */
-}
-
-.right-view .username[b-1ionqlzgif] {
-  height: 32px;
-  line-height: 32px;
-  text-align: center;
-}
-
-.right-view button[b-1ionqlzgif] {
-  outline: none;
   border: none;
-  cursor: pointer;
-}
-
-.right-view img[b-1ionqlzgif] {
-  cursor: pointer;
-}
-
-.right-view .right-icon[b-1ionqlzgif] {
-  position: relative;
-  width: 24px;
-  margin: 4px 0 0 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0;
-}
-
-.right-view .right-icon span[b-1ionqlzgif] {
-  position: absolute;
-  right: -15px;
-  top: -3px;
-  font-size: 12px;
-  color: #fff;
-  background: #4684e2;
-  border-radius: 8px;
-  padding: 0 4px;
-  height: 16px;
-  line-height: 16px;
-  font-weight: 600;
-  min-width: 20px;
-  text-align: center;
-}
-
-.right-view .right-icon .msg-point[b-1ionqlzgif] {
-  position: absolute;
-  right: -4px;
-  top: 0;
-  min-width: 8px;
-  width: 8px;
-  height: 8px;
-  background: #4684e2;
-  border-radius: 50%;
-}
-
-.right-view .self-img[b-1ionqlzgif] {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.right-view .btn[b-1ionqlzgif] {
-  background: #4684e2;
+  outline: none;
+  background: transparent;
   font-size: 14px;
-  color: #fff;
-  border-radius: 32px;
-  text-align: center;
-  width: 66px;
-  height: 32px;
-  line-height: 32px;
-  vertical-align: middle;
-  margin-left: 32px;
+  color: #333;
 }
 
-/* Content List */
-.content-list[b-1ionqlzgif] {
-  flex: 1;
+/* --- 右侧内容 --- */
+.right-view[b-1ionqlzgif] {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.content-list .list-title[b-1ionqlzgif] {
-  color: #152844;
-  font-weight: 600;
-  font-size: 18px;
-  height: 48px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid #cedce4;
-}
-
-/* Message Drawer */
-.message-drawer[b-1ionqlzgif] {
-  position: absolute; /* 使其不占据页面布局的空间 */
-  top: 60px; /* 根据实际情况调整位置 */
-  right: 16px; /* 根据图标的位置调整 */
-  width: 300px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 500; /* 确保消息抽屉在其他元素之上 */
-  padding: 16px;
-}
-
-/* Notification Item */
-.notification-item[b-1ionqlzgif] {
-  padding-top: 16px;
-}
-
-.notification-item .avatar[b-1ionqlzgif] {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-.notification-item .content-box[b-1ionqlzgif] {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border-bottom: 1px dashed #e9e9e9;
-  padding: 4px 0 16px;
-}
-
-.notification-item .header[b-1ionqlzgif] {
-  margin-bottom: 12px;
-}
-
-.notification-item .title-txt[b-1ionqlzgif] {
-  color: #315c9e;
+/* 后台入口按钮 */
+.btn-link[b-1ionqlzgif] {
+  background: none;
+  border: none;
+  color: #4684e2;
   font-weight: 500;
   font-size: 14px;
+  cursor: pointer;
 }
 
-.notification-item .time[b-1ionqlzgif] {
-  color: #a1adc5;
+/* 登录按钮 */
+.btn.login[b-1ionqlzgif] {
+  background-color: #4684e2;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
   font-size: 14px;
+  cursor: pointer;
 }
 
-.notification-item .head-text[b-1ionqlzgif] {
-  color: #152844;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.notification-item .head-text .name[b-1ionqlzgif] {
-  margin-right: 8px;
-}
-
-.notification-item .content[b-1ionqlzgif] {
-  margin-top: 4px;
-  color: #484848;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-/* User Dropdown */
+/* 用户头像 + 下拉 */
 .user-dropdown[b-1ionqlzgif] {
   position: relative;
-  display: inline-block;
 }
 
-/* Dropdown Menu */
+.user-dropdown .self-img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-dropdown .self-img:hover[b-1ionqlzgif] {
+  transform: scale(1.05);
+}
+
 .dropdown-menu[b-1ionqlzgif] {
   position: absolute;
-  top: 100%;
+  top: 110%;
   right: 0;
-  min-width: 150px;
+  width: 160px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  z-index: 1000;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  animation: fadeIn-b-1ionqlzgif 0.2s ease-in-out;
+  z-index: 999;
 }
 
 .dropdown-menu a[b-1ionqlzgif] {
   display: block;
-  padding: 10px;
+  padding: 10px 16px;
   color: #333;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .dropdown-menu a:hover[b-1ionqlzgif] {
-  background-color: #f0f0f0;
+  background-color: #f6f9fc;
+}
+
+/* --- 消息通知图标 --- */
+.right-icon[b-1ionqlzgif] {
+  position: relative;
+  cursor: pointer;
+}
+
+.right-icon img[b-1ionqlzgif] {
+  width: 20px;
+  height: 20px;
+}
+
+.right-icon .msg-point[b-1ionqlzgif] {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+}
+
+/* --- 消息抽屉 --- */
+.message-drawer[b-1ionqlzgif] {
+  position: absolute;
+  top: 72px;
+  right: 16px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 16px;
+  z-index: 999;
+  animation: slideDown-b-1ionqlzgif 0.2s ease;
+}
+
+.message-drawer h3[b-1ionqlzgif] {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.notification-item[b-1ionqlzgif] {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item h4[b-1ionqlzgif] {
+  font-size: 14px;
+  color: #152844;
+  margin-bottom: 4px;
+}
+
+.notification-item p[b-1ionqlzgif] {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.notification-item .time[b-1ionqlzgif] {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* --- 动画效果 --- */
+@keyframes fadeIn-b-1ionqlzgif {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown-b-1ionqlzgif {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 响应式调整 --- */
+@media (max-width: 768px) {
+  .main-bar-view[b-1ionqlzgif] {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-entry[b-1ionqlzgif] {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .right-view[b-1ionqlzgif] {
+    justify-content: flex-end;
+    width: 100%;
+  }
 }
 /* _content/CarRental/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-6vrjrk681f] {
@@ -2008,384 +1967,156 @@ textarea[b-ac60ju7ahk] {
   }
   
 /* _content/CarRental/Components/Pages/index/Portal.razor.rz.scp.css */
-.content[b-pb0pfr6hiv] {
-    display: flex;
-    flex-direction: row;
-    width: 1100px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 80px;
+/* 容器结构 */
+.portal-container[b-pb0pfr6hiv] {
+  display: flex;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.sidebar[b-pb0pfr6hiv] {
+  flex: 0 0 220px;
+}
+
+.sidebar-section[b-pb0pfr6hiv] {
+  margin-bottom: 32px;
+}
+
+.sidebar-section h4[b-pb0pfr6hiv] {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.tag-list[b-pb0pfr6hiv] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag[b-pb0pfr6hiv] {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.tag:hover[b-pb0pfr6hiv] {
+  background-color: #4684e2;
+  color: #fff;
+}
+
+.tag-active[b-pb0pfr6hiv] {
+  background-color: #4684e2;
+  color: #fff;
+}
+
+/* 主内容区 */
+.main-content[b-pb0pfr6hiv] {
+  flex: 1;
+}
+
+.tab-bar[b-pb0pfr6hiv] {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+}
+
+.tab[b-pb0pfr6hiv] {
+  font-size: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #666;
+  position: relative;
+}
+
+.tab.active[b-pb0pfr6hiv] {
+  font-weight: bold;
+  color: #152844;
+  border-bottom: 3px solid #4684e2;
+}
+
+.loading[b-pb0pfr6hiv] {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* 商品展示区 */
+.grid[b-pb0pfr6hiv] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card[b-pb0pfr6hiv] {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover[b-pb0pfr6hiv] {
+  transform: translateY(-4px);
+}
+
+.card img[b-pb0pfr6hiv] {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-info[b-pb0pfr6hiv] {
+  padding: 12px 16px;
+}
+
+.card-info h3[b-pb0pfr6hiv] {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-info .price[b-pb0pfr6hiv] {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .portal-container[b-pb0pfr6hiv] {
+    flex-direction: column;
   }
-  
-  .content-left[b-pb0pfr6hiv] {
-    width: 220px;
-    margin-right: 32px;
+
+  .sidebar[b-pb0pfr6hiv] {
+    width: 100%;
   }
-  
-  .left-search-item[b-pb0pfr6hiv] {
-    overflow: hidden;
-    border-bottom: 1px solid #cedce4;
-    margin-top: 24px;
-    padding-bottom: 24px;
+
+  .tab-bar[b-pb0pfr6hiv] {
+    overflow-x: auto;
+    white-space: nowrap;
   }
-  
-  h4[b-pb0pfr6hiv] {
-    color: #4d4d4d;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    height: 24px;
+
+  .grid[b-pb0pfr6hiv] {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .category-item[b-pb0pfr6hiv] {
-    cursor: pointer;
-    color: #333;
-    margin: 12px 0 0;
-    padding-left: 16px;
+}
+
+@media (max-width: 480px) {
+  .grid[b-pb0pfr6hiv] {
+    grid-template-columns: 1fr;
   }
-  
-  ul[b-pb0pfr6hiv] {
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul[b-pb0pfr6hiv] {
-    list-style-type: none;
-  }
-  
-  li[b-pb0pfr6hiv] {
-    margin: 4px 0 0;
-    display: list-item;
-    text-align: -webkit-match-parent;
-  }
-  
-  .child[b-pb0pfr6hiv] {
-    color: #333;
-    padding-left: 16px;
-  }
-  
-  .child:hover[b-pb0pfr6hiv] {
-    color: #4684e2;
-  }
-  
-  .select[b-pb0pfr6hiv] {
-    color: #4684e2;
-  }
-  
-  .flex-view[b-pb0pfr6hiv] {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    display: flex;
-  }
-  
-  .name[b-pb0pfr6hiv] {
-    font-size: 14px;
-  }
-  
-  .name:hover[b-pb0pfr6hiv] {
-    color: #4684e2;
-  }
-  
-  .count[b-pb0pfr6hiv] {
-    font-size: 14px;
-    color: #999;
-  }
-  
-  .check-item[b-pb0pfr6hiv] {
-    font-size: 0;
-    height: 18px;
-    line-height: 12px;
-    margin: 12px 0 0;
-    color: #333;
-    cursor: pointer;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  
-  .check-item input[b-pb0pfr6hiv] {
-    cursor: pointer;
-  }
-  
-  .check-item label[b-pb0pfr6hiv] {
-    font-size: 14px;
-    margin-left: 12px;
-    cursor: pointer;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-  
-  .tag-view[b-pb0pfr6hiv] {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 4px;
-  }
-  
-  .tag-flex-view[b-pb0pfr6hiv] {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .tag[b-pb0pfr6hiv] {
-    background: #fff;
-    border: 1px solid #a1adc6;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 16px;
-    height: 20px;
-    line-height: 18px;
-    padding: 0 8px;
-    margin: 8px 8px 0 0;
-    cursor: pointer;
-    font-size: 12px;
-    color: #152833;
-  }
-  
-  .tag:hover[b-pb0pfr6hiv] {
-    background: #4684e3;
-    color: #fff;
-    border: 1px solid #4684e3;
-  }
-  
-  .tag-select[b-pb0pfr6hiv] {
-    background: #4684e3;
-    color: #fff;
-    border: 1px solid #4684e3;
-  }
-  
-  .content-right[b-pb0pfr6hiv] {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding-top: 12px;
-  
-    .pc-search-view {
-      margin: 0 0 24px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-  
-      .search-icon {
-        width: 20px;
-        height: 20px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 20px;
-        flex: 0 0 20px;
-        margin-right: 16px;
-      }
-  
-      input[b-pb0pfr6hiv] {
-        outline: none;
-        border: 0px;
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        border-bottom: 1px solid #cedce4;
-        color: #152844;
-        font-size: 14px;
-        height: 22px;
-        line-height: 22px;
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-        padding-bottom: 8px;
-      }
-  
-      .clear-search-icon[b-pb0pfr6hiv] {
-        position: relative;
-        left: -20px;
-        cursor: pointer;
-      }
-  
-      button[b-pb0pfr6hiv] {
-        outline: none;
-        border: none;
-        font-size: 14px;
-        color: #fff;
-        background: #288dda;
-        border-radius: 32px;
-        width: 88px;
-        height: 32px;
-        line-height: 32px;
-        margin-left: 2px;
-        cursor: pointer;
-      }
-  
-      .float-count[b-pb0pfr6hiv] {
-        color: #999;
-        margin-left: 24px;
-      }
-    }
-  
-    .flex-view[b-pb0pfr6hiv] {
-      display: flex;
-    }
-  
-    .top-select-view[b-pb0pfr6hiv] {
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      height: 40px;
-      line-height: 40px;
-  
-      .type-view {
-        position: relative;
-        font-weight: 400;
-        font-size: 18px;
-        color: #5f77a6;
-  
-        .type-tab {
-          margin-right: 32px;
-          cursor: pointer;
-        }
-  
-        .type-tab-select[b-pb0pfr6hiv] {
-          color: #152844;
-          font-weight: 600;
-          font-size: 20px;
-        }
-  
-        .tab-underline[b-pb0pfr6hiv] {
-          position: absolute;
-          bottom: 0;
-          width: 16px;
-          height: 4px;
-          background: #4684e2;
-          -webkit-transition: left .3s;
-          transition: left .3s;
-        }
-      }
-  
-      .order-view[b-pb0pfr6hiv] {
-        position: relative;
-        color: #6c6c6c;
-        font-size: 14px;
-  
-        .title {
-          margin-right: 8px;
-        }
-  
-        .tab[b-pb0pfr6hiv] {
-          color: #999;
-          margin-right: 20px;
-          cursor: pointer;
-        }
-  
-        .tab-select[b-pb0pfr6hiv] {
-          color: #152844;
-        }
-  
-        .tab-underline[b-pb0pfr6hiv] {
-          position: absolute;
-          bottom: 0;
-          left: 84px;
-          width: 16px;
-          height: 4px;
-          background: #4684e2;
-          -webkit-transition: left .3s;
-          transition: left .3s;
-        }
-      }
-  
-    }
-  
-    .pc-thing-list[b-pb0pfr6hiv] {
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  
-      .thing-item {
-        min-width: 255px;
-        max-width: 255px;
-        position: relative;
-        flex: 1;
-        margin-right: 20px;
-        height: fit-content;
-        overflow: hidden;
-        margin-top: 26px;
-        margin-bottom: 36px;
-        cursor: pointer;
-  
-        .img-view {
-          height: 200px;
-          width: 255px;
-  
-          img {
-            height: 200px;
-            width: 240px;
-            margin: 0 auto;
-            background-size: cover;
-            object-fit: cover;
-          }
-        }
-  
-        .info-view[b-pb0pfr6hiv] {
-          overflow: hidden;
-          padding: 0 0px;
-  
-          .thing-name {
-            line-height: 32px;
-            margin-top: 12px;
-            color: #0F1111 !important;
-            font-size: 15px !important;
-            font-weight: 400 !important;
-            font-style: normal !important;
-            text-transform: none !important;
-            text-decoration: none !important;
-          }
-  
-          .price[b-pb0pfr6hiv] {
-            color: #ff7b31;
-            font-size: 20px;
-            line-height: 20px;
-            margin-top: 4px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-  
-          .translators[b-pb0pfr6hiv] {
-            color: #6f6f6f;
-            font-size: 12px;
-            line-height: 14px;
-            margin-top: 4px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-        }
-      }
-  
-      .no-data[b-pb0pfr6hiv] {
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        width: 100%;
-        font-size: 16px;
-        color: #152844;
-      }
-    }
-  
-    .page-view[b-pb0pfr6hiv] {
-      width: 100%;
-      text-align: center;
-      margin-top: 48px;
-    }
-  }
-  
-  .a-price-symbol[b-pb0pfr6hiv] {
-    top: -0.5em;
-    font-size: 12px;
-  }
-  
-  .a-price[b-pb0pfr6hiv] {
-    color: #0F1111;
-    font-size: 14px;
-  }
-  
+}
 /* _content/CarRental/Components/Pages/index/Register.razor.rz.scp.css */
 
 div[b-xvdlf18dfz] {
@@ -2507,269 +2238,256 @@ div[b-xvdlf18dfz] {
 }
 
 /* _content/CarRental/Components/Pages/index/Search.razor.rz.scp.css */
-
+/* 容器整体居中与宽度控制 */
 .content-margin[b-4rhzd1ud88] {
-  margin: 0 100px 0px 100px;
-  padding-bottom: 50px; 
-  padding-left: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
 }
 
+/* 搜索导航文字居中 */
+.search-tab-nav[b-4rhzd1ud88] {
+  padding: 24px 0 16px;
+  text-align: center;
+}
+
+.search-tab-nav .tab-text[b-4rhzd1ud88] {
+  color: #5f77a6;
+  font-size: 16px;
+}
+
+.search-tab-nav .strong[b-4rhzd1ud88] {
+  color: #152844;
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+/* 卡片列表容器，自动换行并居中 */
+.things[b-4rhzd1ud88] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* 单个卡片样式 */
+.thing-item[b-4rhzd1ud88] {
+  flex: 0 1 280px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.thing-item:hover[b-4rhzd1ud88] {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 图片区域 */
+.img-view[b-4rhzd1ud88] {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.img-view img[b-4rhzd1ud88] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 信息区 */
+.info-view[b-4rhzd1ud88] {
+  padding: 16px;
+}
+
+.thing-name[b-4rhzd1ud88] {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0F1111;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.a-price[b-4rhzd1ud88] {
+  color: #ff7b31;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.a-location[b-4rhzd1ud88] {
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+/* 加载动画 & 无数据样式 */
+.loading-spinner[b-4rhzd1ud88],
+.no-data[b-4rhzd1ud88] {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  padding: 80px 0;
+}
+
+/* 分页容器样式 */
 .page-view[b-4rhzd1ud88] {
   width: 100%;
   text-align: center;
   margin-top: 48px;
 }
-
-.search-name-box[b-4rhzd1ud88] {
-  background: #f5f9fb;
-  height: 100px;
-  line-height: 100px;
-  font-size: 20px;
-  color: #152844;
-  text-align: center;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  z-index: 1;
-  width: calc(100% - 8px);
-}
-
-.search-tab-nav[b-4rhzd1ud88] {
-  position: relative;
-  padding: 24px 0 16px;
-  text-align: center;
-
-  .tab-text {
-    float: left;
-    color: #5f77a6;
-    font-size: 14px;
-  }
-
-  .strong[b-4rhzd1ud88] {
-    color: #152844;
-    font-weight: 600;
-    margin: 0 4px;
-  }
-}
-
-.things[b-4rhzd1ud88] {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.flex-view[b-4rhzd1ud88] {
-  display: flex;
-}
-
-.thing-item[b-4rhzd1ud88] {
-  min-width: 255px;
-  max-width: 255px;
-  position: relative;
-  flex: 1;
-  margin-right: 20px;
-  height: fit-content;
-  overflow: hidden;
-  margin-top: 26px;
-  margin-bottom: 36px;
-  cursor: pointer;
-
-  .img-view {
-    height: 200px;
-    width: 255px;
-
-    img {
-      height: 200px;
-      width: 220px;
-      margin: 0 auto;
-      background-size: cover;
-      object-fit: cover;
-    }
-  }
-
-  .info-view[b-4rhzd1ud88] {
-    overflow: hidden;
-    padding: 0 16px;
-
-    .thing-name {
-      line-height: 32px;
-      margin-top: 12px;
-      color: #0F1111 !important;
-      font-size: 15px !important;
-      font-weight: 400 !important;
-      font-style: normal !important;
-      text-transform: none !important;
-      text-decoration: none !important;
-    }
-
-    .price[b-4rhzd1ud88] {
-      color: #ff7b31;
-      font-size: 20px;
-      line-height: 20px;
-      margin-top: 4px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .translators[b-4rhzd1ud88] {
-      color: #6f6f6f;
-      font-size: 12px;
-      line-height: 14px;
-      margin-top: 4px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-}
-
-.a-price-symbol[b-4rhzd1ud88] {
-  top: -0.5em;
-  font-size: 12px;
-}
-
-.a-price[b-4rhzd1ud88] {
-  color: #0F1111;
-  font-size: 14px;
-}
-
 /* _content/CarRental/Components/Pages/index/UserCenter.razor.rz.scp.css */
-.mine-infos-view[b-v1zsapz5t3] {
+.user-center-container[b-v1zsapz5t3] {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* 顶部用户信息块 */
+  .user-header[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     padding: 20px;
-    background-color: #f5f5f5;
-    margin-top: 50px; /* 增加顶部外边距，避免与header重叠 */
-}
-
-.info-box[b-v1zsapz5t3] {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.avatar-img[b-v1zsapz5t3] {
-    width: 60px;
-    height: 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+  }
+  
+  .avatar-img[b-v1zsapz5t3] {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 15px;
-}
-
-.name-box[b-v1zsapz5t3] {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.nick[b-v1zsapz5t3] {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-}
-
-.age[b-v1zsapz5t3] {
+    object-fit: cover;
+  }
+  
+  .user-info .username[b-v1zsapz5t3] {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+  }
+  
+  .status[b-v1zsapz5t3] {
     display: flex;
     align-items: center;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .status-dot[b-v1zsapz5t3] {
+    width: 8px;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  
+  /* 收藏 & 愿望统计 */
+  .stats-panel[b-v1zsapz5t3] {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 24px 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .stat-box[b-v1zsapz5t3] {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .stat-label[b-v1zsapz5t3] {
     font-size: 14px;
     color: #777;
-}
-
-.age span[b-v1zsapz5t3] {
-    margin-right: 10px;
-}
-
-.give-point[b-v1zsapz5t3] {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-}
-
-.counts-view[b-v1zsapz5t3] {
-    margin: 20px 0;
-}
-
-.counts[b-v1zsapz5t3] {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fans-box[b-v1zsapz5t3],
-.follow-box[b-v1zsapz5t3] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.text[b-v1zsapz5t3] {
-    font-size: 14px;
-    color: #555;
-}
-
-.num[b-v1zsapz5t3] {
-    font-size: 18px;
+  }
+  
+  .stat-value[b-v1zsapz5t3] {
+    font-size: 22px;
     font-weight: bold;
     color: #333;
-    margin-top: 5px;
-}
-
-.split-line[b-v1zsapz5t3] {
+    margin-top: 6px;
+  }
+  
+  .divider-line[b-v1zsapz5t3] {
     width: 1px;
+    background: #eee;
     height: 40px;
-    background-color: #ddd;
-}
-
-.setting-box[b-v1zsapz5t3] {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.title[b-v1zsapz5t3] {
+    margin: auto 20px;
+  }
+  
+  /* 设置模块 */
+  .settings-card[b-v1zsapz5t3] {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 24px;
+  }
+  
+  .settings-title[b-v1zsapz5t3] {
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 16px;
     color: #333;
-    margin-bottom: 10px;
-}
-
-.list[b-v1zsapz5t3] {
+  }
+  
+  .settings-list[b-v1zsapz5t3] {
     display: flex;
     flex-direction: column;
-}
-
-.mine-item[b-v1zsapz5t3] {
+    gap: 16px;
+  }
+  
+  .settings-item[b-v1zsapz5t3] {
     display: flex;
     align-items: center;
-    padding: 10px 0;
     cursor: pointer;
-}
-
-.mine-item img[b-v1zsapz5t3] {
+    padding: 10px 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .settings-item img[b-v1zsapz5t3] {
     width: 24px;
     height: 24px;
-    margin-right: 10px;
-}
-
-.mine-item span[b-v1zsapz5t3] {
-    font-size: 14px;
+    margin-right: 12px;
+  }
+  
+  .settings-item span[b-v1zsapz5t3] {
+    font-size: 15px;
     color: #333;
-}
-
-.mine-item:hover[b-v1zsapz5t3] {
+  }
+  
+  .settings-item:hover[b-v1zsapz5t3] {
     background-color: #f9f9f9;
-}
-
-.flex-view[b-v1zsapz5t3] {
-    display: flex;
-    align-items: center;
-}
-
-.flex-item[b-v1zsapz5t3] {
-    flex: 1;
-    text-align: center;
-}
-
+  }
+  
+  /* 响应式适配 */
+  @media (max-width: 600px) {
+    .user-header[b-v1zsapz5t3] {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .stats-panel[b-v1zsapz5t3] {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .divider-line[b-v1zsapz5t3] {
+      display: none;
+    }
+  }
+  
 /* _content/CarRental/Components/Pages/index/WishesThing.razor.rz.scp.css */
 .flex-view[b-8gepgyd694] {
     display: -webkit-box;

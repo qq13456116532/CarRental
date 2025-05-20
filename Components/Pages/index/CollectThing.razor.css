@@ -1,113 +1,139 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
 .flex-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .content-list {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  
-    .list-title {
-      color: #152844;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 24px;
-      height: 24px;
-      margin-bottom: 4px;
-    }
-  
-    .list-tabs-view {
-      position: relative;
-      border-bottom: 1px solid #cedce4;
-      height: 12px;
-      line-height: 42px;
-    }
-  }
-  
-  .thing-list {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  
-    .thing-item {
-      position: relative;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      margin-right: 20px;
-      min-width: 255px;
-      max-width: 255px;
-      height: fit-content;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: 16px;
-      cursor: pointer;
-  
-      .remove {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        width: 48px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        color: #fff;
-        background: #a1adc5;
-        border-radius: 32px;
-        cursor: pointer;
-      }
-  
-      .img-view {
-        background: #eaf1f5;
-        font-size: 0;
-        text-align: center;
-        height: 156px;
-        padding: 8px 0;
-  
-        img {
-          max-width: 100%;
-          height: 100%;
-          display: block;
-          margin: 0 auto;
-          border-radius: 4px;
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-        }
-      }
-  
-      .info-view {
-        background: #f6f9fb;
-        text-align: center;
-        height: 108px;
-        overflow: hidden;
-        padding: 0 16px;
-  
-        h3 {
-          color: #1c355a;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 20px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          margin: 12px 0 8px;
-        }
-  
-        .authors, .translators {
-          color: #6f6f6f;
-          font-size: 12px;
-          line-height: 14px;
-          margin-top: 4px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment for flex containers */
+}
+
+.content-list {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 1200px; /* Max width for the content area */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Hide the empty tabs view for now */
+.content-list .list-tabs-view {
+  display: none; /* Remove if/when tabs are implemented */
+}
+
+.collect-thing-view { /* Matches class from MyWishes for consistency */
+  margin-top: 10px; /* Space above the list of things */
+}
+
+.thing-list {
+  display: grid; /* Using CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items */
+}
+
+.thing-item {
+  position: relative;
+  background: #fff; /* White card background */
+  border-radius: 8px; /* Softer corners */
+  overflow: hidden; /* To contain image and remove button */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: default; /* Default cursor for the card itself */
+}
+
+.thing-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.thing-item .remove {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 28px; /* Smaller, icon-like button */
+  height: 28px;
+  text-align: center;
+  line-height: 28px; /* Vertically center content (e.g., an 'X') */
+  color: #fff;
+  background: rgba(44, 62, 80, 0.6); /* Semi-transparent dark background */
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  font-size: 14px; /* Size for an 'X' character if used */
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 10; /* Ensure it's above the image */
+}
+.thing-item .remove:hover {
+  background: #e74c3c; /* Red background on hover for delete */
+  transform: scale(1.1);
+}
+
+.thing-item .img-view {
+  background: #f8f9fa; /* Light background for image area */
+  font-size: 0;
+  text-align: center;
+  height: 180px; /* Adjusted height for a more balanced card */
+  cursor: pointer; /* Make image clickable */
+  overflow: hidden;
+}
+
+.thing-item .img-view img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cover ensures image fills the area well */
+}
+
+.thing-item .info-view {
+  background: #fff; /* Consistent with card background */
+  text-align: left; /* Left-align text */
+  overflow: hidden;
+  padding: 15px; /* Uniform padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info view to take remaining space */
+  min-height: 70px; /* Ensure a minimum height for info section */
+}
+
+.thing-item .info-view .thing-name { /* Target h3 directly */
+  color: #2c3e50;
+  font-weight: 600; /* Bolder title */
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  margin: 0; /* Reset margin from h3 default */
+  /* min-height: calc(1.4em * 2); /* Reserve space for two lines, handled by info-view min-height */
+}
+
+/* Styling for the empty state message */
+.empty-collections-message { /* Specific class for this page */
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}

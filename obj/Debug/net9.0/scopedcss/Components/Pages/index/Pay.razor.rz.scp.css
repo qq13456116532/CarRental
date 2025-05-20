@@ -1,0 +1,253 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-azim4cdjqa] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center .pay-content if Header is full-width */
+}
+
+.flex-view[b-azim4cdjqa] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.pay-content[b-azim4cdjqa] {
+  position: relative;
+  margin: 40px auto; /* Adjusted margin, assuming Header takes some space */
+  width: 500px;
+  max-width: 95%; /* Ensure it's responsive on smaller viewports */
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer, more modern shadow */
+  padding: 30px 40px; /* Increased padding */
+  text-align: center; /* Default text alignment for content */
+}
+
+.pay-content .title[b-azim4cdjqa] {
+  color: #2c3e50; /* Darker, neutral title */
+  font-weight: 600; /* Bolder */
+  font-size: 26px; /* Larger title */
+  line-height: 1.4;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.pay-content .text[b-azim4cdjqa] {
+  /* height: auto; Removed fixed height */
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: center;
+  color: #5a677d; /* Softer text color */
+  margin-bottom: 8px;
+}
+.pay-content .text.time-margin[b-azim4cdjqa] { /* Specific margin for the deadline text */
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.pay-content .time[b-azim4cdjqa] {
+  color: #e74c3c; /* Red for urgency */
+  font-weight: 500;
+}
+
+.pay-content .price[b-azim4cdjqa] {
+  color: #e67e22; /* Orange for price */
+  font-weight: 600;
+  font-size: 20px; /* Base size for "元" */
+  /* height: auto; Removed fixed height */
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px; /* Space before payment options */
+}
+
+.pay-content .price .num[b-azim4cdjqa] {
+  font-size: 36px; /* Larger amount */
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.pay-content .pay-choose-view[b-azim4cdjqa] {
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.pay-content .pay-choose-box[b-azim4cdjqa] {
+  justify-content: center; /* Center boxes if less than max-width */
+  gap: 20px; /* Space between payment options */
+  max-width: 340px; /* Adjusted to fit two 140px boxes + 20px gap */
+  margin: 0 auto 20px auto; /* Center the container and add bottom margin */
+}
+
+.pay-content .choose-box[b-azim4cdjqa] {
+  width: 140px;
+  min-height: 120px; /* Use min-height instead of fixed height */
+  border: 2px solid #e0e6ed; /* Slightly thicker, softer border */
+  border-radius: 8px; /* More rounded */
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  background-color: #fdfdfd;
+}
+.pay-content .choose-box:hover[b-azim4cdjqa] {
+  border-color: #a0b0c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pay-content .choose-box img[b-azim4cdjqa] {
+  height: 36px; /* Adjusted icon size */
+  width: auto;
+  margin: 0 auto 12px auto; /* Adjusted margin */
+  display: block;
+}
+.pay-content .choose-box span[b-azim4cdjqa] {
+    font-size: 14px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.pay-content .choose-box.choose-box-active[b-azim4cdjqa] { /* Styles for the active payment method */
+  border-color: #3498db; /* Primary blue for active */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3); /* Glow effect */
+  background-color: #fff;
+}
+
+.pay-content .tips[b-azim4cdjqa] {
+  color: #7f8c9f; /* Softer grey for tips */
+  font-size: 13px;
+  line-height: 1.5;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin: 20px 0 25px; /* Adjusted margins */
+}
+
+.pay-content .pay-btn[b-azim4cdjqa] {
+  cursor: pointer;
+  background: #bdc3c7; /* Default disabled-like background */
+  border-radius: 25px; /* Pill shape */
+  min-width: 160px; /* Wider button */
+  height: 46px; /* Taller button */
+  line-height: 46px;
+  border: none;
+  outline: none;
+  font-size: 16px; /* Larger font */
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-content .pay-btn:hover[b-azim4cdjqa] {
+    transform: translateY(-1px);
+}
+.pay-content .pay-btn:active[b-azim4cdjqa] {
+    transform: translateY(0px);
+}
+
+.pay-content .pay-btn.pay-btn-active[b-azim4cdjqa] { /* Active style for when a payment method is chosen */
+  background: #3498db; /* Primary blue */
+}
+.pay-content .pay-btn.pay-btn-active:hover[b-azim4cdjqa] {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+
+/* Styles for QR Code View */
+.pay-qr-view[b-azim4cdjqa] {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.pay-qr-view .loading-tip[b-azim4cdjqa] {
+  font-size: 15px;
+  color: #5a677d;
+  margin-bottom: 20px;
+}
+
+.pay-qr-view .qr-box[b-azim4cdjqa] {
+  display: flex; /* Use flex for column layout */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pay-qr-view .qr[b-azim4cdjqa] { /* This is where the QR code will be rendered */
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0; /* Placeholder background */
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #aaa;
+}
+.pay-qr-view .qr img[b-azim4cdjqa] { /* If QR code library renders an img tag */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.pay-qr-view .qr-box .tips[b-azim4cdjqa] { /* Overrides general .tips for QR context if needed */
+  color: #34495e;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.pay-qr-view .pay-finish-btn[b-azim4cdjqa],
+.pay-qr-view .back-pay-btn[b-azim4cdjqa] {
+  cursor: pointer;
+  border-radius: 25px;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 0 25px; /* Horizontal padding */
+  min-width: 200px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-qr-view .pay-finish-btn:hover[b-azim4cdjqa],
+.pay-qr-view .back-pay-btn:hover[b-azim4cdjqa] {
+    transform: translateY(-1px);
+}
+
+.pay-qr-view .pay-finish-btn[b-azim4cdjqa] {
+  background: #2ecc71; /* Green for success/finish */
+}
+.pay-qr-view .pay-finish-btn:hover[b-azim4cdjqa] {
+  background: #27ae60;
+}
+
+.pay-qr-view .back-pay-btn[b-azim4cdjqa] {
+  background: transparent;
+  color: #3498db; /* Blue link color */
+  border: 1px solid #3498db; /* Optional: make it look like a secondary button */
+  margin-top: 15px;
+}
+.pay-qr-view .back-pay-btn:hover[b-azim4cdjqa] {
+  background: rgba(52, 152, 219, 0.1); /* Light blue background on hover */
+  color: #2980b9;
+}

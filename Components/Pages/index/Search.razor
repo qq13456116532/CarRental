@@ -6,46 +6,54 @@
 @using Data
 <div class="content-margin">
     <h1>@Keyword</h1>
-    <div class="search-tab-nav clearfix">
+
+    <div class="search-tab-nav">
         <div class="tab-text">
             <span>与</span>
             <span class="strong">@Keyword</span>
             <span>相关的内容</span>
         </div>
     </div>
+
     <div class="content-list">
         <div class="thing-list">
             @if (Loading)
             {
-                <div class="loading-spinner" style="min-height: 200px;">Loading...</div>
+                <div class="loading-spinner">Loading...</div>
+            }
+            else if (!PageData.Any())
+            {
+                <div class="no-data">未找到相关内容</div>
             }
             else
             {
-                <div class="things flex-view">
+                <div class="things">
                     @foreach (var item in PageData)
                     {
-                        <div class="thing-item item-column-4" @onclick="() => HandleDetail(item)">
+                        <div class="thing-item" @onclick="() => HandleDetail(item)">
                             <div class="img-view">
-                                <img src="@item.Cover" />
+                                <img src="@item.Cover" alt="@item.Title" />
                             </div>
                             <div class="info-view">
                                 <h3 class="thing-name">@item.Title.Substring(0, Math.Min(12, item.Title.Length))</h3>
-                                <span>
-                                    <span class="a-price">@item.Price</span>&nbsp;
-                                    <span class="a-price">@item.Location</span>
-                                </span>
+                                <div>
+                                    <span class="a-price">$@item.Price</span>
+                                    <span class="a-location">@item.Location</span>
+                                </div>
                             </div>
                         </div>
                     }
                 </div>
 
-                @* <div class="page-view">
-                    <Pagination CurrentPage="@Page" TotalItems="@Total" PageSize="@PageSize" OnPageChange="ChangePage" />
-                </div> *@
+                <div class="page-view">
+                    @* 分页功能可以恢复使用 *@
+                    @* <Pagination CurrentPage="@Page" TotalItems="@Total" PageSize="@PageSize" OnPageChange="ChangePage" /> *@
+                </div>
             }
         </div>
     </div>
 </div>
+
 
 @code {
     private string? Keyword { get; set; } = "";

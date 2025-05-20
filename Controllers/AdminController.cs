@@ -296,7 +296,7 @@ public class AdminController : ControllerBase
         address.Name = updatedAddress.Name;
         address.Mobile = updatedAddress.Mobile;
         address.Description = updatedAddress.Description;
-        address.Def = updatedAddress.Def;
+        address.Default = updatedAddress.Default;
         address.CreateTime = updatedAddress.CreateTime;
         address.UserId = updatedAddress.UserId;
 

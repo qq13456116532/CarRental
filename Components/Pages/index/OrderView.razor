@@ -3,6 +3,7 @@
 @inject NavigationManager Navigation
 @using Services
 @inject AuthService AuthService
+
 <div class="content-list">
     <div class="list-title">我的预订</div>
     <div class="list-content">
@@ -14,45 +15,50 @@
                     <div class="header flex-view">
                         <div class="left">
                             <span class="text">编号</span>
-                            <span class="num mg-4">#</span>
-                            <span class="num">@item.OrderNumber</span>
+                            <span class="num">#@item.OrderNumber</span>
                             <span class="time">@item.OrderTime</span>
                         </div>
                         <div class="right">
-                            @if (item.Status == "1")
+                            @if (item.Status == "1") // Assuming "1" means cancellable
                             {
-                                <button class="btn btn-primary btn-sm" style="margin-right: 24px;" @onclick="() => HandleCancel(item)">取消</button>
+                                <button class="btn-cancel" @onclick="() => HandleCancel(item)">取消</button> @* <-- Changed class for styling *@
                             }
+                            @* You could add status text here if needed, e.g.,
+                               else if (item.Status == "0") { <span class="status-text status-completed">已完成</span> }
+                               else if (item.Status == "2") { <span class="status-text status-cancelled">已取消</span> }
+                            *@
                         </div>
                     </div>
                     <div class="content flex-view">
                         <div class="left-list">
                             <div class="list-item flex-view">
                                 <img src="@item.Cover" class="thing-img" alt="cover">
-                                <div class="detail flex-between flex-view">
-                                    <div class="flex-between flex-top flex-view">
+                                <div class="detail flex-view"> @* Removed redundant flex-between from original for simplicity, CSS handles it *@
+                                    <div class="flex-top flex-view" style="width: 100%; justify-content: space-between;"> @* Top section for title and count *@
                                         <h2 class="name">@item.Title</h2>
-                                        <span class="count">@item.Count</span>
+                                        <span class="count">x @item.Count</span> @* Added 'x' for clarity *@
                                     </div>
-                                    <div class="flex-between flex-center flex-view">
+                                    <div class="flex-view" style="align-items: flex-end; margin-top: auto; width: 100%; justify-content: flex-start;"> @* Bottom section for price *@
                                         <span class="price">&yen;@item.Price</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @* If there was a .right-info section, it would go here or CSS adjusts .left-list flex property accordingly *@
                     </div>
                     <div class="bottom flex-view">
                         <div class="left">
                             <span class="text">共 @item.Count 辆</span>
-                            <span class="open" @onclick="() => HandleDetail(item.ThingId)">详情</span>
+                            <span class="open" @onclick="() => HandleDetail(item.ThingId)">订单详情</span>
                         </div>
+                        @* Removed original .right from bottom as it wasn't used with provided data structure *@
                     </div>
                 </div>
             }
         }
         else
         {
-            <div>暂无订单。</div>
+            <div class="empty-orders-message">您当前还没有预订记录。</div> @* <-- Added class for styling *@
         }
     </div>
 </div>
@@ -60,75 +66,88 @@
 @code {
     private List<OrderDto> orderData = new();
     
-    private string orderStatus = "1";
+    private string orderStatus = "1"; // Default or initial status to fetch
 
     protected override async Task OnInitializedAsync()
     {
         await GetOrderList();
     }
 
-    @* private async Task OnTabChange(string key)
-    {
-        orderStatus = key switch
-        {
-            "1" => "",
-            "2" => "1",
-            "3" => "2",
-            _ => orderStatus
-        };
-        await GetOrderList();
-    } *@
-
     private async Task GetOrderList()
     {
         try
         {
+            // Ensure AuthService.UserToken is available and valid
+            if (string.IsNullOrEmpty(AuthService.UserToken)) {
+                // Handle missing token, e.g., redirect to login or show error
+                Console.WriteLine("User token is missing. Cannot fetch orders.");
+                orderData = new List<OrderDto>(); // Clear data or set to empty
+                return;
+            }
+
             var response = await Http.GetFromJsonAsync<List<OrderDto>>($"{Navigation.BaseUri}api/Index/orders/{orderStatus}?token={AuthService.UserToken}");
             if (response != null)
             {
                 foreach (var item in response)
                 {
-                    if (!string.IsNullOrEmpty(item.Cover))
+                    if (!string.IsNullOrEmpty(item.Cover) && !item.Cover.StartsWith("images/"))
                     {
                         item.Cover = $"images/{item.Cover}";
+                    }
+                    else if (string.IsNullOrEmpty(item.Cover)) {
+                        item.Cover = "images/placeholder.jpg"; // Fallback image
                     }
                 }
                 orderData = response;
             }
+            else {
+                orderData = new List<OrderDto>();
+            }
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine($"Error fetching orders: {ex.Message}");
+            orderData = new List<OrderDto>(); // Ensure data is empty on error
         }
+        StateHasChanged(); // Ensure UI updates if data changes after initial render
     }
 
     private void HandleDetail(long thingId)
     {
         var uri = $"/detail?id={thingId}";
-        Navigation.NavigateTo(uri, true);
+        Navigation.NavigateTo(uri); // Removed forceLoad: true unless specifically needed for this page
     }
 
     private async Task HandleCancel(OrderDto item)
     {
         try
         {
+            // Ensure AuthService.UserToken is available
+            if (string.IsNullOrEmpty(AuthService.UserToken)) {
+                 Console.WriteLine("User token is missing. Cannot cancel order.");
+                // Potentially show a message to the user
+                return;
+            }
+
             var response = await Http.DeleteAsync($"{Navigation.BaseUri}api/Index/orders/{item.Id}?token={AuthService.UserToken}");
             if (response.IsSuccessStatusCode)
             {
                 orderData.Remove(item);
                 Console.WriteLine("取消成功");
+                // Optionally, show a success message to the user
             }
             else
             {
-                Console.WriteLine("取消失败");
+                Console.WriteLine($"取消失败: {response.StatusCode}");
+                // Optionally, show an error message to the user
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine($"Error cancelling order: {ex.Message}");
+            // Optionally, show an error message to the user
         }
+        StateHasChanged(); // Update UI
     }
-
-
 
 }

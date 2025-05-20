@@ -2,77 +2,142 @@
 
 @using Microsoft.AspNetCore.Components
 @inject NavigationManager Navigation
+@*@inject IJSRuntime JSRuntime*@ @* Uncomment if using JS for QR code generation *@
 
-<Header />
+<Header /> @* Assuming Header is a global component *@
 <div class="pay-content">
-    <div class="title">订单提交成功</div>
-    <div class="text time-margin">
-        <span>请在 </span>
-        <span class="time">@DdlTime</span>
-        <span> 之前付款，超时订单将自动取消</span>
-    </div>
-    <div class="text">支付金额</div>
-    <div class="price">
-        <span class="num">@Amount</span>
-        <span>元</span>
-    </div>
-    <div class="pay-choose-view">
-        <div class="pay-choose-box flex-view">
-            <div class="choose-box choose-box-active">
-                <img src="@WxPayIcon" alt="WeChat Pay Icon">
-                <span>微信支付</span>
+    @if (!showQrView)
+    {
+        <div class="title">订单提交成功</div>
+        <div class="text time-margin">
+            <span>请在 </span>
+            <span class="time">@DdlTime</span>
+            <span> 之前付款，超时订单将自动取消</span>
+        </div>
+        <div class="text">支付金额</div>
+        <div class="price">
+            <span class="num">@Amount</span>
+            <span>元</span>
+        </div>
+        <div class="pay-choose-view">
+            <div class="pay-choose-box flex-view">
+                <div class="choose-box @(selectedPaymentMethod == "wx" ? "choose-box-active" : "")" @onclick='() => SelectPaymentMethod("wx")'>
+                    <img src="@WxPayIcon" alt="WeChat Pay Icon">
+                    <span>微信支付</span>
+                </div>
+                <div class="choose-box @(selectedPaymentMethod == "ali" ? "choose-box-active" : "")" @onclick='() => SelectPaymentMethod("ali")'>
+                    <img src="@AliPayIcon" alt="AliPay Icon">
+                    <span>支付宝</span>
+                </div>
             </div>
-            <div class="choose-box">
-                <img src="@AliPayIcon" alt="AliPay Icon">
-                <span>支付宝</span>
+            <div class="tips">请选择任意一种支付方式</div>
+            <button class="pay-btn @(string.IsNullOrEmpty(selectedPaymentMethod) ? "" : "pay-btn-active")" @onclick="HandlePay" disabled="@(string.IsNullOrEmpty(selectedPaymentMethod))">
+                确认支付
+            </button>
+        </div>
+    }
+    else @* Show QR View *@
+    {
+        <div class="pay-qr-view">
+            @if (generatingQr)
+            {
+                <div class="loading-tip">@qrLoadingMessage</div>
+            }
+            <div class="qr-box" style="@(generatingQr ? "display: none;" : "")">
+                <div id="qrCode" class="qr">
+                    @* QR Code will be rendered here by a library or as an image *@
+                    @if (!string.IsNullOrEmpty(qrCodeUrl)) {
+                        <img src="@qrCodeUrl" alt="Payment QR Code" style="width:100%; height:100%;" />
+                    } else {
+                        <span>二维码加载中...</span>
+                    }
+                </div>
+                <div class="tips">请打开@(selectedPaymentMethod == "wx" ? "微信" : "支付宝")扫一扫进行支付</div>
+                <button class="pay-finish-btn" @onclick="HandlePaymentFinished">支付完成</button>
+                <button class="back-pay-btn" @onclick="ShowPaymentSelection">选择其他支付方式</button>
             </div>
         </div>
-        <div class="tips">请选择任意一种支付方式</div>
-        <button class="pay-btn pay-btn-active" @onclick="HandlePay">确认支付</button>
-    </div>
-    <div class="pay-qr-view" style="display: none;">
-        <div class="loading-tip">正在生成安全支付二维码</div>
-        <div class="qr-box" style="display: none;">
-            <div id="qrCode" class="qr"></div>
-            <div class="tips">请打开微信扫一扫进行支付</div>
-            <button class="pay-finish-btn">支付完成</button>
-            <button class="back-pay-btn">选择其他支付方式</button>
-        </div>
-    </div>
+    }
 </div>
 
 @code {
     [Parameter]
-    public string WxPayIcon { get; set; } = "images/wx-pay-icon.svg";
+    public string WxPayIcon { get; set; } = "images/wx-pay-icon.svg"; // Ensure these images exist
     [Parameter]
-    public string AliPayIcon { get; set; } = "images/ali-pay-icon.svg";
+    public string AliPayIcon { get; set; } = "images/ali-pay-icon.svg"; // Ensure these images exist
     
     private string? DdlTime { get; set; }
     private string? Amount { get; set; }
 
+    private string selectedPaymentMethod = "wx"; // Default to WeChat Pay or empty string
+    private bool showQrView = false;
+    private bool generatingQr = false;
+    private string qrLoadingMessage = "正在生成安全支付二维码...";
+    private string qrCodeUrl = ""; // To store the QR code image URL if generated as an image
 
     protected override void OnInitialized()
     {
         var uri = new Uri(Navigation.Uri);
         var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
-        Amount = queryParams["amount"]?? "0";
-        DdlTime = FormatDate(DateTime.Now.AddHours(1));
+        Amount = queryParams["amount"] ?? "0.00"; // Default to a formatted string
+        DdlTime = FormatDate(DateTime.Now.AddMinutes(15)); // Shorter deadline for example
     }
-    private async Task OnHideModalClick()
-        {
-            //await modal.HideAsync();
-            await Task.Delay(10);
-        }
-    private async void HandlePay()
+
+    private void SelectPaymentMethod(string method)
     {
-        // Display a warning message for the lack of payment functionality
-        Console.WriteLine("to do 支付功能");
-        //await modal.ShowAsync();
-        await Task.Delay(10);
+        selectedPaymentMethod = method;
+        Console.WriteLine($"Selected payment method: {method}");
+    }
+
+    private async Task HandlePay()
+    {
+        if (string.IsNullOrEmpty(selectedPaymentMethod))
+        {
+            // Optionally show a message to select a payment method
+            return;
+        }
+
+        showQrView = true;
+        generatingQr = true;
+        qrLoadingMessage = $"正在为{(selectedPaymentMethod == "wx" ? "微信" : "支付宝")}支付生成二维码...";
+        qrCodeUrl = ""; // Clear previous QR code
+
+        // Simulate QR code generation
+        Console.WriteLine($"Initiating payment with {selectedPaymentMethod} for amount {Amount}");
+        await Task.Delay(2000); // Simulate network latency for QR generation
+
+        // In a real app, you would call an API to get a QR code URL or data
+        // For example: qrCodeUrl = await GetQrCodeFromServer(selectedPaymentMethod, Amount);
+        // For this demo, we'll use a placeholder or simulate success/failure
+        if (selectedPaymentMethod == "wx") {
+            qrCodeUrl = "images/sample-qr-code.png"; // Replace with a real QR or generation logic
+        } else {
+            qrCodeUrl = "images/sample-qr-code.png"; // Replace with a real QR or generation logic
+        }
+        
+        // If using a JS library to generate QR code in 'div#qrCode':
+        // await JSRuntime.InvokeVoidAsync("generateQrCodeFunction", "qrCode", "some_payment_data_for_qr");
+
+        generatingQr = false;
+        StateHasChanged();
+    }
+
+    private void ShowPaymentSelection()
+    {
+        showQrView = false;
+        qrCodeUrl = ""; // Clear QR code
+        StateHasChanged();
+    }
+
+    private void HandlePaymentFinished()
+    {
+        // Navigate to an order confirmation page or show a success message
+        Console.WriteLine("Payment finished clicked. Verify payment status with backend.");
+        Navigation.NavigateTo("/order-confirmation"); // Example navigation
     }
 
     private string FormatDate(DateTime dateTime)
     {
-        return dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+        return dateTime.ToString("HH:mm:ss"); // Only show time for deadline, or full date as preferred
     }
 }

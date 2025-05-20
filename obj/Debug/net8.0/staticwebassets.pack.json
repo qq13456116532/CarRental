@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CarRental.bundle.scp.css"
+      "PackagePath": "staticwebassets\\CarRental.9a8y25j809.bundle.scp.css"
     },
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\app.css",
@@ -123,6 +123,10 @@
     {
       "Id": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\wx-pay-icon.svg",
       "PackagePath": "staticwebassets\\images\\wx-pay-icon.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CarRental.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CarRental.Microsoft.AspNetCore.StaticWebAssets.props",

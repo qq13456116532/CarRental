@@ -1,0 +1,373 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-7hjh3ekh3h] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+  padding: 20px 0; /* Add some padding to the body */
+}
+
+.order-form[b-7hjh3ekh3h] {
+  max-width: 800px; /* Max width for the form */
+  margin: 20px auto; /* Centering the form */
+  padding: 30px;
+  border: none; /* Remove original border */
+  border-radius: 8px;
+  background-color: #fff; /* White background for the form card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for elevation */
+}
+
+/* Section Styling */
+.order-details[b-7hjh3ekh3h],
+.remark-address-group[b-7hjh3ekh3h],
+.checkout-section[b-7hjh3ekh3h] {
+  margin-bottom: 30px; /* Space between sections */
+}
+.order-details:last-child[b-7hjh3ekh3h],
+.remark-address-group:last-child[b-7hjh3ekh3h],
+.checkout-section:last-child[b-7hjh3ekh3h] {
+    margin-bottom: 0;
+}
+
+
+/* Section Titles */
+.order-form h3[b-7hjh3ekh3h] {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50; /* Dark blue-grey for titles */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef; /* Subtle separator for section titles */
+}
+
+/* Order Details List */
+.list-container[b-7hjh3ekh3h] {
+  border: 1px solid #e0e6ed; /* Softer border */
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.list-th[b-7hjh3ekh3h] {
+  display: flex;
+  background-color: #f8f9fa; /* Lighter header background */
+  padding: 12px 15px;
+  font-weight: 600; /* Bolder header text */
+  color: #495057; /* Header text color */
+  font-size: 14px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.list-th span[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+.list-th span:first-child[b-7hjh3ekh3h] {
+  flex: 3; /* More space for product name */
+  text-align: left;
+}
+.list-th span:last-child[b-7hjh3ekh3h] { /* For "操作" */
+  flex: 0.8;
+}
+
+
+.list[b-7hjh3ekh3h] {
+  padding: 0; /* Remove padding if OrderItem handles its own spacing */
+}
+
+/* Styles for items within OrderItem.razor (assuming this structure) */
+.items[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px; /* Increased padding */
+  border-bottom: 1px solid #f1f3f5; /* Lighter item separator */
+  gap: 15px;
+}
+.items:last-child[b-7hjh3ekh3h] {
+  border-bottom: none;
+}
+
+.book[b-7hjh3ekh3h] { /* Targets the product info part within OrderItem */
+  display: flex;
+  align-items: center;
+  flex: 3; /* Corresponds to list-th */
+  gap: 12px;
+}
+
+.book img[b-7hjh3ekh3h] {
+  width: 65px; /* Slightly larger image */
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px; /* Softer radius */
+  border: 1px solid #eee;
+}
+
+.book h2[b-7hjh3ekh3h] { /* Product title within OrderItem */
+  font-size: 15px;
+  font-weight: 500; /* Medium weight */
+  color: #34495e;
+  margin: 0;
+  /* max-width: 160px; /* Remove or adjust if flex handles it */
+  /* white-space: nowrap; /* Allow wrapping if needed, or ensure sufficient width */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+
+.pay[b-7hjh3ekh3h] { /* Price per item within OrderItem */
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.items input[type="number"].quantity-input[b-7hjh3ekh3h] { /* Style for quantity input in OrderItem */
+  width: 55px;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.items input[type="number"].quantity-input:focus[b-7hjh3ekh3h] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+}
+
+.delete[b-7hjh3ekh3h] { /* Delete icon/button within OrderItem */
+  width: 24px; /* Adjust size for icon */
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  flex: 0.8; /* Corresponds to list-th */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete:hover[b-7hjh3ekh3h] {
+  opacity: 1;
+}
+.delete img[b-7hjh3ekh3h], .delete svg[b-7hjh3ekh3h] { /* If using img or svg for delete icon */
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Remark and Address Section */
+.remark-address-group[b-7hjh3ekh3h] {
+  display: flex;
+  gap: 20px; /* Space between remark and address */
+  align-items: flex-start; /* Align top */
+}
+@media (max-width: 768px) { /* Stack on smaller screens */
+    .remark-address-group[b-7hjh3ekh3h] {
+        flex-direction: column;
+    }
+    .remark-group[b-7hjh3ekh3h], .address-group-container[b-7hjh3ekh3h] { /* Assuming AddressBlock is wrapped */
+        flex: 1 1 100%;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+
+.remark-group[b-7hjh3ekh3h] {
+  flex: 1;
+  /* margin-right: 10px; Replaced by gap */
+}
+.remark-group.compact[b-7hjh3ekh3h] { /* Not sure if .compact is used, if so, adjust width */
+  max-width: none; /* Let flex handle it */
+}
+
+.remark-input[b-7hjh3ekh3h], /* For InputTextArea */
+.styled-input-text[b-7hjh3ekh3h] { /* For generic InputText styling (e.g., in modal) */
+  width: 100%;
+  /* max-width: 400px; /* Remove if it should take flex width */
+  min-height: 80px; /* min-height instead of fixed height */
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.remark-input:focus[b-7hjh3ekh3h],
+.styled-input-text:focus[b-7hjh3ekh3h] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+}
+
+/* Assuming AddressBlock renders into a container */
+.address-group-container[b-7hjh3ekh3h] { /* Add this class to the div wrapping AddressBlock if needed */
+    flex: 1;
+}
+.address-details[b-7hjh3ekh3h], .no-address[b-7hjh3ekh3h] { /* Styles for content presumably inside AddressBlock */
+  padding: 15px;
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.address-details p[b-7hjh3ekh3h], .no-address p[b-7hjh3ekh3h] {
+    margin-bottom: 5px;
+}
+.address-details p strong[b-7hjh3ekh3h] {
+    color: #34495e;
+}
+
+
+/* Checkout Section */
+.checkout-section[b-7hjh3ekh3h] {
+  margin-top: 30px;
+}
+
+.price-view[b-7hjh3ekh3h] {
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for summary */
+}
+
+.price-item[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #495057;
+}
+.price-item div:last-child[b-7hjh3ekh3h] {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.total-price[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ced4da; /* Dashed separator */
+  font-size: 18px; /* Larger total */
+  color: #2c3e50;
+}
+.total-price div:last-child[b-7hjh3ekh3h] { /* Total amount styling */
+    color: #e74c3c; /* Emphasize total price */
+    font-size: 22px;
+}
+
+.action-buttons[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 15px; /* Space between buttons */
+  margin-top: 25px;
+}
+
+.btn-back[b-7hjh3ekh3h], .btn-submit[b-7hjh3ekh3h] {
+  padding: 10px 25px; /* Increased padding */
+  border: none;
+  border-radius: 6px; /* Softer radius */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-back:hover[b-7hjh3ekh3h], .btn-submit:hover[b-7hjh3ekh3h] {
+    transform: translateY(-1px);
+}
+
+.btn-back[b-7hjh3ekh3h] {
+  background-color: #e9ecef; /* Light grey for secondary button */
+  color: #495057;
+  border: 1px solid #ced4da;
+}
+.btn-back:hover[b-7hjh3ekh3h] {
+  background-color: #d3d9df;
+}
+
+.btn-submit[b-7hjh3ekh3h] {
+  background-color: #007bff; /* Primary blue */
+  color: #fff;
+}
+.btn-submit:hover[b-7hjh3ekh3h] {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Basic Styling for the "Add Address" Modal Form (from the second snippet) */
+.address-modal-form[b-7hjh3ekh3h] { /* Assuming you wrap the modal's EditForm in this */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.address-modal-form h4[b-7hjh3ekh3h] { /* Add a title to your modal if you wish */
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.address-modal-form div.form-field[b-7hjh3ekh3h] { /* Wrap label and input in this for spacing */
+    margin-bottom: 15px;
+}
+.address-modal-form label[b-7hjh3ekh3h] {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #495057;
+}
+.address-modal-form .styled-input-text[b-7hjh3ekh3h], /* Reusing class from remark for InputText */
+.address-modal-form InputTextArea[b-7hjh3ekh3h] { /* If textarea is used in modal */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding/border don't increase total width */
+}
+
+/* Style for InputCheckbox if it renders as a standard checkbox */
+.address-modal-form InputCheckbox[type="checkbox"][b-7hjh3ekh3h] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.address-modal-form .checkbox-label[b-7hjh3ekh3h] { /* If you wrap checkbox and its text in a label */
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.address-modal-form .modal-actions[b-7hjh3ekh3h] {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+/* Buttons inside modal (assuming they render as <button> or can be styled thus) */
+.address-modal-form .modal-actions button[b-7hjh3ekh3h] {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.address-modal-form .modal-actions .btn-modal-secondary[b-7hjh3ekh3h] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+.address-modal-form .modal-actions .btn-modal-secondary:hover[b-7hjh3ekh3h] {
+    background-color: #5a6268;
+}
+.address-modal-form .modal-actions .btn-modal-primary[b-7hjh3ekh3h] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+.address-modal-form .modal-actions .btn-modal-primary:hover[b-7hjh3ekh3h] {
+    background-color: #0056b3;
+}

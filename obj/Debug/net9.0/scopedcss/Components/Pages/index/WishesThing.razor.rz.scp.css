@@ -1,0 +1,159 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-8gepgyd694] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
+.flex-view[b-8gepgyd694] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment for flex containers */
+}
+
+.content-list[b-8gepgyd694] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 1200px; /* Max width for the content area, allowing for more cards */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title[b-8gepgyd694] {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Hide the empty tabs view for now */
+.content-list .list-tabs-view[b-8gepgyd694] {
+  display: none; /* Remove if/when tabs are implemented */
+  /* Original styles if needed later:
+  position: relative;
+  border-bottom: 1px solid #cedce4;
+  height: 12px;
+  line-height: 42px;
+  */
+}
+
+.collect-thing-view[b-8gepgyd694] {
+  margin-top: 10px; /* Space above the list of things */
+}
+
+.thing-list[b-8gepgyd694] {
+  display: grid; /* Using CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items, replaces margins on items */
+  justify-content: flex-start; /* Align items to the start if not filling whole row */
+}
+
+.thing-item[b-8gepgyd694] {
+  position: relative;
+  background: #fff; /* White card background */
+  border-radius: 8px; /* Softer corners */
+  overflow: hidden; /* To contain image and remove button */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: default; /* Default cursor for the card itself */
+}
+
+.thing-item:hover[b-8gepgyd694] {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.thing-item .remove[b-8gepgyd694] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 28px; /* Smaller, icon-like button */
+  height: 28px;
+  text-align: center;
+  line-height: 28px; /* Vertically center content (e.g., an 'X') */
+  color: #fff;
+  background: rgba(44, 62, 80, 0.6); /* Semi-transparent dark background */
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  font-size: 14px; /* Size for an 'X' character if used */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 10; /* Ensure it's above the image */
+}
+.thing-item .remove:hover[b-8gepgyd694] {
+  background: #e74c3c; /* Red background on hover for delete */
+  transform: scale(1.1);
+}
+
+.thing-item .img-view[b-8gepgyd694] {
+  background: #f8f9fa; /* Light background for image area before image loads */
+  font-size: 0;
+  text-align: center;
+  height: 180px; /* Adjusted height for a more balanced card */
+  padding: 0; /* Remove padding if image uses object-fit */
+  cursor: pointer; /* Make image clickable */
+  overflow: hidden; /* Ensure image respects border radius of its parent if needed */
+}
+
+.thing-item .img-view img[b-8gepgyd694] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cover ensures image fills the area well */
+  /* border-radius: 4px; /* Can be removed if .thing-item overflow:hidden clips it */
+}
+
+.thing-item .info-view[b-8gepgyd694] {
+  background: #fff; /* Consistent with card background */
+  text-align: left; /* Left-align text for better readability */
+  /* height: auto; /* Let content determine height */
+  overflow: hidden;
+  padding: 15px; /* Uniform padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info view to take remaining space */
+}
+
+.thing-item .info-view .thing-name[b-8gepgyd694] { /* Target h3 directly */
+  color: #2c3e50;
+  font-weight: 600; /* Bolder title */
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  margin: 0 0 8px 0; /* Reset margin from h3 default and add bottom margin */
+  min-height: calc(1.4em * 2); /* Reserve space for two lines */
+}
+
+/* Styles for .authors, .translators if you add them back to the Razor */
+.thing-item .info-view .authors[b-8gepgyd694],
+.thing-item .info-view .translators[b-8gepgyd694] {
+  color: #5a677d;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Styling for the empty state message */
+.empty-wishlist-message[b-8gepgyd694] {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}

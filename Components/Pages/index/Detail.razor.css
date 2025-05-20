@@ -1,595 +1,654 @@
-.hide {
-    display: none;
-  }
-  
-  .detail-content {
-    display: flex;
-    flex-direction: column;
-    width: 1100px;
-    margin: 4px auto;
-  }
-  
-  .flex-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  
-  .hidden-lg {
-    display: none !important;
-  }
-  
-  .thing-infos-view {
-    display: flex;
-    margin: 0 0 40px;
+/* Detail.razor.css - Enhanced Version */
 
-    overflow: hidden;
-  
-    .thing-infos {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      display: flex;
-    }
-  
-    .mobile-share-box {
-      height: 38px;
-      background: transparent;
-      padding: 0 16px;
-      margin: 12px 0;
-      font-size: 0;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-  
-      .state {
-        width: 64px;
-        height: 24px;
-        line-height: 24px;
-        background: rgba(70, 132, 226, .1);
-        border-radius: 2px;
-        font-weight: 500;
-        font-size: 12px;
-        color: #4684e2;
-        text-align: center;
-      }
-  
-      .share-img {
-        background: #fff;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        text-align: center;
-  
-        img {
-          position: relative;
-          top: 4px;
-          width: 24px;
-        }
-      }
-    }
-  
-    .thing-img-box {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 235px;
-      flex: 0 0 235px;
-      margin: 0 40px 0 0;
-  
-      img {
-        width: 220px;
-        height: 200px;
-        display: block;
-        background-size: cover;
-        object-fit: cover;
-      }
-    }
-  
-    .thing-info-box {
-      text-align: left;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .thing-state {
-      height: 26px;
-      line-height: 26px;
-  
-      .state {
-        font-weight: 500;
-        color: #4684e2;
-        background: rgba(70, 132, 226, .1);
-        border-radius: 2px;
-        padding: 5px 8px;
-        margin-right: 16px;
-      }
-  
-      span {
-        font-size: 14px;
-        color: #152844;
-      }
-    }
-  
-    .thing-name {
-      line-height: 32px;
-      margin: 16px 0;
-      color: #0F1111!important;
-      font-size: 15px!important;
-      font-weight: 400!important;
-      font-style: normal!important;
-      text-transform: none!important;
-      text-decoration: none!important;
-    }
-  
-    .translators, .authors {
-      line-height: 18px;
-      font-size: 14px;
-      margin: 8px 0;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-  
-      .name {
-        color: #315c9e;
-        white-space: normal;
-      }
-    }
-  
-    .tags {
-      position: absolute;
-      bottom: 20px;
-      margin-top: 16px;
-  
-      .category-box {
-        color: #152844;
-        font-size: 14px;
-  
-        .title {
-          color: #787878;
-        }
-      }
-    }
-  
-    .thing-counts {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 235px;
-      flex: 0 0 235px;
-      margin-left: 20px;
-    }
-  
-    .pointer {
-      cursor: pointer;
-    }
-  
-    .count-item {
-      height: 64px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      cursor: pointer;
-    }
-  
-    .count-img {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 32px;
-      flex: 0 0 32px;
-      margin-right: 24px;
-      font-size: 0;
-  
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
-  
-    .count-box {
-      position: relative;
-      border-bottom: 1px solid #cedce4;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      height: 100%;
-    }
-  
-    .count-text-box {
-      font-size: 0;
-  
-      .count-title {
-        color: #152844;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 18px;
-        display: block;
-        height: 18px;
-      }
-    }
-  
-    .count-num-box {
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      color: #152844;
-    }
-  }
-  
-  .buy-btn {
-    cursor: pointer;
-    display: block;
-    background: #4684e2;
-    border-radius: 4px;
-    text-align: center;
-    color: #fff;
+/* General body styles (Consider adding to a global stylesheet if not already present) */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa; /* A slightly off-white background for the page */
+  color: #333; /* Default text color */
+}
+
+.hide {
+  display: none;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  width: 1100px; /* Consider using max-width for better responsiveness on smaller large screens */
+  margin: 20px auto; /* Increased margin for better spacing from viewport edges */
+  background-color: #fff; /* White background for the content area */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  padding: 20px; /* Added some internal padding */
+}
+
+.flex-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden-lg {
+  display: none !important;
+}
+
+/* --- Thing Infos View --- */
+.thing-infos-view {
+  display: flex;
+  margin: 0 0 30px; /* Slightly reduced bottom margin */
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef; /* Softer separator */
+}
+
+.thing-infos-view .thing-infos {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  /* flex-direction: column; Ensures items stack vertically if space is tight */
+}
+
+.thing-infos-view .thing-img-box {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 250px; /* Slightly larger image box */
+  flex: 0 0 250px;
+  margin: 0 30px 0 0; /* Adjusted margin */
+  border-radius: 6px;
+  overflow: hidden; /* Ensures image respects border-radius */
+}
+
+.thing-infos-view .thing-img-box img {
+  width: 100%; /* Make image responsive to its container */
+  height: 230px; /* Adjusted height */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the area well */
+  border-radius: 6px;
+}
+
+.thing-infos-view .thing-info-box {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Allows this box to take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.thing-infos-view .thing-state {
+  height: auto; /* Allow height to adjust based on content */
+  line-height: normal;
+  margin-bottom: 12px; /* Added margin */
+}
+
+.thing-infos-view .thing-state .state {
+  font-weight: 500;
+  color: #4684e2;
+  background: rgba(70, 132, 226, .1);
+  border-radius: 4px; /* Softer radius */
+  padding: 6px 10px; /* Adjusted padding */
+  margin-right: 12px; /* Adjusted margin */
+  font-size: 13px; /* Slightly larger */
+}
+
+.thing-infos-view .thing-state span:not(.state) { /* Target the "有效" span */
+  font-size: 14px;
+  color: #28a745; /* Green color for "有效" status for better visual cue */
+  font-weight: 500;
+}
+
+.thing-infos-view .thing-name {
+  line-height: 1.3; /* Adjusted line height */
+  margin: 8px 0 12px; /* Adjusted margin */
+  color: #1a1a1a !important; /* Slightly softer black */
+  font-size: 26px !important; /* Significantly larger for title prominence */
+  font-weight: 600 !important; /* Bolder */
+}
+
+/* Price styling */
+.thing-info-box .price-container {
+    margin-bottom: 15px;
+}
+.thing-info-box .a-price {
+    color: #d9534f; /* A common color for prices */
+    font-size: 24px !important; /* Larger price */
+    font-weight: 600;
+}
+.thing-info-box .a-price-symbol {
+    top: -0.4em; /* Adjust if needed */
     font-size: 14px;
-    height: 36px;
-    line-height: 36px;
-    width: 110px;
-    outline: none;
-    border: none;
-    margin-top: 18px;
-  }
-  
-  .buy-btn img {
-    width: 12px;
+    color: #d9534f;
     margin-right: 2px;
-    vertical-align: middle;
-  }
-  
-  .buy-btn span {
-    vertical-align: middle;
-  }
-  
-  .buy-way {
-    overflow: hidden;
-  
-    .title {
-      font-weight: 600;
-      font-size: 18px;
-      height: 26px;
-      line-height: 26px;
-      color: #152844;
-      margin-bottom: 12px;
-    }
-  }
-  
-  .thing-content-view {
-    margin-top: 40px;
-    padding-bottom: 50px;
-  }
-  
-  .main-content {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  
-    .text {
-      color: #484848;
-      font-size: 16px;
-      line-height: 26px;
-      padding-left: 12px;
-      margin: 11px 0;
-      white-space: pre-wrap;
-    }
-  }
-  
-  .main-tab {
-    border-bottom: 1px solid #cedce4;
-  }
-  
-  .order-view {
-    position: relative;
-    color: #6c6c6c;
-    font-size: 14px;
-    line-height: 40px;
-  
-    .title {
-      margin-right: 8px;
-    }
-  
-    .tab {
-      margin-right: 20px;
-      cursor: pointer;
-      color: #5f77a6;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  
-    .tab-select {
-      color: #152844;
-      font-weight: 600;
-    }
-  
-    .tab-underline {
-      position: absolute;
-      bottom: 0;
-      left: 84px;
-      width: 16px;
-      height: 4px;
-      background: #4684e2;
-      -webkit-transition: left .3s;
-      transition: left .3s;
-    }
-  }
-  
-  .recommend {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 235px;
-    flex: 0 0 235px;
-    margin-left: 20px;
-  
-    .title {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 26px;
-      color: #152844;
-      margin-bottom: 12px;
-    }
-  
-    .things {
-      border-top: 1px solid #cedce4;
-  
-      .thing-item {
-        min-width: 255px;
-        max-width: 255px;
-        position: relative;
-        flex: 1;
-        margin-right: 20px;
-        height: fit-content;
-        overflow: hidden;
-        margin-top: 26px;
-        margin-bottom: 36px;
-        padding-bottom: 24px;
-        border-bottom: 1px #e1e1e1 solid;
-        cursor: pointer;
-  
-        .img-view {
-          height: 200px;
-          width: 255px;  
-          img {
-            height: 200px;
-            width: 255px;
-            overflow: hidden;
-            margin: 0 auto;
-            background-size: contain;
-            object-fit: contain;
-          }
-        }
-  
-        .info-view {
-          overflow: hidden;
-          padding: 0 16px;
-          .thing-name {
-            line-height: 32px;
-            margin-top: 12px;
-            color: #0F1111!important;
-            font-size: 15px!important;
-            font-weight: 400!important;
-            font-style: normal!important;
-            text-transform: none!important;
-            text-decoration: none!important;
-          }
-  
-          .price {
-            color: #ff7b31;
-            font-size: 20px;
-            line-height: 20px;
-            margin-top: 4px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-  
-          .translators {
-            color: #6f6f6f;
-            font-size: 12px;
-            line-height: 14px;
-            margin-top: 4px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-        }
-      }
-  
-    }
-  }
-  
-  .flex-view {
-    display: flex;
-  }
-  
-  .thing-comment {
-    .title {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 22px;
-      height: 22px;
-      color: #152844;
-      margin: 24px 0 12px;
-    }
-  
-    .publish {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-  
-      .mine-img {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 40px;
-        flex: 0 0 40px;
-        margin-right: 12px;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-      }
-  
-      .content-input {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        background: #f6f9fb;
-        border-radius: 4px;
-        height: 32px;
-        line-height: 32px;
-        color: #484848;
-        padding: 5px 12px;
-        white-space: nowrap;
-        outline: none;
-        border: 0px;
-      }
-  
-      .send-btn {
-        margin-left: 10px;
-        background: #4684e2;
-        border-radius: 4px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 80px;
-        flex: 0 0 80px;
-        color: #fff;
-        font-size: 14px;
-        text-align: center;
-        height: 32px;
-        line-height: 32px;
-        outline: none;
-        border: 0px;
-        cursor: pointer;
-      }
-    }
-  
-    .tab-view {
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      font-size: 14px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin: 24px 0;
-  
-      .count-text {
-        color: #484848;
-        float: left;
-      }
-  
-      .tab-box {
-        color: #5f77a6;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-  
-        .tab-select {
-          color: #152844;
-        }
-  
-        span {
-          cursor: pointer;
-        }
-      }
-  
-      .line {
-        width: 1px;
-        height: 12px;
-        margin: 0 12px;
-        background: #cedce4;
-      }
-    }
-  }
-  
-  
-  .comments-list {
-    .comment-item {
-      .flex-item {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-top: 16px;
-  
-        .avator {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 40px;
-          flex: 0 0 40px;
-          width: 40px;
-          height: 40px;
-          margin-right: 12px;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-  
-        .person {
-          -webkit-box-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-        }
-  
-        .name {
-          color: #152844;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 22px;
-          height: 22px;
-          cursor: pointer;
-        }
-  
-        .time {
-          color: #5f77a6;
-          font-size: 12px;
-          line-height: 16px;
-          height: 16px;
-          margin-top: 2px;
-        }
-  
-        .float-right {
-          color: #4684e2;
-          font-size: 14px;
-          float: right;
-  
-          span {
-            margin-left: 19px;
-            cursor: pointer;
-          }
-  
-          .num {
-            color: #152844;
-            margin-left: 6px;
-            cursor: auto;
-          }
-        }
-      }
-    }
-  }
-  
-  .comment-content {
-    margin-top: 8px;
-    color: #484848;
-    font-size: 14px;
-    line-height: 22px;
-    padding-bottom: 16px;
-    border-bottom: 1px dashed #cedce4;
-    margin-left: 52px;
-    overflow: hidden;
-    word-break: break-word;
-  }
-  
-  .infinite-loading-container {
-    clear: both;
-    text-align: center;
-  }
-  
-  .a-price-symbol {
-    top: -0.5em;
+}
+
+.thing-infos-view .attributes-list {
+    margin-top: 10px;
+    margin-bottom: 15px; /* Space before buy button */
+}
+
+.thing-infos-view .translators, /* Shared style for attribute lines */
+.thing-infos-view .authors { /* If you still use .authors */
+  line-height: 1.6;
+  font-size: 15px; /* Slightly larger for readability */
+  margin: 6px 0;
+  color: #555; /* Slightly darker grey for labels */
+  display: flex; 
+  align-items: center;
+}
+
+.thing-infos-view .attributes-list .label { /* More specific selector */
+  color: #787878;
+  min-width: 80px; /* Ensures alignment */
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.thing-infos-view .attributes-list .name { /* More specific selector */
+  color: #315c9e;
+  white-space: normal;
+  font-weight: 400;
+}
+
+/* --- Action Counts (Wishlist, Collect, Share) --- */
+.thing-infos-view .thing-counts {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 220px; /* Slightly adjusted width */
+  flex: 0 0 220px;
+  margin-left: 30px; /* Increased margin */
+  border-left: 1px solid #e9ecef; /* Add a subtle separator */
+  padding-left: 20px; /* Space after separator */
+}
+
+.thing-infos-view .pointer {
+  cursor: pointer;
+}
+
+.thing-infos-view .count-item {
+  height: auto; /* More flexible height */
+  padding: 12px 0; /* Add some padding */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.thing-infos-view .count-item:not(:last-child) { /* Add a border between count items */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.thing-infos-view .count-item:hover {
+  background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.thing-infos-view .count-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 28px; /* Slightly smaller icons */
+  flex: 0 0 28px;
+  margin-right: 18px; /* Adjusted margin */
+  font-size: 0;
+}
+
+.thing-infos-view .count-img img {
+  width: 100%;
+  display: block;
+}
+
+.thing-infos-view .count-box {
+  position: relative;
+  border-bottom: none; 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+.thing-infos-view .count-text-box .count-title {
+  color: #2c3e50; /* More neutral color */
+  font-weight: 500; /* Adjusted weight */
+  font-size: 15px; /* Adjusted size */
+  line-height: 1.4;
+  display: block;
+}
+
+.thing-infos-view .count-num-box {
+  font-weight: 600;
+  font-size: 18px; /* Slightly smaller for balance */
+  line-height: 1.4;
+  color: #34495e; /* More neutral color */
+}
+.thing-infos-view .count-num-box .mg-l { /* For the weibo share icon */
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+
+
+/* --- Buy Button --- */
+.buy-btn {
+  cursor: pointer;
+  display: inline-flex; /* For aligning icon and text */
+  align-items: center;
+  justify-content: center;
+  background: #007bff; /* Standard primary blue */
+  border-radius: 5px; /* Softer radius */
+  text-align: center;
+  color: #fff;
+  font-size: 16px; /* Larger font */
+  font-weight: 500; /* Bolder */
+  height: 42px; /* Taller button */
+  line-height: 42px; /* Match height */
+  width: auto; /* Auto width based on content */
+  padding: 0 20px; /* Horizontal padding */
+  outline: none;
+  border: none;
+  margin-top: auto; /* Pushes button to bottom if .thing-info-box is flex-column */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover {
+  background: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.buy-btn img {
+  width: 14px; /* Adjusted size */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle;
+}
+
+.buy-btn span {
+  vertical-align: middle;
+}
+
+/* --- Thing Content View (Tabs, Description, Comments, Recommendations) --- */
+.thing-content-view {
+  margin-top: 30px; /* Adjusted */
+  padding-bottom: 30px; /* Adjusted */
+}
+
+.main-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 20px; 
+}
+
+.main-content .text { /* For thing.Description */
+  color: #484848;
+  font-size: 16px;
+  line-height: 1.8; /* Increased line height for readability */
+  padding-left: 0; 
+  margin: 20px 0; /* Adjusted margin */
+  white-space: pre-wrap;
+}
+
+.order-view.main-tab { /* Styles for the tab container */
+  border-bottom: 2px solid #dee2e6; 
+  margin-bottom: 20px; 
+  position: relative; /* Crucial for absolute positioning of tab-underline */
+  color: #6c757d; 
+  font-size: 16px; 
+  line-height: 48px; /* Increased height for tabs */
+  display: flex; /* To align tabs horizontally */
+}
+
+.order-view .tab {
+  margin-right: 25px; 
+  cursor: pointer;
+  color: #495057; 
+  font-size: 17px; 
+  font-weight: 500; 
+  padding: 0 4px 10px 4px; /* Adjusted padding, esp. bottom for underline space */
+  position: relative; 
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Prevent tab text from wrapping */
+}
+.order-view .tab:hover {
+  color: #0056b3; 
+}
+
+.order-view .tab-select {
+  color: #007bff !important; /* Selected tab color, ensure it overrides */
+  font-weight: 600 !important; /* Bolder for selected */
+  /* NO border-bottom here if using the animated .tab-underline span */
+}
+
+.order-view .tab-underline {
+  position: absolute;
+  bottom: 0; /* Aligns to the bottom of .order-view.main-tab, just above its border-bottom */
+  /* left: is set via inline style in Razor by @tabUnderLeft */
+  width: 30px; /* Default width, Blazor logic might need to adjust this too if tabs vary greatly */
+  height: 3px;
+  background-color: #007bff; /* Consistent primary color */
+  border-radius: 1.5px; /* Optional for rounded ends */
+  transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1); /* Smoother transition */
+}
+
+
+/* --- Recommendations Section --- */
+.recommend {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 260px; 
+  flex: 0 0 260px;
+  margin-left: 20px; 
+  padding-left: 20px; 
+  border-left: 1px solid #e9ecef; 
+}
+
+.recommend .title {
+  font-weight: 600;
+  font-size: 20px; 
+  line-height: 1.4;
+  color: #152844;
+  margin-bottom: 16px; 
+}
+
+.recommend .things {
+  border-top: none; 
+}
+
+.recommend .thing-item {
+  position: relative;
+  flex: 1; 
+  height: auto; 
+  overflow: hidden;
+  margin-bottom: 20px; 
+  padding-bottom: 0; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 6px; 
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.recommend .thing-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); 
+  transform: translateY(-3px); 
+}
+
+.recommend .thing-item .img-view {
+  height: 180px; 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.recommend .thing-item .img-view img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+  background-size: cover;
+  border-top-left-radius: 6px; 
+  border-top-right-radius: 6px; 
+}
+
+.recommend .thing-item .info-view {
+  overflow: hidden;
+  padding: 12px 16px; 
+}
+
+.recommend .thing-item .info-view .thing-name {
+  line-height: 1.4; 
+  margin-top: 0; 
+  margin-bottom: 8px; 
+  color: #212529 !important; 
+  font-size: 16px !important; 
+  font-weight: 600 !important; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommend .thing-item .info-view .a-price { 
+  color: #dd571c; 
+  font-size: 18px; 
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block; /* To allow margin and proper flow */
+}
+.recommend .thing-item .info-view .a-price-symbol {
     font-size: 12px;
-  }
-  .a-price {
-    color: #0F1111;
-    font-size:14px;
-  }
+    color: #dd571c;
+    margin-right: 1px;
+}
+
+.recommend .thing-item .info-view .location-info { 
+    color: #6c757d;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* Or inline-block if on same line as price */
+}
+
+/* --- Comments Section --- */
+.thing-comment .title {
+  font-weight: 600;
+  font-size: 18px; 
+  line-height: 1.5;
+  color: #152844;
+  margin: 30px 0 15px; 
+}
+
+.thing-comment .publish {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.thing-comment .publish .mine-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.thing-comment .publish .content-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #f1f3f5; 
+  border-radius: 4px;
+  height: 40px; 
+  line-height: normal; 
+  color: #495057;
+  padding: 8px 12px; 
+  /* white-space: nowrap; /* allow normal wrap for input */
+  outline: none;
+  border: 1px solid #ced4da; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.thing-comment .publish .content-input:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+
+.thing-comment .publish .send-btn {
+  margin-left: 12px; 
+  background: #28a745; 
+  border-radius: 4px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  height: 40px; 
+  line-height: 40px; 
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.thing-comment .publish .send-btn:hover {
+  background: #218838; 
+}
+
+.thing-comment .tab-view {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 14px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 24px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef; 
+}
+
+.thing-comment .tab-view .count-text {
+  color: #484848;
+  font-weight: 500;
+}
+
+.thing-comment .tab-view .tab-box {
+  color: #5f77a6;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex; /* ensure child elements align properly */
+}
+
+.thing-comment .tab-view .tab-box .tab-select {
+  color: #152844 !important; /* ensure higher specificity */
+  font-weight: 600;
+}
+
+.thing-comment .tab-view .tab-box span {
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+.thing-comment .tab-view .tab-box span:not(.tab-select):hover {
+    color: #0056b3;
+}
+
+.thing-comment .tab-view .line {
+  width: 1px;
+  height: 12px;
+  margin: 0 12px;
+  background: #cedce4;
+}
+
+/* --- Comments List --- */
+.comments-list .comment-item {
+  padding-bottom: 16px; 
+  margin-bottom: 16px; 
+  border-bottom: 1px solid #e9ecef; 
+}
+.comments-list .comment-item:last-child {
+    border-bottom: none; 
+    margin-bottom: 0;
+}
+
+
+.comments-list .comment-item .flex-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 16px; /* Original was 16px, can be adjusted */
+   display: flex; /* ensure flex properties apply */
+}
+
+.comments-list .comment-item .avator {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .person {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.comments-list .comment-item .name {
+  color: #152844;
+  font-weight: 600;
+  font-size: 15px; 
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .time {
+  color: #5f77a6;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.comments-list .comment-item .float-right {
+  color: #4684e2;
+  font-size: 14px;
+  /* float: right; /* Consider using flexbox for alignment instead if parent is flex */
+  margin-left: auto; /* Pushes to the right if flex-item is display:flex */
+}
+
+.comments-list .comment-item .float-right span {
+  margin-left: 19px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.comments-list .comment-item .float-right span:hover:not(.num) {
+    color: #0056b3;
+}
+
+
+.comments-list .comment-item .float-right .num {
+  color: #152844;
+  margin-left: 6px;
+  cursor: auto;
+}
+
+.comment-content {
+  margin-top: 8px;
+  color: #484848;
+  font-size: 15px; 
+  line-height: 1.7; 
+  padding-bottom: 0; 
+  border-bottom: none; 
+  margin-left: 52px; /* Aligns with username (avatar width + margin) */
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.infinite-loading-container {
+  clear: both;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fallback for general a-price if not specifically styled, should be overridden by context */
+.a-price { 
+  color: #0F1111;
+  font-size: 14px;
+}
+.a-price-symbol {
+  top: -0.5em; 
+  font-size: 12px; 
+}

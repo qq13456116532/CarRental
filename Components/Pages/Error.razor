@@ -1,36 +1,96 @@
 ﻿@page "/admin/Error"
 @using System.Diagnostics
+@using Microsoft.AspNetCore.Diagnostics // 使用 IExceptionHandlerFeature 需要此 using 语句
+@using Microsoft.Extensions.Hosting     // 使用 IHostEnvironment 需要此 using 语句
 
-<PageTitle>Error</PageTitle>
+@inject IHostEnvironment HostEnv       // 获取当前托管环境
+@* @inject ILogger<Error> Logger       // 如果需要，注入日志记录器 *@
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<PageTitle>错误</PageTitle>
 
-@if (ShowRequestId)
+@if (HostEnv.IsDevelopment() && ExceptionFeature?.Error != null)
 {
+    <h1 class="text-danger">开发模式错误</h1>
+    <h2 class="text-danger">处理您的请求时发生了一个异常。</h2>
+
     <p>
-        <strong>Request ID:</strong> <code>@RequestId</code>
+        <strong>错误信息:</strong> <code class="text-danger">@ExceptionFeature.Error.Message</code>
+    </p>
+    <p>
+        <strong>异常类型:</strong> <code>@ExceptionFeature.Error.GetType().FullName</code>
+    </p>
+
+    @if (!string.IsNullOrEmpty(ExceptionFeature.Path))
+    {
+        <p>
+            <strong>请求路径:</strong> <code>@ExceptionFeature.Path</code>
+        </p>
+    }
+
+    @if (ShowRequestId)
+    {
+        <p>
+            <strong>请求 ID:</strong> <code>@RequestId</code>
+        </p>
+    }
+
+    <h3 class="mt-4">堆栈跟踪:</h3>
+    <pre class="alert alert-danger" style="white-space: pre-wrap; word-break: break-all;">@ExceptionFeature.Error.StackTrace</pre>
+
+    <hr />
+    <p>
+        <strong>ASPNETCORE_ENVIRONMENT:</strong> <code>@HostEnv.EnvironmentName</code>
+    </p>
+    <p>
+        显示此错误详细信息是因为您的应用程序正在<strong>开发</strong>环境中运行。
+        请勿在已部署的应用程序中启用此模式，因为它可能向最终用户显示异常中的敏感信息。
+        要在本地调试，请将 <strong>ASPNETCORE_ENVIRONMENT</strong> 环境变量设置为 <strong>Development</strong> 并重启应用程序。
+    </p>
+}
+else
+{
+    <h1 class="text-danger">发生错误</h1>
+    <h2 class="text-danger">处理您的请求时发生了意外错误。</h2>
+
+    <p>
+        给您带来不便，我们深表歉意。我们正在努力解决此问题。
+    </p>
+    <p>
+        请稍后重试，如果问题仍然存在，请联系支持人员。
+    </p>
+
+    @if (ShowRequestId)
+    {
+        <p>
+            <strong>错误参考 ID:</strong> <code>@RequestId</code>
+            <br />
+            <small>(联系支持时请提供此ID，以便更快解决问题。)</small>
+        </p>
+    }
+
+    <p class="mt-4">
+        <a href="/" class="btn btn-primary">返回首页</a>
+        @* <a href="/support" class="btn btn-info ms-2">联系支持</a> *@
     </p>
 }
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
-</p>
-
-@code{
+@code {
     [CascadingParameter]
     private HttpContext? HttpContext { get; set; }
 
     private string? RequestId { get; set; }
     private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    private IExceptionHandlerFeature? ExceptionFeature { get; set; }
 
-    protected override void OnInitialized() =>
+    protected override void OnInitialized()
+    {
         RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+        ExceptionFeature = HttpContext?.Features.Get<IExceptionHandlerFeature>();
+
+        // 如果需要，在此处记录错误信息。
+        // if (ExceptionFeature?.Error != null)
+        // {
+        //     Logger?.LogError(ExceptionFeature.Error, "请求ID {RequestId} 发生未处理的异常。", RequestId);
+        // }
+    }
 }

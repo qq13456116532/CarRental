@@ -5,74 +5,63 @@
 @using Data
 @using Radzen
 @using Radzen.Blazor
-
-<div class="content">
-    <div class="content-left">
-        <div class="left-search-item">
+<div class="portal-container">
+    <aside class="sidebar">
+        <section class="sidebar-section">
             <h4>车辆分类</h4>
-            <Shared.TreeView Items="@classifications" TitleSelector="(e)=>e.Title" 
+            <Shared.TreeView Items="@classifications" TitleSelector="(e)=>e.Title"
                 OnItemSelected="EventCallback.Factory.Create<Classification>(this, OnCategorySelected)" />
-        </div>
-        <div class="left-search-item">
+        </section>
+        <section class="sidebar-section">
             <h4>热门标签</h4>
-            <div class="tag-view tag-flex-view">
+            <div class="tag-list">
                 @foreach (var tag in tags)
                 {
-                    <span class="tag @(selectedTagId == tag.Id ? "tag-select" : "")" @onclick="() => OnTagClicked(tag.Id)">
+                    <span class="tag @(selectedTagId == tag.Id ? "tag-active" : "")" @onclick="() => OnTagClicked(tag.Id)">
                         @tag.Title
                     </span>
                 }
             </div>
-        </div>
-    </div>
-    <div class="content-right">
-        <div class="top-select-view flex-view">
-            <div class="order-view">
-                <span class="title"></span>
-                @foreach (var tab in tabData.Select((item, index) => new { item, index }))
-                {
-                    <span class="tab @(selectedTabIndex == tab.index ? "tab-select" : "")" @onclick="() => SelectTab(tab.index)">
-                        @tab.item
-                    </span>
-                }
-                <span class="tab-underline" style="left: @tabUnderlineLeft"></span>
-            </div>
-        </div>
+        </section>
+    </aside>
+
+    <main class="main-content">
+        <nav class="tab-bar">
+            @foreach (var tab in tabData.Select((item, index) => new { item, index }))
+            {
+                <span class="tab @(selectedTabIndex == tab.index ? "active" : "")"
+                      @onclick="() => SelectTab(tab.index)">
+                    @tab.item
+                </span>
+            }
+        </nav>
+
         @if (loading)
         {
-            <div>加载中...</div>
+            <div class="loading">加载中...</div>
         }
         else
         {
-            <div class="pc-thing-list flex-view">
+            <div class="grid">
                 @foreach (var item in pageData)
                 {
-                    <div class="thing-item item-column-3">
-                        <div class="img-view">
-                            <img src="@item.Cover"  @onclick="() => HandleDetail(item)"/> 
-                        </div>
-                        <div class="info-view">
-                            <h3 class="thing-name">@item.Title.Substring(0, Math.Min(item.Title.Length, 12))</h3>
-                            <span>
-                                <span class="a-price-symbol"></span>
-                                <span class="a-price">@item.Price</span>&nbsp;
-                                <span class="a-price">@item.Location</span>
-                            </span>
+                    <div class="card" @onclick="() => HandleDetail(item)">
+                        <img src="@item.Cover" alt="@item.Title" />
+                        <div class="card-info">
+                            <h3>@item.Title</h3>
+                            <p class="price">￥@item.Price · @item.Location</p>
                         </div>
                     </div>
                 }
-                @if (!pageData.Any() && !loading)
+                @if (!pageData.Any())
                 {
                     <div class="no-data">暂无数据</div>
                 }
             </div>
         }
-        @* <div class="page-view"> *@
-            @* <h1>RadzenPager</h1> *@
-            @* <RadzenPager CurrentPage="@currentPage" PageSize="@pageSize" Total="@total" OnPageChanged="ChangePage" /> *@
-        @* </div> *@
-    </div>
+    </main>
 </div>
+
 
 
 @code {

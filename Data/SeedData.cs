@@ -508,7 +508,7 @@ public static class SeedData
         Name = "John Doe",
         Mobile = "1234567890",
         Description = "Primary residence",
-        Def = "安徽工业大学",
+        Default = false,
         CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
         UserId = 1
     },
@@ -518,7 +518,7 @@ public static class SeedData
         Name = "Jane Smith",
         Mobile = "0987654321",
         Description = "Office address",
-        Def = "No",
+        Default = false,
         CreateTime = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd HH:mm:ss"),
         UserId = 2
     },
@@ -528,7 +528,7 @@ public static class SeedData
         Name = "Emily Brown",
         Mobile = "1122334455",
         Description = "Vacation home",
-        Def = "No",
+        Default = false,
         CreateTime = DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd HH:mm:ss"),
         UserId = 3
     }

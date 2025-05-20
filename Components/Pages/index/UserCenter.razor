@@ -4,56 +4,60 @@
 @inject HttpClient Http
 @inject AuthService AuthService
 @using Data
-<div class="mine-infos-view">
-    <div class="info-box flex-view">
+<div class="user-center-container">
+    <!-- 用户信息头部 -->
+    <div class="user-header">
         <img src="images/avatar.jpg" class="avatar-img" />
-        <div class="name-box">
-            <h2 class="nick">@user.Username</h2>
-            <div class="age">
+        <div class="user-info">
+            <h2 class="username">@user.Username</h2>
+            <div class="status">
                 <span>Active for 1 day</span>
-                <span class="give-point"></span>
+                <span class="status-dot"></span>
             </div>
         </div>
     </div>
-    <div class="counts-view">
-        <div class="counts flex-view">
-            <div class="fans-box flex-item" @onclick='() => NavigateToMenu("my-collections")'>
-                <div class="text">Favorites</div>
-                <div class="num">@collects.Count</div>
-            </div>
-            <div class="split-line"></div>
-            <div class="follow-box flex-item" @onclick='() => NavigateToMenu("my-wishes")'>
-                <div class="text">Wishlist</div>
-                <div class="num">@wishes.Count</div>
-            </div>
+
+    <!-- 收藏/愿望统计 -->
+    <div class="stats-panel">
+        <div class="stat-box" @onclick='() => NavigateToMenu("my-collections")'>
+            <div class="stat-label">Favorites</div>
+            <div class="stat-value">@collects.Count</div>
+        </div>
+        <div class="divider-line"></div>
+        <div class="stat-box" @onclick='() => NavigateToMenu("my-wishes")'>
+            <div class="stat-label">Wishlist</div>
+            <div class="stat-value">@wishes.Count</div>
         </div>
     </div>
-    <div class="setting-box">
-        <div class="title">Personal Settings</div>
-        <div class="list">
-            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("orderView")'>
-                <img src="images/setting-icon.svg" alt="My Reservations" />
+
+    <!-- 设置模块 -->
+    <div class="settings-card">
+        <div class="settings-title">Personal Settings</div>
+        <div class="settings-list">
+            <div class="settings-item" @onclick='() => NavigateToMenu("orderView")'>
+                <img src="images/setting-icon.svg" alt="" />
                 <span>My Reservations</span>
             </div>
-            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("userInfoEditView")'>
-                <img src="images/setting-icon.svg" alt="Edit Profile" />
+            <div class="settings-item" @onclick='() => NavigateToMenu("userInfoEditView")'>
+                <img src="images/setting-icon.svg" alt="" />
                 <span>Edit Profile</span>
             </div>
-            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("securityView")'>
-                <img src="images/setting-safe-icon.svg" alt="Account Security" />
+            <div class="settings-item" @onclick='() => NavigateToMenu("securityView")'>
+                <img src="images/setting-safe-icon.svg" alt="" />
                 <span>Account Security</span>
             </div>
-            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("pushView")'>
-                <img src="images/setting-push-icon.svg" alt="Push Notifications" />
+            <div class="settings-item" @onclick='() => NavigateToMenu("pushView")'>
+                <img src="images/setting-push-icon.svg" alt="" />
                 <span>Push Notifications</span>
             </div>
-            <div class="mine-item flex-view" @onclick='() => NavigateToMenu("messageView")'>
-                <img src="images/setting-msg-icon.svg" alt="Message Management" />
+            <div class="settings-item" @onclick='() => NavigateToMenu("messageView")'>
+                <img src="images/setting-msg-icon.svg" alt="" />
                 <span>Message Management</span>
             </div>
         </div>
     </div>
 </div>
+
 
 @code {
 

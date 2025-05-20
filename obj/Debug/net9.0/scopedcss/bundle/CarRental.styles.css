@@ -1,0 +1,3153 @@
+@import '_content/TabBlazor/TabBlazor.bundle.scp.css';
+
+/* _content/CarRental/Components/Layout/Footer.razor.rz.scp.css */
+.flex-view[b-jwwntbm0gw] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .footer-view[b-jwwntbm0gw] {
+    max-width: 1108px;
+    margin: 0 auto;
+    padding: 24px 0 20px 54px;
+  
+    .foot-link-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 24px auto 16px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      .foot-link {
+        margin: 0 16px;
+        color: #2a4f88;
+      }
+      a[b-jwwntbm0gw] {
+        background-color: transparent;
+        text-decoration: none;
+        color: var(--mid-blue);
+      }
+    }
+  
+    .footer-infos[b-jwwntbm0gw] {
+      height: 16px;
+      line-height: 16px;
+      font-size: 12px;
+      padding-left: 63px;
+      color: #aeaeae;
+      margin-top: 16px;
+      text-align: center;
+    }
+    .address[b-jwwntbm0gw] {
+      text-align: center;
+      height: 16px;
+      line-height: 16px;
+      font-size: 12px;
+      color: #aeaeae;
+      margin-top: 8px;
+    }
+  }
+/* _content/CarRental/Components/Layout/Header.razor.rz.scp.css */
+/* --- 顶部导航栏 --- */
+.main-bar-view[b-1ionqlzgif] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+/* --- LOGO --- */
+.logo img[b-1ionqlzgif] {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/* --- 搜索框 --- */
+.search-entry[b-1ionqlzgif] {
+  position: relative;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #f4f6f9;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.search-entry .search-icon[b-1ionqlzgif] {
+  width: 18px;
+  margin-right: 8px;
+}
+
+.search-entry input[b-1ionqlzgif] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+/* --- 右侧内容 --- */
+.right-view[b-1ionqlzgif] {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 后台入口按钮 */
+.btn-link[b-1ionqlzgif] {
+  background: none;
+  border: none;
+  color: #4684e2;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 登录按钮 */
+.btn.login[b-1ionqlzgif] {
+  background-color: #4684e2;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 用户头像 + 下拉 */
+.user-dropdown[b-1ionqlzgif] {
+  position: relative;
+}
+
+.user-dropdown .self-img[b-1ionqlzgif] {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-dropdown .self-img:hover[b-1ionqlzgif] {
+  transform: scale(1.05);
+}
+
+.dropdown-menu[b-1ionqlzgif] {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 160px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  animation: fadeIn-b-1ionqlzgif 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.dropdown-menu a[b-1ionqlzgif] {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover[b-1ionqlzgif] {
+  background-color: #f6f9fc;
+}
+
+/* --- 消息通知图标 --- */
+.right-icon[b-1ionqlzgif] {
+  position: relative;
+  cursor: pointer;
+}
+
+.right-icon img[b-1ionqlzgif] {
+  width: 20px;
+  height: 20px;
+}
+
+.right-icon .msg-point[b-1ionqlzgif] {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+}
+
+/* --- 消息抽屉 --- */
+.message-drawer[b-1ionqlzgif] {
+  position: absolute;
+  top: 72px;
+  right: 16px;
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 16px;
+  z-index: 999;
+  animation: slideDown-b-1ionqlzgif 0.2s ease;
+}
+
+.message-drawer h3[b-1ionqlzgif] {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.notification-item[b-1ionqlzgif] {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item h4[b-1ionqlzgif] {
+  font-size: 14px;
+  color: #152844;
+  margin-bottom: 4px;
+}
+
+.notification-item p[b-1ionqlzgif] {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.notification-item .time[b-1ionqlzgif] {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* --- 动画效果 --- */
+@keyframes fadeIn-b-1ionqlzgif {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown-b-1ionqlzgif {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 响应式调整 --- */
+@media (max-width: 768px) {
+  .main-bar-view[b-1ionqlzgif] {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-entry[b-1ionqlzgif] {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .right-view[b-1ionqlzgif] {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+/* _content/CarRental/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-6vrjrk681f] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-6vrjrk681f] {
+    flex: 1;
+}
+
+.sidebar[b-6vrjrk681f] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-6vrjrk681f] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-6vrjrk681f]  a, .top-row[b-6vrjrk681f]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-6vrjrk681f]  a:hover, .top-row[b-6vrjrk681f]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-6vrjrk681f]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-6vrjrk681f] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-6vrjrk681f]  a, .top-row[b-6vrjrk681f]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-6vrjrk681f] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-6vrjrk681f] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-6vrjrk681f] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-6vrjrk681f]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-6vrjrk681f], article[b-6vrjrk681f] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-6vrjrk681f] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-6vrjrk681f] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/CarRental/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-c9zwnx3nu7] {
+    appearance: none;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:checked[b-c9zwnx3nu7] {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top-row[b-c9zwnx3nu7] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-c9zwnx3nu7] {
+    font-size: 1.1rem;
+}
+
+.bi[b-c9zwnx3nu7] {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    top: -1px;
+    background-size: cover;
+}
+
+.bi-house-door-fill-nav-menu[b-c9zwnx3nu7] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
+}
+
+.bi-plus-square-fill-nav-menu[b-c9zwnx3nu7] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
+}
+
+.bi-list-nested-nav-menu[b-c9zwnx3nu7] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
+}
+
+.nav-item[b-c9zwnx3nu7] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-c9zwnx3nu7] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-c9zwnx3nu7] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-c9zwnx3nu7]  .nav-link {
+        color: #d7d7d7;
+        background: none;
+        border: none;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        width: 100%;
+    }
+
+.nav-item[b-c9zwnx3nu7]  a.active {
+    background-color: rgba(255,255,255,0.37);
+    color: white;
+}
+
+.nav-item[b-c9zwnx3nu7]  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-scrollable[b-c9zwnx3nu7] {
+    display: none;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable[b-c9zwnx3nu7] {
+    display: block;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-c9zwnx3nu7] {
+        display: none;
+    }
+
+    .nav-scrollable[b-c9zwnx3nu7] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+/* _content/CarRental/Components/Pages/admin/Login.razor.rz.scp.css */
+
+#userLayout[b-gauzrmhdlj] {
+    position: relative;
+    height: 90vh;
+
+    .user-layout-header {
+      height: 80px;
+      padding: 0 24px;
+      color: fade(#000, 85%);
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 80px;
+  
+      .logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        margin-top: -4px;
+      }
+    }
+
+    .main-container[b-gauzrmhdlj] {
+      width: 100%;
+      height: calc(45vh);
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      .main {
+        position: absolute;
+        height: 40vh;
+        right: 80px;
+        top: 50%;
+        display: flex;
+        transform: translate(0, -50%);
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px #aaa;
+        box-shadow: 2px 2px 6px #aaa;
+  
+        .main_right {
+          background: #ffffff;
+          padding: 24px;
+          width: 420px;
+          user-select: none;
+  
+          .sys_title {
+            font-size: 24px;
+            color: fade(#000, 85%);
+            font-weight: bold;
+            user-select: none;
+            padding-bottom: 8px;
+          }
+  
+          :deep(.ant-form-item label)[b-gauzrmhdlj] {
+            font-weight: bold;
+          }
+  
+          .flex[b-gauzrmhdlj] {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+          }
+  
+          .forget_password[b-gauzrmhdlj] {
+            cursor: pointer;
+          }
+  
+          .login-button[b-gauzrmhdlj] {
+            background: linear-gradient(128deg, #00aaeb, #00c1cd 59%, #0ac2b0 100%);
+          }
+        }
+  
+        .error-tip[b-gauzrmhdlj] {
+          text-align: center;
+        }
+      }
+    }
+  
+    .footer[b-gauzrmhdlj] {
+      height: 80px;
+    }
+  }
+  
+/* _content/CarRental/Components/Pages/index/CollectThing.razor.rz.scp.css */
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-ukrlbohemy] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
+.flex-view[b-ukrlbohemy] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment for flex containers */
+}
+
+.content-list[b-ukrlbohemy] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 1200px; /* Max width for the content area */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title[b-ukrlbohemy] {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Hide the empty tabs view for now */
+.content-list .list-tabs-view[b-ukrlbohemy] {
+  display: none; /* Remove if/when tabs are implemented */
+}
+
+.collect-thing-view[b-ukrlbohemy] { /* Matches class from MyWishes for consistency */
+  margin-top: 10px; /* Space above the list of things */
+}
+
+.thing-list[b-ukrlbohemy] {
+  display: grid; /* Using CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items */
+}
+
+.thing-item[b-ukrlbohemy] {
+  position: relative;
+  background: #fff; /* White card background */
+  border-radius: 8px; /* Softer corners */
+  overflow: hidden; /* To contain image and remove button */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: default; /* Default cursor for the card itself */
+}
+
+.thing-item:hover[b-ukrlbohemy] {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.thing-item .remove[b-ukrlbohemy] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 28px; /* Smaller, icon-like button */
+  height: 28px;
+  text-align: center;
+  line-height: 28px; /* Vertically center content (e.g., an 'X') */
+  color: #fff;
+  background: rgba(44, 62, 80, 0.6); /* Semi-transparent dark background */
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  font-size: 14px; /* Size for an 'X' character if used */
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 10; /* Ensure it's above the image */
+}
+.thing-item .remove:hover[b-ukrlbohemy] {
+  background: #e74c3c; /* Red background on hover for delete */
+  transform: scale(1.1);
+}
+
+.thing-item .img-view[b-ukrlbohemy] {
+  background: #f8f9fa; /* Light background for image area */
+  font-size: 0;
+  text-align: center;
+  height: 180px; /* Adjusted height for a more balanced card */
+  cursor: pointer; /* Make image clickable */
+  overflow: hidden;
+}
+
+.thing-item .img-view img[b-ukrlbohemy] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cover ensures image fills the area well */
+}
+
+.thing-item .info-view[b-ukrlbohemy] {
+  background: #fff; /* Consistent with card background */
+  text-align: left; /* Left-align text */
+  overflow: hidden;
+  padding: 15px; /* Uniform padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info view to take remaining space */
+  min-height: 70px; /* Ensure a minimum height for info section */
+}
+
+.thing-item .info-view .thing-name[b-ukrlbohemy] { /* Target h3 directly */
+  color: #2c3e50;
+  font-weight: 600; /* Bolder title */
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  margin: 0; /* Reset margin from h3 default */
+  /* min-height: calc(1.4em * 2); /* Reserve space for two lines, handled by info-view min-height */
+}
+
+/* Styling for the empty state message */
+.empty-collections-message[b-ukrlbohemy] { /* Specific class for this page */
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+/* _content/CarRental/Components/Pages/index/Confirm.razor.rz.scp.css */
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-7hjh3ekh3h] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+  padding: 20px 0; /* Add some padding to the body */
+}
+
+.order-form[b-7hjh3ekh3h] {
+  max-width: 800px; /* Max width for the form */
+  margin: 20px auto; /* Centering the form */
+  padding: 30px;
+  border: none; /* Remove original border */
+  border-radius: 8px;
+  background-color: #fff; /* White background for the form card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for elevation */
+}
+
+/* Section Styling */
+.order-details[b-7hjh3ekh3h],
+.remark-address-group[b-7hjh3ekh3h],
+.checkout-section[b-7hjh3ekh3h] {
+  margin-bottom: 30px; /* Space between sections */
+}
+.order-details:last-child[b-7hjh3ekh3h],
+.remark-address-group:last-child[b-7hjh3ekh3h],
+.checkout-section:last-child[b-7hjh3ekh3h] {
+    margin-bottom: 0;
+}
+
+
+/* Section Titles */
+.order-form h3[b-7hjh3ekh3h] {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50; /* Dark blue-grey for titles */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef; /* Subtle separator for section titles */
+}
+
+/* Order Details List */
+.list-container[b-7hjh3ekh3h] {
+  border: 1px solid #e0e6ed; /* Softer border */
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.list-th[b-7hjh3ekh3h] {
+  display: flex;
+  background-color: #f8f9fa; /* Lighter header background */
+  padding: 12px 15px;
+  font-weight: 600; /* Bolder header text */
+  color: #495057; /* Header text color */
+  font-size: 14px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.list-th span[b-7hjh3ekh3h] {
+  flex: 1;
+  text-align: center;
+}
+.list-th span:first-child[b-7hjh3ekh3h] {
+  flex: 3; /* More space for product name */
+  text-align: left;
+}
+.list-th span:last-child[b-7hjh3ekh3h] { /* For "操作" */
+  flex: 0.8;
+}
+
+
+.list[b-7hjh3ekh3h] {
+  padding: 0; /* Remove padding if OrderItem handles its own spacing */
+}
+
+/* Styles for items within OrderItem.razor (assuming this structure) */
+.items[b-7hjh3ekh3h] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px; /* Increased padding */
+  border-bottom: 1px solid #f1f3f5; /* Lighter item separator */
+  gap: 15px;
+}
+.items:last-child[b-7hjh3ekh3h] {
+  border-bottom: none;
+}
+
+.book[b-7hjh3ekh3h] { /* Targets the product info part within OrderItem */
+  display: flex;
+  align-items: center;
+  flex: 3; /* Corresponds to list-th */
+  gap: 12px;
+}
+
+.book img[b-7hjh3ekh3h] {
+  width: 65px; /* Slightly larger image */
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px; /* Softer radius */
+  border: 1px solid #eee;
+}
+
+.book h2[b-7hjh3ekh3h] { /* Product title within OrderItem */
+  font-size: 15px;
+  font-weight: 500; /* Medium weight */
+  color: #34495e;
+  margin: 0;
+  /* max-width: 160px; /* Remove or adjust if flex handles it */
+  /* white-space: nowrap; /* Allow wrapping if needed, or ensure sufficient width */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+
+.pay[b-7hjh3ekh3h] { /* Price per item within OrderItem */
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.items input[type="number"].quantity-input[b-7hjh3ekh3h] { /* Style for quantity input in OrderItem */
+  width: 55px;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.items input[type="number"].quantity-input:focus[b-7hjh3ekh3h] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+}
+
+.delete[b-7hjh3ekh3h] { /* Delete icon/button within OrderItem */
+  width: 24px; /* Adjust size for icon */
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  flex: 0.8; /* Corresponds to list-th */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete:hover[b-7hjh3ekh3h] {
+  opacity: 1;
+}
+.delete img[b-7hjh3ekh3h], .delete svg[b-7hjh3ekh3h] { /* If using img or svg for delete icon */
+    width: 18px;
+    height: 18px;
+}
+
+
+/* Remark and Address Section */
+.remark-address-group[b-7hjh3ekh3h] {
+  display: flex;
+  gap: 20px; /* Space between remark and address */
+  align-items: flex-start; /* Align top */
+}
+@media (max-width: 768px) { /* Stack on smaller screens */
+    .remark-address-group[b-7hjh3ekh3h] {
+        flex-direction: column;
+    }
+    .remark-group[b-7hjh3ekh3h], .address-group-container[b-7hjh3ekh3h] { /* Assuming AddressBlock is wrapped */
+        flex: 1 1 100%;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+
+.remark-group[b-7hjh3ekh3h] {
+  flex: 1;
+  /* margin-right: 10px; Replaced by gap */
+}
+.remark-group.compact[b-7hjh3ekh3h] { /* Not sure if .compact is used, if so, adjust width */
+  max-width: none; /* Let flex handle it */
+}
+
+.remark-input[b-7hjh3ekh3h], /* For InputTextArea */
+.styled-input-text[b-7hjh3ekh3h] { /* For generic InputText styling (e.g., in modal) */
+  width: 100%;
+  /* max-width: 400px; /* Remove if it should take flex width */
+  min-height: 80px; /* min-height instead of fixed height */
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.remark-input:focus[b-7hjh3ekh3h],
+.styled-input-text:focus[b-7hjh3ekh3h] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  outline: none;
+}
+
+/* Assuming AddressBlock renders into a container */
+.address-group-container[b-7hjh3ekh3h] { /* Add this class to the div wrapping AddressBlock if needed */
+    flex: 1;
+}
+.address-details[b-7hjh3ekh3h], .no-address[b-7hjh3ekh3h] { /* Styles for content presumably inside AddressBlock */
+  padding: 15px;
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.address-details p[b-7hjh3ekh3h], .no-address p[b-7hjh3ekh3h] {
+    margin-bottom: 5px;
+}
+.address-details p strong[b-7hjh3ekh3h] {
+    color: #34495e;
+}
+
+
+/* Checkout Section */
+.checkout-section[b-7hjh3ekh3h] {
+  margin-top: 30px;
+}
+
+.price-view[b-7hjh3ekh3h] {
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for summary */
+}
+
+.price-item[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #495057;
+}
+.price-item div:last-child[b-7hjh3ekh3h] {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.total-price[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ced4da; /* Dashed separator */
+  font-size: 18px; /* Larger total */
+  color: #2c3e50;
+}
+.total-price div:last-child[b-7hjh3ekh3h] { /* Total amount styling */
+    color: #e74c3c; /* Emphasize total price */
+    font-size: 22px;
+}
+
+.action-buttons[b-7hjh3ekh3h] {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 15px; /* Space between buttons */
+  margin-top: 25px;
+}
+
+.btn-back[b-7hjh3ekh3h], .btn-submit[b-7hjh3ekh3h] {
+  padding: 10px 25px; /* Increased padding */
+  border: none;
+  border-radius: 6px; /* Softer radius */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-back:hover[b-7hjh3ekh3h], .btn-submit:hover[b-7hjh3ekh3h] {
+    transform: translateY(-1px);
+}
+
+.btn-back[b-7hjh3ekh3h] {
+  background-color: #e9ecef; /* Light grey for secondary button */
+  color: #495057;
+  border: 1px solid #ced4da;
+}
+.btn-back:hover[b-7hjh3ekh3h] {
+  background-color: #d3d9df;
+}
+
+.btn-submit[b-7hjh3ekh3h] {
+  background-color: #007bff; /* Primary blue */
+  color: #fff;
+}
+.btn-submit:hover[b-7hjh3ekh3h] {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Basic Styling for the "Add Address" Modal Form (from the second snippet) */
+.address-modal-form[b-7hjh3ekh3h] { /* Assuming you wrap the modal's EditForm in this */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.address-modal-form h4[b-7hjh3ekh3h] { /* Add a title to your modal if you wish */
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.address-modal-form div.form-field[b-7hjh3ekh3h] { /* Wrap label and input in this for spacing */
+    margin-bottom: 15px;
+}
+.address-modal-form label[b-7hjh3ekh3h] {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #495057;
+}
+.address-modal-form .styled-input-text[b-7hjh3ekh3h], /* Reusing class from remark for InputText */
+.address-modal-form InputTextArea[b-7hjh3ekh3h] { /* If textarea is used in modal */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding/border don't increase total width */
+}
+
+/* Style for InputCheckbox if it renders as a standard checkbox */
+.address-modal-form InputCheckbox[type="checkbox"][b-7hjh3ekh3h] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.address-modal-form .checkbox-label[b-7hjh3ekh3h] { /* If you wrap checkbox and its text in a label */
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.address-modal-form .modal-actions[b-7hjh3ekh3h] {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+/* Buttons inside modal (assuming they render as <button> or can be styled thus) */
+.address-modal-form .modal-actions button[b-7hjh3ekh3h] {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.address-modal-form .modal-actions .btn-modal-secondary[b-7hjh3ekh3h] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+.address-modal-form .modal-actions .btn-modal-secondary:hover[b-7hjh3ekh3h] {
+    background-color: #5a6268;
+}
+.address-modal-form .modal-actions .btn-modal-primary[b-7hjh3ekh3h] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+.address-modal-form .modal-actions .btn-modal-primary:hover[b-7hjh3ekh3h] {
+    background-color: #0056b3;
+}
+/* _content/CarRental/Components/Pages/index/Detail.razor.rz.scp.css */
+/* Detail.razor.css - Enhanced Version */
+
+/* General body styles (Consider adding to a global stylesheet if not already present) */
+body[b-c4umwzs5wk] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa; /* A slightly off-white background for the page */
+  color: #333; /* Default text color */
+}
+
+.hide[b-c4umwzs5wk] {
+  display: none;
+}
+
+.detail-content[b-c4umwzs5wk] {
+  display: flex;
+  flex-direction: column;
+  width: 1100px; /* Consider using max-width for better responsiveness on smaller large screens */
+  margin: 20px auto; /* Increased margin for better spacing from viewport edges */
+  background-color: #fff; /* White background for the content area */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  padding: 20px; /* Added some internal padding */
+}
+
+.flex-view[b-c4umwzs5wk] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden-lg[b-c4umwzs5wk] {
+  display: none !important;
+}
+
+/* --- Thing Infos View --- */
+.thing-infos-view[b-c4umwzs5wk] {
+  display: flex;
+  margin: 0 0 30px; /* Slightly reduced bottom margin */
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef; /* Softer separator */
+}
+
+.thing-infos-view .thing-infos[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  /* flex-direction: column; Ensures items stack vertically if space is tight */
+}
+
+.thing-infos-view .thing-img-box[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 250px; /* Slightly larger image box */
+  flex: 0 0 250px;
+  margin: 0 30px 0 0; /* Adjusted margin */
+  border-radius: 6px;
+  overflow: hidden; /* Ensures image respects border-radius */
+}
+
+.thing-infos-view .thing-img-box img[b-c4umwzs5wk] {
+  width: 100%; /* Make image responsive to its container */
+  height: 230px; /* Adjusted height */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the area well */
+  border-radius: 6px;
+}
+
+.thing-infos-view .thing-info-box[b-c4umwzs5wk] {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Allows this box to take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.thing-infos-view .thing-state[b-c4umwzs5wk] {
+  height: auto; /* Allow height to adjust based on content */
+  line-height: normal;
+  margin-bottom: 12px; /* Added margin */
+}
+
+.thing-infos-view .thing-state .state[b-c4umwzs5wk] {
+  font-weight: 500;
+  color: #4684e2;
+  background: rgba(70, 132, 226, .1);
+  border-radius: 4px; /* Softer radius */
+  padding: 6px 10px; /* Adjusted padding */
+  margin-right: 12px; /* Adjusted margin */
+  font-size: 13px; /* Slightly larger */
+}
+
+.thing-infos-view .thing-state span:not(.state)[b-c4umwzs5wk] { /* Target the "有效" span */
+  font-size: 14px;
+  color: #28a745; /* Green color for "有效" status for better visual cue */
+  font-weight: 500;
+}
+
+.thing-infos-view .thing-name[b-c4umwzs5wk] {
+  line-height: 1.3; /* Adjusted line height */
+  margin: 8px 0 12px; /* Adjusted margin */
+  color: #1a1a1a !important; /* Slightly softer black */
+  font-size: 26px !important; /* Significantly larger for title prominence */
+  font-weight: 600 !important; /* Bolder */
+}
+
+/* Price styling */
+.thing-info-box .price-container[b-c4umwzs5wk] {
+    margin-bottom: 15px;
+}
+.thing-info-box .a-price[b-c4umwzs5wk] {
+    color: #d9534f; /* A common color for prices */
+    font-size: 24px !important; /* Larger price */
+    font-weight: 600;
+}
+.thing-info-box .a-price-symbol[b-c4umwzs5wk] {
+    top: -0.4em; /* Adjust if needed */
+    font-size: 14px;
+    color: #d9534f;
+    margin-right: 2px;
+}
+
+.thing-infos-view .attributes-list[b-c4umwzs5wk] {
+    margin-top: 10px;
+    margin-bottom: 15px; /* Space before buy button */
+}
+
+.thing-infos-view .translators[b-c4umwzs5wk], /* Shared style for attribute lines */
+.thing-infos-view .authors[b-c4umwzs5wk] { /* If you still use .authors */
+  line-height: 1.6;
+  font-size: 15px; /* Slightly larger for readability */
+  margin: 6px 0;
+  color: #555; /* Slightly darker grey for labels */
+  display: flex; 
+  align-items: center;
+}
+
+.thing-infos-view .attributes-list .label[b-c4umwzs5wk] { /* More specific selector */
+  color: #787878;
+  min-width: 80px; /* Ensures alignment */
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.thing-infos-view .attributes-list .name[b-c4umwzs5wk] { /* More specific selector */
+  color: #315c9e;
+  white-space: normal;
+  font-weight: 400;
+}
+
+/* --- Action Counts (Wishlist, Collect, Share) --- */
+.thing-infos-view .thing-counts[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 220px; /* Slightly adjusted width */
+  flex: 0 0 220px;
+  margin-left: 30px; /* Increased margin */
+  border-left: 1px solid #e9ecef; /* Add a subtle separator */
+  padding-left: 20px; /* Space after separator */
+}
+
+.thing-infos-view .pointer[b-c4umwzs5wk] {
+  cursor: pointer;
+}
+
+.thing-infos-view .count-item[b-c4umwzs5wk] {
+  height: auto; /* More flexible height */
+  padding: 12px 0; /* Add some padding */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.thing-infos-view .count-item:not(:last-child)[b-c4umwzs5wk] { /* Add a border between count items */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.thing-infos-view .count-item:hover[b-c4umwzs5wk] {
+  background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.thing-infos-view .count-img[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 28px; /* Slightly smaller icons */
+  flex: 0 0 28px;
+  margin-right: 18px; /* Adjusted margin */
+  font-size: 0;
+}
+
+.thing-infos-view .count-img img[b-c4umwzs5wk] {
+  width: 100%;
+  display: block;
+}
+
+.thing-infos-view .count-box[b-c4umwzs5wk] {
+  position: relative;
+  border-bottom: none; 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+.thing-infos-view .count-text-box .count-title[b-c4umwzs5wk] {
+  color: #2c3e50; /* More neutral color */
+  font-weight: 500; /* Adjusted weight */
+  font-size: 15px; /* Adjusted size */
+  line-height: 1.4;
+  display: block;
+}
+
+.thing-infos-view .count-num-box[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 18px; /* Slightly smaller for balance */
+  line-height: 1.4;
+  color: #34495e; /* More neutral color */
+}
+.thing-infos-view .count-num-box .mg-l[b-c4umwzs5wk] { /* For the weibo share icon */
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+
+
+/* --- Buy Button --- */
+.buy-btn[b-c4umwzs5wk] {
+  cursor: pointer;
+  display: inline-flex; /* For aligning icon and text */
+  align-items: center;
+  justify-content: center;
+  background: #007bff; /* Standard primary blue */
+  border-radius: 5px; /* Softer radius */
+  text-align: center;
+  color: #fff;
+  font-size: 16px; /* Larger font */
+  font-weight: 500; /* Bolder */
+  height: 42px; /* Taller button */
+  line-height: 42px; /* Match height */
+  width: auto; /* Auto width based on content */
+  padding: 0 20px; /* Horizontal padding */
+  outline: none;
+  border: none;
+  margin-top: auto; /* Pushes button to bottom if .thing-info-box is flex-column */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover[b-c4umwzs5wk] {
+  background: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.buy-btn img[b-c4umwzs5wk] {
+  width: 14px; /* Adjusted size */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle;
+}
+
+.buy-btn span[b-c4umwzs5wk] {
+  vertical-align: middle;
+}
+
+/* --- Thing Content View (Tabs, Description, Comments, Recommendations) --- */
+.thing-content-view[b-c4umwzs5wk] {
+  margin-top: 30px; /* Adjusted */
+  padding-bottom: 30px; /* Adjusted */
+}
+
+.main-content[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 20px; 
+}
+
+.main-content .text[b-c4umwzs5wk] { /* For thing.Description */
+  color: #484848;
+  font-size: 16px;
+  line-height: 1.8; /* Increased line height for readability */
+  padding-left: 0; 
+  margin: 20px 0; /* Adjusted margin */
+  white-space: pre-wrap;
+}
+
+.order-view.main-tab[b-c4umwzs5wk] { /* Styles for the tab container */
+  border-bottom: 2px solid #dee2e6; 
+  margin-bottom: 20px; 
+  position: relative; /* Crucial for absolute positioning of tab-underline */
+  color: #6c757d; 
+  font-size: 16px; 
+  line-height: 48px; /* Increased height for tabs */
+  display: flex; /* To align tabs horizontally */
+}
+
+.order-view .tab[b-c4umwzs5wk] {
+  margin-right: 25px; 
+  cursor: pointer;
+  color: #495057; 
+  font-size: 17px; 
+  font-weight: 500; 
+  padding: 0 4px 10px 4px; /* Adjusted padding, esp. bottom for underline space */
+  position: relative; 
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Prevent tab text from wrapping */
+}
+.order-view .tab:hover[b-c4umwzs5wk] {
+  color: #0056b3; 
+}
+
+.order-view .tab-select[b-c4umwzs5wk] {
+  color: #007bff !important; /* Selected tab color, ensure it overrides */
+  font-weight: 600 !important; /* Bolder for selected */
+  /* NO border-bottom here if using the animated .tab-underline span */
+}
+
+.order-view .tab-underline[b-c4umwzs5wk] {
+  position: absolute;
+  bottom: 0; /* Aligns to the bottom of .order-view.main-tab, just above its border-bottom */
+  /* left: is set via inline style in Razor by @tabUnderLeft */
+  width: 30px; /* Default width, Blazor logic might need to adjust this too if tabs vary greatly */
+  height: 3px;
+  background-color: #007bff; /* Consistent primary color */
+  border-radius: 1.5px; /* Optional for rounded ends */
+  transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1); /* Smoother transition */
+}
+
+
+/* --- Recommendations Section --- */
+.recommend[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 260px; 
+  flex: 0 0 260px;
+  margin-left: 20px; 
+  padding-left: 20px; 
+  border-left: 1px solid #e9ecef; 
+}
+
+.recommend .title[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 20px; 
+  line-height: 1.4;
+  color: #152844;
+  margin-bottom: 16px; 
+}
+
+.recommend .things[b-c4umwzs5wk] {
+  border-top: none; 
+}
+
+.recommend .thing-item[b-c4umwzs5wk] {
+  position: relative;
+  flex: 1; 
+  height: auto; 
+  overflow: hidden;
+  margin-bottom: 20px; 
+  padding-bottom: 0; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 6px; 
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.recommend .thing-item:hover[b-c4umwzs5wk] {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); 
+  transform: translateY(-3px); 
+}
+
+.recommend .thing-item .img-view[b-c4umwzs5wk] {
+  height: 180px; 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.recommend .thing-item .img-view img[b-c4umwzs5wk] {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+  background-size: cover;
+  border-top-left-radius: 6px; 
+  border-top-right-radius: 6px; 
+}
+
+.recommend .thing-item .info-view[b-c4umwzs5wk] {
+  overflow: hidden;
+  padding: 12px 16px; 
+}
+
+.recommend .thing-item .info-view .thing-name[b-c4umwzs5wk] {
+  line-height: 1.4; 
+  margin-top: 0; 
+  margin-bottom: 8px; 
+  color: #212529 !important; 
+  font-size: 16px !important; 
+  font-weight: 600 !important; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommend .thing-item .info-view .a-price[b-c4umwzs5wk] { 
+  color: #dd571c; 
+  font-size: 18px; 
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block; /* To allow margin and proper flow */
+}
+.recommend .thing-item .info-view .a-price-symbol[b-c4umwzs5wk] {
+    font-size: 12px;
+    color: #dd571c;
+    margin-right: 1px;
+}
+
+.recommend .thing-item .info-view .location-info[b-c4umwzs5wk] { 
+    color: #6c757d;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* Or inline-block if on same line as price */
+}
+
+/* --- Comments Section --- */
+.thing-comment .title[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 18px; 
+  line-height: 1.5;
+  color: #152844;
+  margin: 30px 0 15px; 
+}
+
+.thing-comment .publish[b-c4umwzs5wk] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.thing-comment .publish .mine-img[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.thing-comment .publish .content-input[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #f1f3f5; 
+  border-radius: 4px;
+  height: 40px; 
+  line-height: normal; 
+  color: #495057;
+  padding: 8px 12px; 
+  /* white-space: nowrap; /* allow normal wrap for input */
+  outline: none;
+  border: 1px solid #ced4da; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.thing-comment .publish .content-input:focus[b-c4umwzs5wk] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+
+.thing-comment .publish .send-btn[b-c4umwzs5wk] {
+  margin-left: 12px; 
+  background: #28a745; 
+  border-radius: 4px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  height: 40px; 
+  line-height: 40px; 
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.thing-comment .publish .send-btn:hover[b-c4umwzs5wk] {
+  background: #218838; 
+}
+
+.thing-comment .tab-view[b-c4umwzs5wk] {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 14px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 24px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef; 
+}
+
+.thing-comment .tab-view .count-text[b-c4umwzs5wk] {
+  color: #484848;
+  font-weight: 500;
+}
+
+.thing-comment .tab-view .tab-box[b-c4umwzs5wk] {
+  color: #5f77a6;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex; /* ensure child elements align properly */
+}
+
+.thing-comment .tab-view .tab-box .tab-select[b-c4umwzs5wk] {
+  color: #152844 !important; /* ensure higher specificity */
+  font-weight: 600;
+}
+
+.thing-comment .tab-view .tab-box span[b-c4umwzs5wk] {
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+.thing-comment .tab-view .tab-box span:not(.tab-select):hover[b-c4umwzs5wk] {
+    color: #0056b3;
+}
+
+.thing-comment .tab-view .line[b-c4umwzs5wk] {
+  width: 1px;
+  height: 12px;
+  margin: 0 12px;
+  background: #cedce4;
+}
+
+/* --- Comments List --- */
+.comments-list .comment-item[b-c4umwzs5wk] {
+  padding-bottom: 16px; 
+  margin-bottom: 16px; 
+  border-bottom: 1px solid #e9ecef; 
+}
+.comments-list .comment-item:last-child[b-c4umwzs5wk] {
+    border-bottom: none; 
+    margin-bottom: 0;
+}
+
+
+.comments-list .comment-item .flex-item[b-c4umwzs5wk] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 16px; /* Original was 16px, can be adjusted */
+   display: flex; /* ensure flex properties apply */
+}
+
+.comments-list .comment-item .avator[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .person[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.comments-list .comment-item .name[b-c4umwzs5wk] {
+  color: #152844;
+  font-weight: 600;
+  font-size: 15px; 
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .time[b-c4umwzs5wk] {
+  color: #5f77a6;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.comments-list .comment-item .float-right[b-c4umwzs5wk] {
+  color: #4684e2;
+  font-size: 14px;
+  /* float: right; /* Consider using flexbox for alignment instead if parent is flex */
+  margin-left: auto; /* Pushes to the right if flex-item is display:flex */
+}
+
+.comments-list .comment-item .float-right span[b-c4umwzs5wk] {
+  margin-left: 19px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.comments-list .comment-item .float-right span:hover:not(.num)[b-c4umwzs5wk] {
+    color: #0056b3;
+}
+
+
+.comments-list .comment-item .float-right .num[b-c4umwzs5wk] {
+  color: #152844;
+  margin-left: 6px;
+  cursor: auto;
+}
+
+.comment-content[b-c4umwzs5wk] {
+  margin-top: 8px;
+  color: #484848;
+  font-size: 15px; 
+  line-height: 1.7; 
+  padding-bottom: 0; 
+  border-bottom: none; 
+  margin-left: 52px; /* Aligns with username (avatar width + margin) */
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.infinite-loading-container[b-c4umwzs5wk] {
+  clear: both;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fallback for general a-price if not specifically styled, should be overridden by context */
+.a-price[b-c4umwzs5wk] { 
+  color: #0F1111;
+  font-size: 14px;
+}
+.a-price-symbol[b-c4umwzs5wk] {
+  top: -0.5em; 
+  font-size: 12px; 
+}
+/* _content/CarRental/Components/Pages/index/Login.razor.rz.scp.css */
+div[b-ac60ju7ahk] {
+    display: block;
+}
+
+.container[b-ac60ju7ahk] {
+    background-size: cover;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-content[b-ac60ju7ahk] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 80px auto 0;
+    width: 980px;
+}
+
+.logo-img[b-ac60ju7ahk] {
+    width: 125px;
+    display: block;
+    margin-left: 137.5px;
+}
+
+.login-page[b-ac60ju7ahk] {
+    overflow: hidden;
+    background: #fff;
+
+    .logo-icon {
+        margin-top: 20px;
+        margin-left: 175px;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.pc-style[b-ac60ju7ahk] {
+    position: relative;
+    width: 400px;
+    height: 464px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 6px #aaa;
+    box-shadow: 2px 2px 6px #aaa;
+}
+
+.login-tab[b-ac60ju7ahk] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #1e1e1e;
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: 500;
+    height: 46px;
+    line-height: 44px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #c3c9d5;
+
+    div {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .tabline[b-ac60ju7ahk] {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: inline-block;
+        width: 0;
+        height: 2px;
+        background: #3d5b96;
+        -webkit-transition: width .5s cubic-bezier(.46, 1, .23, 1.52);
+        transition: width .5s cubic-bezier(.46, 1, .23, 1.52);
+    }
+
+    tab-selected[b-ac60ju7ahk] {
+        color: #1e1e1e;
+        font-weight: 500;
+    }
+
+    .mail-login[b-ac60ju7ahk],
+    .tel-login[b-ac60ju7ahk] {
+        padding: 0 28px;
+    }
+
+}
+
+.mail-login[b-ac60ju7ahk] {
+    margin: 0px 24px;
+}
+
+.common-input[b-ac60ju7ahk] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
+    .left-icon {
+        margin-right: 12px;
+        width: 24px;
+    }
+
+    .input-view[b-ac60ju7ahk] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+
+        .input {
+            font-weight: 500;
+            font-size: 14px;
+            color: #1e1e1e;
+            height: 26px;
+            line-height: 26px;
+            border: none;
+            padding: 0;
+            display: block;
+            width: 100%;
+            letter-spacing: 1.5px;
+        }
+
+        err-view[b-ac60ju7ahk] {
+            margin-top: 4px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            color: #f62a2a;
+        }
+    }
+}
+
+.next-btn[b-ac60ju7ahk] {
+    background: #3d5b96;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+button[b-ac60ju7ahk] {
+    background: transparent;
+    padding: 0;
+    border-width: 0px;
+}
+
+button[b-ac60ju7ahk],
+input[b-ac60ju7ahk],
+select[b-ac60ju7ahk],
+textarea[b-ac60ju7ahk] {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.operation[b-ac60ju7ahk] {
+    display: flex;
+    flex-direction: row;
+    margin: 0 24px;
+}
+
+.forget-pwd[b-ac60ju7ahk] {
+    display: block;
+    overflow: hidden;
+    flex: 1;
+    margin: 0 auto;
+    color: #3d5b96;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* _content/CarRental/Components/Pages/index/OrderView.razor.rz.scp.css */
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-ct95ir8go8] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
+.flex-view[b-ct95ir8go8] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment */
+}
+
+.flex-between[b-ct95ir8go8] {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-top[b-ct95ir8go8] {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.flex-center[b-ct95ir8go8] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+
+.content-list[b-ct95ir8go8] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 900px; /* Max width for the content area */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title[b-ct95ir8go8] {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.order-item-view[b-ct95ir8go8] {
+  background: #fff; /* White background for cards */
+  border-radius: 8px; /* Softer corners */
+  padding: 20px; /* Increased padding */
+  margin-bottom: 20px; /* Space between cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Elevation shadow */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.order-item-view:hover[b-ct95ir8go8] {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Slightly more pronounced shadow on hover */
+}
+
+.order-item-view .header[b-ct95ir8go8] {
+  border-bottom: 1px solid #e9ecef; /* Softer border color */
+  padding-bottom: 15px; /* Increased padding */
+  margin-bottom: 15px; /* Space after header */
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center; /* Vertically align items in header */
+}
+
+.order-item-view .header .left[b-ct95ir8go8] {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between items in the left part of header */
+}
+
+.order-item-view .header .text[b-ct95ir8go8] {
+  color: #5a677d; /* Softer grey */
+}
+
+.order-item-view .header .num[b-ct95ir8go8] {
+  font-weight: 500;
+  color: #34495e; /* Dark blue-grey */
+}
+.order-item-view .header .num.mg-4[b-ct95ir8go8] { /* Overriding specific margin if needed, prefer gap */
+   margin-left: 0; /* Reset if using gap */
+}
+
+
+.order-item-view .header .time[b-ct95ir8go8] {
+  /* margin-left: 16px; /* Replaced by gap */
+  color: #7f8c9f; /* Lighter grey for time */
+  font-size: 13px;
+}
+
+/* Cancel Button Styling */
+.order-item-view .header .btn-cancel[b-ct95ir8go8] { /* Custom class for cancel button */
+    background-color: #e74c3c; /* Red for cancel/delete */
+    border-color: #e74c3c;
+    color: white;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+.order-item-view .header .btn-cancel:hover[b-ct95ir8go8] {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+.order-item-view .header .btn-cancel:focus[b-ct95ir8go8] {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.3);
+}
+
+
+.order-item-view .content[b-ct95ir8go8] {
+  padding: 0; /* Remove extra padding if card padding is sufficient */
+  overflow: hidden;
+}
+
+.order-item-view .content .left-list[b-ct95ir8go8] {
+  overflow: hidden;
+  /* height: auto; /* Let content determine height */
+  -webkit-box-flex: 1; /* Let it take full width if no right-info */
+  -ms-flex: 1;
+  flex: 1;
+  /* padding-right: 16px; /* Only if there's a right-info section */
+}
+
+.order-item-view .content .list-item[b-ct95ir8go8] {
+  /* height: auto; /* Let content determine height */
+  margin-bottom: 0; /* Remove margin if only one item per order card */
+  overflow: hidden;
+  align-items: flex-start; /* Align image and details to the top */
+}
+
+.order-item-view .content .thing-img[b-ct95ir8go8] {
+  width: 90px;  /* Slightly smaller for better balance */
+  height: 75px; /* Adjust height to maintain aspect ratio or desired look */
+  margin-right: 16px; /* Increased margin */
+  border-radius: 4px; /* Rounded corners for image */
+  object-fit: cover; /* Ensure image covers without distortion */
+}
+
+.order-item-view .content .detail[b-ct95ir8go8] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space if detail has fixed height */
+  align-items: stretch; /* Stretch children to fill width */
+  min-height: 75px; /* Match image height */
+}
+
+
+.order-item-view .content .name[b-ct95ir8go8] {
+  color: #2c3e50; /* Darker title */
+  font-weight: 600;
+  font-size: 16px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 6px; /* Space below title */
+}
+
+.order-item-view .content .count[b-ct95ir8go8] {
+  color: #5a677d; /* Softer grey */
+  font-size: 13px;
+  margin-left: 10px; /* Space from title if on same line, or use flex-gap */
+}
+
+.order-item-view .content .price[b-ct95ir8go8] {
+  color: #e67e22; /* Orange for price */
+  font-weight: 600;
+  font-size: 16px; /* Larger price */
+  margin-top: auto; /* Push to bottom if detail is flex-column and has space */
+}
+
+.order-item-view .bottom[b-ct95ir8go8] {
+  align-items: center;
+  border-top: 1px solid #e9ecef; /* Softer border */
+  justify-content: space-between;
+  font-size: 14px;
+  padding-top: 15px; /* Increased padding */
+  margin-top: 15px; /* Space before bottom section */
+}
+
+.order-item-view .bottom .left[b-ct95ir8go8] {
+    display: flex;
+    align-items: center;
+}
+
+.order-item-view .bottom .text[b-ct95ir8go8] {
+  color: #5a677d; /* Softer grey */
+}
+
+.order-item-view .bottom .open[b-ct95ir8go8] { /* "详情" link */
+  color: #3498db; /* Blue for links/actions */
+  margin-left: 12px; /* Increased margin */
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.order-item-view .bottom .open:hover[b-ct95ir8go8] {
+  color: #2980b9; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Styling for the empty state message */
+.empty-orders-message[b-ct95ir8go8] {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+/* Remove duplicate/unused styles from original CSS if any */
+/* .order-item-view .header .state - not used in provided HTML */
+/* .order-item-view .content .right-info - not used in provided HTML */
+/* .order-item-view .bottom .right, .num, .money - not used in provided HTML's bottom section */
+/* _content/CarRental/Components/Pages/index/Pay.razor.rz.scp.css */
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-azim4cdjqa] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center .pay-content if Header is full-width */
+}
+
+.flex-view[b-azim4cdjqa] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.pay-content[b-azim4cdjqa] {
+  position: relative;
+  margin: 40px auto; /* Adjusted margin, assuming Header takes some space */
+  width: 500px;
+  max-width: 95%; /* Ensure it's responsive on smaller viewports */
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer, more modern shadow */
+  padding: 30px 40px; /* Increased padding */
+  text-align: center; /* Default text alignment for content */
+}
+
+.pay-content .title[b-azim4cdjqa] {
+  color: #2c3e50; /* Darker, neutral title */
+  font-weight: 600; /* Bolder */
+  font-size: 26px; /* Larger title */
+  line-height: 1.4;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.pay-content .text[b-azim4cdjqa] {
+  /* height: auto; Removed fixed height */
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: center;
+  color: #5a677d; /* Softer text color */
+  margin-bottom: 8px;
+}
+.pay-content .text.time-margin[b-azim4cdjqa] { /* Specific margin for the deadline text */
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.pay-content .time[b-azim4cdjqa] {
+  color: #e74c3c; /* Red for urgency */
+  font-weight: 500;
+}
+
+.pay-content .price[b-azim4cdjqa] {
+  color: #e67e22; /* Orange for price */
+  font-weight: 600;
+  font-size: 20px; /* Base size for "元" */
+  /* height: auto; Removed fixed height */
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px; /* Space before payment options */
+}
+
+.pay-content .price .num[b-azim4cdjqa] {
+  font-size: 36px; /* Larger amount */
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.pay-content .pay-choose-view[b-azim4cdjqa] {
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.pay-content .pay-choose-box[b-azim4cdjqa] {
+  justify-content: center; /* Center boxes if less than max-width */
+  gap: 20px; /* Space between payment options */
+  max-width: 340px; /* Adjusted to fit two 140px boxes + 20px gap */
+  margin: 0 auto 20px auto; /* Center the container and add bottom margin */
+}
+
+.pay-content .choose-box[b-azim4cdjqa] {
+  width: 140px;
+  min-height: 120px; /* Use min-height instead of fixed height */
+  border: 2px solid #e0e6ed; /* Slightly thicker, softer border */
+  border-radius: 8px; /* More rounded */
+  text-align: center;
+  cursor: pointer;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  background-color: #fdfdfd;
+}
+.pay-content .choose-box:hover[b-azim4cdjqa] {
+  border-color: #a0b0c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pay-content .choose-box img[b-azim4cdjqa] {
+  height: 36px; /* Adjusted icon size */
+  width: auto;
+  margin: 0 auto 12px auto; /* Adjusted margin */
+  display: block;
+}
+.pay-content .choose-box span[b-azim4cdjqa] {
+    font-size: 14px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.pay-content .choose-box.choose-box-active[b-azim4cdjqa] { /* Styles for the active payment method */
+  border-color: #3498db; /* Primary blue for active */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3); /* Glow effect */
+  background-color: #fff;
+}
+
+.pay-content .tips[b-azim4cdjqa] {
+  color: #7f8c9f; /* Softer grey for tips */
+  font-size: 13px;
+  line-height: 1.5;
+  /* height: auto; Removed fixed height */
+  text-align: center;
+  margin: 20px 0 25px; /* Adjusted margins */
+}
+
+.pay-content .pay-btn[b-azim4cdjqa] {
+  cursor: pointer;
+  background: #bdc3c7; /* Default disabled-like background */
+  border-radius: 25px; /* Pill shape */
+  min-width: 160px; /* Wider button */
+  height: 46px; /* Taller button */
+  line-height: 46px;
+  border: none;
+  outline: none;
+  font-size: 16px; /* Larger font */
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-content .pay-btn:hover[b-azim4cdjqa] {
+    transform: translateY(-1px);
+}
+.pay-content .pay-btn:active[b-azim4cdjqa] {
+    transform: translateY(0px);
+}
+
+.pay-content .pay-btn.pay-btn-active[b-azim4cdjqa] { /* Active style for when a payment method is chosen */
+  background: #3498db; /* Primary blue */
+}
+.pay-content .pay-btn.pay-btn-active:hover[b-azim4cdjqa] {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+
+/* Styles for QR Code View */
+.pay-qr-view[b-azim4cdjqa] {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.pay-qr-view .loading-tip[b-azim4cdjqa] {
+  font-size: 15px;
+  color: #5a677d;
+  margin-bottom: 20px;
+}
+
+.pay-qr-view .qr-box[b-azim4cdjqa] {
+  display: flex; /* Use flex for column layout */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pay-qr-view .qr[b-azim4cdjqa] { /* This is where the QR code will be rendered */
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0; /* Placeholder background */
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #aaa;
+}
+.pay-qr-view .qr img[b-azim4cdjqa] { /* If QR code library renders an img tag */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.pay-qr-view .qr-box .tips[b-azim4cdjqa] { /* Overrides general .tips for QR context if needed */
+  color: #34495e;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.pay-qr-view .pay-finish-btn[b-azim4cdjqa],
+.pay-qr-view .back-pay-btn[b-azim4cdjqa] {
+  cursor: pointer;
+  border-radius: 25px;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 0 25px; /* Horizontal padding */
+  min-width: 200px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.pay-qr-view .pay-finish-btn:hover[b-azim4cdjqa],
+.pay-qr-view .back-pay-btn:hover[b-azim4cdjqa] {
+    transform: translateY(-1px);
+}
+
+.pay-qr-view .pay-finish-btn[b-azim4cdjqa] {
+  background: #2ecc71; /* Green for success/finish */
+}
+.pay-qr-view .pay-finish-btn:hover[b-azim4cdjqa] {
+  background: #27ae60;
+}
+
+.pay-qr-view .back-pay-btn[b-azim4cdjqa] {
+  background: transparent;
+  color: #3498db; /* Blue link color */
+  border: 1px solid #3498db; /* Optional: make it look like a secondary button */
+  margin-top: 15px;
+}
+.pay-qr-view .back-pay-btn:hover[b-azim4cdjqa] {
+  background: rgba(52, 152, 219, 0.1); /* Light blue background on hover */
+  color: #2980b9;
+}
+/* _content/CarRental/Components/Pages/index/Portal.razor.rz.scp.css */
+/* 容器结构 */
+.portal-container[b-pb0pfr6hiv] {
+  display: flex;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.sidebar[b-pb0pfr6hiv] {
+  flex: 0 0 220px;
+}
+
+.sidebar-section[b-pb0pfr6hiv] {
+  margin-bottom: 32px;
+}
+
+.sidebar-section h4[b-pb0pfr6hiv] {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.tag-list[b-pb0pfr6hiv] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag[b-pb0pfr6hiv] {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.tag:hover[b-pb0pfr6hiv] {
+  background-color: #4684e2;
+  color: #fff;
+}
+
+.tag-active[b-pb0pfr6hiv] {
+  background-color: #4684e2;
+  color: #fff;
+}
+
+/* 主内容区 */
+.main-content[b-pb0pfr6hiv] {
+  flex: 1;
+}
+
+.tab-bar[b-pb0pfr6hiv] {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+}
+
+.tab[b-pb0pfr6hiv] {
+  font-size: 15px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #666;
+  position: relative;
+}
+
+.tab.active[b-pb0pfr6hiv] {
+  font-weight: bold;
+  color: #152844;
+  border-bottom: 3px solid #4684e2;
+}
+
+.loading[b-pb0pfr6hiv] {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* 商品展示区 */
+.grid[b-pb0pfr6hiv] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card[b-pb0pfr6hiv] {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover[b-pb0pfr6hiv] {
+  transform: translateY(-4px);
+}
+
+.card img[b-pb0pfr6hiv] {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-info[b-pb0pfr6hiv] {
+  padding: 12px 16px;
+}
+
+.card-info h3[b-pb0pfr6hiv] {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-info .price[b-pb0pfr6hiv] {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .portal-container[b-pb0pfr6hiv] {
+    flex-direction: column;
+  }
+
+  .sidebar[b-pb0pfr6hiv] {
+    width: 100%;
+  }
+
+  .tab-bar[b-pb0pfr6hiv] {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .grid[b-pb0pfr6hiv] {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid[b-pb0pfr6hiv] {
+    grid-template-columns: 1fr;
+  }
+}
+/* 新增：侧边栏整体卡片化 */
+.sidebar[b-pb0pfr6hiv] {
+  flex: 0 0 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+}
+
+/* 每个 section 更加分明 */
+.sidebar-section[b-pb0pfr6hiv] {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+.sidebar-section h4[b-pb0pfr6hiv] {
+  font-size: 16px;
+  font-weight: 600;
+  color: #152844;
+  margin-bottom: 12px;
+  border-left: 4px solid #4684e2;
+  padding-left: 8px;
+}
+
+/* TreeView 中的分类样式 */
+.sidebar-section a[b-pb0pfr6hiv] {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.sidebar-section a:hover[b-pb0pfr6hiv] {
+  background-color: #f5f7fb;
+  color: #4684e2;
+}
+
+/* 标签样式加强 */
+.tag-list[b-pb0pfr6hiv] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag[b-pb0pfr6hiv] {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover[b-pb0pfr6hiv] {
+  background-color: #e0ecff;
+  color: #4684e2;
+}
+
+.tag-active[b-pb0pfr6hiv] {
+  background-color: #4684e2;
+  color: #fff;
+  border-color: #4684e2;
+}
+/* _content/CarRental/Components/Pages/index/Register.razor.rz.scp.css */
+
+div[b-xvdlf18dfz] {
+  display: block;
+}
+
+*[b-xvdlf18dfz], [b-xvdlf18dfz]:after, [b-xvdlf18dfz]:before, img[b-xvdlf18dfz] {
+  border-style: none;
+}
+
+*[b-xvdlf18dfz], [b-xvdlf18dfz]:after, [b-xvdlf18dfz]:before {
+  border-width: 0;
+  border-color: #dae1e7;
+}
+
+.container[b-xvdlf18dfz] {
+  max-width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.pc-style[b-xvdlf18dfz] {
+  position: relative;
+  width: 400px;
+  height: 464px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 6px #aaa;
+  box-shadow: 2px 2px 6px #aaa;
+  border-radius: 4px;
+}
+
+.tel-regist-page[b-xvdlf18dfz] {
+  overflow: hidden;
+
+  .regist-title {
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: 500;
+    height: 24px;
+    line-height: 24px;
+    margin: 40px 0;
+    padding: 0 28px;
+
+    .toWxLogin {
+      color: #3d5b96;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  .regist-padding[b-xvdlf18dfz] {
+    padding: 0 28px;
+    margin-bottom: 8px;
+  }
+}
+
+.common-input[b-xvdlf18dfz] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  .left-icon {
+    margin-right: 12px;
+    width: 24px;
+  }
+
+  .input-view[b-xvdlf18dfz] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    .input {
+      font-weight: 500;
+      font-size: 14px;
+      color: #1e1e1e;
+      height: 26px;
+      line-height: 26px;
+      padding: 0;
+      display: block;
+      width: 100%;
+      letter-spacing: 1.5px;
+      outline: none; 
+    }
+
+    .err-view[b-xvdlf18dfz] {
+      margin-top: 4px;
+      height: 16px;
+      line-height: 16px;
+      font-size: 12px;
+      color: #f62a2a;
+    }
+  }
+}
+
+.tel-login[b-xvdlf18dfz] {
+  padding: 0 28px;
+}
+
+.next-btn[b-xvdlf18dfz] {
+  background: #3d5b96;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+/* _content/CarRental/Components/Pages/index/Search.razor.rz.scp.css */
+/* 容器整体居中与宽度控制 */
+.content-margin[b-4rhzd1ud88] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+/* 搜索导航文字居中 */
+.search-tab-nav[b-4rhzd1ud88] {
+  padding: 24px 0 16px;
+  text-align: center;
+}
+
+.search-tab-nav .tab-text[b-4rhzd1ud88] {
+  color: #5f77a6;
+  font-size: 16px;
+}
+
+.search-tab-nav .strong[b-4rhzd1ud88] {
+  color: #152844;
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+/* 卡片列表容器，自动换行并居中 */
+.things[b-4rhzd1ud88] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* 单个卡片样式 */
+.thing-item[b-4rhzd1ud88] {
+  flex: 0 1 280px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.thing-item:hover[b-4rhzd1ud88] {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 图片区域 */
+.img-view[b-4rhzd1ud88] {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.img-view img[b-4rhzd1ud88] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 信息区 */
+.info-view[b-4rhzd1ud88] {
+  padding: 16px;
+}
+
+.thing-name[b-4rhzd1ud88] {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0F1111;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.a-price[b-4rhzd1ud88] {
+  color: #ff7b31;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.a-location[b-4rhzd1ud88] {
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+/* 加载动画 & 无数据样式 */
+.loading-spinner[b-4rhzd1ud88],
+.no-data[b-4rhzd1ud88] {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  padding: 80px 0;
+}
+
+/* 分页容器样式 */
+.page-view[b-4rhzd1ud88] {
+  width: 100%;
+  text-align: center;
+  margin-top: 48px;
+}
+/* _content/CarRental/Components/Pages/index/UserCenter.razor.rz.scp.css */
+.user-center-container[b-v1zsapz5t3] {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* 顶部用户信息块 */
+  .user-header[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+  }
+  
+  .avatar-img[b-v1zsapz5t3] {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-info .username[b-v1zsapz5t3] {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+  }
+  
+  .status[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .status-dot[b-v1zsapz5t3] {
+    width: 8px;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  
+  /* 收藏 & 愿望统计 */
+  .stats-panel[b-v1zsapz5t3] {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 24px 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .stat-box[b-v1zsapz5t3] {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .stat-label[b-v1zsapz5t3] {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .stat-value[b-v1zsapz5t3] {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 6px;
+  }
+  
+  .divider-line[b-v1zsapz5t3] {
+    width: 1px;
+    background: #eee;
+    height: 40px;
+    margin: auto 20px;
+  }
+  
+  /* 设置模块 */
+  .settings-card[b-v1zsapz5t3] {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 24px;
+  }
+  
+  .settings-title[b-v1zsapz5t3] {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .settings-list[b-v1zsapz5t3] {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .settings-item[b-v1zsapz5t3] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .settings-item img[b-v1zsapz5t3] {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  
+  .settings-item span[b-v1zsapz5t3] {
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .settings-item:hover[b-v1zsapz5t3] {
+    background-color: #f9f9f9;
+  }
+  
+  /* 响应式适配 */
+  @media (max-width: 600px) {
+    .user-header[b-v1zsapz5t3] {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .stats-panel[b-v1zsapz5t3] {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .divider-line[b-v1zsapz5t3] {
+      display: none;
+    }
+  }
+  
+/* _content/CarRental/Components/Pages/index/WishesThing.razor.rz.scp.css */
+/* General page setup - consider moving to a global stylesheet if not already present */
+body[b-8gepgyd694] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
+.flex-view[b-8gepgyd694] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment for flex containers */
+}
+
+.content-list[b-8gepgyd694] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 1200px; /* Max width for the content area, allowing for more cards */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title[b-8gepgyd694] {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Hide the empty tabs view for now */
+.content-list .list-tabs-view[b-8gepgyd694] {
+  display: none; /* Remove if/when tabs are implemented */
+  /* Original styles if needed later:
+  position: relative;
+  border-bottom: 1px solid #cedce4;
+  height: 12px;
+  line-height: 42px;
+  */
+}
+
+.collect-thing-view[b-8gepgyd694] {
+  margin-top: 10px; /* Space above the list of things */
+}
+
+.thing-list[b-8gepgyd694] {
+  display: grid; /* Using CSS Grid for layout */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items, replaces margins on items */
+  justify-content: flex-start; /* Align items to the start if not filling whole row */
+}
+
+.thing-item[b-8gepgyd694] {
+  position: relative;
+  background: #fff; /* White card background */
+  border-radius: 8px; /* Softer corners */
+  overflow: hidden; /* To contain image and remove button */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: default; /* Default cursor for the card itself */
+}
+
+.thing-item:hover[b-8gepgyd694] {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.thing-item .remove[b-8gepgyd694] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 28px; /* Smaller, icon-like button */
+  height: 28px;
+  text-align: center;
+  line-height: 28px; /* Vertically center content (e.g., an 'X') */
+  color: #fff;
+  background: rgba(44, 62, 80, 0.6); /* Semi-transparent dark background */
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  font-size: 14px; /* Size for an 'X' character if used */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  z-index: 10; /* Ensure it's above the image */
+}
+.thing-item .remove:hover[b-8gepgyd694] {
+  background: #e74c3c; /* Red background on hover for delete */
+  transform: scale(1.1);
+}
+
+.thing-item .img-view[b-8gepgyd694] {
+  background: #f8f9fa; /* Light background for image area before image loads */
+  font-size: 0;
+  text-align: center;
+  height: 180px; /* Adjusted height for a more balanced card */
+  padding: 0; /* Remove padding if image uses object-fit */
+  cursor: pointer; /* Make image clickable */
+  overflow: hidden; /* Ensure image respects border radius of its parent if needed */
+}
+
+.thing-item .img-view img[b-8gepgyd694] {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Cover ensures image fills the area well */
+  /* border-radius: 4px; /* Can be removed if .thing-item overflow:hidden clips it */
+}
+
+.thing-item .info-view[b-8gepgyd694] {
+  background: #fff; /* Consistent with card background */
+  text-align: left; /* Left-align text for better readability */
+  /* height: auto; /* Let content determine height */
+  overflow: hidden;
+  padding: 15px; /* Uniform padding */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info view to take remaining space */
+}
+
+.thing-item .info-view .thing-name[b-8gepgyd694] { /* Target h3 directly */
+  color: #2c3e50;
+  font-weight: 600; /* Bolder title */
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  margin: 0 0 8px 0; /* Reset margin from h3 default and add bottom margin */
+  min-height: calc(1.4em * 2); /* Reserve space for two lines */
+}
+
+/* Styles for .authors, .translators if you add them back to the Razor */
+.thing-item .info-view .authors[b-8gepgyd694],
+.thing-item .info-view .translators[b-8gepgyd694] {
+  color: #5a677d;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Styling for the empty state message */
+.empty-wishlist-message[b-8gepgyd694] {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}

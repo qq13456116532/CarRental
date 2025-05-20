@@ -21,7 +21,6 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.Extensions.Options.d
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
-E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\System.Net.Http.Json.dll
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -92,3 +91,6 @@ E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Microsoft.Extensions.Localizat
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\TabBlazor.dll
 E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\scopedcss\Components\Pages\admin\Login.razor.rz.scp.css
 E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\Blazor-ApexCharts.dll
+E:\VSproject\CarRental\CarRental\bin\Debug\net8.0\CarRental.staticwebassets.endpoints.json
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\VSproject\CarRental\CarRental\obj\Debug\net8.0\staticwebassets\msbuild.CarRental.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

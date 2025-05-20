@@ -4,33 +4,37 @@
 @inject AuthService AuthService
 @using Services
 
-<div class="content-list" >
+<div class="content-list">
     <div class="list-title">我的心愿单</div>
     <div role="tablist" class="list-tabs-view flex-view">
+        @* Tabs can be added here if needed in the future *@
     </div>
     <div class="list-content">
         <div class="collect-thing-view">
-            <div class="thing-list flex-view">
-                @if (wishData != null && wishData.Any())
-                {
+            @if (wishData != null && wishData.Any())
+            {
+                <div class="thing-list"> @* Removed .flex-view, using CSS Grid now *@
                     @foreach (var item in wishData)
                     {
-                        <div class="thing-item item-column-3">
-                            <div class="remove" @onclick="() => HandleRemove(item)">移出</div>
+                        <div class="thing-item"> @* Removed .item-column-3 *@
+                            <div class="remove" title="移出心愿单" @onclick="() => HandleRemove(item)">
+                                &#x2715; @* Using an 'X' character; you can use an SVG or icon font too *@
+                            </div>
                             <div class="img-view" @onclick="() => HandleClickItem(item)">
-                                <img src="@item.Cover" />
+                                <img src="@item.Cover" alt="@item.Title" />
                             </div>
                             <div class="info-view">
-                                <h3 class="thing-name">@item.Title</h3>
+                                <h3 class="thing-name" title="@item.Title">@item.Title</h3>
+                                @* If you add authors/translators or other info, it would go here *@
                             </div>
                         </div>
                     }
-                }
-                else
-                {
-                    <p>没有收藏的物品。</p>
-                }
-            </div>
+                </div>
+            }
+            else
+            {
+                <div class="empty-wishlist-message">您的心愿单还是空的，快去添加一些吧！</div> @* Added class for styling *@
+            }
         </div>
     </div>
 </div>
@@ -43,19 +47,34 @@
         await GetCollectThingList();
     }
 
-    private  void  HandleClickItem(WishedThingDto item)
+    private void HandleClickItem(WishedThingDto item)
     {
         var url = $"/detail?id={item.id}";
-        Navigation.NavigateTo(url, true);
+        Navigation.NavigateTo(url); // forceLoad: true can be jarring, remove unless necessary
     }
 
     private async Task HandleRemove(WishedThingDto item)
     {
         try
         {
-
-            await Http.DeleteAsync($"{Navigation.BaseUri}api/Index/things/wish/{item.id}?token={AuthService.UserToken}");
-            await GetCollectThingList();
+            if (string.IsNullOrEmpty(AuthService.UserToken))
+            {
+                Console.WriteLine("User token is missing. Cannot remove item.");
+                // Optionally redirect to login or show a message
+                return;
+            }
+            var response = await Http.DeleteAsync($"{Navigation.BaseUri}api/Index/things/wish/{item.id}?token={AuthService.UserToken}");
+            if (response.IsSuccessStatusCode)
+            {
+                wishData.Remove(item); // Optimistically update UI
+                // Or call GetCollectThingList() again, but removing directly is often faster UI-wise
+                StateHasChanged();
+            }
+            else
+            {
+                Console.WriteLine($"Failed to remove item: {response.StatusCode}");
+                // Optionally show an error message to the user
+            }
         }
         catch (Exception ex)
         {
@@ -68,11 +87,33 @@
         try
         {
             var token = AuthService.UserToken;
-            wishData = await Http.GetFromJsonAsync<List<WishedThingDto>>($"{Navigation.BaseUri}api/Index/things/wish?token={token}") ?? wishData;
+            if (string.IsNullOrEmpty(token))
+            {
+                Console.WriteLine("User token is missing. Cannot fetch wishlist.");
+                wishData = new List<WishedThingDto>(); // Clear data
+                StateHasChanged();
+                return;
+            }
+            var fetchedData = await Http.GetFromJsonAsync<List<WishedThingDto>>($"{Navigation.BaseUri}api/Index/things/wish?token={token}");
+            wishData = fetchedData ?? new List<WishedThingDto>();
+
+            // Ensure image paths are correct
+            foreach (var item in wishData) {
+                if (string.IsNullOrEmpty(item.Cover)){
+                    item.Cover = "images/placeholder.jpg"; // Default placeholder
+                }
+                else if (!item.Cover.StartsWith("images/") && !item.Cover.StartsWith("http")) {
+                     item.Cover = $"images/{item.Cover}";
+                }
+            }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error fetching collection: {ex.Message}");
+            Console.WriteLine($"Error fetching wishlist: {ex.Message}");
+            wishData = new List<WishedThingDto>(); // Ensure data is empty on error
         }
+        StateHasChanged();
     }
+
+
 }

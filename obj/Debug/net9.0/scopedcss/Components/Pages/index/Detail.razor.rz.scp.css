@@ -1,0 +1,654 @@
+/* Detail.razor.css - Enhanced Version */
+
+/* General body styles (Consider adding to a global stylesheet if not already present) */
+body[b-c4umwzs5wk] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa; /* A slightly off-white background for the page */
+  color: #333; /* Default text color */
+}
+
+.hide[b-c4umwzs5wk] {
+  display: none;
+}
+
+.detail-content[b-c4umwzs5wk] {
+  display: flex;
+  flex-direction: column;
+  width: 1100px; /* Consider using max-width for better responsiveness on smaller large screens */
+  margin: 20px auto; /* Increased margin for better spacing from viewport edges */
+  background-color: #fff; /* White background for the content area */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  padding: 20px; /* Added some internal padding */
+}
+
+.flex-view[b-c4umwzs5wk] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden-lg[b-c4umwzs5wk] {
+  display: none !important;
+}
+
+/* --- Thing Infos View --- */
+.thing-infos-view[b-c4umwzs5wk] {
+  display: flex;
+  margin: 0 0 30px; /* Slightly reduced bottom margin */
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef; /* Softer separator */
+}
+
+.thing-infos-view .thing-infos[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  /* flex-direction: column; Ensures items stack vertically if space is tight */
+}
+
+.thing-infos-view .thing-img-box[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 250px; /* Slightly larger image box */
+  flex: 0 0 250px;
+  margin: 0 30px 0 0; /* Adjusted margin */
+  border-radius: 6px;
+  overflow: hidden; /* Ensures image respects border-radius */
+}
+
+.thing-infos-view .thing-img-box img[b-c4umwzs5wk] {
+  width: 100%; /* Make image responsive to its container */
+  height: 230px; /* Adjusted height */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the area well */
+  border-radius: 6px;
+}
+
+.thing-infos-view .thing-info-box[b-c4umwzs5wk] {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Allows this box to take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.thing-infos-view .thing-state[b-c4umwzs5wk] {
+  height: auto; /* Allow height to adjust based on content */
+  line-height: normal;
+  margin-bottom: 12px; /* Added margin */
+}
+
+.thing-infos-view .thing-state .state[b-c4umwzs5wk] {
+  font-weight: 500;
+  color: #4684e2;
+  background: rgba(70, 132, 226, .1);
+  border-radius: 4px; /* Softer radius */
+  padding: 6px 10px; /* Adjusted padding */
+  margin-right: 12px; /* Adjusted margin */
+  font-size: 13px; /* Slightly larger */
+}
+
+.thing-infos-view .thing-state span:not(.state)[b-c4umwzs5wk] { /* Target the "有效" span */
+  font-size: 14px;
+  color: #28a745; /* Green color for "有效" status for better visual cue */
+  font-weight: 500;
+}
+
+.thing-infos-view .thing-name[b-c4umwzs5wk] {
+  line-height: 1.3; /* Adjusted line height */
+  margin: 8px 0 12px; /* Adjusted margin */
+  color: #1a1a1a !important; /* Slightly softer black */
+  font-size: 26px !important; /* Significantly larger for title prominence */
+  font-weight: 600 !important; /* Bolder */
+}
+
+/* Price styling */
+.thing-info-box .price-container[b-c4umwzs5wk] {
+    margin-bottom: 15px;
+}
+.thing-info-box .a-price[b-c4umwzs5wk] {
+    color: #d9534f; /* A common color for prices */
+    font-size: 24px !important; /* Larger price */
+    font-weight: 600;
+}
+.thing-info-box .a-price-symbol[b-c4umwzs5wk] {
+    top: -0.4em; /* Adjust if needed */
+    font-size: 14px;
+    color: #d9534f;
+    margin-right: 2px;
+}
+
+.thing-infos-view .attributes-list[b-c4umwzs5wk] {
+    margin-top: 10px;
+    margin-bottom: 15px; /* Space before buy button */
+}
+
+.thing-infos-view .translators[b-c4umwzs5wk], /* Shared style for attribute lines */
+.thing-infos-view .authors[b-c4umwzs5wk] { /* If you still use .authors */
+  line-height: 1.6;
+  font-size: 15px; /* Slightly larger for readability */
+  margin: 6px 0;
+  color: #555; /* Slightly darker grey for labels */
+  display: flex; 
+  align-items: center;
+}
+
+.thing-infos-view .attributes-list .label[b-c4umwzs5wk] { /* More specific selector */
+  color: #787878;
+  min-width: 80px; /* Ensures alignment */
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.thing-infos-view .attributes-list .name[b-c4umwzs5wk] { /* More specific selector */
+  color: #315c9e;
+  white-space: normal;
+  font-weight: 400;
+}
+
+/* --- Action Counts (Wishlist, Collect, Share) --- */
+.thing-infos-view .thing-counts[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 220px; /* Slightly adjusted width */
+  flex: 0 0 220px;
+  margin-left: 30px; /* Increased margin */
+  border-left: 1px solid #e9ecef; /* Add a subtle separator */
+  padding-left: 20px; /* Space after separator */
+}
+
+.thing-infos-view .pointer[b-c4umwzs5wk] {
+  cursor: pointer;
+}
+
+.thing-infos-view .count-item[b-c4umwzs5wk] {
+  height: auto; /* More flexible height */
+  padding: 12px 0; /* Add some padding */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.thing-infos-view .count-item:not(:last-child)[b-c4umwzs5wk] { /* Add a border between count items */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.thing-infos-view .count-item:hover[b-c4umwzs5wk] {
+  background-color: #f8f9fa; /* Subtle hover effect */
+}
+
+.thing-infos-view .count-img[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 28px; /* Slightly smaller icons */
+  flex: 0 0 28px;
+  margin-right: 18px; /* Adjusted margin */
+  font-size: 0;
+}
+
+.thing-infos-view .count-img img[b-c4umwzs5wk] {
+  width: 100%;
+  display: block;
+}
+
+.thing-infos-view .count-box[b-c4umwzs5wk] {
+  position: relative;
+  border-bottom: none; 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+.thing-infos-view .count-text-box .count-title[b-c4umwzs5wk] {
+  color: #2c3e50; /* More neutral color */
+  font-weight: 500; /* Adjusted weight */
+  font-size: 15px; /* Adjusted size */
+  line-height: 1.4;
+  display: block;
+}
+
+.thing-infos-view .count-num-box[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 18px; /* Slightly smaller for balance */
+  line-height: 1.4;
+  color: #34495e; /* More neutral color */
+}
+.thing-infos-view .count-num-box .mg-l[b-c4umwzs5wk] { /* For the weibo share icon */
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+
+
+/* --- Buy Button --- */
+.buy-btn[b-c4umwzs5wk] {
+  cursor: pointer;
+  display: inline-flex; /* For aligning icon and text */
+  align-items: center;
+  justify-content: center;
+  background: #007bff; /* Standard primary blue */
+  border-radius: 5px; /* Softer radius */
+  text-align: center;
+  color: #fff;
+  font-size: 16px; /* Larger font */
+  font-weight: 500; /* Bolder */
+  height: 42px; /* Taller button */
+  line-height: 42px; /* Match height */
+  width: auto; /* Auto width based on content */
+  padding: 0 20px; /* Horizontal padding */
+  outline: none;
+  border: none;
+  margin-top: auto; /* Pushes button to bottom if .thing-info-box is flex-column */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover[b-c4umwzs5wk] {
+  background: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.buy-btn img[b-c4umwzs5wk] {
+  width: 14px; /* Adjusted size */
+  margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle;
+}
+
+.buy-btn span[b-c4umwzs5wk] {
+  vertical-align: middle;
+}
+
+/* --- Thing Content View (Tabs, Description, Comments, Recommendations) --- */
+.thing-content-view[b-c4umwzs5wk] {
+  margin-top: 30px; /* Adjusted */
+  padding-bottom: 30px; /* Adjusted */
+}
+
+.main-content[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 20px; 
+}
+
+.main-content .text[b-c4umwzs5wk] { /* For thing.Description */
+  color: #484848;
+  font-size: 16px;
+  line-height: 1.8; /* Increased line height for readability */
+  padding-left: 0; 
+  margin: 20px 0; /* Adjusted margin */
+  white-space: pre-wrap;
+}
+
+.order-view.main-tab[b-c4umwzs5wk] { /* Styles for the tab container */
+  border-bottom: 2px solid #dee2e6; 
+  margin-bottom: 20px; 
+  position: relative; /* Crucial for absolute positioning of tab-underline */
+  color: #6c757d; 
+  font-size: 16px; 
+  line-height: 48px; /* Increased height for tabs */
+  display: flex; /* To align tabs horizontally */
+}
+
+.order-view .tab[b-c4umwzs5wk] {
+  margin-right: 25px; 
+  cursor: pointer;
+  color: #495057; 
+  font-size: 17px; 
+  font-weight: 500; 
+  padding: 0 4px 10px 4px; /* Adjusted padding, esp. bottom for underline space */
+  position: relative; 
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Prevent tab text from wrapping */
+}
+.order-view .tab:hover[b-c4umwzs5wk] {
+  color: #0056b3; 
+}
+
+.order-view .tab-select[b-c4umwzs5wk] {
+  color: #007bff !important; /* Selected tab color, ensure it overrides */
+  font-weight: 600 !important; /* Bolder for selected */
+  /* NO border-bottom here if using the animated .tab-underline span */
+}
+
+.order-view .tab-underline[b-c4umwzs5wk] {
+  position: absolute;
+  bottom: 0; /* Aligns to the bottom of .order-view.main-tab, just above its border-bottom */
+  /* left: is set via inline style in Razor by @tabUnderLeft */
+  width: 30px; /* Default width, Blazor logic might need to adjust this too if tabs vary greatly */
+  height: 3px;
+  background-color: #007bff; /* Consistent primary color */
+  border-radius: 1.5px; /* Optional for rounded ends */
+  transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1); /* Smoother transition */
+}
+
+
+/* --- Recommendations Section --- */
+.recommend[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 260px; 
+  flex: 0 0 260px;
+  margin-left: 20px; 
+  padding-left: 20px; 
+  border-left: 1px solid #e9ecef; 
+}
+
+.recommend .title[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 20px; 
+  line-height: 1.4;
+  color: #152844;
+  margin-bottom: 16px; 
+}
+
+.recommend .things[b-c4umwzs5wk] {
+  border-top: none; 
+}
+
+.recommend .thing-item[b-c4umwzs5wk] {
+  position: relative;
+  flex: 1; 
+  height: auto; 
+  overflow: hidden;
+  margin-bottom: 20px; 
+  padding-bottom: 0; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 6px; 
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.recommend .thing-item:hover[b-c4umwzs5wk] {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); 
+  transform: translateY(-3px); 
+}
+
+.recommend .thing-item .img-view[b-c4umwzs5wk] {
+  height: 180px; 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.recommend .thing-item .img-view img[b-c4umwzs5wk] {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+  background-size: cover;
+  border-top-left-radius: 6px; 
+  border-top-right-radius: 6px; 
+}
+
+.recommend .thing-item .info-view[b-c4umwzs5wk] {
+  overflow: hidden;
+  padding: 12px 16px; 
+}
+
+.recommend .thing-item .info-view .thing-name[b-c4umwzs5wk] {
+  line-height: 1.4; 
+  margin-top: 0; 
+  margin-bottom: 8px; 
+  color: #212529 !important; 
+  font-size: 16px !important; 
+  font-weight: 600 !important; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommend .thing-item .info-view .a-price[b-c4umwzs5wk] { 
+  color: #dd571c; 
+  font-size: 18px; 
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block; /* To allow margin and proper flow */
+}
+.recommend .thing-item .info-view .a-price-symbol[b-c4umwzs5wk] {
+    font-size: 12px;
+    color: #dd571c;
+    margin-right: 1px;
+}
+
+.recommend .thing-item .info-view .location-info[b-c4umwzs5wk] { 
+    color: #6c757d;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* Or inline-block if on same line as price */
+}
+
+/* --- Comments Section --- */
+.thing-comment .title[b-c4umwzs5wk] {
+  font-weight: 600;
+  font-size: 18px; 
+  line-height: 1.5;
+  color: #152844;
+  margin: 30px 0 15px; 
+}
+
+.thing-comment .publish[b-c4umwzs5wk] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.thing-comment .publish .mine-img[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.thing-comment .publish .content-input[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #f1f3f5; 
+  border-radius: 4px;
+  height: 40px; 
+  line-height: normal; 
+  color: #495057;
+  padding: 8px 12px; 
+  /* white-space: nowrap; /* allow normal wrap for input */
+  outline: none;
+  border: 1px solid #ced4da; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.thing-comment .publish .content-input:focus[b-c4umwzs5wk] {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+
+.thing-comment .publish .send-btn[b-c4umwzs5wk] {
+  margin-left: 12px; 
+  background: #28a745; 
+  border-radius: 4px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  height: 40px; 
+  line-height: 40px; 
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.thing-comment .publish .send-btn:hover[b-c4umwzs5wk] {
+  background: #218838; 
+}
+
+.thing-comment .tab-view[b-c4umwzs5wk] {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 14px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 24px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef; 
+}
+
+.thing-comment .tab-view .count-text[b-c4umwzs5wk] {
+  color: #484848;
+  font-weight: 500;
+}
+
+.thing-comment .tab-view .tab-box[b-c4umwzs5wk] {
+  color: #5f77a6;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex; /* ensure child elements align properly */
+}
+
+.thing-comment .tab-view .tab-box .tab-select[b-c4umwzs5wk] {
+  color: #152844 !important; /* ensure higher specificity */
+  font-weight: 600;
+}
+
+.thing-comment .tab-view .tab-box span[b-c4umwzs5wk] {
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+.thing-comment .tab-view .tab-box span:not(.tab-select):hover[b-c4umwzs5wk] {
+    color: #0056b3;
+}
+
+.thing-comment .tab-view .line[b-c4umwzs5wk] {
+  width: 1px;
+  height: 12px;
+  margin: 0 12px;
+  background: #cedce4;
+}
+
+/* --- Comments List --- */
+.comments-list .comment-item[b-c4umwzs5wk] {
+  padding-bottom: 16px; 
+  margin-bottom: 16px; 
+  border-bottom: 1px solid #e9ecef; 
+}
+.comments-list .comment-item:last-child[b-c4umwzs5wk] {
+    border-bottom: none; 
+    margin-bottom: 0;
+}
+
+
+.comments-list .comment-item .flex-item[b-c4umwzs5wk] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 16px; /* Original was 16px, can be adjusted */
+   display: flex; /* ensure flex properties apply */
+}
+
+.comments-list .comment-item .avator[b-c4umwzs5wk] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .person[b-c4umwzs5wk] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.comments-list .comment-item .name[b-c4umwzs5wk] {
+  color: #152844;
+  font-weight: 600;
+  font-size: 15px; 
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.comments-list .comment-item .time[b-c4umwzs5wk] {
+  color: #5f77a6;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.comments-list .comment-item .float-right[b-c4umwzs5wk] {
+  color: #4684e2;
+  font-size: 14px;
+  /* float: right; /* Consider using flexbox for alignment instead if parent is flex */
+  margin-left: auto; /* Pushes to the right if flex-item is display:flex */
+}
+
+.comments-list .comment-item .float-right span[b-c4umwzs5wk] {
+  margin-left: 19px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.comments-list .comment-item .float-right span:hover:not(.num)[b-c4umwzs5wk] {
+    color: #0056b3;
+}
+
+
+.comments-list .comment-item .float-right .num[b-c4umwzs5wk] {
+  color: #152844;
+  margin-left: 6px;
+  cursor: auto;
+}
+
+.comment-content[b-c4umwzs5wk] {
+  margin-top: 8px;
+  color: #484848;
+  font-size: 15px; 
+  line-height: 1.7; 
+  padding-bottom: 0; 
+  border-bottom: none; 
+  margin-left: 52px; /* Aligns with username (avatar width + margin) */
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.infinite-loading-container[b-c4umwzs5wk] {
+  clear: both;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fallback for general a-price if not specifically styled, should be overridden by context */
+.a-price[b-c4umwzs5wk] { 
+  color: #0F1111;
+  font-size: 14px;
+}
+.a-price-symbol[b-c4umwzs5wk] {
+  top: -0.5em; 
+  font-size: 12px; 
+}

@@ -433,14 +433,7 @@
         }
       },
       "System.Memory/4.5.3": {},
-      "System.Net.Http.Json/8.0.1": {
-        "runtime": {
-          "lib/net8.0/System.Net.Http.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.1024.46610"
-          }
-        }
-      },
+      "System.Net.Http.Json/8.0.1": {},
       "TabBlazor/0.14.10-beta": {
         "dependencies": {
           "LinqKit.Core": "1.2.5",

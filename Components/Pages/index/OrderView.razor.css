@@ -1,231 +1,234 @@
+/* General page setup - consider moving to a global stylesheet if not already present */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9; /* Light background for the page */
+  color: #333;
+}
+
 .flex-view {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; /* Default alignment */
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-top {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+
+.content-list {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 900px; /* Max width for the content area */
+  margin: 20px auto; /* Centering the list */
+  padding: 0 15px; /* Padding on smaller screens */
+}
+
+.content-list .list-title {
+  color: #2c3e50; /* Darker, more neutral title color */
+  font-weight: 600;
+  font-size: 24px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.order-item-view {
+  background: #fff; /* White background for cards */
+  border-radius: 8px; /* Softer corners */
+  padding: 20px; /* Increased padding */
+  margin-bottom: 20px; /* Space between cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Elevation shadow */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.order-item-view:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Slightly more pronounced shadow on hover */
+}
+
+.order-item-view .header {
+  border-bottom: 1px solid #e9ecef; /* Softer border color */
+  padding-bottom: 15px; /* Increased padding */
+  margin-bottom: 15px; /* Space after header */
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center; /* Vertically align items in header */
+}
+
+.order-item-view .header .left {
     display: flex;
-  }
-  
-  .content-list {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  
-    .list-title {
-      color: #152844;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 24px;
-      height: 24px;
-      margin-bottom: 4px;
-    }
-  }
-  
-  .order-item-view {
-    background: #f7f9fb;
+    align-items: center;
+    gap: 8px; /* Space between items in the left part of header */
+}
+
+.order-item-view .header .text {
+  color: #5a677d; /* Softer grey */
+}
+
+.order-item-view .header .num {
+  font-weight: 500;
+  color: #34495e; /* Dark blue-grey */
+}
+.order-item-view .header .num.mg-4 { /* Overriding specific margin if needed, prefer gap */
+   margin-left: 0; /* Reset if using gap */
+}
+
+
+.order-item-view .header .time {
+  /* margin-left: 16px; /* Replaced by gap */
+  color: #7f8c9f; /* Lighter grey for time */
+  font-size: 13px;
+}
+
+/* Cancel Button Styling */
+.order-item-view .header .btn-cancel { /* Custom class for cancel button */
+    background-color: #e74c3c; /* Red for cancel/delete */
+    border-color: #e74c3c;
+    color: white;
+    font-size: 13px;
+    padding: 5px 12px;
     border-radius: 4px;
-    padding: 16px;
-    margin-top: 12px;
-  
-    .header {
-      border-bottom: 1px solid #cedce4;
-      padding-bottom: 12px;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      font-size: 14px;
-  
-      .text {
-        color: #6f6f6f;
-      }
-  
-      .mg-4 {
-        margin-left: 4px;
-      }
-  
-      .num {
-        font-weight: 500;
-        color: #152844;
-      }
-  
-      .num {
-        font-weight: 500;
-        color: #152844;
-      }
-  
-      .time {
-        margin-left: 16px;
-        color: #a1adc5;
-      }
-  
-      .state {
-        color: #ff7b31;
-        font-weight: 600;
-        margin-left: 10px;
-      }
-    }
-  
-    .content {
-      padding: 12px 0;
-      overflow: hidden;
-  
-      .left-list {
-        overflow: hidden;
-        height: 132px;
-        -webkit-box-flex: 2;
-        -ms-flex: 2;
-        flex: 2;
-        padding-right: 16px;
-  
-        .list-item {
-          height: 60px;
-          margin-bottom: 12px;
-          overflow: hidden;
-          cursor: pointer;
-        }
-  
-        .thing-img {
-          width: 100px;
-          height: 100%;
-          margin-right: 12px;
-        }
-  
-        .detail {
-          -webkit-box-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-        }
-  
-        .flex-between {
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-        }
-  
-        .flex-between {
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-        }
-  
-        .flex-top {
-          -webkit-box-align: start;
-          -ms-flex-align: start;
-          align-items: flex-start;
-        }
-  
-        .name {
-          color: #152844;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 18px;
-        }
-  
-        .count {
-          color: #484848;
-          font-size: 12px;
-        }
-  
-        .flex-between {
-          -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-        }
-  
-        .flex-center {
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-        }
-  
-        .type {
-          color: #6f6f6f;
-          font-size: 12px;
-        }
-  
-        .price {
-          color: #ff7b31;
-          font-weight: 600;
-          font-size: 14px;
-        }
-      }
-  
-      .right-info {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        border-left: 1px solid #cedce4;
-        padding-left: 12px;
-        line-height: 22px;
-        font-size: 14px;
-  
-        .title {
-          color: #6f6f6f;
-        }
-  
-        .name {
-          color: #152844;
-        }
-  
-        .text {
-          color: #484848;
-        }
-  
-        .mg {
-          margin-bottom: 4px;
-        }
-      }
-    }
-  
-    .bottom {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      border-top: 1px solid #cedce4;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      font-size: 14px;
-      padding-top: 14px;
-  
-      .text {
-        color: #6f6f6f;
-      }
-  
-      .open {
-        color: #4684e2;
-        margin-left: 8px;
-        cursor: pointer;
-      }
-  
-      .right {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-      }
-  
-      .text {
-        color: #6f6f6f;
-      }
-  
-      .num {
-        color: #152844;
-        margin: 0 40px 0 8px;
-      }
-  
-      .money {
-        font-weight: 600;
-        font-size: 18px;
-        color: #ff7b31;
-        margin-left: 8px;
-      }
-    }
-  
-  }
-  
-  .order-item-view:first-child {
-    margin-top: 16px;
-  }
-  
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+.order-item-view .header .btn-cancel:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+.order-item-view .header .btn-cancel:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.3);
+}
+
+
+.order-item-view .content {
+  padding: 0; /* Remove extra padding if card padding is sufficient */
+  overflow: hidden;
+}
+
+.order-item-view .content .left-list {
+  overflow: hidden;
+  /* height: auto; /* Let content determine height */
+  -webkit-box-flex: 1; /* Let it take full width if no right-info */
+  -ms-flex: 1;
+  flex: 1;
+  /* padding-right: 16px; /* Only if there's a right-info section */
+}
+
+.order-item-view .content .list-item {
+  /* height: auto; /* Let content determine height */
+  margin-bottom: 0; /* Remove margin if only one item per order card */
+  overflow: hidden;
+  align-items: flex-start; /* Align image and details to the top */
+}
+
+.order-item-view .content .thing-img {
+  width: 90px;  /* Slightly smaller for better balance */
+  height: 75px; /* Adjust height to maintain aspect ratio or desired look */
+  margin-right: 16px; /* Increased margin */
+  border-radius: 4px; /* Rounded corners for image */
+  object-fit: cover; /* Ensure image covers without distortion */
+}
+
+.order-item-view .content .detail {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space if detail has fixed height */
+  align-items: stretch; /* Stretch children to fill width */
+  min-height: 75px; /* Match image height */
+}
+
+
+.order-item-view .content .name {
+  color: #2c3e50; /* Darker title */
+  font-weight: 600;
+  font-size: 16px; /* Larger title */
+  line-height: 1.4;
+  margin-bottom: 6px; /* Space below title */
+}
+
+.order-item-view .content .count {
+  color: #5a677d; /* Softer grey */
+  font-size: 13px;
+  margin-left: 10px; /* Space from title if on same line, or use flex-gap */
+}
+
+.order-item-view .content .price {
+  color: #e67e22; /* Orange for price */
+  font-weight: 600;
+  font-size: 16px; /* Larger price */
+  margin-top: auto; /* Push to bottom if detail is flex-column and has space */
+}
+
+.order-item-view .bottom {
+  align-items: center;
+  border-top: 1px solid #e9ecef; /* Softer border */
+  justify-content: space-between;
+  font-size: 14px;
+  padding-top: 15px; /* Increased padding */
+  margin-top: 15px; /* Space before bottom section */
+}
+
+.order-item-view .bottom .left {
+    display: flex;
+    align-items: center;
+}
+
+.order-item-view .bottom .text {
+  color: #5a677d; /* Softer grey */
+}
+
+.order-item-view .bottom .open { /* "详情" link */
+  color: #3498db; /* Blue for links/actions */
+  margin-left: 12px; /* Increased margin */
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.order-item-view .bottom .open:hover {
+  color: #2980b9; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Styling for the empty state message */
+.empty-orders-message {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 18px;
+    color: #7f8c9f;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+/* Remove duplicate/unused styles from original CSS if any */
+/* .order-item-view .header .state - not used in provided HTML */
+/* .order-item-view .content .right-info - not used in provided HTML */
+/* .order-item-view .bottom .right, .num, .money - not used in provided HTML's bottom section */

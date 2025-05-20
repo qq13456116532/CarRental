@@ -3,7 +3,7 @@
 # 车辆租赁管理平台/租车系统(partly completed)
 [English Version](README-en.md)
 ### 功能介绍
-平台采用 B/S 结构，使用 .NET8 开发
+平台采用 B/S 结构，使用 .NET9 开发
 
 
 整个平台包括前台和后台两个部分。
@@ -36,7 +36,7 @@
 ![Image description](README/13.png)
 ### 部署运行
 
-- 安装.Net8.0，链接：https://dotnet.microsoft.com/en-us/download
+- 安装.Net9.0，链接：https://dotnet.microsoft.com/en-us/download
 
 - 下载包
 ```cs
@@ -48,4 +48,5 @@ dotnet restore
 dotnet run
 ```
 
-
+### 数据库
+数据库存在本地的 carDB.db，有可能变得很大，如果要初始化，那么直接删除即可，`dotnet run`之后会自动生成一个新的

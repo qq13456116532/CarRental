@@ -1,0 +1,85 @@
+
+#userLayout[b-gauzrmhdlj] {
+    position: relative;
+    height: 90vh;
+
+    .user-layout-header {
+      height: 80px;
+      padding: 0 24px;
+      color: fade(#000, 85%);
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 80px;
+  
+      .logo {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        margin-top: -4px;
+      }
+    }
+
+    .main-container[b-gauzrmhdlj] {
+      width: 100%;
+      height: calc(45vh);
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      .main {
+        position: absolute;
+        height: 40vh;
+        right: 80px;
+        top: 50%;
+        display: flex;
+        transform: translate(0, -50%);
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-box-shadow: 2px 2px 6px #aaa;
+        box-shadow: 2px 2px 6px #aaa;
+  
+        .main_right {
+          background: #ffffff;
+          padding: 24px;
+          width: 420px;
+          user-select: none;
+  
+          .sys_title {
+            font-size: 24px;
+            color: fade(#000, 85%);
+            font-weight: bold;
+            user-select: none;
+            padding-bottom: 8px;
+          }
+  
+          :deep(.ant-form-item label)[b-gauzrmhdlj] {
+            font-weight: bold;
+          }
+  
+          .flex[b-gauzrmhdlj] {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+          }
+  
+          .forget_password[b-gauzrmhdlj] {
+            cursor: pointer;
+          }
+  
+          .login-button[b-gauzrmhdlj] {
+            background: linear-gradient(128deg, #00aaeb, #00c1cd 59%, #0ac2b0 100%);
+          }
+        }
+  
+        .error-tip[b-gauzrmhdlj] {
+          text-align: center;
+        }
+      }
+    }
+  
+    .footer[b-gauzrmhdlj] {
+      height: 80px;
+    }
+  }
+  

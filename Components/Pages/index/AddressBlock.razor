@@ -1,0 +1,27 @@
+@using Data
+@using static CarRental.Components.Pages.index.Confirm
+@code {
+    [Parameter] public PageData PageData { get; set; } = default!;
+    [Parameter] public EventCallback OnAddAddress { get; set; }
+}
+
+<div class="address-group compact">
+    <h3>收货地址</h3>
+    @if (!string.IsNullOrEmpty(PageData.ReceiverAddress))
+    {
+        <div class="address-details">
+            <div>收件人：<br />
+                @PageData.ReceiverName<br />
+                @PageData.ReceiverPhone<br />
+                @PageData.ReceiverAddress
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-address">
+            <span>目前暂无地址信息，请</span>
+            <button class="add-address" @onclick="() => OnAddAddress.InvokeAsync()">新建地址</button>
+        </div>
+    }
+</div>

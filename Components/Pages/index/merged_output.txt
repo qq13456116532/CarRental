@@ -1,0 +1,357 @@
+Confirm.razor:
+【@page "/confirm"
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject AuthService AuthService
+@using Data
+@using Services
+
+<EditForm Model="pageData" OnValidSubmit="HandleJiesuan">
+    <DataAnnotationsValidator />
+    <div class="order-form">
+
+        <div class="order-details">
+            <h3>订单明细</h3>
+            <div class="list-container">
+                <div class="list-th">
+                    <span>商品名称</span>
+                    <span>价格</span>
+                    <span>数量</span>
+                    <span>操作</span>
+                </div>
+                <div class="list">
+                    <OrderItem ItemData="pageData" OnCountChanged="OnCountChange" />
+                </div>
+            </div>
+        </div>
+
+        <div class="remark-address-group">
+            <div class="remark-group compact">
+                <h3>备注</h3>
+                <InputTextArea class="remark-input" @bind-Value="pageData.Remark" Placeholder="输入备注信息，100字以内" />
+            </div>
+            <AddressBlock PageData="pageData" OnAddAddress="HandleAdd" />
+        </div>
+
+        <div class="checkout-section">
+            <h3>结算</h3>
+            <div class="price-view">
+                <div class="price-item">
+                    <div>商品总价</div>
+                    <div>&yen;@pageData.Amount</div>
+                </div>
+                <div class="price-item">
+                    <div>商品优惠</div>
+                    <div>&yen;0</div>
+                </div>
+                <div class="price-item">
+                    <div>商品折扣</div>
+                    <div>&yen;0</div>
+                </div>
+                <div class="total-price">
+                    <span>合计</span>
+                    <div>&yen;@pageData.Amount</div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-back" @onclick="HandleBack">返回</button>
+                    <button class="btn-submit" type="submit">结算</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</EditForm>
+
+@code {
+    private PageData pageData = new();
+    private ModalData modal = new();
+
+    [Parameter] public required string id { get; set; }
+    [Parameter] public required string title { get; set; }
+    [Parameter] public required string cover { get; set; }
+    [Parameter] public required string price { get; set; }
+
+    protected override void OnInitialized()
+    {
+        pageData.Id = id ?? "default";
+        pageData.Title = title ?? "default";
+        pageData.Cover = cover ?? "images/electric_car.jpg";
+        pageData.Price = price ?? "100";
+        if (decimal.TryParse(pageData.Price, out var o))
+        {
+            pageData.Amount = o;
+        }
+
+        ListAddressData();
+    }
+
+    private void HandleAdd() => Console.WriteLine("新增地址");
+
+    private void OnCountChange(int count)
+    {
+        pageData.Count = count;
+        if (decimal.TryParse(pageData.Price, out var o))
+        {
+            pageData.Amount = o * count;
+        }
+    }
+
+    private void HandleBack() => Navigation.NavigateTo("/");
+
+    private async void HandleJiesuan()
+    {
+        if (string.IsNullOrEmpty(pageData.ReceiverName))
+        {
+            Console.WriteLine("请选择收货地址");
+            return;
+        }
+        await Task.Delay(100);
+        Console.WriteLine("结算成功，跳转支付页面");
+    }
+
+    private async void ListAddressData()
+    {
+        string token = AuthService.UserToken ?? "0";
+        var requestUrl = $"{Navigation.BaseUri}api/Index/addresses?token={token}";
+        List<Address>? res = await Http.GetFromJsonAsync<List<Address>>(requestUrl);
+
+        if (res != null && res.Any())
+        {
+            var addr = res[0];
+            pageData.ReceiverName = addr.Name;
+            pageData.ReceiverPhone = addr.Mobile;
+            pageData.ReceiverAddress = addr.Def;
+            pageData.Remark = addr.Description;
+        }
+        else
+        {
+            pageData.ReceiverName = "default";
+            pageData.ReceiverPhone = "default";
+            pageData.ReceiverAddress = "default";
+            pageData.Remark = "default";
+        }
+    }
+
+    public class PageData
+    {
+        public string? Id { get; set; }
+        public string? Title { get; set; }
+        public string? Cover { get; set; }
+        public string? Price { get; set; }
+        public int Count { get; set; } = 1;
+        public decimal Amount { get; set; }
+        public string? Remark { get; set; }
+        public string? ReceiverName { get; set; }
+        public string? ReceiverPhone { get; set; }
+        public string? ReceiverAddress { get; set; }
+    }
+}】
+
+Confirm.razor.css:
+【.order-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-details {
+  margin-bottom: 20px;
+}
+
+.list-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.list-th {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.list-th span {
+  flex: 1;
+  text-align: center;
+}
+
+.list {
+  padding: 10px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.book img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pay {
+  flex: 1;
+  text-align: center;
+}
+
+.delete {
+  width: 20px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.remark-address-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.remark-group {
+  margin-top: 10px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.remark-input {
+  width: 100%;
+  max-width: 400px;
+  height: 80px;
+}
+
+.address-group {
+  margin-top: 10px;
+  flex: 1;
+}
+
+.address-details, .no-address {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.compact {
+  max-width: 400px;
+}
+
+.checkout-section {
+  margin-top: 20px;
+}
+
+.price-view {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back, .btn-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-back {
+  background-color: #f0f0f0;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}】
+
+AddressBlock.razor:
+【@using Data
+@using static CarRental.Components.Pages.index.Confirm
+@code {
+    [Parameter] public PageData PageData { get; set; } = default!;
+    [Parameter] public EventCallback OnAddAddress { get; set; }
+}
+
+<div class="address-group compact">
+    <h3>收货地址</h3>
+    @if (!string.IsNullOrEmpty(PageData.ReceiverAddress))
+    {
+        <div class="address-details">
+            <div>收件人：<br />
+                @PageData.ReceiverName<br />
+                @PageData.ReceiverPhone<br />
+                @PageData.ReceiverAddress
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="no-address">
+            <span>目前暂无地址信息，请</span>
+            <button class="add-address" @onclick="() => OnAddAddress.InvokeAsync()">新建地址</button>
+        </div>
+    }
+</div>】
+
+OrderItem.razor:
+【@using Microsoft.AspNetCore.Components.Web
+@using Data
+@using static CarRental.Components.Pages.index.Confirm
+@code {
+    [Parameter] public PageData ItemData { get; set; } = default!;
+    [Parameter] public EventCallback<int> OnCountChanged { get; set; }
+
+    private async Task OnChange(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int count))
+        {
+            await OnCountChanged.InvokeAsync(count);
+        }
+    }
+}
+
+<div class="items">
+    <div class="book">
+        <img src="@ItemData.Cover" alt="@ItemData.Title" />
+        <h2>@ItemData.Title</h2>
+    </div>
+    <div class="pay">&yen;@ItemData.Price</div>
+    <input type="number" min="1" max="10" value="@ItemData.Count" @oninput="OnChange" />
+    <img src="images/delete-icon.svg" class="delete" alt="删除商品" />
+</div>】
+

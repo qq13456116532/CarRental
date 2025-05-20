@@ -5,6 +5,7 @@
 @using Microsoft.AspNetCore.WebUtilities
 @using Services
 @inject AuthService AuthService
+
 <div class="detail">
     <div class="detail-content">
         <div class="detail-content-top">
@@ -12,7 +13,7 @@
                 <div class="thing-infos-view">
                     <div class="thing-infos">
                         <div class="thing-img-box">
-                            <img src="images/@thing.Cover" />
+                            <img src="images/@thing.Cover" alt="@thing.Title" />
                         </div>
                         <div class="thing-info-box">
                             <div class="thing-state">
@@ -20,32 +21,37 @@
                                 <span>有效</span>
                             </div>
                             <h1 class="thing-name">@thing.Title</h1>
-                            <span>
-                                <span class="a-price-symbol"></span>
-                                <span class="a-price" style="font-size: 20px;">@thing.Price</span>
-                            </span>
-                            <div class="translators flex-view">
-                                <span>车龄：</span>
-                                <span class="name">@thing.Age</span>
+                            
+                            <div class="price-container"> @* <-- 修改点: 包裹价格 *@
+                                <span class="a-price-symbol">$</span> @* 可根据实际情况调整或移除货币符号 *@
+                                <span class="a-price">@thing.Price</span>
                             </div>
-                            <div class="translators flex-view">
-                                <span>续航：</span>
-                                <span class="name">@thing.Xuhang</span>
+
+                            <div class="attributes-list"> @* <-- 修改点: 包裹所有属性 *@
+                                <div class="translators flex-view"> @* 可考虑将此类名改为 .attribute-item 等更通用的名称 *@
+                                    <span class="label">车龄：</span> @* <-- 修改点: 为标签添加 class="label" *@
+                                    <span class="name">@thing.Age</span>
+                                </div>
+                                <div class="translators flex-view">
+                                    <span class="label">续航：</span> @* <-- 修改点: 为标签添加 class="label" *@
+                                    <span class="name">@thing.Xuhang</span>
+                                </div>
+                                <div class="translators flex-view">
+                                    <span class="label">动力：</span> @* <-- 修改点: 为标签添加 class="label" *@
+                                    <span class="name">@thing.Dongli</span>
+                                </div>
+                                <div class="translators flex-view">
+                                    <span class="label">闲置时间：</span> @* <-- 修改点: 为标签添加 class="label" *@
+                                    <span class="name">@thing.Xianzhi</span>
+                                </div>
+                                <div class="translators flex-view">
+                                    <span class="label">所在地区：</span> @* <-- 修改点: 为标签添加 class="label" *@
+                                    <span class="name">@thing.Location</span>
+                                </div>
                             </div>
-                            <div class="translators flex-view">
-                                <span>动力：</span>
-                                <span class="name">@thing.Dongli</span>
-                            </div>
-                            <div class="translators flex-view">
-                                <span>闲置时间：</span>
-                                <span class="name">@thing.Xianzhi</span>
-                            </div>
-                            <div class="translators flex-view">
-                                <span>所在地区：</span>
-                                <span class="name">@thing.Location</span>
-                            </div>
+
                             <button class="buy-btn" @onclick="() => HandleOrder(thing)">
-                                <img src="images/add.svg" />
+                                <img src="images/add.svg" alt="预订" />
                                 <span>立即预订</span>
                             </button>
                         </div>
@@ -54,11 +60,11 @@
                     <div class="thing-counts hidden-sm">
                         <div class="count-item flex-view pointer" @onclick="AddToWish">
                             <div class="count-img">
-                                <img src="images/want-read-hover.svg" />
+                                <img src="images/want-read-hover.svg" alt="心愿单" />
                             </div>
                             <div class="count-box flex-view">
                                 <div class="count-text-box">
-                                    <span class="count-title" @onclick="AddToWish">加入心愿单</span>
+                                    <span class="count-title">加入心愿单</span>
                                 </div>
                                 <div class="count-num-box">
                                     <span class="num-text">@thing.WishCount</span>
@@ -67,7 +73,7 @@
                         </div>
                         <div class="count-item flex-view pointer" @onclick="Collect">
                             <div class="count-img">
-                                <img src="images/recommend-hover.svg" />
+                                <img src="images/recommend-hover.svg" alt="收藏" />
                             </div>
                             <div class="count-box flex-view">
                                 <div class="count-text-box">
@@ -80,14 +86,14 @@
                         </div>
                         <div class="count-item flex-view" @onclick="Share">
                             <div class="count-img">
-                                <img src="images/share-icon.svg" />
+                                <img src="images/share-icon.svg" alt="分享" />
                             </div>
                             <div class="count-box flex-view">
                                 <div class="count-text-box">
                                     <span class="count-title">分享</span>
                                 </div>
                                 <div class="count-num-box">
-                                    <img src="images/wb-share.svg" class="mg-l" />
+                                    <img src="images/wb-share.svg" class="mg-l" alt="微博分享" />
                                 </div>
                             </div>
                         </div>
@@ -98,34 +104,32 @@
         <div class="detail-content-bottom">
             <div class="thing-content-view flex-view">
                 <div class="main-content">
-                    <div class="order-view main-tab">
+                    <div class="order-view main-tab"> @* 确保 Blazor 代码中 tabUnderLeft 能正确计算使下划线对齐 *@
                         @foreach (var item in tabData.Select((name, index) => new { Name = name, Index = index }))
                         {
                             <span class="tab @(selectTabIndex == item.Index ? "tab-select" : "")" @onclick="() => SelectTab(item.Index)">
                                 @item.Name
                             </span>
                         }
-
                         <span style="left: @($"{tabUnderLeft}px")" class="tab-underline"></span>
                     </div>
 
-                    <!-- 简介 -->
                     <div class="thing-intro @(selectTabIndex == 0 ? "" : "hide")">
                         <p class="text">@thing.Description</p>
                     </div>
 
-                    <!-- 评论 -->
                     <div class="thing-comment @(selectTabIndex == 1 ? "" : "hide")">
                         <div class="title">发表新的评论</div>
                         <div class="publish flex-view">
-                            <img src="images/avatar.jpg" class="mine-img" />
+                            <img src="images/avatar.jpg" class="mine-img" alt="我的头像" />
                             <input placeholder="说点什么..." class="content-input" @bind="newComment" />
                             <button class="send-btn" @onclick="SendComment">发送</button>
                         </div>
                         <div class="tab-view flex-view">
                             <div class="count-text">共有 @commentData.Count 条评论</div>
-                            @if(commentData.Any()){
-                                <div class="tab-box flex-view" >
+                            @if (commentData.Any())
+                            {
+                                <div class="tab-box flex-view">
                                     <span class="@((sortIndex == 0 ? "tab-select" : ""))" @onclick='() => SortCommentList("recent")'>最新</span>
                                     <div class="line"></div>
                                     <span class="@((sortIndex == 1 ? "tab-select" : ""))" @onclick='() => SortCommentList("hot")'>热门</span>
@@ -137,7 +141,7 @@
                             {
                                 <div class="comment-item">
                                     <div class="flex-item flex-view">
-                                        <img src="images/avatar.jpg" class="avator" />
+                                        <img src="images/avatar.jpg" class="avator" alt="评论者头像" />
                                         <div class="person">
                                             <div class="name">@comment.Username</div>
                                             <div class="time">@comment.CommentTime</div>
@@ -160,19 +164,18 @@
                         {
                             <div class="thing-item" @onclick="() => HandleDetail(item)">
                                 <div class="img-view">
-                                    <img src="images/@item.Cover" />
+                                    <img src="images/@item.Cover" alt="@item.Title" />
                                 </div>
                                 <div class="info-view">
                                     <h3 class="thing-name">
                                         @if (!string.IsNullOrEmpty(item.Title))
                                         {
-                                            @item.Title.Substring(0, Math.Min(12, item.Title.Length)) <!-- 安全截取字符串 -->
-                                        }
+                                            @item.Title.Substring(0, Math.Min(12, item.Title.Length)) }
                                     </h3>
-                                    <span>
-                                        <span class="a-price-symbol"></span>
-                                        <span class="a-price">@item.Price</span>&nbsp;
-                                        <span class="a-price">@item.Location</span>
+                                    <span> @* <-- 修改点: 调整价格和地点的包裹方式 *@
+                                        <span class="a-price-symbol">$</span> @* 可选的货币符号 *@
+                                        <span class="a-price">@item.Price</span>
+                                        <span class="location-info">@item.Location</span> @* <-- 修改点: 为地点信息新增 span 和 class *@
                                     </span>
                                 </div>
                             </div>
@@ -182,7 +185,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 @code {
