@@ -18,7 +18,7 @@ namespace Data
         public string? Description { get; set; }
 
         // [StringLength(10)]
-        public bool Default { get; set; }
+        // public bool Default { get; set; }
 
         [StringLength(30)]
         public string? CreateTime { get; set; }

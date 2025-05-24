@@ -413,6 +413,56 @@ public class IndexController : ControllerBase
         return Ok(addresses);
     }
 
+    // 新增的添加地址 API 端点
+    [HttpPost("addresses")]
+    public async Task<ActionResult<Address>> CreateUserAddress([FromQuery] string token, [FromBody] Address addressDto)
+    {
+        // 1. 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token); // 假设您的用户表名为 Users
+        if (user == null)
+        {
+            return Unauthorized(new { message = "Invalid token" });
+        }
+
+        // 2. 创建新的 Address 实体
+        var newAddress = new Address
+        {
+            Name = addressDto.Name,
+            Mobile = addressDto.Mobile,
+            Description = addressDto.Description,
+            UserId = user.Id, // 关联到当前用户
+            CreateTime = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") // 设置创建时间 (UTC 标准时间)
+        };
+
+        // 如果需要处理 IsDefault 逻辑 (例如，确保用户只有一个默认地址)
+        // if (newAddress.Default)
+        // {
+        //     var currentDefault = await _context.Addresses
+        //         .Where(a => a.UserId == user.Id && a.Default)
+        //         .FirstOrDefaultAsync();
+        //     if (currentDefault != null)
+        //     {
+        //         currentDefault.Default = false; // 将之前的默认地址设为非默认
+        //     }
+        // }
+
+
+        // 3. 将新地址添加到数据库上下文并保存
+        _context.Addresses.Add(newAddress);
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateException ex)
+        {
+            // 记录日志 ex
+            Console.WriteLine($"Error saving new address: {ex.Message}"); // 简单日志
+            return StatusCode(StatusCodes.Status500InternalServerError, new { message = "An error occurred while saving the address." });
+        }
+
+        return Ok(newAddress);
+    }
+
     [HttpGet("orders/{status}")]
     public async Task<ActionResult<List<OrderDto>>> GetOrders([FromQuery] string token,string status){
         // 验证用户身份
@@ -444,6 +494,46 @@ public class IndexController : ControllerBase
 
         return Ok(orders);
 
+    }
+
+    [HttpGet("order/{id}")]
+    public async Task<ActionResult<OrderDto>> GetOrderById(int id, [FromQuery] string token)
+    {
+        // 验证用户身份
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
+        if (user == null)
+        {
+            return Unauthorized("Invalid token");
+        }
+
+        // 查询订单（确保是当前用户的订单）
+        var order = await _context.Orders
+            .Where(o => o.Id == id && o.UserId == user.Id)
+            .Join(
+                _context.Things,
+                o => o.ThingId,
+                t => t.Id,
+                (o, t) => new OrderDto
+                {
+                    Id = o.Id ?? 0,
+                    OrderNumber = o.OrderNumber,
+                    OrderTime = o.OrderTime,
+                    ThingId = o.ThingId,
+                    Status = o.Status,
+                    Count = o.Count,
+                    Cover = t.Cover,
+                    Title = t.Title,
+                    Price = t.Price
+                }
+            )
+            .FirstOrDefaultAsync();
+
+        if (order == null)
+        {
+            return NotFound("Order not found");
+        }
+
+        return Ok(order);
     }
 
     [HttpDelete("orders/{id}")]
@@ -478,13 +568,14 @@ public class IndexController : ControllerBase
     }
     //添加order
     [HttpPost("orders/{thingId}")]
-    public async Task<ActionResult> addOrders([FromQuery] string token,long thingId){
+    public async Task<ActionResult> addOrders([FromQuery] string token, long thingId)
+    {
         // 验证用户身份
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Token == token);
         if (user == null)
         {
             return Unauthorized("Invalid token");
-        }    
+        }
 
         // 检查该用户是否已经为该商品下过订单
         var existingOrder = await _context.Orders
@@ -492,32 +583,34 @@ public class IndexController : ControllerBase
 
         if (existingOrder != null)
         {
-            // 如果订单已存在，返回 Conflict（冲突）状态码或其他适当响应
-            return Conflict("Order already exists for this item.");
+            // 如果订单已存在，数量加1
+            existingOrder.Count += 1;
+            await _context.SaveChangesAsync();
+            return Ok(new { id = existingOrder.Id, message = "Order count incremented" });
         }
-            // 创建新的订单实体
+
+        // 创建新的订单实体
         var newOrder = new Order
         {
-            UserId = user.Id??1,
+            UserId = user.Id ?? 1,
             Status = "1", // 订单状态
-            OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), // 订单时间
-            PayTime = "default", // 支付时间，可能为空或由其他逻辑设置
-            ThingId = thingId, // 商品ID
-            Count = 1, // 购买数量
-            OrderNumber = "default", // 订单编号
-            ReceiverAddress = "default", // 收货地址，可以根据需求填充
-            ReceiverName = "default", // 收货人姓名，可以根据需求填充
-            ReceiverPhone = "default", // 收货人电话，可以根据需求填充
-            Remark = "default" // 备注，可以根据需求填充
+            OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+            PayTime = "default",
+            ThingId = thingId,
+            Count = 1,
+            OrderNumber = "default",
+            ReceiverAddress = "default",
+            ReceiverName = "default",
+            ReceiverPhone = "default",
+            Remark = "default"
         };
 
-        // 将新订单添加到上下文中
         _context.Orders.Add(newOrder);
+        await _context.SaveChangesAsync();
 
-        // 保存更改
-        await _context.SaveChangesAsync();          
-        return Ok();                                            
+        return Ok(new { id = newOrder.Id });
     }
+
 
 
 }

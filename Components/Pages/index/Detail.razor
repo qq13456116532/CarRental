@@ -4,6 +4,7 @@
 @using Data
 @using Microsoft.AspNetCore.WebUtilities
 @using Services
+@using System.Text.Json
 @inject AuthService AuthService
 
 <div class="detail">
@@ -464,9 +465,17 @@
         // 发送POST请求
         var response = await Http.PostAsync(url,null); 
         // 检查响应状态
-        if (response.IsSuccessStatusCode)
+        if (response.IsSuccessStatusCode) //创建成功订单，应该直接跳转去订单页面
         {
             Console.WriteLine("Order added successfully.");
+            var responseContent = await response.Content.ReadAsStringAsync();
+    
+            // 反序列化 JSON 到匿名对象或具体类
+            var result = JsonSerializer.Deserialize<JsonElement>(responseContent);
+            int orderId = result.GetProperty("id").GetInt32();
+            
+            Navigation.NavigateTo($"/confirm?id={orderId}",true); //这里传入的ID是order的ID
+
         }
         else
         {

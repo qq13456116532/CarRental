@@ -44,11 +44,11 @@
         </Column>
 
         <!-- Def Column -->
-        <Column Item="Data.Address" Property="e=>e.Default" Title="Default" Sortable Searchable Groupable>
+        @* <Column Item="Data.Address" Property="e=>e.Default" Title="Default" Sortable Searchable Groupable>
             <EditorTemplate>
                 <input type="checkbox" class="form-check-input" @bind="@context.Default" />
             </EditorTemplate>
-        </Column>
+        </Column> *@
 
         <!-- Create Time Column -->
         <Column Item="Data.Address" Property="e=>e.CreateTime" Title="Create Time" Sortable Searchable Groupable>
@@ -141,7 +141,7 @@
             Name = "John Doe",
             Mobile = "1234567890",
             Description = "Primary address for John Doe",
-            Default = false,
+            @* Default = false, *@
             CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
             UserId = 1
         });

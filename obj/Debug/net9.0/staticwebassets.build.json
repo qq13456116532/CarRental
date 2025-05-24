@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FMWzipbYGkRfRjZjPdLmyMCXEHnlhdZE4No7J9sHqn4=",
+  "Hash": "Yasb9wZn6rrO0pxvo4LV0C271aGSRGtEAkk/Jxi4Kcs=",
   "Source": "CarRental",
   "BasePath": "_content/CarRental",
   "Mode": "Default",
@@ -1487,12 +1487,12 @@
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\wwwroot\\images\\message-icon.svg"
     },
     {
-      "Identity": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-xdcpbqumoi.gz",
+      "Identity": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-3ilji98mjy.gz",
       "SourceId": "CarRental",
       "SourceType": "Computed",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "CarRental#[.{fingerprint=xdcpbqumoi}]?.styles.css.gz",
+      "RelativePath": "CarRental#[.{fingerprint=3ilji98mjy}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -1501,8 +1501,8 @@
       "RelatedAsset": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zyss9235ot",
-      "Integrity": "q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c=",
+      "Fingerprint": "psuoc8qi43",
+      "Integrity": "6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css"
@@ -2159,12 +2159,12 @@
       "OriginalItemSpec": "C:\\Users\\10293\\.nuget\\packages\\tabblazor\\0.14.10-beta\\staticwebassets\\TabBlazor.bundle.scp.css"
     },
     {
-      "Identity": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-yv7165jtl6.gz",
+      "Identity": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-dln011ttzs.gz",
       "SourceId": "CarRental",
       "SourceType": "Computed",
       "ContentRoot": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/CarRental",
-      "RelativePath": "CarRental#[.{fingerprint=yv7165jtl6}]!.bundle.scp.css.gz",
+      "RelativePath": "CarRental#[.{fingerprint=dln011ttzs}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -2173,8 +2173,8 @@
       "RelatedAsset": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "yygpzbzqdj",
-      "Integrity": "1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo=",
+      "Fingerprint": "2vrhzg3ntl",
+      "Integrity": "TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css"
@@ -2215,8 +2215,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "xdcpbqumoi",
-      "Integrity": "CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o=",
+      "Fingerprint": "3ilji98mjy",
+      "Integrity": "ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css"
@@ -2236,8 +2236,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "yv7165jtl6",
-      "Integrity": "0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8=",
+      "Fingerprint": "dln011ttzs",
+      "Integrity": "ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css"
@@ -8838,13 +8838,13 @@
       ]
     },
     {
-      "Route": "CarRental.bundle.scp.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-yv7165jtl6.gz",
+      "Route": "CarRental.3ilji98mjy.styles.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-3ilji98mjy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000058394161"
+          "Quality": "0.000058882412"
         }
       ],
       "ResponseHeaders": [
@@ -8854,297 +8854,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17124"
+          "Value": "16982"
         },
         {
           "Name": "ETag",
-          "Value": "\"1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo=\""
+          "Value": "\"6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.bundle.scp.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "81734"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.bundle.scp.css.gz",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-yv7165jtl6.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17124"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.styles.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-xdcpbqumoi.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000058309038"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17149"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o=\""
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.styles.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "81792"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.styles.css.gz",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-xdcpbqumoi.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17149"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c="
-        }
-      ]
-    },
-    {
-      "Route": "CarRental.xdcpbqumoi.styles.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-xdcpbqumoi.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000058309038"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17149"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9164,7 +8882,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o=\""
+          "Value": "W/\"ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo=\""
         },
         {
           "Name": "Link",
@@ -9174,11 +8892,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xdcpbqumoi"
+          "Value": "3ilji98mjy"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o="
+          "Value": "sha256-ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo="
         },
         {
           "Name": "label",
@@ -9187,7 +8905,7 @@
       ]
     },
     {
-      "Route": "CarRental.xdcpbqumoi.styles.css",
+      "Route": "CarRental.3ilji98mjy.styles.css",
       "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -9201,7 +8919,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "81792"
+          "Value": "80650"
         },
         {
           "Name": "Content-Type",
@@ -9209,11 +8927,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o=\""
+          "Value": "\"ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Link",
@@ -9223,11 +8941,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xdcpbqumoi"
+          "Value": "3ilji98mjy"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CwIiyFi2s1yGl55Bdcyt1P2hgN2qNsTDoGVQGYAVV0o="
+          "Value": "sha256-ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo="
         },
         {
           "Name": "label",
@@ -9236,8 +8954,8 @@
       ]
     },
     {
-      "Route": "CarRental.xdcpbqumoi.styles.css.gz",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-xdcpbqumoi.gz",
+      "Route": "CarRental.3ilji98mjy.styles.css.gz",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-3ilji98mjy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9246,7 +8964,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17149"
+          "Value": "16982"
         },
         {
           "Name": "Content-Type",
@@ -9254,11 +8972,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c=\""
+          "Value": "\"6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9276,7 +8994,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xdcpbqumoi"
+          "Value": "3ilji98mjy"
         },
         {
           "Name": "label",
@@ -9284,18 +9002,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-q+JQAxfLqqtW6pVCiG16QEWCuSegaMBL+rgENzhOz+c="
+          "Value": "sha256-6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg="
         }
       ]
     },
     {
-      "Route": "CarRental.yv7165jtl6.bundle.scp.css",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-yv7165jtl6.gz",
+      "Route": "CarRental.bundle.scp.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-dln011ttzs.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000058394161"
+          "Quality": "0.000058972696"
         }
       ],
       "ResponseHeaders": [
@@ -9305,19 +9023,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17124"
+          "Value": "16956"
         },
         {
           "Name": "ETag",
-          "Value": "\"1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo=\""
+          "Value": "\"TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -9333,26 +9051,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8=\""
+          "Value": "W/\"ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "yv7165jtl6"
-        },
-        {
-          "Name": "label",
-          "Value": "CarRental.bundle.scp.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8="
+          "Value": "sha256-ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4="
         }
       ]
     },
     {
-      "Route": "CarRental.yv7165jtl6.bundle.scp.css",
+      "Route": "CarRental.bundle.scp.css",
       "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -9362,7 +9072,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "81734"
+          "Value": "80592"
         },
         {
           "Name": "Content-Type",
@@ -9370,11 +9080,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8=\""
+          "Value": "\"ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.bundle.scp.css.gz",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-dln011ttzs.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.dln011ttzs.bundle.scp.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-dln011ttzs.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000058972696"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16956"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dln011ttzs"
+        },
+        {
+          "Name": "label",
+          "Value": "CarRental.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.dln011ttzs.bundle.scp.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\CarRental.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80592"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9384,7 +9239,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yv7165jtl6"
+          "Value": "dln011ttzs"
         },
         {
           "Name": "label",
@@ -9392,13 +9247,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0rc3C3WWDPjN6LLleixTNWAJpocHkC4ok64TcfYtEA8="
+          "Value": "sha256-ccw5RBaxT0Za7adN/bkmTbm8+LWPhwlV5orFEYBgUB4="
         }
       ]
     },
     {
-      "Route": "CarRental.yv7165jtl6.bundle.scp.css.gz",
-      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-yv7165jtl6.gz",
+      "Route": "CarRental.dln011ttzs.bundle.scp.css.gz",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\ys9bfuvxwj-dln011ttzs.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9407,7 +9262,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17124"
+          "Value": "16956"
         },
         {
           "Name": "Content-Type",
@@ -9415,11 +9270,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo=\""
+          "Value": "\"TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 20 May 2025 08:23:12 GMT"
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9437,7 +9292,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yv7165jtl6"
+          "Value": "dln011ttzs"
         },
         {
           "Name": "label",
@@ -9445,7 +9300,152 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-1h5dGuBURkvPQbQdC0BP9Ws+Q2qKXsIR9qDJB4ZfIbo="
+          "Value": "sha256-TtotsYtwYeZneHNywTfERyYIuPhNRe8MEWE4LCWwZY4="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.styles.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-3ilji98mjy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000058882412"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16982"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo=\""
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.styles.css",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\scopedcss\\bundle\\CarRental.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/TabBlazor/TabBlazor.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZfaXjrgR+cjxIAtP51+A20KYqqeserp6ejUx4WNY0qo="
+        }
+      ]
+    },
+    {
+      "Route": "CarRental.styles.css.gz",
+      "AssetFile": "E:\\VSproject\\CarRental\\CarRental\\obj\\Debug\\net9.0\\compressed\\frk2xl7eef-3ilji98mjy.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16982"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 08:28:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6X2Sf1efHhc31aXRFcCFc3gShpXLy1gk09+MByev/Wg="
         }
       ]
     },

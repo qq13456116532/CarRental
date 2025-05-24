@@ -1,27 +1,41 @@
 @using Data
-@using static CarRental.Components.Pages.index.Confirm
+
+
+
 @code {
-    [Parameter] public PageData PageData { get; set; } = default!;
-    [Parameter] public EventCallback OnAddAddress { get; set; }
+    [Parameter] public Confirm.PageData PageData { get; set; } = default!; // Ensure Confirm.PageData is accessible
+    [Parameter] public EventCallback OnManageAddress { get; set; } // Renamed for clarity
 }
 
 <div class="address-group compact">
-    <h3>收货地址</h3>
+    @* Removed <h3> as it's in the parent already *@
     @if (!string.IsNullOrEmpty(PageData.ReceiverAddress))
     {
         <div class="address-details">
-            <div>收件人：<br />
-                @PageData.ReceiverName<br />
-                @PageData.ReceiverPhone<br />
-                @PageData.ReceiverAddress
+            <div>
+                <strong>收件人：@PageData.ReceiverName</strong><br />
+                电话：@PageData.ReceiverPhone<br />
+                地址：@PageData.ReceiverAddress
             </div>
+            <button type="button" class="btn btn-sm btn-outline-primary mt-2" @onclick="() => OnManageAddress.InvokeAsync()">
+                更改地址
+            </button>
         </div>
     }
     else
     {
         <div class="no-address">
             <span>目前暂无地址信息，请</span>
-            <button class="add-address" @onclick="() => OnAddAddress.InvokeAsync()">新建地址</button>
+            <button type="button" class="btn btn-link add-address-link" @onclick="() => OnManageAddress.InvokeAsync()">选择或新建地址</button>
         </div>
     }
 </div>
+
+<script>
+
+    .add-address-link {
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: underline;
+}
+</script>

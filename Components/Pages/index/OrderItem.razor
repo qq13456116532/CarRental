@@ -1,29 +1,183 @@
 @using Microsoft.AspNetCore.Components.Web
+@using System.ComponentModel.DataAnnotations 
 @using Data
-@using static CarRental.Components.Pages.index.Confirm
+@using static CarRental.Components.Pages.index.Confirm 
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject AuthService AuthService 
+@inject IJSRuntime JSRuntime 
+
 @code {
     [Parameter] public PageData ItemData { get; set; } = default!;
     [Parameter] public EventCallback<int> OnCountChanged { get; set; }
+    [Parameter] public EventCallback<long> OnOrderDeleted { get; set; }
+
+    private string? apiError; // To store potential API error messages
 
     private async Task OnChange(ChangeEventArgs e)
     {
         if (int.TryParse(e.Value?.ToString(), out int count))
         {
+            // Basic validation for count if needed, though input type="number" handles min/max
+            if (count < 1) count = 1;
+            if (count > 100) count = 100; // Assuming max 100 based on PageData validation
             await OnCountChanged.InvokeAsync(count);
         }
+    }
+
+    private async Task HandleDeleteClick()
+    {
+        if (ItemData.Id == null)
+        {
+            apiError = "商品 ID 无效，无法删除。";
+            Console.WriteLine(apiError);
+            return;
+        }
+
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"您确定要从订单中移除商品 \"{ItemData.Title}\" 吗？");
+        if (confirmed)
+        {
+            await DeleteOrderAsync(ItemData.Id.Value);
+        }
+    }
+
+    private async Task DeleteOrderAsync(long orderId)
+    {
+        apiError = null; 
+        string token = AuthService.UserToken ?? ""; 
+        var requestUrl = $"{Navigation.BaseUri}api/Index/orders/{orderId}?token={token}";
+
+        try
+        {
+            var response = await Http.DeleteAsync(requestUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Order with ID {orderId} deleted successfully from server.");
+                await OnOrderDeleted.InvokeAsync(orderId); // Notify parent component
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                apiError = $"删除失败 (状态码: {response.StatusCode}): {errorContent}";
+                Console.WriteLine(apiError);
+                // Optionally, show a more user-friendly message using JSRuntime alert or a dedicated UI element
+                await JSRuntime.InvokeVoidAsync("alert", $"删除失败: {errorContent}");
+            }
+        }
+        catch (Exception ex)
+        {
+            apiError = $"删除商品时发生异常: {ex.Message}";
+            Console.WriteLine(apiError);
+            await JSRuntime.InvokeVoidAsync("alert", $"删除时发生错误: {ex.Message}");
+        }
+        StateHasChanged(); // Update UI if apiError is displayed
     }
 }
 
 <div class="items">
-    <div class="book">
-        <img src="@ItemData.Cover" alt="@ItemData.Title" />
-        <h2>@ItemData.Title</h2>
+    <div class="col name">
+        <div class="book">
+            <img src="@ItemData.Cover" alt="@ItemData.Title" />
+            <h2>@ItemData.Title</h2>
+        </div>
     </div>
-    <div class="pay">&yen;@ItemData.Price</div>
-    <div>
+    <div class="col price">&yen;@ItemData.Price</div>
+    <div class="col count">
         <input type="number" min="1" max="10" value="@ItemData.Count" @oninput="OnChange" />
     </div>
-    <div>
-        <img src="images/delete-icon.svg" class="delete" alt="删除商品" />
+    <div class="col action">
+        @* Corrected @onclick syntax and call HandleDeleteClick *@
+        <img src="images/delete-icon.svg" @onclick="HandleDeleteClick" class="delete" alt="删除订单项" style="cursor: pointer;" />
     </div>
 </div>
+
+@if (!string.IsNullOrEmpty(apiError))
+{
+    <div class="alert alert-danger mt-2" role="alert">
+        @apiError
+    </div>
+}
+
+<style>
+  .items {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f1f3f5;
+    font-size: 14px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col.name {
+    flex: 3;
+    justify-content: flex-start;
+}
+
+.col.price {
+    flex: 1;
+    text-align: center;
+}
+
+.col.count {
+    flex: 1;
+    justify-content: center;
+}
+
+.col.action {
+    flex: 0.8;
+    justify-content: center;
+}
+
+/* 原有样式保留 */
+.book {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.book img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.book h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #34495e;
+    margin: 0;
+}
+
+input[type="number"] {
+    width: 55px;
+    padding: 6px 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.delete {
+    width: 24px;
+    height: 24px;
+    /* cursor: pointer; already added inline for clarity */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.delete:hover {
+    opacity: 1;
+}
+
+/* For displaying API errors, ensure Bootstrap CSS is available or style as needed */
+.alert { padding: .75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem; } */
+.alert-danger { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; } */
+
+</style>

@@ -61,12 +61,13 @@ body {
   flex: 1;
   text-align: center;
 }
-.list-th span:first-child {
-  flex: 3; /* More space for product name */
-  text-align: left;
-}
 .list-th span:last-child { /* For "操作" */
   flex: 0.8;
+}
+.list-th span:first-child {
+  flex: 3;
+  text-align: left;
+  padding-left: 75px; /* 假设你的图片宽度是65px，加一点间距刚好 */
 }
 
 
@@ -74,52 +75,11 @@ body {
   padding: 0; /* Remove padding if OrderItem handles its own spacing */
 }
 
-/* Styles for items within OrderItem.razor (assuming this structure) */
-.items {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px; /* Increased padding */
-  border-bottom: 1px solid #f1f3f5; /* Lighter item separator */
-  gap: 15px;
-}
 .items:last-child {
   border-bottom: none;
 }
 
-.book { /* Targets the product info part within OrderItem */
-  display: flex;
-  align-items: center;
-  flex: 3; /* Corresponds to list-th */
-  gap: 12px;
-}
 
-.book img {
-  width: 65px; /* Slightly larger image */
-  height: 65px;
-  object-fit: cover;
-  border-radius: 6px; /* Softer radius */
-  border: 1px solid #eee;
-}
-
-.book h2 { /* Product title within OrderItem */
-  font-size: 15px;
-  font-weight: 500; /* Medium weight */
-  color: #34495e;
-  margin: 0;
-  /* max-width: 160px; /* Remove or adjust if flex handles it */
-  /* white-space: nowrap; /* Allow wrapping if needed, or ensure sufficient width */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-}
-
-.pay { /* Price per item within OrderItem */
-  flex: 1;
-  text-align: center;
-  font-size: 15px;
-  color: #2c3e50;
-  font-weight: 500;
-}
 
 .items input[type="number"].quantity-input { /* Style for quantity input in OrderItem */
   width: 55px;
