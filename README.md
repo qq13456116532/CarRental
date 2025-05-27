@@ -1,6 +1,6 @@
 
 
-# 车辆租赁管理平台/租车系统(partly completed)
+# 车辆租赁管理平台/租车系统
 [English Version](README-en.md)
 ### 功能介绍
 平台采用 B/S 结构，使用 .NET9 开发
