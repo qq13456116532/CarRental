@@ -47,6 +47,7 @@ dotnet restore
 ```cs
 dotnet run
 ```
+然后使用`admin`-`admin123`登录即可
 
 ### 数据库
 数据库存在本地的 carDB.db，有可能变得很大，如果要初始化，那么直接删除即可，`dotnet run`之后会自动生成一个新的
